@@ -1,0 +1,270 @@
+ALTER DATABASE `proyecto ingesoft` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+
+-- Eliminar tabla INGREDIENTE_PLATO (dependiente)
+`proyecto ingesoft`
+DROP TABLE IF EXISTS INGREDIENTE_PLATO;
+
+-- Eliminar tabla INGREDIENTE (tabla principal)
+DROP TABLE IF EXISTS INGREDIENTE;
+
+-- Eliminar tabla PLATO (tabla principal)
+DROP TABLE IF EXISTS PLATO;
+
+CREATE TABLE INGREDIENTE (
+    ID_INGREDIENTE INT AUTO_INCREMENT PRIMARY KEY,
+    NOMBRE VARCHAR(255) NOT NULL,
+    UNIDAD VARCHAR(10) NOT NULL,
+    CANTIDAD_INV INT,
+    CONSTRAINT chk_unidad CHECK (UNIDAD IN ('ml', 'g', 'Unidades'))
+);
+
+
+-- Creación tabla Plato
+CREATE TABLE PLATO(
+    ID_PLATO INT AUTO_INCREMENT PRIMARY KEY,
+    NOMBRE VARCHAR(255),
+    DESCRIPCION VARCHAR(255)
+);
+
+-- Creación tabla INGREDIENTE_plato
+CREATE TABLE INGREDIENTE_PLATO(
+    ID_PLATO INT,
+    ID_INGREDIENTE INT,
+    Cantidad DECIMAL(10, 2),
+    PRIMARY KEY (ID_PLATO, ID_INGREDIENTE),
+    FOREIGN KEY (ID_PLATO) REFERENCES PLATO(ID_PLATO),
+    FOREIGN KEY (ID_INGREDIENTE) REFERENCES INGREDIENTE(ID_INGREDIENTE)
+);
+
+-- Inserción de INGREDIENTEs
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Avellana', 'g', 1000);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Limon', 'g', 1000);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Frambuesa', 'g', 1000);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Fresa', 'g', 1000);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Chocolate picante dulce', 'g', 1000);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Queso Mascarpone', 'g', 750);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Huevos', 'Unidades', 20);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Azucar', 'g', 1000);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Bizcochos de soletilla', 'Unidades', 20);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Café Expreso', 'ml', 600);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Cacao en polvo', 'g', 20);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Crema de leche', 'ml', 1500);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Esencia de Vainilla', 'ml', 4);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Frutos rojos', 'g', 200);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Helado de vainilla', 'ml', 1000);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Ricotta', 'g', 500);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Azucar Glass', 'g', 100);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Canela en polvo', 'g', 10);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Chocolate rallado', 'g', 50);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Masa de canolli', 'g', 300);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Lomo de res', 'g', 700);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Salmon', 'g', 1700);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Aceite de Oliva', 'ml', 1000);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Zumo de limon', 'ml', 100);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Parmesano', 'ml', 5000);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Rugula', 'g', 100);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Sal', 'g', 1000);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Pimienta', 'g', 1000);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Harina', 'g', 800);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Agua', 'ml', 1000);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Levadura', 'g', 20);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Romero', 'g', 10);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Sal gruesa', 'ml',500);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Pasas', 'g', 100);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Frutos secos', 'g', 500);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Cebolla', 'g', 100);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Tomates cherry', 'g', 500);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Aceitunas negras', 'g', 1000);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Lechuga Romana', 'g', 500);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Pechuga de pollo','g', 10000);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Crutones', 'g', 150);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Aderezo cesar', 'ml', 200);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Champinones', 'g', 1000);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Queso de cabra', 'g', 2000);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Nueces', 'g', 500);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Vinagreta balsamica', 'ml', 200);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Ventresca de atun', 'g', 500);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Cebolla morada', 'g', 100);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Pimientos', 'g', 200);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Queso brie', 'g', 1000);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Queso gorgonzola', 'g', 1500);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Queso Pecorino', 'g', 1500);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Mermelada', 'ml', 100);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Miel', 'ml', 100);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Crakers', 'g', 500);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Queso mozarella', 'g', 3000);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Anchoas', 'g', 600);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Salsa de tomate', 'ml', 2000);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Albahaca', 'g', 500);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Peperonni', 'g', 1000);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Tomates', 'g', 500);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Spaguetti', 'g', 2000);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Panceta', 'g', 1500);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Fettuccine', 'g', 1000);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Tomates en conserva', 'g', 800);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Alcaparras', 'g', 100);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Trenette', 'g', 1000);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Pesto', 'g', 1500);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Bolognesa', 'g', 3500);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Salsa bechamel', 'g', 1300);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Carne molida', 'g', 1000);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Arroz arborio', 'g', 3000);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Caldo de verduras', 'ml', 2000);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Caldo de pescado', 'ml', 2000);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Caldo de setas', 'ml', 2000);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Esparragos', 'g', 1000);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Eneldo', 'g', 500);
+INSERT INTO INGREDIENTE (nombre, unidad, cantidad_inv) VALUES ('Setas variadas', 'g', 5000);
+
+-- Inserción de platos
+INSERT INTO PLATO (nombre, descripcion) VALUES ('Gelato Bacio (Avellana)', 'Helado de avellana');
+INSERT INTO PLATO (nombre, descripcion) VALUES('Gelato Limone (Limón)', 'Helado de limón');
+INSERT INTO PLATO (nombre, descripcion) VALUES('Gelato Lampone (Frambuesa)', 'Helado de frambuesa');
+INSERT INTO PLATO (nombre, descripcion) VALUES('Gelato Fragola (Fresa)', 'Helado de fresa');
+INSERT INTO PLATO (nombre, descripcion) VALUES('Gelato Cioccolato con Peperoncino', 'Helado de chocolate picante dulce');
+INSERT INTO PLATO (nombre, descripcion) VALUES('Tiramisu', 'Postre clásico italiano');
+INSERT INTO PLATO (nombre, descripcion) VALUES('Panna Cotta', 'Postre tradicional italiano a base de nata');
+INSERT INTO PLATO (nombre, descripcion) VALUES('Affogato', 'Helado de vainilla con café');
+INSERT INTO PLATO (nombre, descripcion) VALUES('Cannoli', 'Rollo de masa con queso ricotta');
+INSERT INTO PLATO (nombre, descripcion) VALUES('Carpaccio de Res', 'Láminas finas de res marinadas');
+INSERT INTO PLATO (nombre, descripcion) VALUES('Carpaccio de Salmón', 'Láminas finas de salmón marinadas');
+INSERT INTO PLATO (nombre, descripcion) VALUES('Tabla de Quesos', 'Selección de quesos variados');
+INSERT INTO PLATO (nombre, descripcion) VALUES('Ensalada César Romana', 'Ensalada clásica con pollo, lechuga romana y crutones');
+INSERT INTO PLATO (nombre, descripcion) VALUES('Ensalada de Portobello', 'Ensalada de champiñones portobello, rúcula y queso de cabra');
+INSERT INTO PLATO (nombre, descripcion) VALUES('Ensalada de Ventresca', 'Ensalada con ventresca de atún, tomates cherry y aceitunas');
+INSERT INTO PLATO (nombre, descripcion) VALUES('Pizza Cuatro Quesos', 'Pizza con mozzarella, gorgonzola, parmesano y queso de cabra');
+INSERT INTO PLATO (nombre, descripcion) VALUES('Pizza Margarita', 'Pizza clásica con salsa de tomate, mozzarella y albahaca');
+INSERT INTO PLATO (nombre, descripcion) VALUES('Pizza Pepperoni', 'Pizza con pepperoni, salsa de tomate y mozzarella');
+INSERT INTO PLATO (nombre, descripcion) VALUES('Pizza Napolitana', 'Pizza con anchoas, aceitunas y tomate triturado');
+INSERT INTO PLATO (nombre, descripcion) VALUES('Focaccia Genovese', 'Focaccia con aceite de oliva y sal');
+INSERT INTO PLATO (nombre, descripcion) VALUES('Focaccia Dolce', 'Focaccia dulce con azúcar y pasas');
+INSERT INTO PLATO (nombre, descripcion) VALUES('Focaccia Veneta', 'Focaccia con cebolla caramelizada');
+INSERT INTO PLATO (nombre, descripcion) VALUES('Focaccia Pugliese', 'Focaccia con tomates cherry y aceitunas negras');
+INSERT INTO PLATO (nombre, descripcion) VALUES('Pasta alla Carbonara', 'Espagueti con panceta, huevo y queso pecorino');
+INSERT INTO PLATO (nombre, descripcion) VALUES('Fettuccine alla Puttanesca', 'Fettuccine con anchoas, aceitunas y alcaparras');
+INSERT INTO PLATO (nombre, descripcion) VALUES('Trenette al Pesto', 'Pasta Trenette con salsa pesto y parmesano');
+INSERT INTO PLATO (nombre, descripcion) VALUES('Lasagna Bolognese', 'Lasaña con salsa boloñesa');
+INSERT INTO PLATO (nombre, descripcion) VALUES('Lasagna Mixta', 'Lasaña con carne molida y pollo');
+INSERT INTO PLATO (nombre, descripcion) VALUES('Lasagna de Pollo', 'Lasaña con pollo desmenuzado y bechamel');
+INSERT INTO PLATO (nombre, descripcion) VALUES('Risotto Vegetariano', 'Risotto con verduras frescas');
+INSERT INTO PLATO (nombre, descripcion) VALUES('Risotto de Salmón', 'Risotto con salmón ahumado y eneldo');
+INSERT INTO PLATO (nombre, descripcion) VALUES('Risotto de Hongos', 'Risotto con setas variadas');
+
+-- Inserción INGREDIENTE_plato
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (1, 1, 100); -- Avellana (100g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (1, 15, 150); -- Helado de vainilla (150ml)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (2, 2, 100); -- Limón (100g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (2, 15, 150); -- Helado de vainilla (150ml)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (3, 3, 100); -- Frambuesa (100g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (3, 15, 150); -- Helado de vainilla (150ml)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (4, 4, 100); -- Fresa (100g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (4, 15, 150); -- Helado de vainilla (150ml)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (5, 5, 100); -- Chocolate picante dulce (100g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (5, 15, 150); -- Helado de vainilla (150ml)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (6, 6, 100); -- Queso Mascarpone (100g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (6, 7, 2);   -- Huevos (2 unidades)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (6, 8, 50);  -- Azúcar (50g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (6, 9, 2);   -- Bizcochos de soletilla (2 unidades)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (6, 10, 60); -- Café expreso (60ml)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (6, 11, 2);  -- Cacao en polvo (2g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (7, 12, 150); -- Crema de leche (150ml)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (7, 13, 1);   -- Esencia de vainilla (1ml)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (7, 8, 30);   -- Azúcar (30g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (8, 15, 100); -- Helado de vainilla (100ml)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (8, 10, 30);  -- Café expreso (30ml)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (9, 16, 50);  -- Ricotta (50g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (9, 20, 30);  -- Masa de cannoli (30g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (9, 17, 10);  -- Azúcar Glass (10g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (9, 18, 1);   -- Canela en polvo (1g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (10, 21, 70);  -- Lomo de res (70g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (10, 23, 10);  -- Aceite de oliva (10ml)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (10, 24, 5);   -- Zumo de limón (5ml)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (10, 27, 2);   -- Sal (2g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (10, 28, 1);   -- Pimienta (1g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (11, 22, 70);  -- Salmón (70g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (11, 23, 10);  -- Aceite de oliva (10ml)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (11, 24, 5);   -- Zumo de limón (5ml)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (11, 27, 2);   -- Sal (2g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (11, 32, 1);   -- Romero (1g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (12, 25, 50);   -- Parmesano (50g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (12, 44, 50);   -- Queso de cabra (50g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (12, 50, 50);   -- Queso brie (50g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (12, 51, 50);   -- Queso gorgonzola (50g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (13, 39, 100);  -- Lechuga Romana (100g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (13, 40, 150);  -- Pechuga de pollo (150g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (13, 41, 10);   -- Crutones (10g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (13, 42, 20);   -- Aderezo César (20ml)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (13, 25, 10);   -- Parmesano (10g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (14, 43, 100);  -- Champiñones (100g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (14, 26, 10);   -- Rúcula (10g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (14, 44, 20);   -- Queso de cabra (20g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (14, 46, 10);   -- Vinagreta balsámica (10ml)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (15, 47, 50);   -- Ventresca de atún (50g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (15, 37, 30);   -- Tomates cherry (30g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (15, 38, 10);   -- Aceitunas negras (10g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (15, 46, 10);   -- Vinagreta balsámica (10ml)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (16, 56, 100);  -- Mozzarella (100g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (16, 51, 30);   -- Gorgonzola (30g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (16, 25, 20);   -- Parmesano (20g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (16, 44, 30);   -- Queso de cabra (30g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (17, 58, 50);   -- Salsa de tomate (50ml)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (17, 56, 100);  -- Mozzarella (100g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (17, 59, 5);    -- Albahaca (5g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (18, 58, 50);   -- Salsa de tomate (50ml)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (18, 56, 100);  -- Mozzarella (100g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (18, 60, 30);   -- Pepperoni (30g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (19, 58, 50);   -- Salsa de tomate (50ml)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (19, 57, 20);   -- Anchoas (20g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (19, 38, 10);   -- Aceitunas negras (10g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (20, 23, 20);   -- Aceite de oliva (20ml)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (20, 27, 5);    -- Sal (5g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (20, 29, 100);  -- Harina (100g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (21, 8, 30);   -- Azúcar (30g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (21, 34, 20);  -- Pasas (20g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (21, 29, 100); -- Harina (100g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (21, 23, 10);  -- Aceite de oliva (10ml)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (22, 36, 30);   -- Cebolla (30g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (22, 29, 100);  -- Harina (100g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (22, 23, 10);   -- Aceite de oliva (10ml)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (23, 37, 30);   -- Tomates cherry (30g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (23, 38, 10);   -- Aceitunas negras (10g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (23, 29, 100);  -- Harina (100g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (23, 23, 10);   -- Aceite de oliva (10ml)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (24, 62, 100);  -- Pasta (100g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (24, 63, 30);   -- Pancetta (30g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (24, 7, 1);     -- Huevo (1 unidad)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (24, 25, 20);   -- Parmesano (20g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (24, 28, 1);    -- Pimienta (1g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (25, 62, 100);  -- Pasta (100g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (25, 32, 10);   -- Albahaca (10g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (25, 30, 30);   -- Piñones (30g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (25, 23, 10);   -- Aceite de oliva (10ml)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (25, 25, 20);   -- Parmesano (20g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (26, 67, 100);  -- Trenette (100g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (26, 68, 30);   -- Pesto (30g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (26, 25, 10);   -- Parmesano (10g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (27, 69, 100);  -- Salsa Bolognesa (100g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (27, 70, 30);   -- Salsa Bechamel (30g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (27, 29, 20);   -- Harina (20g, para la pasta)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (28, 71, 50);   -- Carne molida (50g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (28, 40, 50);   -- Pechuga de pollo (50g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (28, 70, 30);   -- Salsa Bechamel (30g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (28, 29, 20);   -- Harina (20g, para la pasta)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (29, 40, 100);  -- Pechuga de pollo (100g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (29, 70, 50);   -- Salsa Bechamel (50g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (29, 29, 20);   -- Harina (20g, para la pasta)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (30, 72, 100);  -- Arroz Arborio (100g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (30, 73, 200);  -- Caldo de verduras (200ml)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (30, 36, 20);   -- Cebolla (20g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (30, 37, 20);   -- Tomates cherry (20g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (30, 76, 30);   -- Espárragos (30g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (31, 72, 100);  -- Arroz Arborio (100g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (31, 74, 200);  -- Caldo de pescado (200ml)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (31, 22, 50);   -- Salmón (50g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (31, 77, 5);    -- Eneldo (5g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (32, 72, 100);  -- Arroz Arborio (100g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (32, 75, 200);  -- Caldo de setas (200ml)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (32, 78, 50);   -- Setas variadas (50g)
+
+
