@@ -1,10 +1,10 @@
-module com.example.cliente2 {
+module com.example.cliente {
     requires javafx.controls;
     requires javafx.fxml;
 
-    requires org.controlsfx.controls;
-    requires com.dlsc.formsfx;
 
-    opens com.example.cliente2 to javafx.fxml;
-    exports com.example.cliente2;
+    opens com.example.cliente to javafx.fxml;
+    exports com.example.cliente;
+    exports controller;
+    opens controller to javafx.fxml;
 }
