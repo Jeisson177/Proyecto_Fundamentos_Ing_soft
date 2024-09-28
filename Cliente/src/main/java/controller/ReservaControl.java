@@ -56,8 +56,11 @@ public class ReservaControl {
                 cargarHorariosDisponibles();  // Cargar horarios disponibles
             }
         } else {
-            horariosDisponibles.clear();  // Limpiar la tabla si no hay fecha seleccionada
-            horariosDisponibles.add("Por favor, selecciona una fecha.");
+            Alert alert= new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setTitle("Error");
+            alert.setContentText("No hay fecha especificada");
+            alert.showAndWait();
         }
 
 
