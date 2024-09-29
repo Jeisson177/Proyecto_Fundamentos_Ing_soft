@@ -6,13 +6,13 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import repository.ReservaRepository;
+import services.GestionarReserva;
 
 import java.time.LocalDate;
 
 public class ReservaControl {
     @FXML
-    private TableView Tabla;
+    private TableView<String> Tabla;
     @FXML
     private TableColumn<String, String> horariosColumn;
     @FXML
@@ -27,20 +27,15 @@ public class ReservaControl {
     private Button btnConsultar;
     private ObservableList<String> horariosDisponibles = FXCollections.observableArrayList();
 
-    private ReservaRepository reservaRepo = new ReservaRepository();
-    // @FXML
-   // private Label welcomeText;
+    private GestionarReserva gestionarReserva = new GestionarReserva();  // Usar el servicio
 
-    //@FXML
-    //protected void onHelloButtonClick() {
-    //    welcomeText.setText("Welcome to JavaFX Application!");
-    //}
     @FXML
     public void initialize() {
         // Asociar la columna con los datos
         horariosColumn.setCellValueFactory(new PropertyValueFactory<>("fecha"));
         Tabla.setItems(horariosDisponibles);  // Vincula la lista observable al TableView
     }
+
     @FXML
     public void ConsultarReserva(ActionEvent actionEvent) {
         LocalDate fechaSeleccionada = Calendario.getValue();  // Obtener la fecha seleccionada del DatePicker
@@ -48,36 +43,36 @@ public class ReservaControl {
         if (fechaSeleccionada != null) {
             String fechaConsulta = fechaSeleccionada.toString();  // Convertir LocalDate a String
 
-            // Verificar si la fecha está ocupada
-            if (reservaRepo.FechaOcupada(fechaConsulta)) {
+            // Verificar si la fecha está ocupada utilizando el servicio
+            if (gestionarReserva.isFechaOcupada(fechaConsulta)) {
                 horariosDisponibles.clear();  // Limpiar la tabla
                 horariosDisponibles.add("La fecha " + fechaConsulta + " ya está ocupada.");
             } else {
                 cargarHorariosDisponibles();  // Cargar horarios disponibles
             }
         } else {
-            Alert alert= new Alert(Alert.AlertType.ERROR);
+            Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText(null);
             alert.setTitle("Error");
             alert.setContentText("No hay fecha especificada");
             alert.showAndWait();
         }
-
-
     }
+
     private void cargarHorariosDisponibles() {
         horariosDisponibles.clear();  // Limpiar la lista observable antes de cargar nuevos datos
-        horariosDisponibles.addAll(reservaRepo.obtenerFechasDisponibles());  // Cargar datos desde el repositorio
+        horariosDisponibles.addAll(gestionarReserva.obtenerHorariosDisponibles());  // Cargar datos desde el servicio
     }
 
-
     public void IrMenu(ActionEvent actionEvent) {
-        
+        // Implementación futura
     }
 
     public void IrHome(ActionEvent actionEvent) {
+        // Implementación futura
     }
 
     public void IrReserva(ActionEvent actionEvent) {
+        // Implementación futura
     }
 }
