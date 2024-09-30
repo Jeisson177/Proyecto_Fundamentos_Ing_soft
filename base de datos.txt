@@ -27,6 +27,12 @@ DROP TABLE IF EXISTS MENU;
 
 -- Eliminar tabla PLATO (tabla principal)
 DROP TABLE IF EXISTS plato;
+
+-- Eliminar tabla Horarios 
+DROP TABLE IF EXISTS Horarios;
+
+-- Eliminar tabla dias 
+DROP TABLE IF EXISTS Dias;
 -- --------------------------------------------------------------------------- Creación de tablas
 -- Creación tabla ingrediente
 CREATE TABLE INGREDIENTE (
@@ -82,15 +88,16 @@ CREATE TABLE CLIENTE(
 );
 
 -- Creación de la tabla reserva
+-- comente cosas que no aportan al problema
 CREATE TABLE RESERVA(
 	 ID_RESERVA INT AUTO_INCREMENT PRIMARY KEY,
 	 ID_CLIENTE INT,
 	 ID_MESA INT,
-	 FECHA_HORA DATE,
-	 ESTADO VARCHAR (255),
+	 FECHA_HORA DATETIME,
+	 -- ESTADO VARCHAR (255),
 	 FOREIGN KEY (ID_MESA) REFERENCES MESA(ID_MESA),
-	 FOREIGN KEY (ID_RESERVA) REFERENCES CLIENTE(ID_CLIENTE),
-	 CONSTRAINT chk_est CHECK (ESTADO IN ('Confirmado', 'Cancelado', 'Pendiente'))
+	 FOREIGN KEY (ID_RESERVA) REFERENCES CLIENTE(ID_CLIENTE)-- , 
+	 -- CONSTRAINT chk_est CHECK (ESTADO IN ('Confirmado', 'Cancelado', 'Pendiente'))
 );	
 
 -- Creación tabla menu
@@ -108,6 +115,25 @@ CREATE TABLE MENU_PLATO(
     FOREIGN KEY (ID_PLATO) REFERENCES PLATO(ID_PLATO),
     FOREIGN KEY (ID_MENU) REFERENCES MENU(ID_MENU)
 );
+
+-- HORARIOS RESTAURANTE
+
+-- Tabla para almacenar los días de la semana
+CREATE TABLE Dias (
+    id_dia INT AUTO_INCREMENT PRIMARY KEY,
+    nombre_dia VARCHAR(20) NOT NULL,
+    intervalo INT -- intervalo que se demora un cliente en comer
+);
+
+CREATE TABLE Horarios (
+    id_horario INT AUTO_INCREMENT PRIMARY KEY,
+    id_dia INT NOT NULL,
+    hora_apertura TIME NOT NULL,
+    hora_cierre TIME NOT NULL,
+    CONSTRAINT fk_dia FOREIGN KEY (id_dia) REFERENCES Dias(id_dia) ON DELETE CASCADE
+);
+
+
 
 -- --------------------------------------------------------------------------- Inserción de duplas
 -- Inserción de INGREDIENTEs
@@ -567,4 +593,22 @@ INSERT INTO MENU_PLATO (ID_MENU, ID_PLATO) VALUES
 (1, 46);
 
 
+-- Insertar los días de la semana
+INSERT INTO Dias (nombre_dia,intervalo) VALUES
+('Lunes',120),
+('Martes',120),
+('Miércoles',120),
+('Jueves',120),
+('Viernes',120),
+('Sábado',120),
+('Domingo',120);
 
+
+INSERT INTO Horarios (id_dia, hora_apertura, hora_cierre) VALUES
+(1, '09:00:00', '22:00:00'), -- Lunes
+(2, '09:00:00', '22:00:00'), -- Martes
+(3, '09:00:00', '22:00:00'), -- Miércoles
+(4, '09:00:00', '23:00:00'), -- Jueves
+(5, '09:00:00', '23:00:00'), -- Viernes
+(6, '10:00:00', '23:00:00'), -- Sábado
+(7, '10:00:00', '21:00:00'); -- Domingo
