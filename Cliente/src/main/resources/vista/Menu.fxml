@@ -39,11 +39,9 @@
         <!-- Primer panel con imagen y botón -->
         <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;">
             <VBox alignment="CENTER" spacing="5">
-                <ImageView fitHeight="340.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="false">
-                    <Image url="@/Imagenes/menu_principal/portada_antipasti.png"/>
-                </ImageView>
+                <ImageView fx:id="antipastiImage" fitHeight="340.0" fitWidth="173.0" pickOnBounds="true"  preserveRatio="false"/>
             </VBox>
-            <Button layoutX="32.0" layoutY="178.0" prefHeight="45.0" prefWidth="110.0" onAction="#onHelloButtonClick"
+            <Button fx:id="antipastiMenu" layoutX="32.0" layoutY="178.0" prefHeight="45.0" prefWidth="110.0" onAction="#onHelloButtonClick"
                     style="-fx-background-color:transparent; -fx-text-fill: white; -fx-font-size: 17px;"
                     text="ANTIPASTI"/>
         </Pane>
@@ -51,9 +49,7 @@
         <!-- Segundo panel con imagen y botón -->
         <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;">
             <VBox alignment="CENTER" spacing="5">
-                <ImageView fitHeight="340.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="false">
-                    <Image url="@/Imagenes/menu_principal/portada_platos_fuertes.png"/>
-                </ImageView>
+                <ImageView fx:id="platoFuerteImage" fitHeight="340.0" fitWidth="173.0" pickOnBounds="true"  preserveRatio="false"/>
             </VBox>
             <Button layoutX="8.0" layoutY="178.0" prefHeight="45.0" prefWidth="156.0"
                     style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 17px;"
@@ -63,9 +59,7 @@
         <!-- Tercer panel con imagen y botón -->
         <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;">
             <VBox alignment="CENTER" spacing="5">
-                <ImageView fitHeight="340.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="false">
-                    <Image url="@/Imagenes/menu_principal/portada_postres.png"/>
-                </ImageView>
+                <ImageView fx:id="postresImage" fitHeight="340.0" fitWidth="173.0" pickOnBounds="true"  preserveRatio="false"/>
             </VBox>
             <Button layoutX="32.0" layoutY="178.0" prefHeight="45.0" prefWidth="110.0"
                     style="-fx-background-color: transparent; -fx-text-fill: white;-fx-font-size: 17px;" text="POSTRE"/>
@@ -74,9 +68,7 @@
         <!-- Cuarto panel con imagen y botón -->
         <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;">
             <VBox alignment="CENTER" spacing="5">
-                <ImageView fitHeight="340.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="false">
-                    <Image url="@/Imagenes/menu_principal/portada_bebidas.png"/>
-                </ImageView>
+                <ImageView fx:id="bebidasImage" fitHeight="340.0" fitWidth="173.0" pickOnBounds="true"  preserveRatio="false"/>
             </VBox>
             <Button layoutX="32.0" layoutY="178.0" prefHeight="45.0" prefWidth="110.0"
                     style="-fx-background-color: transparent; -fx-text-fill: white;-fx-font-size: 17px;"
