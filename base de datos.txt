@@ -15,14 +15,14 @@ DROP TABLE IF EXISTS CLIENTE;
 
 -- Eliminar tabla Mesa (dependiente)`proyecto ingesoft`
 DROP TABLE IF EXISTS MESA;
-ingrediente_inv
--- Eliminar tabla INGREDIENTE (tabla principal)
+
+--  Eliminar tabla INGREDIENTE (tabla principal)
 DROP TABLE IF EXISTS INGREDIENTE;
 
--- Eliminar tabla Mesa (dependiente)`proyecto ingesoft`
+--  Eliminar tabla Mesa (dependiente)`proyecto ingesoft`
 DROP TABLE IF EXISTS MENU_PLATO;
 
--- Eliminar tabla INGREDIENTE (tabla principal)
+--  Eliminar tabla INGREDIENTE (tabla principal)
 DROP TABLE IF EXISTS MENU;
 
 -- Eliminar tabla PLATO (tabla principal)
@@ -612,3 +612,15 @@ INSERT INTO Horarios (id_dia, hora_apertura, hora_cierre) VALUES
 (5, '09:00:00', '23:00:00'), -- Viernes
 (6, '10:00:00', '23:00:00'), -- Sábado
 (7, '10:00:00', '21:00:00'); -- Domingo
+
+
+-- Inserciones en la tabla RESERVA
+INSERT INTO RESERVA (ID_CLIENTE, ID_MESA, FECHA_HORA) VALUES
+(1, 1, '2024-10-07 09:00:00'),  -- Primera reserva del día lunes
+(2, 2, '2024-10-07 11:00:00'),  -- Segunda reserva (120 min después)
+(3, 3, '2024-10-07 13:00:00'),  -- Tercera reserva
+(4, 4, '2024-10-07 15:00:00'),  -- Cuarta reserva
+(5, 5, '2024-10-07 17:00:00'),  -- Quinta reserva
+(6, 6, '2024-10-07 19:00:00'),  -- Sexta reserva
+(7, 1, '2024-10-07 21:00:00');  -- Séptima reserva (última reserva antes de cierre)
+
