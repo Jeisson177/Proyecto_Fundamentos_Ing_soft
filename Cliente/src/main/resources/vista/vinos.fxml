@@ -8,7 +8,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.VinosControl ">
    <children>
       <Pane prefHeight="65.0" prefWidth="600.0" style="-fx-background-color: black;">
@@ -49,21 +48,6 @@
                </font>
             </Text>
             <Button layoutX="501.0" layoutY="13.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="86.0" style="-fx-background-color: blue;" text="Regresar" textFill="WHITE" />
-            <ImageView fitHeight="109.0" fitWidth="86.0" layoutX="270.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../Imagenes/Vinos/rosa.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="130.0" fitWidth="96.0" layoutX="371.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../Imagenes/Vinos/tinto.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="133.0" fitWidth="96.0" layoutX="480.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../Imagenes/Vinos/white.png" />
-               </image>
-            </ImageView>
             <Text fill="#004aad" layoutX="282.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rosado" textAlignment="CENTER" wrappingWidth="54.33856201171875">
                <font>
                   <Font name="System Bold" size="13.0" />
@@ -94,6 +78,21 @@
                   <Text fill="WHITE" layoutX="28.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                </children>
             </Pane>
+            <Button id="rosa" layoutX="251.0" layoutY="103.0" mnemonicParsing="false" prefHeight="108.0" prefWidth="116.0" style="-fx-background-color: white;">
+               <graphic>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="false">
+                     <Image url="@../Imagenes/Vinos/rosa.png" />
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button id="blanco" layoutX="489.0" layoutY="110.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="79.0" style="-fx-background-color: white;" />
+            <Button id="tinto" layoutX="380.0" layoutY="110.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="79.0" style="-fx-background-color: white;" />
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="369.0" layoutY="107.0" pickOnBounds="true" preserveRatio="false">
+               <Image url="@../Imagenes/Vinos/tinto.png" />
+            </ImageView>
+            <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="478.0" layoutY="107.0" pickOnBounds="true" preserveRatio="false">
+               <Image url="@../Imagenes/Vinos/white.png" />
+            </ImageView>
          </children>
       </Pane>
    </children>
