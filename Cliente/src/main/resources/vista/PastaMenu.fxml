@@ -21,29 +21,29 @@
             <Button fx:id="selecReservar" layoutX="402.0" layoutY="18.0" mnemonicParsing="false" onAction="#onClickReservar" text="Reservar" />
             <ImageView fitHeight="50.0" fitWidth="47.0" layoutX="528.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../imagenes/ig.png" />
+                  <Image url="@../imagenes/ig.png" />
                </image>
             </ImageView>
          </children>
       </AnchorPane>
       <ImageView fitHeight="115.0" fitWidth="115.0" layoutX="24.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../imagenes/Carbonara.png" />
+            <Image url="@../imagenes/Carbonara.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="114.0" fitWidth="115.0" layoutX="177.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../imagenes/Fetu.png" />
+            <Image url="@../imagenes/Fetu.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="114.0" fitWidth="115.0" layoutX="316.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../imagenes/trene.png" />
+            <Image url="@../imagenes/trene.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="113.0" fitWidth="115.0" layoutX="461.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../imagenes/spa.png" />
+            <Image url="@../imagenes/spa.png" />
          </image>
       </ImageView>
       <Text fill="#1800ec" layoutX="22.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Platos Fuertes: Pastas">

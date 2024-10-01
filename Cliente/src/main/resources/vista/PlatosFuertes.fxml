@@ -18,7 +18,7 @@
             </Text>
             <ImageView fitHeight="48.0" fitWidth="51.0" layoutX="538.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../imagenes/ig.png" />
+                  <Image url="@../imagenes/ig.png" />
                </image>
             </ImageView>
             <Button fx:id="selecHome" layoutX="268.0" layoutY="19.0" mnemonicParsing="false" onAction="#onClickHome" text="Home">
@@ -40,22 +40,22 @@
       </AnchorPane>
       <ImageView fitHeight="280.0" fitWidth="148.0" layoutY="65.0" pickOnBounds="true">
          <image>
-            <Image url="@../../imagenes/pizza.png" />
+            <Image url="@../imagenes/pizza.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="280.0" fitWidth="160.0" layoutX="148.0" layoutY="65.0" pickOnBounds="true">
          <image>
-            <Image url="@../../imagenes/Pasta.png" />
+            <Image url="@../imagenes/Pasta.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="280.0" fitWidth="154.0" layoutX="308.0" layoutY="66.0" pickOnBounds="true">
          <image>
-            <Image url="@../../imagenes/L1.png" />
+            <Image url="@../imagenes/L1.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="280.0" fitWidth="148.0" layoutX="460.0" layoutY="65.0" pickOnBounds="true">
          <image>
-            <Image url="@../../imagenes/risoto.png" />
+            <Image url="@../imagenes/risoto.png" />
          </image>
       </ImageView>
       <Button fx:id="selecPizza" layoutX="32.0" layoutY="173.0" mnemonicParsing="false" onAction="#onClickPizza" text="Pizzas">

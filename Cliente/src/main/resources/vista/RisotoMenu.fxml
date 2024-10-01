@@ -18,7 +18,7 @@
             </Text>
             <ImageView fitHeight="67.0" fitWidth="63.0" layoutX="518.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../imagenes/ig.png" />
+                  <Image url="@../imagenes/ig.png" />
                </image>
             </ImageView>
             <Button fx:id="selecHome" layoutX="218.0" layoutY="21.0" mnemonicParsing="false" onAction="#onClickHome" text="Home" />
@@ -33,17 +33,17 @@
       </Text>
       <ImageView fitHeight="116.0" fitWidth="148.0" layoutX="48.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../imagenes/vegetariano.png" />
+            <Image url="@../imagenes/vegetariano.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="116.0" fitWidth="119.0" layoutX="250.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../imagenes/Salmon.png" />
+            <Image url="@../imagenes/Salmon.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="116.0" fitWidth="113.0" layoutX="437.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../imagenes/Hongos.png" />
+            <Image url="@../imagenes/Hongos.png" />
          </image>
       </ImageView>
       <Button fx:id="risotoVegetariano" layoutX="67.0" layoutY="255.0" mnemonicParsing="false" onAction="#onClickVegetariano" text="Vegetariano" />

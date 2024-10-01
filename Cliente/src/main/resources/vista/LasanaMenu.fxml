@@ -22,7 +22,7 @@
             <Button fx:id="selecReservar" layoutX="417.0" layoutY="17.0" mnemonicParsing="false" onAction="#onClickReservar" text="Reservar" />
             <ImageView fitHeight="49.0" fitWidth="52.0" layoutX="532.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../imagenes/ig.png" />
+                  <Image url="@../imagenes/ig.png" />
                </image>
             </ImageView>
          </children>
@@ -34,17 +34,17 @@
       </Text>
       <ImageView fitHeight="123.0" fitWidth="142.0" layoutX="33.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../imagenes/BOLOÑESA.png" />
+            <Image url="@../imagenes/BOLOÑESA.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="123.0" fitWidth="126.0" layoutX="240.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../imagenes/Mixta.png" />
+            <Image url="@../imagenes/Mixta.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="123.0" fitWidth="124.0" layoutX="431.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../imagenes/pollo.png" />
+            <Image url="@../imagenes/pollo.png" />
          </image>
       </ImageView>
       <Button fx:id="LasBolonesa" layoutX="44.0" layoutY="270.0" mnemonicParsing="false" onAction="#onClickLasBolonesa" text="Lasaña Boloñesa" />
