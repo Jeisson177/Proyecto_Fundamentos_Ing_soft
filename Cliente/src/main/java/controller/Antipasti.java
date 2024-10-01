@@ -27,7 +27,9 @@ public class Antipasti {
     public ImageView ensaladaVentrescaImage;
     public ImageView tablaQuesosImage;
 
-
+    public Button menuBoton;
+    public Button reservarBoton;
+    public Button homeBoton;
 
     public  Button volverMenu;
 
@@ -72,6 +74,64 @@ public class Antipasti {
 
             //Opcionalmente, cierra la ventana actual
             ((Stage) volverMenu.getScene().getWindow()).close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void menuButtonClick(ActionEvent actionEvent) {
+        try {
+            // Carga la nueva ventana
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Menu.fxml"));
+            Parent root = loader.load();
+
+            // Crea una nueva escena
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Menu"); // Título de la nueva ventana
+            stage.show();
+
+            // Opcionalmente, cierra la ventana actual
+            ((Stage) menuBoton.getScene().getWindow()).close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public void reservarButtonClick(ActionEvent actionEvent) {
+        try {
+            // Carga la nueva ventana
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/ReservaFecha.fxml"));
+            Parent root = loader.load();
+
+            // Crea una nueva escena
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Reservar"); // Título de la nueva ventana
+            stage.show();
+
+            // Opcionalmente, cierra la ventana actual
+            ((Stage) reservarBoton.getScene().getWindow()).close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void homeButtonClick(ActionEvent actionEvent) {
+        try {
+            // Carga la nueva ventana
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/ReservaFecha.fxml"));
+            Parent root = loader.load();
+
+            // Crea una nueva escena
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Reserva"); // Título de la nueva ventana
+            stage.show();
+
+            // Opcionalmente, cierra la ventana actual
+            ((Stage) homeBoton.getScene().getWindow()).close();
         } catch (Exception e) {
             e.printStackTrace();
         }

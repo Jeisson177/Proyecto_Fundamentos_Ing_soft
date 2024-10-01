@@ -15,19 +15,19 @@
                     <Font size="24.0"/>
                 </font>
             </Text>
-            <Button layoutX="365.0" layoutY="8.0" mnemonicParsing="false" style="-fx-background-color: black;"
+            <Button fx:id="menuBoton" layoutX="365.0" layoutY="8.0" mnemonicParsing="false" onAction="#menuButtonClick" style="-fx-background-color: black;"
                     text="Menú" textFill="WHITE">
                 <font>
                     <Font size="17.0"/>
                 </font>
             </Button>
-            <Button layoutX="438.0" layoutY="9.0" mnemonicParsing="false" style="-fx-background-color: black;"
+            <Button fx:id="reservarBoton" layoutX="438.0" layoutY="9.0" mnemonicParsing="false" onAction="#reservarButtonClick" style="-fx-background-color: black;"
                     text="Reservar" textFill="WHITE" underline="true">
                 <font>
                     <Font size="17.0"/>
                 </font>
             </Button>
-            <Button layoutX="289.0" layoutY="8.0" mnemonicParsing="false" style="-fx-background-color: black;"
+            <Button fx:id="homeBoton" layoutX="289.0" layoutY="8.0" mnemonicParsing="false" onAction="#homeButtonClick" style="-fx-background-color: black;"
                     text="home" textFill="WHITE" underline="true">
                 <font>
                     <Font size="17.0"/>

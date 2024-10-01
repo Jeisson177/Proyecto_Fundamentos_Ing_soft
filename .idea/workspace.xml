@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fd8ff85-b94a-4b81-b0f1-01c765de323a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/Proyecto_Fundamentos_Ing_soft.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/openjfx_javafx_fxml.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cliente/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cliente/src/main/java/com/example/cliente/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/java/com/example/cliente/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cliente/src/main/java/controller/Antipasti.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/java/controller/Antipasti.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cliente/src/main/java/controller/MenuControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/java/controller/MenuControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cliente/src/main/java/controller/ReservaControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/java/controller/ReservaControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cliente/src/main/resources/Imagenes/menu_principal/1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/resources/vista/Antipasti.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/resources/vista/Antipasti.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cliente/src/main/resources/vista/Menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/resources/vista/Menu.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +40,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="menu" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -91,7 +83,7 @@
     "ignore.preview.features.used": "true",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Jocel/Downloads/Proyecto_Fundamentos_Ing_soft",
+    "last_opened_file_path": "C:/Users/Jocel/Downloads/Proyecto_Fundamentos_Ing_soft/Cliente",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -104,6 +96,21 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Proyecto_Fundamentos_Ing_soft" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Proyecto_Fundamentos_Ing_soft" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -126,6 +133,7 @@
       <workItem from="1727571665501" duration="3463000" />
       <workItem from="1727575151798" duration="2451000" />
       <workItem from="1727577652510" duration="1324000" />
+      <workItem from="1727809683234" duration="1056000" />
     </task>
     <servers />
   </component>
