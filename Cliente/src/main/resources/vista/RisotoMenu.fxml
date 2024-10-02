@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="346.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlatosFuertes">
+<AnchorPane prefHeight="396.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlatosFuertes">
    <children>
       <AnchorPane prefHeight="67.0" prefWidth="600.0" style="-fx-background-color: black;">
          <children>
@@ -61,5 +61,6 @@
       <Text layoutX="77.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10.000 COP" />
       <Text layoutX="276.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="50.000 COP" />
       <Text layoutX="463.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="30.000 COP" />
+      <Button fx:id="selecVolver" layoutX="51.0" layoutY="340.0" mnemonicParsing="false" onAction="#onClickVolver" text="Volver a Platos Fuertes" />
    </children>
 </AnchorPane>

@@ -61,5 +61,6 @@
       <Text layoutX="65.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20.000 COP" />
       <Text layoutX="271.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="40.000 COP" />
       <Text layoutX="462.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20.000 COP" />
+      <Button fx:id="selecVolver" layoutX="28.0" layoutY="351.0" mnemonicParsing="false" onAction="#onClickVolver" text="Volver a platos fuertes" />
    </children>
 </AnchorPane>
