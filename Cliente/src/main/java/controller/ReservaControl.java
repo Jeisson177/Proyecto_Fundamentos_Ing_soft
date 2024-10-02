@@ -59,19 +59,29 @@ public class ReservaControl {
                 Tabla.refresh();
             } catch (Exception e) {
                 e.printStackTrace();
-                mostrarAlertaError("Error", "Hubo un problema al consultar los horarios.");
+                mostrarAlertaError("Error", "Hubo un problema al consultar los horarios.",1);
             }
         } else {
-            mostrarAlertaError("Error", "No hay fecha especificada");
+            mostrarAlertaError("Error", "No hay fecha especificada",1);
         }
     }
 
-    private void mostrarAlertaError(String titulo, String contenido) {
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle(titulo);
-        alert.setHeaderText(null);
-        alert.setContentText(contenido);
-        alert.showAndWait();
+    private void mostrarAlertaError(String titulo, String contenido,int tipo) {
+        if(tipo==1){//error
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle(titulo);
+            alert.setHeaderText(null);
+            alert.setContentText(contenido);
+            alert.showAndWait();
+
+        }else {//confirmacion
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle(titulo);
+            alert.setHeaderText(null);
+            alert.setContentText(contenido);
+            alert.showAndWait();
+        }
+
     }
     @FXML
     public void IrMenu(ActionEvent actionEvent) {
@@ -89,14 +99,14 @@ public class ReservaControl {
     public void Reservar(ActionEvent actionEvent) {
         String h = this.Tabla.getSelectionModel().getSelectedItem();
         if(h==null){
-            mostrarAlertaError("ERROR","No has seleccionado hora");
+            mostrarAlertaError("ERROR","No has seleccionado hora",1);
         }
         else{
             LocalDate fechaSeleccionada = Calendario.getValue();
             if(gestionarReserva.GReserva(fechaSeleccionada,h)){
-                mostrarAlertaError("Aprobado","La reserva fue hecha satisfactoriamente");
+                mostrarAlertaError("Aprobado","La reserva fue hecha satisfactoriamente",2);
             }else{
-                mostrarAlertaError("ERROR","No se realizo la reserva");
+                mostrarAlertaError("ERROR","No se realizo la reserva",1);
             }
 
         }

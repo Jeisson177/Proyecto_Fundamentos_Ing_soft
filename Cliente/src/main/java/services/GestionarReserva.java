@@ -1,5 +1,6 @@
 package services;
 
+import controller.MesaControl;
 import repository.ReservaRepository;
 
 import java.sql.*;
@@ -10,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GestionarReserva {
-
+    private MesaControl mesa= new MesaControl();
     private ReservaRepository reservaRepo = new ReservaRepository();
 
     // Método para obtener los horarios disponibles en un día específico y para una mesa específica
@@ -18,7 +19,7 @@ public class GestionarReserva {
         List<String> horariosDisponibles = new ArrayList<>();
 
         // Conectar a la base de datos
-        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/proyecto ingesoft", "root", "Basedatos")) {
+        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/proyecto ingesoft", "root", "cl")) {
 
             // Obtener el día de la semana de la fecha seleccionada
             String nombreDia = obtenerNombreDia(fechaSeleccionada);
@@ -44,9 +45,6 @@ public class GestionarReserva {
                             }
                             horaActual = horaActual.plusMinutes(intervalo);  // Avanzar en el intervalo
                         }
-                    }else{
-
-                        System.out.println("No se encontraron resultados para: " + nombreDia);
                     }
                 }
             }
@@ -80,7 +78,7 @@ public class GestionarReserva {
 
     public boolean GReserva(LocalDate calendario, String hora) {
         int idCliente = 1; // Supongamos que siempre es el cliente 1. Esto puede ser dinámico.
-        int idMesa = 1;    // Supongamos que siempre es la mesa 1. Esto puede ser dinámico.
+        int idMesa = mesa.getMesa();
 
         // Combina la fecha (calendario) y la hora (hora) en una cadena de fecha y hora
         String fechaHora = calendario.toString() + " " + hora;  // Formato "YYYY-MM-DD HH:MM:SS"
@@ -88,7 +86,7 @@ public class GestionarReserva {
         // Consulta SQL para insertar una nueva reserva
         String query = "INSERT INTO RESERVA (ID_CLIENTE, ID_MESA, FECHA_HORA) VALUES (?, ?, ?)";
 
-        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/proyecto ingesoft", "root", "Basedatos")) {
+        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/proyecto ingesoft", "root", "cl")) {
             try (PreparedStatement stmt = connection.prepareStatement(query)) {
                 // Asignamos los valores a los parámetros de la consulta
                 stmt.setInt(1, idCliente);                    // ID del cliente

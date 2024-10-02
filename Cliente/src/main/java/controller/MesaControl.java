@@ -44,7 +44,7 @@ public class MesaControl {
     @FXML
     public void seleccionarMesa(ActionEvent actionEvent) {
         Button clickedButton = (Button) actionEvent.getSource(); // Obtén el botón que fue clicado
-        String buttonId = clickedButton.getId(); // Obtén el ID del botón 
+        String buttonId = clickedButton.getId(); // Obtén el ID del botón
 
         // Elimina el prefijo "bntm" y convierte el valor restante a un entero
         mesaSeleccionada = Integer.parseInt(buttonId.replace("bntm", ""));
