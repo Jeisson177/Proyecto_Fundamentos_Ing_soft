@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -56,6 +57,8 @@ public class PlatosFuertes {
     public Button risotoSalmon;
     @FXML
     public Button risotoHongos;
+    @FXML
+    public ImageView pizzaSelec;
 
     public void onClickPizza(ActionEvent actionEvent) {
         try {
