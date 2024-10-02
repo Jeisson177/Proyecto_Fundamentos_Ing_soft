@@ -13,7 +13,7 @@
          <children>
             <Text fill="#fcfcfc" layoutX="23.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bella Ventura">
                <font>
-                  <Font name="Baskerville Old Face" size="22.0" />
+                  <Font name="Times New Roman Italic" size="20.0" />
                </font>
             </Text>
             <ImageView fitHeight="67.0" fitWidth="63.0" layoutX="518.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
@@ -21,9 +21,18 @@
                   <Image url="@../imagenes/ig.png" />
                </image>
             </ImageView>
-            <Button fx:id="selecHome" layoutX="218.0" layoutY="21.0" mnemonicParsing="false" onAction="#onClickHome" text="Home" />
-            <Button fx:id="selecMenu" layoutX="326.0" layoutY="21.0" mnemonicParsing="false" onAction="#onClickMenu" text="Menu" />
-            <Button fx:id="selecReservar" layoutX="428.0" layoutY="21.0" mnemonicParsing="false" onAction="#onClickReservar" text="Reservar" />
+            <Button fx:id="selecHome" layoutX="233.0" layoutY="21.0" mnemonicParsing="false" onAction="#onClickHome" style="-fx-background-color: bl; -fx-text-fill: white;" text="Home" underline="true">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font></Button>
+            <Button fx:id="selecMenu" layoutX="332.0" layoutY="21.0" mnemonicParsing="false" onAction="#onClickMenu" style="-fx-background-color: bl; -fx-text-fill: white;" text="Menu" underline="true">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font></Button>
+            <Button fx:id="selecReservar" layoutX="410.0" layoutY="21.0" mnemonicParsing="false" onAction="#onClickReservar" style="-fx-background-color: bl; -fx-text-fill: white;" text="Reservar" underline="true">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font></Button>
          </children>
       </AnchorPane>
       <Text fill="#2f00ff" layoutX="21.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Platos Fuertes: Risotos">

@@ -7,19 +7,27 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlatosFuertes">
    <children>
       <AnchorPane prefHeight="62.0" prefWidth="600.0" style="-fx-background-color: black;">
          <children>
             <Text fill="#faf8f8" layoutX="25.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bella Ventura">
                <font>
-                  <Font name="Times New Roman" size="19.0" />
+                  <Font name="Times New Roman Italic" size="19.0" />
                </font>
             </Text>
-            <Button fx:id="selecHome" layoutX="221.0" layoutY="17.0" mnemonicParsing="false" onAction="#onClickHome" text="Home" />
-            <Button fx:id="selecMenu" layoutX="325.0" layoutY="17.0" mnemonicParsing="false" onAction="#onClickMenu" text="Menu" />
-            <Button fx:id="selecReservar" layoutX="417.0" layoutY="17.0" mnemonicParsing="false" onAction="#onClickReservar" text="Reservar" />
+            <Button fx:id="selecHome" layoutX="221.0" layoutY="17.0" mnemonicParsing="false" onAction="#onClickHome" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-style: italic;" text="Home" underline="true">
+               <font>
+                  <Font name="Times New Roman" size="15.0" />
+               </font></Button>
+            <Button fx:id="selecMenu" layoutX="325.0" layoutY="17.0" mnemonicParsing="false" onAction="#onClickMenu" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-style: italic;" text="Menu" underline="true">
+               <font>
+                  <Font name="Times New Roman" size="15.0" />
+               </font></Button>
+            <Button fx:id="selecReservar" layoutX="417.0" layoutY="17.0" mnemonicParsing="false" onAction="#onClickReservar" style="-fx-background-color: bl; -fx-text-fill: white; -fx-font-style: italic;" text="Reservar" underline="true">
+               <font>
+                  <Font name="Times New Roman" size="15.0" />
+               </font></Button>
             <ImageView fitHeight="49.0" fitWidth="52.0" layoutX="532.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../imagenes/ig.png" />

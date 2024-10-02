@@ -14,12 +14,21 @@
          <children>
             <Text fill="#fffcfc" layoutX="14.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bella Ventura">
                <font>
-                  <Font name="Baskerville Old Face" size="23.0" />
+                  <Font name="Times New Roman Italic" size="20.0" />
                </font>
             </Text>
-            <Button fx:id="selecHome" layoutX="223.0" layoutY="21.0" mnemonicParsing="false" onAction="#onClickHome" text="Home" />
-            <Button fx:id="selecMenu" layoutX="317.0" layoutY="21.0" mnemonicParsing="false" onAction="#onClickMenu" text="Menu" />
-            <Button fx:id="selecMenu" layoutX="411.0" layoutY="21.0" mnemonicParsing="false" onAction="#onClickMenu" text="Reservar" />
+            <Button fx:id="selecHome" layoutX="223.0" layoutY="21.0" mnemonicParsing="false" onAction="#onClickHome" style="-fx-background-color: bl; -fx-text-fill: white;" text="Home" underline="true">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font></Button>
+            <Button fx:id="selecMenu" layoutX="317.0" layoutY="21.0" mnemonicParsing="false" onAction="#onClickMenu" style="-fx-background-color: bl; -fx-text-fill: white;" text="Menu" underline="true">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font></Button>
+            <Button fx:id="selecMenu" layoutX="411.0" layoutY="21.0" mnemonicParsing="false" onAction="#onClickMenu" style="-fx-background-color: bl; -fx-text-fill: white;" text="Reservar" underline="true">
+               <font>
+                  <Font name="Times New Roman Italic" size="15.0" />
+               </font></Button>
             <ImageView fitHeight="44.0" fitWidth="48.0" layoutX="522.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../imagenes/ig.png" />
