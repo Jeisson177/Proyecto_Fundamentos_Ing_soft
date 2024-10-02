@@ -8,26 +8,47 @@ import javafx.scene.text.Text;
 
 public class PlatosFuertes {
 
+    @FXML
     public Button selecPizza;
+    @FXML
     public Button selecPasta;
+    @FXML
     public Button selecLasagna;
+    @FXML
     public Button selecRisoto;
+    @FXML
     public Button selecAtras;
+    @FXML
     public Button selecMenu;
+    @FXML
     public Button selecHome;
+    @FXML
     public Button selecReservar;
+    @FXML
     public Button P4quesos;
+    @FXML
     public Button Ppepperoni;
+    @FXML
     public Button Pmargarita;
+    @FXML
     public Button PasCarbonara;
+    @FXML
     public Button PasFetu;
+    @FXML
     public Button Pastrene;
+    @FXML
     public Button PasBolonesa;
+    @FXML
     public Button LasBolonesa;
+    @FXML
     public Button LasMixta;
+    @FXML
     public Button LasPollo;
+    @FXML
     public Button risotoVegetariano;
+    @FXML
     public Button risotoSalmon;
+    @FXML
     public Button risotoHongos;
 
     public void onClickPizza(ActionEvent actionEvent) {
