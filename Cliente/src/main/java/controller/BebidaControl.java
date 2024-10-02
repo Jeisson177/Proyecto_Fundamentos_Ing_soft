@@ -21,10 +21,15 @@ public class BebidaControl {
     public ImageView vinosImage;
 
 
-    //public Button menuBoton;
-    //public Button reservarBoton;
-   // public Button homeBoton;
-    //public  Button volverMenu;
+    public Button botonHome;
+    public Button botonReservar;
+    public Button botonMenu;
+    public Button botonImagenAgua;
+    public Button botonImagenAguaGas;
+    public Button botonImagenVino;
+    public Button botonImagenGaseosa;
+    public Button botonImagenChampagne;
+
 
     @FXML
     public void initialize() {
