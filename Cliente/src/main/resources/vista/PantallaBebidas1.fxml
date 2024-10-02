@@ -72,12 +72,7 @@
                </font>
             </Text>
             <Button id="AguaConGas" layoutX="17.0" layoutY="103.0" mnemonicParsing="false" prefHeight="101.0" prefWidth="106.0" style="-fx-background-color: white;">
-               <graphic>
-                  <ImageView fitHeight="89.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="false">
-                     <Image url="@../Imagenes/Bebidas1/Agua%20con%20gas.png" />
-                  </ImageView>
-               </graphic>
-            </Button>
+            </Button>it
             <Pane layoutX="25.0" layoutY="260.0" prefHeight="24.0" prefWidth="86.0" style="-fx-background-color: blue;">
                <children>
                   <Text fill="WHITE" layoutX="32.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
