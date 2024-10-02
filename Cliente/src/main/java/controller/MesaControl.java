@@ -19,6 +19,7 @@ public class MesaControl {
     public Button btnReservar;
     public Button btnhome;
 
+    private int mesaSeleccionada=0;
     @FXML
     public void initialize(){
 
@@ -38,5 +39,20 @@ public class MesaControl {
     }
     @FXML
     public void IrMenu(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void seleccionarMesa(ActionEvent actionEvent) {
+        Button clickedButton = (Button) actionEvent.getSource(); // Obtén el botón que fue clicado
+        String buttonId = clickedButton.getId(); // Obtén el ID del botón 
+
+        // Elimina el prefijo "bntm" y convierte el valor restante a un entero
+        mesaSeleccionada = Integer.parseInt(buttonId.replace("bntm", ""));
+
+    }
+
+    // Método para obtener la mesa seleccionada (número entero)
+    public int getMesa() {
+        return mesaSeleccionada;
     }
 }

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
@@ -36,5 +37,29 @@
             </Button>
          </children>
       </Pane>
+      <ImageView fitHeight="187.0" fitWidth="254.0" layoutX="218.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagenes/mesa/distribucionMesa.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="bntm2" layoutX="332.0" layoutY="171.0" minHeight="1.0" minWidth="1.0" mnemonicParsing="false" prefHeight="11.0" prefWidth="11.0" scaleShape="false" visible="false" onAction="#seleccionarMesa"/>
+      <Button fx:id="bntm3" layoutX="313.0" layoutY="188.0" minHeight="1.0" minWidth="1.0" mnemonicParsing="false" prefHeight="11.0" prefWidth="11.0" scaleShape="false" visible="false" onAction="#seleccionarMesa"/>
+      <Button fx:id="bntm4" layoutX="331.0" layoutY="189.0" minHeight="1.0" minWidth="1.0" mnemonicParsing="false" prefHeight="11.0" prefWidth="11.0" scaleShape="false" visible="false" onAction="#seleccionarMesa"/>
+      <Button fx:id="bntm5" layoutX="295.0" layoutY="205.0" minHeight="1.0" minWidth="1.0" mnemonicParsing="false" prefHeight="11.0" prefWidth="11.0" scaleShape="false" visible="false" onAction="#seleccionarMesa"/>
+      <Button fx:id="bntm6" layoutX="313.0" layoutY="205.0" minHeight="1.0" minWidth="1.0" mnemonicParsing="false" prefHeight="11.0" prefWidth="11.0" scaleShape="false" visible="false" onAction="#seleccionarMesa"/>
+      <Button fx:id="bntm7" layoutX="332.0" layoutY="205.0" minHeight="1.0" minWidth="1.0" mnemonicParsing="false" prefHeight="11.0" prefWidth="11.0" scaleShape="false" visible="false" onAction="#seleccionarMesa"/>
+      <Button fx:id="bntm8" layoutX="295.0" layoutY="224.0" minHeight="1.0" minWidth="1.0" mnemonicParsing="false" prefHeight="11.0" prefWidth="11.0" scaleShape="false" visible="false" onAction="#seleccionarMesa"/>
+      <Button fx:id="bntm9" layoutX="313.0" layoutY="225.0" minHeight="1.0" minWidth="1.0" mnemonicParsing="false" prefHeight="11.0" prefWidth="11.0" scaleShape="false" visible="false" onAction="#seleccionarMesa"/>
+      <Button fx:id="bntm10" layoutX="332.0" layoutY="223.0" minHeight="1.0" minWidth="1.0" mnemonicParsing="false" prefHeight="11.0" prefWidth="11.0" scaleShape="false" visible="false" onAction="#seleccionarMesa"/>
+      <Button fx:id="bntm11" layoutX="296.0" layoutY="242.0" minHeight="1.0" minWidth="1.0" mnemonicParsing="false" prefHeight="11.0" prefWidth="11.0" scaleShape="false" visible="false" onAction="#seleccionarMesa"/>
+      <Button fx:id="bntm12" layoutX="313.0" layoutY="243.0" minHeight="1.0" minWidth="1.0" mnemonicParsing="false" prefHeight="11.0" prefWidth="11.0" scaleShape="false" visible="false" onAction="#seleccionarMesa" />
+      <Button fx:id="bntm13" layoutX="332.0" layoutY="243.0" minHeight="1.0" minWidth="1.0" mnemonicParsing="false" prefHeight="11.0" prefWidth="11.0" scaleShape="false" visible="false" onAction="#seleccionarMesa" />
+      <Button fx:id="bntm14" layoutX="358.0" layoutY="174.0" minHeight="1.0" minWidth="1.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="17.0" scaleShape="false" visible="false" onAction="#seleccionarMesa" />
+      <Button fx:id="bntm15" layoutX="390.0" layoutY="182.0" minHeight="1.0" minWidth="1.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="17.0" scaleShape="false" visible="false" onAction="#seleccionarMesa" />
+      <Button fx:id="bntm16" layoutX="411.0" layoutY="211.0" minHeight="1.0" minWidth="1.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="17.0" scaleShape="false" visible="false" onAction="#seleccionarMesa" />
+      <Button fx:id="bntm17" layoutX="411.0" layoutY="242.0" minHeight="1.0" minWidth="1.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="17.0" scaleShape="false" visible="false" onAction="#seleccionarMesa" />
+      <Button fx:id="bntm18" layoutX="389.0" layoutY="275.0" minHeight="1.0" minWidth="1.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="17.0" scaleShape="false" visible="false" onAction="#seleccionarMesa" />
+      <Button fx:id="bntm19" layoutX="359.0" layoutY="283.0" minHeight="1.0" minWidth="1.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="17.0" scaleShape="false" visible="false" onAction="#seleccionarMesa" />
+      <Button fx:id="bntm1" layoutX="318.0" layoutY="137.0" minHeight="1.0" minWidth="1.0" mnemonicParsing="false" prefHeight="16.0" prefWidth="17.0" scaleShape="false" visible="false" onAction="#seleccionarMesa" />
    </children>
 </AnchorPane>

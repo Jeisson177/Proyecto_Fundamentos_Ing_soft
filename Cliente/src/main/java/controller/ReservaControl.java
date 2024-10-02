@@ -32,7 +32,7 @@ public class ReservaControl {
     private ObservableList<String> horariosDisponibles = FXCollections.observableArrayList();
 
     private GestionarReserva gestionarReserva = new GestionarReserva();  // Usar el servicio
-
+    private MesaControl mesa= new MesaControl();
     @FXML
     public void initialize() {
         // Asociar la columna con los datos
@@ -43,12 +43,12 @@ public class ReservaControl {
     @FXML
     public void ConsultarReserva(ActionEvent actionEvent) {
         LocalDate fechaSeleccionada = Calendario.getValue();  // Obtener la fecha seleccionada del DatePicker
-        int mesa = 1;  // Seleccionar mesa con un get mesa despues
+
 
         if (fechaSeleccionada != null) {
             try {
                 // Consultar los horarios disponibles para la fecha seleccionada y la mesa especificada
-                List<String> horarios = gestionarReserva.obtenerHorariosDisponibles(fechaSeleccionada, mesa);
+                List<String> horarios = gestionarReserva.obtenerHorariosDisponibles(fechaSeleccionada, mesa.getMesa());
 
                 if (horarios.isEmpty()) {
                     horariosDisponibles.clear();

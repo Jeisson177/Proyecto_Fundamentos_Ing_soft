@@ -1,5 +1,3 @@
-ALTER DATABASE `proyecto ingesoft` CHARACTER SET utf8mb4 COLLATE UTF8MB4_UNICODE_CI;
-
 -- -------------------------------------------------------------------------- Eliminación de tablas
 -- Eliminar tabla INGREDIENTE_PLATO (dependiente)`proyecto ingesoft`
 DROP TABLE IF EXISTS INGREDIENTE_PLATO;
@@ -10,20 +8,20 @@ DROP TABLE IF EXISTS RESERVA;
 -- Eliminar tabla INGREDIENTE_INV (dependiente)`proyecto ingesoft`
 DROP TABLE IF EXISTS INGREDIENTE_INV;
 
--- Eliminar tabla Cliente (dependiente)`proyecto ingesoft`
-DROP TABLE IF EXISTS CLIENTE;
+-- Eliminar tabla usuario (dependiente)`proyecto ingesoft`
+DROP TABLE IF EXISTS Usuario;
 
 -- Eliminar tabla Mesa (dependiente)`proyecto ingesoft`
 DROP TABLE IF EXISTS MESA;
 
---  Eliminar tabla INGREDIENTE (tabla principal)
-DROP TABLE IF EXISTS INGREDIENTE;
-
---  Eliminar tabla Mesa (dependiente)`proyecto ingesoft`
+-- Eliminar tabla Mesa (dependiente)`proyecto ingesoft`
 DROP TABLE IF EXISTS MENU_PLATO;
 
---  Eliminar tabla INGREDIENTE (tabla principal)
+-- Eliminar tabla INGREDIENTE (tabla principal)
 DROP TABLE IF EXISTS MENU;
+
+-- Eliminar tabla INGREDIENTE (tabla principal)
+DROP TABLE IF EXISTS ingrediente;
 
 -- Eliminar tabla PLATO (tabla principal)
 DROP TABLE IF EXISTS plato;
@@ -72,23 +70,26 @@ CREATE TABLE INGREDIENTE_PLATO(
     FOREIGN KEY (ID_INGREDIENTE) REFERENCES INGREDIENTE(ID_INGREDIENTE)
 );
 
--- Creación mesa
+-- Creación tabla mesa
 CREATE TABLE MESA(
-	 ID_MESA INT AUTO_INCREMENT PRIMARY KEY,
+	 ID_MESA INT AUTO_INCREMENT PRIMARY KEY, -- preguntar
 	 CAPACIDAD INT,
-	 UBICACION VARCHAR(255)
-); 
- 
--- Creación de tabla cliente
-CREATE TABLE CLIENTE(
-	 ID_CLIENTE INT AUTO_INCREMENT PRIMARY KEY,
+    UBICACION_X INT,
+    UBICACION_Y INT
+);
+
+-- Creación de tabla usuario
+CREATE TABLE Usuario(
+	 ID_USUARIO INT AUTO_INCREMENT PRIMARY KEY,
 	 NOMBRE VARCHAR(255),
 	 EMAIL VARCHAR(255),
-	 TELEFONO VARCHAR(255)
+	 TELEFONO VARCHAR(255),
+	 ROL VARCHAR(255),
+	 CONTRASENA VARCHAR(255),
+	 CONSTRAINT chk_rol CHECK (ROL IN ('Cliente', 'Mesero', 'Administrador'))
 );
 
 -- Creación de la tabla reserva
--- comente cosas que no aportan al problema
 CREATE TABLE RESERVA(
 	 ID_RESERVA INT AUTO_INCREMENT PRIMARY KEY,
 	 ID_CLIENTE INT,
@@ -96,7 +97,7 @@ CREATE TABLE RESERVA(
 	 FECHA_HORA DATETIME,
 	 -- ESTADO VARCHAR (255),
 	 FOREIGN KEY (ID_MESA) REFERENCES MESA(ID_MESA),
-	 FOREIGN KEY (ID_RESERVA) REFERENCES CLIENTE(ID_CLIENTE)-- , 
+	 FOREIGN KEY (ID_CLIENTE) REFERENCES USUARIO(ID_USUARIO)
 	 -- CONSTRAINT chk_est CHECK (ESTADO IN ('Confirmado', 'Cancelado', 'Pendiente'))
 );	
 
@@ -116,15 +117,14 @@ CREATE TABLE MENU_PLATO(
     FOREIGN KEY (ID_MENU) REFERENCES MENU(ID_MENU)
 );
 
--- HORARIOS RESTAURANTE
-
--- Tabla para almacenar los días de la semana
+-- Creación tabla días 
 CREATE TABLE Dias (
     id_dia INT AUTO_INCREMENT PRIMARY KEY,
     nombre_dia VARCHAR(20) NOT NULL,
     intervalo INT -- intervalo que se demora un cliente en comer
 );
 
+-- Creación tabla horarios
 CREATE TABLE Horarios (
     id_horario INT AUTO_INCREMENT PRIMARY KEY,
     id_dia INT NOT NULL,
@@ -132,7 +132,6 @@ CREATE TABLE Horarios (
     hora_cierre TIME NOT NULL,
     CONSTRAINT fk_dia FOREIGN KEY (id_dia) REFERENCES Dias(id_dia) ON DELETE CASCADE
 );
-
 
 
 -- --------------------------------------------------------------------------- Inserción de duplas
@@ -291,7 +290,7 @@ INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (6, 9,
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (6, 10, 60); -- Café expreso (60ml)
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (6, 11, 2);  -- Cacao en polvo (2g)
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (7, 12, 150); -- Crema de leche (150ml)
-INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (7, 13, 1);   -- Esencia de vainilla (1ml)
+INSERT INTO ingrediente_plato (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (7, 13, 1);   -- Esencia de vainilla (1ml)
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (7, 8, 30);   -- Azúcar (30g)
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (8, 15, 100); -- Helado de vainilla (100ml)
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (8, 10, 30);  -- Café expreso (30ml)
@@ -311,7 +310,7 @@ INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (11, 2
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (11, 32, 1);   -- Romero (1g)
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (12, 25, 50);   -- Parmesano (50g)
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (12, 44, 50);   -- Queso de cabra (50g)
-INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (12, 50, 50);   -- Queso brie (50g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (12, 50 ,50);   -- Queso brie (50g)
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (12, 51, 50);   -- Queso gorgonzola (50g)
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (13, 39, 100);  -- Lechuga Romana (100g)
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (13, 40, 150);  -- Pechuga de pollo (150g)
@@ -326,7 +325,7 @@ INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (15, 4
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (15, 37, 30);   -- Tomates cherry (30g)
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (15, 38, 10);   -- Aceitunas negras (10g)
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (15, 46, 10);   -- Vinagreta balsámica (10ml)
-INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (16, 56, 100);  -- Mozzarella (100g)
+INSERT INTO ingrediente_plato (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (16, 56, 100);  -- Mozzarella (100g)
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (16, 51, 30);   -- Gorgonzola (30g)
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (16, 25, 20);   -- Parmesano (20g)
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (16, 44, 30);   -- Queso de cabra (30g)
@@ -422,7 +421,7 @@ INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (46, 5
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (46, 38, 30);   -- Aceitunas negras (30g)
 
 -- Inserciones en la tabla INGREDIENTE_INV
-INSERT INTO INGREDIENTE_INV (ID_INGREDIENTE, CANTIDAD_INV, FECHA_VEN, FECHA_INGRESO, UNIDAD) VALUES (1, 5000, '2025-12-31', '2024-09-22', 'g');   -- Avellana
+INSERT INTO INGREDIENTE_INV (ID_INGREDIENTE, CANTIDAD_INV, FECHA_VEN, FECHA_INGRESO, UNIDAD) VALUES(1, 5000, '2025-12-31', '2024-09-22', 'g');   -- Avellana
 INSERT INTO INGREDIENTE_INV (ID_INGREDIENTE, CANTIDAD_INV, FECHA_VEN, FECHA_INGRESO, UNIDAD) VALUES(2, 1000, '2025-12-31', '2024-09-22', 'g'); -- Limon
 INSERT INTO INGREDIENTE_INV (ID_INGREDIENTE, CANTIDAD_INV, FECHA_VEN, FECHA_INGRESO, UNIDAD) VALUES(3, 3000, '2025-11-30', '2024-09-22', 'g');   -- Frambuesa
 INSERT INTO INGREDIENTE_INV (ID_INGREDIENTE, CANTIDAD_INV, FECHA_VEN, FECHA_INGRESO, UNIDAD) VALUES(4, 2500, '2025-10-31', '2024-09-22', 'g');   -- Fresa
@@ -511,108 +510,56 @@ INSERT INTO INGREDIENTE_INV (ID_INGREDIENTE, CANTIDAD_INV, FECHA_VEN, FECHA_INGR
 INSERT INTO INGREDIENTE_INV (ID_INGREDIENTE, CANTIDAD_INV, FECHA_VEN, FECHA_INGRESO, UNIDAD) VALUES(87, 50, '2025-10-31', '2024-09-22', 'Unidades');  -- Fanta Naranja
 
 -- Inserción de mesas
-INSERT INTO mesa (CAPACIDAD, UBICACION) VALUES (4, 'Norte cerca al piano');
-INSERT INTO mesa (CAPACIDAD, UBICACION) VALUES (4, 'Noroeste cerca al piano');
-INSERT INTO mesa (CAPACIDAD, UBICACION) VALUES (4, 'Noroeste cerca al piano');
-INSERT INTO mesa (CAPACIDAD, UBICACION) VALUES (4, 'Sureste cerca al piano');
-INSERT INTO mesa (CAPACIDAD, UBICACION) VALUES (4, 'Sureste cerca al piano');
-INSERT INTO mesa (CAPACIDAD, UBICACION) VALUES (4, 'Sur cerca al piano');
+-- PENDIENTE agregar ubicación
 
--- Inserciones en la tabla CLIENTE
-INSERT INTO CLIENTE (NOMBRE, EMAIL, TELEFONO) VALUES ('Juan Perez', 'juan.perez@example.com', '555-1234');
-INSERT INTO CLIENTE (NOMBRE, EMAIL, TELEFONO) VALUES('Maria Rodriguez', 'maria.rodriguez@example.com', '555-5678');
-INSERT INTO CLIENTE (NOMBRE, EMAIL, TELEFONO) VALUES('Carlos Fernandez', 'carlos.fernandez@example.com', '555-9876');
-INSERT INTO CLIENTE (NOMBRE, EMAIL, TELEFONO) VALUES('Ana Martinez', 'ana.martinez@example.com', '555-3456');
-INSERT INTO CLIENTE (NOMBRE, EMAIL, TELEFONO) VALUES('Luis Gomez', 'luis.gomez@example.com', '555-7654');
-INSERT INTO CLIENTE (NOMBRE, EMAIL, TELEFONO) VALUES('Laura Sanchez', 'laura.sanchez@example.com', '555-1122');
-INSERT INTO CLIENTE (NOMBRE, EMAIL, TELEFONO) VALUES('Jose Ramirez', 'jose.ramirez@example.com', '555-3344');
-INSERT INTO CLIENTE (NOMBRE, EMAIL, TELEFONO) VALUES('Elena Diaz', 'elena.diaz@example.com', '555-5566');
-INSERT INTO CLIENTE (NOMBRE, EMAIL, TELEFONO) VALUES('Miguel Herrera', 'miguel.herrera@example.com', '555-7788');
-INSERT INTO CLIENTE (NOMBRE, EMAIL, TELEFONO) VALUES('Carmen Morales', 'carmen.morales@example.com', '555-9900');
-INSERT INTO CLIENTE (NOMBRE, EMAIL, TELEFONO) VALUES('Javier Lopez', 'javier.lopez@example.com', '555-1212');
-INSERT INTO CLIENTE (NOMBRE, EMAIL, TELEFONO) VALUES('Sofia Torres', 'sofia.torres@example.com', '555-3434');
-INSERT INTO CLIENTE (NOMBRE, EMAIL, TELEFONO) VALUES('Andres Nunez', 'andres.nunez@example.com', '555-5656');
-INSERT INTO CLIENTE (NOMBRE, EMAIL, TELEFONO) VALUES('Claudia Vargas', 'claudia.vargas@example.com', '555-7878');
-INSERT INTO CLIENTE (NOMBRE, EMAIL, TELEFONO) VALUES('Ricardo Castillo', 'ricardo.castillo@example.com', '555-9090');
-INSERT INTO CLIENTE (NOMBRE, EMAIL, TELEFONO) VALUES('Natalia Gil', 'natalia.gil@example.com', '555-1313');
-INSERT INTO CLIENTE (NOMBRE, EMAIL, TELEFONO) VALUES('Diego Flores', 'diego.flores@example.com', '555-3535');
-INSERT INTO CLIENTE (NOMBRE, EMAIL, TELEFONO) VALUES('Isabel Ruiz', 'isabel.ruiz@example.com', '555-5757');
-INSERT INTO CLIENTE (NOMBRE, EMAIL, TELEFONO) VALUES('Fernando Munoz', 'fernando.munoz@example.com', '555-7979');
-INSERT INTO CLIENTE (NOMBRE, EMAIL, TELEFONO) VALUES('Veronica Jimenez', 'veronica.jimenez@example.com', '555-9191');
-
--- Inserciones en la tabla menu
-INSERT INTO MENU (ID_MENU, NOMBRE, DESCRIPCION) VALUES (1, 'Menu Bella Venture', 'Menu estilo italiano');
-
--- Inserciones en la tabla MENU_PLATO
-INSERT INTO MENU_PLATO (ID_MENU, ID_PLATO) VALUES
-(1, 1),
-(1, 2),
-(1, 3),
-(1, 4),
-(1, 5),
-(1, 6),
-(1, 7),
-(1, 8),
-(1, 9),
-(1, 10),
-(1, 11),
-(1, 12),
-(1, 13),
-(1, 14),
-(1, 15),
-(1, 16),
-(1, 17),
-(1, 18),
-(1, 19),
-(1, 20),
-(1, 21),
-(1, 22),
-(1, 23),
-(1, 24),
-(1, 25),
-(1, 26),
-(1, 27),
-(1, 28),
-(1, 29),
-(1, 30),
-(1, 31),
-(1, 32),
-(1, 33),
-(1, 34),
-(1, 35),
-(1, 36),
-(1, 37),
-(1, 38),
-(1, 39),
-(1, 40),
-(1, 41),
-(1, 42),
-(1, 43),
-(1, 44),
-(1, 45),
-(1, 46);
+INSERT INTO mesa (CAPACIDAD, UBICACION_X, UBICACION_Y) VALUES (10, 318.0, 137.0); -- bntm1
+INSERT INTO mesa (CAPACIDAD, UBICACION_X, UBICACION_Y) VALUES (4, 332.0, 171.0); -- bntm2
+INSERT INTO mesa (CAPACIDAD, UBICACION_X, UBICACION_Y) VALUES (4, 313.0, 188.0); -- bntm3
+INSERT INTO mesa (CAPACIDAD, UBICACION_X, UBICACION_Y) VALUES (4, 331.0, 189.0); -- bntm4
+INSERT INTO mesa (CAPACIDAD, UBICACION_X, UBICACION_Y) VALUES (4, 295.0, 205.0); -- bntm5
+INSERT INTO mesa (CAPACIDAD, UBICACION_X, UBICACION_Y) VALUES (4, 313.0, 205.0); -- bntm6
+INSERT INTO mesa (CAPACIDAD, UBICACION_X, UBICACION_Y) VALUES (4, 332.0, 205.0); -- bntm7
+INSERT INTO mesa (CAPACIDAD, UBICACION_X, UBICACION_Y) VALUES (4, 295.0, 224.0); -- bntm8
+INSERT INTO mesa (CAPACIDAD, UBICACION_X, UBICACION_Y) VALUES (4, 313.0, 225.0); -- bntm9
+INSERT INTO mesa (CAPACIDAD, UBICACION_X, UBICACION_Y) VALUES (4, 332.0, 223.0); -- bntm10
+INSERT INTO mesa (CAPACIDAD, UBICACION_X, UBICACION_Y) VALUES (4, 296.0, 242.0); -- bntm11
+INSERT INTO mesa (CAPACIDAD, UBICACION_X, UBICACION_Y) VALUES (4, 313.0, 243.0); -- bntm12
+INSERT INTO mesa (CAPACIDAD, UBICACION_X, UBICACION_Y) VALUES (4, 332.0, 243.0); -- bntm13
+INSERT INTO mesa (CAPACIDAD, UBICACION_X, UBICACION_Y) VALUES (6, 358.0, 174.0); -- bntm14
+INSERT INTO mesa (CAPACIDAD, UBICACION_X, UBICACION_Y) VALUES (6, 390.0, 182.0); -- bntm15
+INSERT INTO mesa (CAPACIDAD, UBICACION_X, UBICACION_Y) VALUES (6, 411.0, 211.0); -- bntm16
+INSERT INTO mesa (CAPACIDAD, UBICACION_X, UBICACION_Y) VALUES (6, 411.0, 242.0); -- bntm17
+INSERT INTO mesa (CAPACIDAD, UBICACION_X, UBICACION_Y) VALUES (6, 389.0, 275.0); -- bntm18
+INSERT INTO mesa (CAPACIDAD, UBICACION_X, UBICACION_Y) VALUES (6, 359.0, 283.0); -- bntm19
 
 
--- Insertar los días de la semana
-INSERT INTO Dias (nombre_dia,intervalo) VALUES
-('Lunes',120),
-('Martes',120),
-('Miércoles',120),
-('Jueves',120),
-('Viernes',120),
-('Sábado',120),
-('Domingo',120);
-
-
-INSERT INTO Horarios (id_dia, hora_apertura, hora_cierre) VALUES
-(1, '09:00:00', '22:00:00'), -- Lunes
-(2, '09:00:00', '22:00:00'), -- Martes
-(3, '09:00:00', '22:00:00'), -- Miércoles
-(4, '09:00:00', '23:00:00'), -- Jueves
-(5, '09:00:00', '23:00:00'), -- Viernes
-(6, '10:00:00', '23:00:00'), -- Sábado
-(7, '10:00:00', '21:00:00'); -- Domingo
-
+-- Inserciones en la tabla usuario
+INSERT INTO Usuario (NOMBRE, EMAIL, TELEFONO, ROL, CONTRASENA) VALUES
+('Juan Perez', 'juanperez@email.com', '555-1234', 'Cliente', 'contrasena1'),
+('Ana Garcia', 'anagarcia@email.com', '555-2345', 'Cliente', 'contrasena2'),
+('Luis Martinez', 'luismartinez@email.com', '555-3456', 'Cliente', 'contrasena3'),
+('Maria Lopez', 'marialopez@email.com', '555-4567', 'Cliente', 'contrasena4'),
+('Carlos Fernandez', 'carlosf@email.com', '555-5678', 'Cliente', 'contrasena5'),
+('Sofia Rodriguez', 'sofiarodriguez@email.com', '555-6789', 'Cliente', 'contrasena6'),
+('Javier Morales', 'javiermorales@email.com', '555-7890', 'Cliente', 'contrasena7'),
+('Laura Gomez', 'lauragomez@email.com', '555-8901', 'Cliente', 'contrasena8'),
+('Pedro Sanchez', 'pedrosanchez@email.com', '555-9012', 'Cliente', 'contrasena9'),
+('Marta Ruiz', 'martaruiz@email.com', '555-0123', 'Cliente', 'contrasena10'),
+('Diego Torres', 'diegotorres@email.com', '555-1235', 'Cliente', 'contrasena11'),
+('Carmen Diaz', 'carmendiaz@email.com', '555-2346', 'Cliente', 'contrasena12'),
+('Rafael Jimenez', 'rafaeljimenez@email.com', '555-3457', 'Cliente', 'contrasena13'),
+('Paula Silva', 'paulasilva@email.com', '555-4568', 'Cliente', 'contrasena14'),
+('Fernando Castro', 'fernandocastro@email.com', '555-5679', 'Cliente', 'contrasena15'),
+('Natalia Mendoza', 'nataliamendoza@email.com', '555-6780', 'Cliente', 'contrasena16'),
+('Gustavo Ortega', 'gustavoortega@email.com', '555-7891', 'Cliente', 'contrasena17'),
+('Isabel Herrera', 'isabelherrera@email.com', '555-8902', 'Cliente', 'contrasena18'),
+('Fernando Jimenez', 'fernandojimenez@email.com', '555-9013', 'Cliente', 'contrasena19'),
+('Alma Vazquez', 'almavazquez@email.com', '555-0124', 'Cliente', 'contrasena20'),
+('Andres Romero', 'andresromero@email.com', '555-1111', 'Mesero', 'mesero1'),
+('Patricia Mendoza', 'patriciamendoza@email.com', '555-2222', 'Mesero', 'mesero2'),
+('Samuel Vargas', 'samuelvargas@email.com', '555-3333', 'Mesero', 'mesero3'),
+('Lucia Torres', 'luciatorres@email.com', '555-4444', 'Mesero', 'mesero4'),
+('Jorge Castillo', 'jorgecastillo@email.com', '555-5555', 'Mesero', 'mesero5');
 
 -- Inserciones en la tabla RESERVA
 INSERT INTO RESERVA (ID_CLIENTE, ID_MESA, FECHA_HORA) VALUES
@@ -624,3 +571,31 @@ INSERT INTO RESERVA (ID_CLIENTE, ID_MESA, FECHA_HORA) VALUES
 (6, 6, '2024-10-07 19:00:00'),  -- Sexta reserva
 (7, 1, '2024-10-07 21:00:00');  -- Séptima reserva (última reserva antes de cierre)
 
+-- Inserciones en la tabla menu
+INSERT INTO MENU (ID_MENU, NOMBRE, DESCRIPCION) VALUES (1, 'Menu Bella Venture', 'Menu estilo italiano');
+
+-- Inserciones en la tabla MENU_PLATO
+INSERT INTO MENU_PLATO (ID_MENU, ID_PLATO) VALUES
+(1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (1, 8), (1, 9), (1, 10), (1, 11), (1, 12), (1, 13), 
+(1, 14), (1, 15), (1, 16), (1, 17), (1, 18), (1, 19), (1, 20), (1, 21), (1, 22), (1, 23), (1, 24), 
+(1, 25), (1, 26), (1, 27), (1, 28), (1, 29), (1, 30), (1, 31), (1, 32), (1, 33), (1, 34), (1, 35), 
+(1, 36), (1, 37), (1, 38), (1, 39), (1, 40), (1, 41), (1, 42), (1, 43), (1, 44), (1, 45), (1, 46);
+
+-- Insertar los días de la semana
+INSERT INTO Dias (nombre_dia,intervalo) VALUES
+('Lunes',120),
+('Martes',120),
+('Miercoles',120),
+('Jueves',120),
+('Viernes',120),
+('Sabado',120),
+('Domingo',120);
+
+INSERT INTO Horarios (id_dia, hora_apertura, hora_cierre) VALUES
+(1, '09:00:00', '22:00:00'), -- Lunes
+(2, '09:00:00', '22:00:00'), -- Martes
+(3, '09:00:00', '22:00:00'), -- Miércoles
+(4, '09:00:00', '23:00:00'), -- Jueves
+(5, '09:00:00', '23:00:00'), -- Viernes
+(6, '10:00:00', '23:00:00'), -- Sábado
+(7, '10:00:00', '21:00:00'); -- Domingo
