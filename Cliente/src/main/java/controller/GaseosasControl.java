@@ -9,8 +9,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.Node;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
-
+import repository.bebidasRepositorio;
 import java.io.IOException;
 import java.util.Objects;
 
@@ -29,6 +30,11 @@ public class GaseosasControl {
     public Button botonImagenQuatro;
     public Button botonImagenCoca;
     public Button botonImagenFanta;
+    public Text textoPrecio4;
+    public Text textoPrecioFanta;
+    public Text textoPrecioCoca;
+
+    private bebidasRepositorio bebida=new bebidasRepositorio();
 
     @FXML
     public void initialize() {
@@ -55,6 +61,10 @@ public class GaseosasControl {
         botonImagenQuatro.setGraphic(imageView4);
         botonImagenCoca.setGraphic(imageViewCoca);
         botonImagenFanta.setGraphic(imageViewFanta);
+
+        textoPrecio4.setText(String.valueOf(bebida.getPrecios("Quatro")));
+        textoPrecioFanta.setText(String.valueOf(bebida.getPrecios("Fanta")));
+        textoPrecioCoca.setText(String.valueOf(bebida.getPrecios("Coca cola")));
     }
 
     public void irAPantallaBebidas(ActionEvent event) {
