@@ -29,8 +29,11 @@ public class PlatosFuertes {
     @FXML
     public Button selecMenu;
     @FXML
+<<<<<<< HEAD
     public Button selecVolver;
     @FXML
+=======
+>>>>>>> develop
     public Button selecHome;
     @FXML
     public Button selecReservar;
