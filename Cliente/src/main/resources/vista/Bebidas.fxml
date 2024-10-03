@@ -10,12 +10,12 @@
    <children>
       <Pane prefHeight="63.0" prefWidth="600.0" style="-fx-background-color: Black;">
          <children>
-            <Button fx:id="botonHome" layoutX="331.0" layoutY="13.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Home" textFill="WHITE" underline="true" onAction="#irAPantallaHome">
+            <Button fx:id="botonHome" layoutX="331.0" layoutY="13.0" mnemonicParsing="false" onAction="#irAPantallaHome" style="-fx-background-color: black;" text="Home" textFill="WHITE" underline="true">
                <font>
                   <Font size="17.0" />
                </font>
             </Button>
-            <Button fx:id="botonMenu" layoutX="413.0" layoutY="13.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Menú" textFill="WHITE" underline="true" onAction="#irAPantallaMenu">
+            <Button fx:id="botonMenu" layoutX="413.0" layoutY="13.0" mnemonicParsing="false" onAction="#irAPantallaMenu" style="-fx-background-color: black;" text="Menú" textFill="WHITE" underline="true">
                <font>
                   <Font size="17.0" />
                </font>
@@ -39,7 +39,7 @@
                   <Font size="36.0" />
                </font>
             </Text>
-            <Pane layoutX="22.0" layoutY="228.0" prefHeight="38.0" prefWidth="105.0" style="-fx-background-color: blue;">
+            <Pane layoutX="22.0" layoutY="247.0" prefHeight="38.0" prefWidth="105.0" style="-fx-background-color: blue;">
                <children>
                   <Text fx:id="textoPrecioAgua" fill="WHITE" layoutX="40.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
                      <font>
@@ -48,7 +48,7 @@
                   </Text>
                </children>
             </Pane>
-            <Pane layoutX="134.0" layoutY="228.0" prefHeight="38.0" prefWidth="105.0" style="-fx-background-color: blue;">
+            <Pane layoutX="134.0" layoutY="247.0" prefHeight="38.0" prefWidth="105.0" style="-fx-background-color: blue;">
                <children>
                   <Text fx:id="textoPrecioAguaGas" fill="WHITE" layoutX="35.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
                      <font>
@@ -57,7 +57,7 @@
                   </Text>
                </children>
             </Pane>
-            <Pane layoutX="360.0" layoutY="228.0" prefHeight="38.0" prefWidth="105.0" style="-fx-background-color: blue;">
+            <Pane layoutX="360.0" layoutY="247.0" prefHeight="38.0" prefWidth="105.0" style="-fx-background-color: blue;">
                <children>
                   <Text fx:id="textoPrecioChampagne" fill="WHITE" layoutX="39.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
                      <font>
@@ -68,9 +68,34 @@
             </Pane>
             <Button fx:id="botonImagenAgua" layoutX="22.0" layoutY="98.0" mnemonicParsing="false" prefHeight="107.0" prefWidth="105.0" style="-fx-background-color: white;" />
             <Button fx:id="botonImagenAguaGas" layoutX="134.0" layoutY="98.0" mnemonicParsing="false" prefHeight="107.0" prefWidth="105.0" style="-fx-background-color: white;" />
-            <Button fx:id="botonImagenVino" layoutX="247.0" layoutY="98.0" mnemonicParsing="false" prefHeight="107.0" prefWidth="105.0" style="-fx-background-color: white;" onAction="#irAPantallaVinos"/>
+            <Button fx:id="botonImagenVino" layoutX="247.0" layoutY="98.0" mnemonicParsing="false" onAction="#irAPantallaVinos" prefHeight="107.0" prefWidth="105.0" style="-fx-background-color: white;" />
             <Button fx:id="botonImagenChampagne" layoutX="360.0" layoutY="98.0" mnemonicParsing="false" prefHeight="107.0" prefWidth="105.0" style="-fx-background-color: white;" />
-            <Button fx:id="botonImagenGaseosa" layoutX="474.0" layoutY="98.0" mnemonicParsing="false" prefHeight="107.0" prefWidth="105.0" style="-fx-background-color: white;" onAction="#irAPantallaGaseosas"/>
+            <Button fx:id="botonImagenGaseosa" layoutX="474.0" layoutY="98.0" mnemonicParsing="false" onAction="#irAPantallaGaseosas" prefHeight="107.0" prefWidth="105.0" style="-fx-background-color: white;" />
+            <Text fill="#004aad" layoutX="54.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agua">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text fill="#004aad" layoutX="133.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agua con gas">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text fill="#004aad" layoutX="277.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vinos">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text fill="#004aad" layoutX="364.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Champagne">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text fill="#004aad" layoutX="494.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gaseosa">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
          </children>
       </Pane>
    </children>
