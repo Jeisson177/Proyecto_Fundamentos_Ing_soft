@@ -271,6 +271,9 @@ INSERT INTO PLATO (nombre, descripcion, precio, categoria) VALUES('Pizza Cuatro 
 INSERT INTO PLATO (nombre, descripcion, precio, categoria) VALUES('Pizza Margarita Familiar', 'Pizza clasica con salsa de tomate, mozzarella y albahaca', 18000,'Plato fuerte');
 INSERT INTO PLATO (nombre, descripcion, precio, categoria) VALUES('Pizza Pepperoni Familiar', 'Pizza con pepperoni, salsa de tomate y mozzarella',18000, 'Plato fuerte');
 INSERT INTO PLATO (nombre, descripcion, precio, categoria) VALUES('Pizza Napolitana Familiar', 'Pizza con anchoas, aceitunas y tomate triturado',18000,'Plato fuerte');
+INSERT INTO PLATO (nombre, descripcion, precio, categoria) VALUES('Coca cola', 'Botella de coca cola', 7000,'Bebida'); 
+INSERT INTO PLATO (nombre, descripcion, precio, categoria) VALUES('Fanta', 'Fanta en botella', 5000,'Bebida');
+INSERT INTO PLATO (nombre, descripcion, precio, categoria) VALUES('Quatro', 'Quatro en botella', 6000,'Bebida');
 
 -- Inserción INGREDIENTE_plato
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (1, 1, 100); -- Avellana (100g)
@@ -417,8 +420,9 @@ INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (45, 5
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (45, 56, 300);  -- Mozzarella (300g)
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (45, 60, 90);   -- Pepperoni (90g)
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (46, 58, 150);   -- Salsa de tomate (150ml)
-INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (46, 57, 60);   -- Anchoas (60g)
-INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (46, 38, 30);   -- Aceitunas negras (30g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (47, 86, 1);   -- cocacola (1u)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (48, 87, 1);   -- Fanta (1u)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (49, 85, 1);   -- Quatro negras (1u)
 
 -- Inserciones en la tabla INGREDIENTE_INV
 INSERT INTO INGREDIENTE_INV (ID_INGREDIENTE, CANTIDAD_INV, FECHA_VEN, FECHA_INGRESO, UNIDAD) VALUES(1, 5000, '2025-12-31', '2024-09-22', 'g');   -- Avellana
