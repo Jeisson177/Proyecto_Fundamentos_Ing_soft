@@ -40,22 +40,22 @@
       </AnchorPane>
       <ImageView fitHeight="280.0" fitWidth="148.0" layoutY="65.0" pickOnBounds="true">
          <image>
-            <Image url="@../imagenes/pizza.png" />
+            <Image url="@../imagenes/PlatosFuertes/pizza.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="280.0" fitWidth="160.0" layoutX="148.0" layoutY="65.0" pickOnBounds="true">
          <image>
-            <Image url="@../imagenes/Pasta.png" />
+            <Image url="@../imagenes/PlatosFuertes/Pasta.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="280.0" fitWidth="154.0" layoutX="308.0" layoutY="66.0" pickOnBounds="true">
          <image>
-            <Image url="@../imagenes/L1.png" />
+            <Image url="@../imagenes/PlatosFuertes/L1.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="280.0" fitWidth="148.0" layoutX="460.0" layoutY="65.0" pickOnBounds="true">
          <image>
-            <Image url="@../imagenes/risoto.png" />
+            <Image url="@../imagenes/PlatosFuertes/risoto.png" />
          </image>
       </ImageView>
       <Button fx:id="selecPizza" layoutX="14.0" layoutY="159.0" mnemonicParsing="false" onAction="#onClickPizza" style="-fx-background-color: transpare; -fx-text-fill: white; -fx-font-size: 30px; -fx-font-weight: bold;" text="Pizzas">

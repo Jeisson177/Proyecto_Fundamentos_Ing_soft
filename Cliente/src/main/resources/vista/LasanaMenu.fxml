@@ -42,17 +42,17 @@
       </Text>
       <ImageView fitHeight="123.0" fitWidth="142.0" layoutX="33.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../imagenes/BOLOÑESA.png" />
+            <Image url="@../imagenes/PlatosFuertes/BOLOÑESA.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="123.0" fitWidth="126.0" layoutX="240.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../imagenes/Mixta.png" />
+            <Image url="@../imagenes/PlatosFuertes/Mixta.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="123.0" fitWidth="124.0" layoutX="431.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../imagenes/pollo.png" />
+            <Image url="@../imagenes/PlatosFuertes/pollo.png" />
          </image>
       </ImageView>
       <Button fx:id="LasBolonesa" layoutX="44.0" layoutY="270.0" mnemonicParsing="false" onAction="#onClickLasBolonesa" text="Lasaña Boloñesa" />

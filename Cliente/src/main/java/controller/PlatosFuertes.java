@@ -29,11 +29,10 @@ public class PlatosFuertes {
     @FXML
     public Button selecMenu;
     @FXML
-<<<<<<< HEAD
+
     public Button selecVolver;
     @FXML
-=======
->>>>>>> develop
+
     public Button selecHome;
     @FXML
     public Button selecReservar;
@@ -193,7 +192,7 @@ public class PlatosFuertes {
             stage.setTitle("Comprar Pizza pepperoni"); // Título de la nueva ventana
             stage.show();
 
-              Image imgPep = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/resources/imagenes/Pep.png")));
+              Image imgPep = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/imagenes/PlatosFuertes/Pep.png")));
               pizzaSelec.setImage(imgPep);
 
 

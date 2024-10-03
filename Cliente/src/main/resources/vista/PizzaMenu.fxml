@@ -38,17 +38,17 @@
       </Pane>
       <ImageView fitHeight="134.0" fitWidth="146.0" layoutX="29.0" layoutY="133.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../imagenes/4quesos.png" />
+            <Image url="@../imagenes/PlatosFuertes/4quesos.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="141.0" fitWidth="137.0" layoutX="231.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../imagenes/peper.png" />
+            <Image url="@../imagenes/PlatosFuertes/peper.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="134.0" fitWidth="137.0" layoutX="424.0" layoutY="133.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../imagenes/Margarita.png" />
+            <Image url="@../imagenes/PlatosFuertes/Margarita.png" />
          </image>
       </ImageView>
       <Text fill="#1606ff" layoutX="14.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Platos Fuertes: Pizzas">
