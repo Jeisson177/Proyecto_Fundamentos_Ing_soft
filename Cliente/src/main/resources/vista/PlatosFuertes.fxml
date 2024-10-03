@@ -18,7 +18,7 @@
             </Text>
             <ImageView fitHeight="48.0" fitWidth="51.0" layoutX="538.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../imagenes/ig.png" />
+                  <Image url="@../imagenes/PlatosFuertes/ig.png" />
                </image>
             </ImageView>
             <Button fx:id="selecHome" layoutX="268.0" layoutY="19.0" mnemonicParsing="false" onAction="#onClickHome" style="-fx-background-color: black; -fx-text-fill: WHITE; -fx-font-style: italic;" text="Home" underline="true">
@@ -38,26 +38,10 @@
             </Button>
          </children>
       </AnchorPane>
-      <ImageView fitHeight="280.0" fitWidth="148.0" layoutY="65.0" pickOnBounds="true">
-         <image>
-            <Image url="@../imagenes/PlatosFuertes/pizza.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="280.0" fitWidth="160.0" layoutX="148.0" layoutY="65.0" pickOnBounds="true">
-         <image>
-            <Image url="@../imagenes/PlatosFuertes/Pasta.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="280.0" fitWidth="154.0" layoutX="308.0" layoutY="66.0" pickOnBounds="true">
-         <image>
-            <Image url="@../imagenes/PlatosFuertes/L1.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="280.0" fitWidth="148.0" layoutX="460.0" layoutY="65.0" pickOnBounds="true">
-         <image>
-            <Image url="@../imagenes/PlatosFuertes/risoto.png" />
-         </image>
-      </ImageView>
+      <ImageView fx:id="Pizza" fitHeight="280.0" fitWidth="148.0" layoutY="65.0" pickOnBounds="true" />
+      <ImageView fx:id="Pasta" fitHeight="280.0" fitWidth="160.0" layoutX="148.0" layoutY="65.0" pickOnBounds="true" />
+      <ImageView fx:id="Lasagna" fitHeight="280.0" fitWidth="154.0" layoutX="308.0" layoutY="66.0" pickOnBounds="true" />
+      <ImageView fx:id="Risoto" fitHeight="280.0" fitWidth="148.0" layoutX="460.0" layoutY="65.0" pickOnBounds="true" />
       <Button fx:id="selecPizza" layoutX="14.0" layoutY="159.0" mnemonicParsing="false" onAction="#onClickPizza" style="-fx-background-color: transpare; -fx-text-fill: white; -fx-font-size: 30px; -fx-font-weight: bold;" text="Pizzas">
          <font>
             <Font name="Arial Rounded MT Bold" size="10.0" />

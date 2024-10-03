@@ -64,9 +64,38 @@ public class PlatosFuertes {
     public Button risotoHongos;
     @FXML
     public ImageView pizzaSelec;
+    @FXML
+    public ImageView Pizza;
+    @FXML
+    public ImageView Lasagna;
+    @FXML
+    public ImageView Pasta;
+    @FXML
+    public ImageView Risoto;
+    @FXML
+    public ImageView pmargarita;
+    @FXML
+    public ImageView p4quesos;
+    @FXML
+    public ImageView pperoni;
+
 
     public void initialize(){
+        Image pizza = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/imagenes/PlatosFuertes/pizza.png")));
+        Image pasta= new Image(Objects.requireNonNull(getClass().getResourceAsStream("/imagenes/PlatosFuertes/Pasta.png")));
+        Image lasagna= new Image(Objects.requireNonNull(getClass().getResourceAsStream("/imagenes/PlatosFuertes/L1.png")));
+        Image risoto= new Image(Objects.requireNonNull(getClass().getResourceAsStream("/imagenes/PlatosFuertes/risoto.png")));
+        Image margarita= new Image(Objects.requireNonNull(getClass().getResourceAsStream("/imagenes/PlatosFuertes/Margarita.png")));
+        Image quesos = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/imagenes/PlatosFuertes/4quesos.png")));
+        Image peperoni = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/imagenes/PlatosFuertes/peper.png")));
 
+        Pizza.setImage(pizza);
+        Pasta.setImage(pasta);
+        Lasagna.setImage(lasagna);
+        Risoto.setImage(risoto);
+        pmargarita.setImage(margarita);
+        p4quesos.setImage(quesos);
+        pperoni.setImage(peperoni);
 
     }
 
@@ -177,35 +206,6 @@ public class PlatosFuertes {
     public void onClickReservar(ActionEvent actionEvent) {
     }
 
-    public void onClickQuesos(ActionEvent actionEvent) {
-    }
-
-    public void onClickPepperoni(ActionEvent actionEvent) {
-          try {
-            // Carga la nueva ventana
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/CompraPizza.fxml"));
-            Parent root = loader.load();
-
-            // Crea una nueva escena
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Comprar Pizza pepperoni"); // Título de la nueva ventana
-            stage.show();
-
-              Image imgPep = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/imagenes/PlatosFuertes/Pep.png")));
-              pizzaSelec.setImage(imgPep);
-
-
-              //Opcionalmente, cierra la ventana actual
-            ((Stage) Ppepperoni.getScene().getWindow()).close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-    }
-
-    public void onClickMargarita(ActionEvent actionEvent) {
-    }
 
     public void onClickCarbonara(ActionEvent actionEvent) {
     }
@@ -236,7 +236,21 @@ public class PlatosFuertes {
 
     public void onClickHongos(ActionEvent actionEvent) {
     }
+    @FXML
+    public void seleccionarpizza(ActionEvent actionEvent) {
+        Button clickedButton = (Button) actionEvent.getSource(); // Obtener el botón que se presionó
+        String buttonText = clickedButton.getText(); // Obtener el texto del botón
 
+        // Llamar a una función con el botón presionado como parámetro
+        processPizzaSelection(buttonText);
+    }
+
+    private void processPizzaSelection(String pizzaType) {
+
+        if(pizzaType=="Pizza Pepperoni"){
+
+        }
+    }
 }
 
    
