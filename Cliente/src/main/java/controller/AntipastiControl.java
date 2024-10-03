@@ -76,10 +76,10 @@ public class AntipastiControl {
     }
 
     private void cargarPreciosEntrada() {
-        String url = "jdbc:mysql://localhost:3307/proyecto ingesoft";
+        //String url = "jdbc:mysql://localhost:3307/proyecto ingesoft";
+        String url = "jdbc:mysql://localhost:3306/proyecto ingesoft";
         String user = "root";
         String password = "cl";
-
 
         try (Connection connection = DriverManager.getConnection(url, user, password)) {
             String query = "SELECT NOMBRE, PRECIO FROM PLATO WHERE CATEGORIA = 'Entrada'";
