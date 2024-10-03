@@ -19,9 +19,13 @@ public class MenuControl {
     public ImageView platoFuerteImage;
     public ImageView postresImage;
     public ImageView bebidasImage;
+<<<<<<< HEAD
     public Button menuBoton;
     public Button reservarBoton;
     public Button homeBoton;
+=======
+    public Button botonbebidasImage;
+>>>>>>> develop
 
     @FXML
     public void initialize() {
@@ -58,15 +62,24 @@ public class MenuControl {
         }
     }
 
+<<<<<<< HEAD
     public void menuButtonClick(ActionEvent actionEvent) {
         try {
             // Carga la nueva ventana
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Menu.fxml"));
+=======
+    @FXML
+    private void abrirBebidas() {
+        try {
+            // Carga la nueva ventana
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Bebidas.fxml"));
+>>>>>>> develop
             Parent root = loader.load();
 
             // Crea una nueva escena
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
+<<<<<<< HEAD
             stage.setTitle("Menu"); // Título de la nueva ventana
             stage.show();
 
@@ -111,6 +124,13 @@ public class MenuControl {
 
             // Opcionalmente, cierra la ventana actual
             ((Stage) homeBoton.getScene().getWindow()).close();
+=======
+            stage.setTitle("Bebidas"); // Título de la nueva ventana
+            stage.show();
+
+            // Opcionalmente, cierra la ventana actual
+            ((Stage) botonbebidasImage.getScene().getWindow()).close();
+>>>>>>> develop
         } catch (Exception e) {
             e.printStackTrace();
         }
