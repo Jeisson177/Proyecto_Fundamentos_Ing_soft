@@ -171,6 +171,23 @@ public class PlatosFuertes {
     }
 
     public void onClickPepperoni(ActionEvent actionEvent) {
+          try {
+            // Carga la nueva ventana
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/CompraPizza.fxml"));
+            Parent root = loader.load();
+
+            // Crea una nueva escena
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Comprar Pizza"); // Título de la nueva ventana
+            stage.show();
+
+           //Opcionalmente, cierra la ventana actual
+            ((Stage) Ppepperoni.getScene().getWindow()).close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
     public void onClickMargarita(ActionEvent actionEvent) {
