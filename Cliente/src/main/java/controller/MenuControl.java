@@ -18,6 +18,7 @@ public class MenuControl {
     public ImageView platoFuerteImage;
     public ImageView postresImage;
     public ImageView bebidasImage;
+    public Button botonbebidasImage;
 
     @FXML
     public void initialize() {
@@ -49,6 +50,26 @@ public class MenuControl {
 
             // Opcionalmente, cierra la ventana actual
             ((Stage) antipastiMenu.getScene().getWindow()).close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void abrirBebidas() {
+        try {
+            // Carga la nueva ventana
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Bebidas.fxml"));
+            Parent root = loader.load();
+
+            // Crea una nueva escena
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Bebidas"); // Título de la nueva ventana
+            stage.show();
+
+            // Opcionalmente, cierra la ventana actual
+            ((Stage) botonbebidasImage.getScene().getWindow()).close();
         } catch (Exception e) {
             e.printStackTrace();
         }
