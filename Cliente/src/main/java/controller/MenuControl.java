@@ -19,13 +19,8 @@ public class MenuControl {
     public ImageView platoFuerteImage;
     public ImageView postresImage;
     public ImageView bebidasImage;
-<<<<<<< HEAD
-    public Button menuBoton;
-    public Button reservarBoton;
-    public Button homeBoton;
-=======
     public Button botonbebidasImage;
->>>>>>> develop
+    public Button botonMenu;
 
     @FXML
     public void initialize() {
@@ -43,7 +38,7 @@ public class MenuControl {
     }
 
     @FXML
-    private void onHelloButtonClick() {
+    private void abrirAntipasti() {
         try {
             // Carga la nueva ventana
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Antipasti.fxml"));
@@ -62,77 +57,43 @@ public class MenuControl {
         }
     }
 
-<<<<<<< HEAD
-    public void menuButtonClick(ActionEvent actionEvent) {
-        try {
-            // Carga la nueva ventana
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Menu.fxml"));
-=======
     @FXML
     private void abrirBebidas() {
         try {
             // Carga la nueva ventana
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Bebidas.fxml"));
->>>>>>> develop
             Parent root = loader.load();
 
             // Crea una nueva escena
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
-<<<<<<< HEAD
-            stage.setTitle("Menu"); // Título de la nueva ventana
-            stage.show();
-
-            // Opcionalmente, cierra la ventana actual
-            ((Stage) menuBoton.getScene().getWindow()).close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-    }
-
-    public void reservarButtonClick(ActionEvent actionEvent) {
-        try {
-            // Carga la nueva ventana
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/ReservaFecha.fxml"));
-            Parent root = loader.load();
-
-            // Crea una nueva escena
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Reservar"); // Título de la nueva ventana
-            stage.show();
-
-            // Opcionalmente, cierra la ventana actual
-            ((Stage) reservarBoton.getScene().getWindow()).close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void homeButtonClick(ActionEvent actionEvent) {
-        try {
-            // Carga la nueva ventana
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/ReservaFecha.fxml"));
-            Parent root = loader.load();
-
-            // Crea una nueva escena
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Reserva"); // Título de la nueva ventana
-            stage.show();
-
-            // Opcionalmente, cierra la ventana actual
-            ((Stage) homeBoton.getScene().getWindow()).close();
-=======
             stage.setTitle("Bebidas"); // Título de la nueva ventana
             stage.show();
 
             // Opcionalmente, cierra la ventana actual
             ((Stage) botonbebidasImage.getScene().getWindow()).close();
->>>>>>> develop
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public void irMenu(ActionEvent actionEvent) {
+        try {
+            // Carga la nueva ventana
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Menu.fxml"));
+            Parent root = loader.load();
+
+            // Crea una nueva escena
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Menu"); // Título de la nueva ventana
+            stage.show();
+
+            // Opcionalmente, cierra la ventana actual
+            ((Stage) botonMenu.getScene().getWindow()).close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 }
