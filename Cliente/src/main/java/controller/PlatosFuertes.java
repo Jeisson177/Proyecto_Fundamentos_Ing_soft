@@ -65,6 +65,7 @@ public class PlatosFuertes {
 
     public void initialize(){
 
+
     }
 
     public void onClickPizza(ActionEvent actionEvent) {
@@ -186,17 +187,18 @@ public class PlatosFuertes {
             // Crea una nueva escena
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
-            stage.setTitle("Comprar Pizza"); // Título de la nueva ventana
+            stage.setTitle("Comprar Pizza pepperoni"); // Título de la nueva ventana
             stage.show();
 
-           //Opcionalmente, cierra la ventana actual
+              Image imgPep = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/resources/imagenes/Pep.png")));
+              pizzaSelec.setImage(imgPep);
+
+
+              //Opcionalmente, cierra la ventana actual
             ((Stage) Ppepperoni.getScene().getWindow()).close();
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        Image imgPep = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/resources/imagenes/Pep.png")));
-        pizzaSelec.setImage(imgPep);
 
     }
 
