@@ -64,7 +64,6 @@ public class PlatosFuertes {
     public ImageView pizzaSelec;
 
     public void initialize(){
-        Image imgPep = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/resources/imagenes/Pep.png")));
 
     }
 
@@ -190,12 +189,14 @@ public class PlatosFuertes {
             stage.setTitle("Comprar Pizza"); // Título de la nueva ventana
             stage.show();
 
-            pizzaSelec.setImage(imgPep);
            //Opcionalmente, cierra la ventana actual
             ((Stage) Ppepperoni.getScene().getWindow()).close();
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        Image imgPep = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/resources/imagenes/Pep.png")));
+        pizzaSelec.setImage(imgPep);
 
     }
 
