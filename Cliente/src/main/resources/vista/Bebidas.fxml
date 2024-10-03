@@ -10,12 +10,12 @@
    <children>
       <Pane prefHeight="63.0" prefWidth="600.0" style="-fx-background-color: Black;">
          <children>
-            <Button fx:id="botonHome" layoutX="331.0" layoutY="13.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Home" textFill="WHITE" underline="true">
+            <Button fx:id="botonHome" layoutX="331.0" layoutY="13.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Home" textFill="WHITE" underline="true" onAction="#irAPantallaHome">
                <font>
                   <Font size="17.0" />
                </font>
             </Button>
-            <Button fx:id="botonMenu" layoutX="413.0" layoutY="13.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Menú" textFill="WHITE" underline="true">
+            <Button fx:id="botonMenu" layoutX="413.0" layoutY="13.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Menú" textFill="WHITE" underline="true" onAction="#irAPantallaMenu">
                <font>
                   <Font size="17.0" />
                </font>
@@ -68,9 +68,9 @@
             </Pane>
             <Button fx:id="botonImagenAgua" layoutX="22.0" layoutY="98.0" mnemonicParsing="false" prefHeight="107.0" prefWidth="105.0" style="-fx-background-color: white;" />
             <Button fx:id="botonImagenAguaGas" layoutX="134.0" layoutY="98.0" mnemonicParsing="false" prefHeight="107.0" prefWidth="105.0" style="-fx-background-color: white;" />
-            <Button fx:id="botonImagenVino" layoutX="247.0" layoutY="98.0" mnemonicParsing="false" prefHeight="107.0" prefWidth="105.0" style="-fx-background-color: white;" />
+            <Button fx:id="botonImagenVino" layoutX="247.0" layoutY="98.0" mnemonicParsing="false" prefHeight="107.0" prefWidth="105.0" style="-fx-background-color: white;" onAction="#irAPantallaVinos"/>
             <Button fx:id="botonImagenChampagne" layoutX="360.0" layoutY="98.0" mnemonicParsing="false" prefHeight="107.0" prefWidth="105.0" style="-fx-background-color: white;" />
-            <Button fx:id="botonImagenGaseosa" layoutX="474.0" layoutY="98.0" mnemonicParsing="false" prefHeight="107.0" prefWidth="105.0" style="-fx-background-color: white;" />
+            <Button fx:id="botonImagenGaseosa" layoutX="474.0" layoutY="98.0" mnemonicParsing="false" prefHeight="107.0" prefWidth="105.0" style="-fx-background-color: white;" onAction="#irAPantallaGaseosas"/>
          </children>
       </Pane>
    </children>

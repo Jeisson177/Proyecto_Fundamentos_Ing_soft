@@ -17,7 +17,7 @@
                   <Font size="24.0" />
                </font>
             </Text>
-            <Button fx:id="botonHome" layoutX="309.0" layoutY="20.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Home" textFill="WHITE" underline="true">
+            <Button fx:id="botonHome" layoutX="309.0" layoutY="20.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Home" textFill="WHITE" underline="true" onAction="#irAPantallaHome">
                <font>
                   <Font size="17.0" />
                </font>
@@ -27,7 +27,7 @@
                   <Font size="17.0" />
                </font>
             </Button>
-            <Button fx:id="botonMenu" layoutX="400.0" layoutY="22.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Menú" textFill="WHITE" underline="true">
+            <Button fx:id="botonMenu" layoutX="400.0" layoutY="22.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Menú" textFill="WHITE" underline="true" onAction="#irAPantallaMenu">
                <font>
                   <Font size="17.0" />
                </font>
@@ -46,7 +46,7 @@
                   <Font size="22.0" />
                </font>
             </Text>
-            <Button fx:id="botonRegresar" layoutX="493.0" layoutY="14.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="86.0" style="-fx-background-color: blue;" text="Regresar" textFill="WHITE" />
+            <Button fx:id="botonRegresar" layoutX="493.0" layoutY="14.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="86.0" style="-fx-background-color: blue;" text="Regresar" textFill="WHITE" onAction="#irAPantallaBebidas"/>
             <Pane layoutX="257.0" layoutY="217.0" prefHeight="29.0" prefWidth="68.0" style="-fx-background-color: blue;">
                <children>
                   <Text fx:id="textoPrecio4" fill="WHITE" layoutX="23.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
