@@ -17,17 +17,17 @@
                   <Font size="24.0" />
                </font>
             </Text>
-            <Button layoutX="309.0" layoutY="20.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Home" textFill="WHITE" underline="true">
+            <Button fx:id="botonHome" layoutX="309.0" layoutY="20.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Home" textFill="WHITE" underline="true">
                <font>
                   <Font size="17.0" />
                </font>
             </Button>
-            <Button layoutX="492.0" layoutY="20.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Reservar" textFill="WHITE" underline="true">
+            <Button fx:id="botonReservar" layoutX="492.0" layoutY="20.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Reservar" textFill="WHITE" underline="true">
                <font>
                   <Font size="17.0" />
                </font>
             </Button>
-            <Button layoutX="400.0" layoutY="22.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Menú" textFill="WHITE" underline="true">
+            <Button fx:id="botonMenu" layoutX="400.0" layoutY="22.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Menú" textFill="WHITE" underline="true">
                <font>
                   <Font size="17.0" />
                </font>
@@ -46,34 +46,40 @@
                   <Font size="22.0" />
                </font>
             </Text>
-            <Button layoutX="493.0" layoutY="14.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="86.0" style="-fx-background-color: blue;" text="Regresar" textFill="WHITE" />
+            <Button fx:id="botonRegresar" layoutX="493.0" layoutY="14.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="86.0" style="-fx-background-color: blue;" text="Regresar" textFill="WHITE" />
             <Pane layoutX="257.0" layoutY="217.0" prefHeight="29.0" prefWidth="68.0" style="-fx-background-color: blue;">
                <children>
-                  <Text fill="WHITE" layoutX="23.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="textoPrecio4" fill="WHITE" layoutX="23.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                </children>
             </Pane>
             <Pane layoutX="482.0" layoutY="217.0" prefHeight="29.0" prefWidth="68.0" style="-fx-background-color: blue;">
                <children>
-                  <Text fill="WHITE" layoutX="23.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="textoPrecioFanta" fill="WHITE" layoutX="23.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                </children>
             </Pane>
             <Pane layoutX="371.0" layoutY="217.0" prefHeight="29.0" prefWidth="68.0" style="-fx-background-color: blue;">
                <children>
-                  <Text fill="WHITE" layoutX="23.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="textoPrecioCoca" fill="WHITE" layoutX="23.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                </children>
             </Pane>
-            <Button id="4" layoutX="246.0" layoutY="118.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="90.0" style="-fx-background-color: white;" />
-            <Button id="cocacola" layoutX="360.0" layoutY="118.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="90.0" style="-fx-background-color: white;" />
-            <Button id="fanta" layoutX="471.0" layoutY="118.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="90.0" style="-fx-background-color: white;" />
-              <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="250.0" layoutY="101.0" pickOnBounds="true" preserveRatio="false">
-                  <Image url="@../Imagenes/Gaseosas/quatro.png" />
-              </ImageView>
-              <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="371.0" layoutY="101.0" pickOnBounds="true" preserveRatio="false">
-                  <Image url="@../Imagenes/Gaseosas/cocacola.png" />
-              </ImageView>
-              <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="482.0" layoutY="101.0" pickOnBounds="true" preserveRatio="false">
-                  <Image url="@../Imagenes/Gaseosas/fanta.png" />
-              </ImageView>
+            <Text fill="#004aad" layoutX="271.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quatro">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text fill="#004aad" layoutX="379.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CocaCola">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Text fill="#004aad" layoutX="500.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fanta">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+            <Button fx:id="botonImagenQuatro" layoutX="248.0" layoutY="88.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="86.0" style="-fx-background-color: white;" />
+            <Button fx:id="botonImagenCoca" layoutX="362.0" layoutY="88.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="86.0" style="-fx-background-color: white;" />
+            <Button fx:id="botonImagenFanta" layoutX="473.0" layoutY="88.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="86.0" style="-fx-background-color: white;" />
          </children>
       </Pane>
    </children>
