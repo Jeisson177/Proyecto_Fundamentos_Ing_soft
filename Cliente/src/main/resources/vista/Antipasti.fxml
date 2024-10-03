@@ -6,7 +6,7 @@
 
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.image.Image?>
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Antipasti">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AntipastiControl">
     <Pane prefHeight="61.0" prefWidth="722.0" style="-fx-background-color: black;">
         <children>
             <Text fill="WHITE" layoutX="14.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0"
@@ -35,16 +35,7 @@
             </Button>
         </children>
     </Pane>
-    <Pane layoutY="60.0" prefHeight="60.0" prefWidth="722.0" style="-fx-background-color: WHITE;">
-        <children>
-            <Button  fx:id="volverMenu" layoutX="365.0" layoutY="9.0" mnemonicParsing="false" onAction="#onHelloButtonClick" style="-fx-background-color: black;" text="Regresar a menú" textFill="WHITE" underline="true">
-                <font>
-                    <Font size="17.0" />
-                </font>
-            </Button>
-        </children>
-    </Pane>
-    <GridPane alignment="CENTER" layoutY="120.0" prefHeight="280.0" prefWidth="722.0" >
+    <GridPane alignment="CENTER" layoutY="90.0" prefHeight="280.0" prefWidth="722.0" >
         <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -65,7 +56,7 @@
                     </graphic>
                 </Button>
                 <Label text="CARPACCIO DE RES"/>
-                <Label text="8 000 COP"/>
+                <Label fx:id="carpaccioResPrecio"/>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" alignment="CENTER">
                 <children>
@@ -75,7 +66,7 @@
                         </graphic>
                     </Button>
                     <Label text="CARPACCIO DE SALMÓN" />
-                    <Label text="10 000 COP" />
+                    <Label fx:id="carpaccioSalmonPrecio"/>
                 </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" alignment="CENTER">
@@ -86,7 +77,7 @@
                         </graphic>
                     </Button>
                     <Label text="FOCACCIA GENOVESE" />
-                    <Label text="2 000 COP" />
+                    <Label fx:id="focacciaGenovesePrecio"/>
                 </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" alignment="CENTER">
@@ -97,7 +88,7 @@
                         </graphic>
                     </Button>
                     <Label text="FOCACCIA DOLCE" />
-                    <Label text="3 000 COP" />
+                    <Label fx:id="focacciaDolcePrecio"/>
                 </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4" alignment="CENTER">
@@ -108,7 +99,7 @@
                         </graphic>
                     </Button>
                     <Label text="FOCACCIA VENETA" />
-                    <Label text="5 000 COP" />
+                    <Label fx:id="focacciaVenetaPrecio"/>
                 </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1" alignment="CENTER" >
@@ -119,7 +110,7 @@
                         </graphic>
                     </Button>
                     <Label text="FOCACCIA PUGLIESE" />
-                    <Label text="3 000 COP" />
+                    <Label fx:id="focacciaPugliesePrecio"/>
                 </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1" alignment="CENTER">
@@ -130,7 +121,7 @@
                         </graphic>
                     </Button>
                     <Label text="ENSALADA CESAR ROMANA" />
-                    <Label text="4 000 COP" />
+                    <Label fx:id="ensaladaCesarRomanaPrecio"/>
                 </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1" alignment="CENTER">
@@ -141,7 +132,7 @@
                         </graphic>
                     </Button>
                     <Label text="ENSALADA PORTOBELLO" />
-                    <Label text="5 000 COP" />
+                    <Label  fx:id="ensaldaPortobelloPrecio"/>
                 </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="1" alignment="CENTER" >
@@ -152,7 +143,7 @@
                         </graphic>
                     </Button>
                     <Label text="ENSALADA VENTRESCA" />
-                    <Label text="2 000 COP" />
+                    <Label fx:id="ensaladaVentrescaPrecio"/>
                 </children>
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4" GridPane.rowIndex="1" alignment="CENTER">
@@ -163,7 +154,7 @@
                         </graphic>
                     </Button>
                     <Label text="TABLA DE QUESOS" />
-                    <Label text="15 000 COP" />
+                    <Label fx:id="tablaQuesosPrecio" />
                 </children>
             </VBox>
         </children>
