@@ -7,9 +7,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+
+import java.util.Objects;
 
 public class PlatosFuertes {
 
@@ -59,6 +62,11 @@ public class PlatosFuertes {
     public Button risotoHongos;
     @FXML
     public ImageView pizzaSelec;
+
+    public void initialize(){
+        Image imgPep = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/resources/imagenes/Pep.png")));
+
+    }
 
     public void onClickPizza(ActionEvent actionEvent) {
         try {
@@ -182,6 +190,7 @@ public class PlatosFuertes {
             stage.setTitle("Comprar Pizza"); // Título de la nueva ventana
             stage.show();
 
+            pizzaSelec.setImage(imgPep);
            //Opcionalmente, cierra la ventana actual
             ((Stage) Ppepperoni.getScene().getWindow()).close();
         } catch (Exception e) {
