@@ -8,6 +8,9 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import services.GestionarReserva;
+import java.util.Set;
+import java.util.HashSet;
+
 
 import java.time.LocalDate;
 import java.util.List;

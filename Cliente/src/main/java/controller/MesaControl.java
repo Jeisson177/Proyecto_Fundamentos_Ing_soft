@@ -12,7 +12,9 @@ import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 import java.sql.*;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 public class MesaControl {
 
@@ -29,6 +31,7 @@ public class MesaControl {
     public Button bntm1, bntm2, bntm3, bntm4, bntm5, bntm6, bntm7, bntm8, bntm9, bntm10;
     @FXML
     public Button bntm11, bntm12, bntm13, bntm14, bntm15, bntm16, bntm17, bntm18, bntm19;
+    public Button btnHorarios;
 
 
     private int mesaSeleccionada=0;
@@ -45,13 +48,17 @@ public class MesaControl {
     }
 
     private void cargarPosicion() {
-            String url = "jdbc:mysql://localhost:3307/proyecto ingesoft";
+            //String url = "jdbc:mysql://localhost:3307/proyecto ingesoft";
+            String url = "jdbc:mysql://localhost:3306/proyecto ingesoft";
             String user = "root";
             String password = "cl";
 
 
             try (Connection connection = DriverManager.getConnection(url, user, password)) {
                 String query = "SELECT ID_MESA, UBICACION_X, UBICACION_Y FROM MESA";
+
+
+                // Ejecutar la consulta para ubicación de los botones de mesas
                 PreparedStatement statement = connection.prepareStatement(query);
                 ResultSet resultSet = statement.executeQuery();
 
@@ -60,6 +67,7 @@ public class MesaControl {
                     double ubicacionX = resultSet.getDouble("UBICACION_X");
                     double ubicacionY = resultSet.getDouble("UBICACION_Y");
 
+
                     // Buscar el botón correspondiente a la mesa en función del ID de la mesa
                     Button mesaButton = getMesaButton(idMesa);
 
@@ -67,9 +75,6 @@ public class MesaControl {
                         // Asignar la posición de la mesa desde la base de datos
                         mesaButton.setLayoutX(ubicacionX);
                         mesaButton.setLayoutY(ubicacionY);
-
-                        // Si la mesa está reservada, ocultar el botón, de lo contrario hacerlo visible
-                        mesaButton.setVisible(true);
                     }
                 }
             } catch (SQLException e) {
@@ -112,22 +117,7 @@ public class MesaControl {
     }
     @FXML
     public void irReserva(ActionEvent actionEvent) {
-        try {
-            // Carga la nueva ventana
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/ReservaFecha.fxml"));
-            Parent root = loader.load();
-
-            // Crea una nueva escena
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Reservar"); // Título de la nueva ventana
-            stage.show();
-
-            // Opcionalmente, cierra la ventana actual
-            ((Stage) btnReservar.getScene().getWindow()).close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+       
     }
     @FXML
     public void IrMenu(ActionEvent actionEvent) {
@@ -162,5 +152,24 @@ public class MesaControl {
     // Método para obtener la mesa seleccionada (número entero)
     public int getMesa() {
         return mesaSeleccionada;
+    }
+
+    public void irHorarios(ActionEvent actionEvent) {
+        try {
+            // Carga la nueva ventana
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/ReservaFecha.fxml"));
+            Parent root = loader.load();
+
+            // Crea una nueva escena
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Reservar"); // Título de la nueva ventana
+            stage.show();
+
+            // Opcionalmente, cierra la ventana actual
+            ((Stage) btnHorarios.getScene().getWindow()).close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
