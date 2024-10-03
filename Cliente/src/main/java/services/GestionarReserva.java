@@ -19,8 +19,8 @@ public class GestionarReserva {
         List<String> horariosDisponibles = new ArrayList<>();
 
         // Conectar a la base de datos
-       // try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/proyecto ingesoft", "root", "cl")) {
-    try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3307/proyecto ingesoft", "root", "cl")) {
+        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/proyecto ingesoft", "root", "cl")) {
+    //try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3307/proyecto ingesoft", "root", "cl")) {
             // Obtener el día de la semana de la fecha seleccionada
             String nombreDia = obtenerNombreDia(fechaSeleccionada);
 
