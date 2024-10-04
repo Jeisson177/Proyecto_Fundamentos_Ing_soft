@@ -18,7 +18,7 @@
             </Text>
             <ImageView fitHeight="48.0" fitWidth="51.0" layoutX="538.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../imagenes/PlatosFuertes/ig.png" />
+                  <Image url="@../Imagenes/PlatosFuertes/ig.png" />
                </image>
             </ImageView>
             <Button fx:id="selecHome" layoutX="268.0" layoutY="19.0" mnemonicParsing="false" onAction="#onClickHome" style="-fx-background-color: black; -fx-text-fill: WHITE; -fx-font-style: italic;" text="Home" underline="true">

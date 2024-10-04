@@ -29,27 +29,9 @@ public class PlatosFuertes {
     @FXML
     public Button selecMenu;
     @FXML
-
-    public Button selecVolver;
-    @FXML
-
     public Button selecHome;
     @FXML
     public Button selecReservar;
-    @FXML
-    public Button LasBolonesa;
-    @FXML
-    public Button LasMixta;
-    @FXML
-    public Button LasPollo;
-    @FXML
-    public Button risotoVegetariano;
-    @FXML
-    public Button risotoSalmon;
-    @FXML
-    public Button risotoHongos;
-    @FXML
-    public ImageView pizzaSelec;
     @FXML
     public ImageView Pizza;
     @FXML
@@ -149,24 +131,6 @@ public class PlatosFuertes {
         }
     }
 
-    public void onClickVolver(ActionEvent actionEvent) {
-        try {
-            // Carga la nueva ventana
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/PlatosFuertes.fxml"));
-            Parent root = loader.load();
-
-            // Crea una nueva escena
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Platos Fuertes"); // Título de la nueva ventana
-            stage.show();
-
-            //Opcionalmente, cierra la ventana actual
-            ((Stage) selecVolver.getScene().getWindow()).close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 
     public void onClick(ActionEvent actionEvent) {
     }
@@ -180,51 +144,6 @@ public class PlatosFuertes {
     public void onClickReservar(ActionEvent actionEvent) {
     }
 
-
-    public void onClickCarbonara(ActionEvent actionEvent) {
-    }
-
-    public void onClickFetu(ActionEvent actionEvent) {
-    }
-
-    public void onClickTrene(ActionEvent actionEvent) {
-    }
-
-    public void onClickBolonesa(ActionEvent actionEvent) {
-    }
-
-    public void onClickLasBolonesa(ActionEvent actionEvent) {
-    }
-
-    public void onClickLasMixta(ActionEvent actionEvent) {
-    }
-
-    public void onClickLasPollo(ActionEvent actionEvent) {
-    }
-
-    public void onClickVegetariano(ActionEvent actionEvent) {
-    }
-
-    public void onClickSalmon(ActionEvent actionEvent) {
-    }
-
-    public void onClickHongos(ActionEvent actionEvent) {
-    }
-    @FXML
-    public void seleccionarpizza(ActionEvent actionEvent) {
-        Button clickedButton = (Button) actionEvent.getSource(); // Obtener el botón que se presionó
-        String buttonText = clickedButton.getText(); // Obtener el texto del botón
-
-        // Llamar a una función con el botón presionado como parámetro
-        processPizzaSelection(buttonText);
-    }
-
-    private void processPizzaSelection(String pizzaType) {
-
-        if(pizzaType=="Pizza Pepperoni"){
-
-        }
-    }
 }
 
    

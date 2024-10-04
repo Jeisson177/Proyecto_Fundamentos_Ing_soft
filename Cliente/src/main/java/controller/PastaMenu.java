@@ -3,7 +3,10 @@ package controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+
+import java.util.Objects;
 
 public class PastaMenu {
     @FXML
@@ -32,7 +35,15 @@ public class PastaMenu {
     public ImageView pastaBolo;
 
     public void initialize(){
+        Image carbonara = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/imagenes/PlatosFuertes/Carbonara.png")));
+        Image fetu= new Image(Objects.requireNonNull(getClass().getResourceAsStream("/imagenes/PlatosFuertes/Fetu.png")));
+        Image trene= new Image(Objects.requireNonNull(getClass().getResourceAsStream("/imagenes/PlatosFuertes/trene.png")));
+        Image bolo= new Image(Objects.requireNonNull(getClass().getResourceAsStream("/imagenes/PlatosFuertes/spa.png")));
 
+        pastaCarbonara.setImage(carbonara);
+        pastaFetu.setImage(fetu);
+        pastaTrene.setImage(trene);
+        pastaBolo.setImage(bolo);
     }
 
     @FXML
