@@ -40,14 +40,14 @@
          </children>
       </Pane>
       <ImageView fx:id="pizzaSelec" fitHeight="344.0" fitWidth="214.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true" />
-      <Text fill="#1e00ff" layoutX="250.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿Como la quieres?">
+      <Text fill="#1e00ff" layoutX="224.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿Como la quieres?">
          <font>
             <Font name="Times New Roman" size="22.0" />
          </font>
       </Text>
-      <Button layoutX="222.0" layoutY="114.0" mnemonicParsing="false" text="Personal (4 slices)" />
-      <Button layoutX="348.0" layoutY="114.0" mnemonicParsing="false" text="Medicina (8 slices)" />
-      <Button layoutX="477.0" layoutY="114.0" mnemonicParsing="false" text="Familiar (12 slices)" />
+      <Button layoutX="222.0" layoutY="157.0" mnemonicParsing="false" text="Personal (4 slices)" />
+      <Button layoutX="348.0" layoutY="157.0" mnemonicParsing="false" text="Medicina (8 slices)" />
+      <Button layoutX="477.0" layoutY="157.0" mnemonicParsing="false" text="Familiar (12 slices)" />
       <Text fill="#060efc" layoutX="289.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADICIONALES">
          <font>
             <Font name="Times New Roman Bold" size="12.0" />
@@ -63,9 +63,10 @@
             <Font name="Times New Roman" size="12.0" />
          </font>
       </Text>
-      <Button layoutX="378.0" layoutY="269.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="68.0" />
-      <Button layoutX="486.0" layoutY="269.0" mnemonicParsing="false" text="Margarita" />
-      <Button layoutX="435.0" layoutY="343.0" mnemonicParsing="false" text="Ninguno" />
+      <Button fx:id="pizza1" layoutX="354.0" layoutY="269.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="96.0" />
+      <Button fx:id="pizza2" layoutX="473.0" layoutY="269.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="96.0" />
+      <Button layoutX="429.0" layoutY="313.0" mnemonicParsing="false" text="Ninguno" />
       <Button fx:id="selecVolver" layoutX="224.0" layoutY="356.0" mnemonicParsing="false" onAction="#onClickVolver" text="Volver" />
+      <Button fx:id="agregarP" layoutX="434.0" layoutY="114.0" mnemonicParsing="false" onAction="#onClickAgregarP" prefHeight="26.0" prefWidth="146.0" text="Agregar al Carrito" />
    </children>
 </AnchorPane>

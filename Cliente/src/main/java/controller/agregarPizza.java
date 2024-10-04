@@ -18,27 +18,37 @@ public class agregarPizza {
     public ImageView pizzaSelec;
     @FXML
     public Button selecVolver;
+    @FXML
+    public Button pizza1;
+    @FXML
+    public Button pizza2;
+    @FXML
+    public Button agregarP;
 
     private String tipoPizza;
 
     public void setTipoPizza(String tipoPizza) {
         this.tipoPizza = tipoPizza;
-        initializePizzaDetails(); // Llama a este método para inicializar la vista
+        initializePizzaDetails(); // Llama a este metodo para inicializar la vista
     }
 
-    // Método para inicializar los componentes según el tipo de pizza
+    // Metodo para inicializar los componentes según el tipo de pizza
     public void initializePizzaDetails() {
         if (tipoPizza.equals("4quesos")) {
             Image quesos = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/imagenes/PlatosFuertes/Quesos.png")));
             pizzaSelec.setImage(quesos);
-            // Aquí puedes configurar las etiquetas, imágenes u otros componentes
+            pizza1.setText("Pepperoni");
+            pizza2.setText("Margarita");
         } else if (tipoPizza.equals("pepperoni")) {
             Image quesos = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/imagenes/PlatosFuertes/Pep.png")));
             pizzaSelec.setImage(quesos);
-            // Configuraciones específicas para Pepperoni
+            pizza1.setText("4 quesos");
+            pizza2.setText("Margarita");
         } else if (tipoPizza.equals("margarita")) {
             Image quesos = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/imagenes/PlatosFuertes/Marga.png")));
             pizzaSelec.setImage(quesos);
+            pizza1.setText("Pepperoni");
+            pizza2.setText("4 quesos");
         }
     }
 
@@ -60,5 +70,9 @@ public class agregarPizza {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    @FXML
+    public void onClickAgregarP(ActionEvent actionEvent) {
     }
 }
