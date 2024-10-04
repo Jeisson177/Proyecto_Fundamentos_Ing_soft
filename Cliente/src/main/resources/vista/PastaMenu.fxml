@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="378.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlatosFuertes">
+<AnchorPane prefHeight="378.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PastaMenu">
    <children>
       <AnchorPane prefHeight="62.0" prefWidth="600.0" style="-fx-background-color: black;">
          <children>
@@ -30,31 +30,15 @@
                </font></Button>
             <ImageView fitHeight="50.0" fitWidth="47.0" layoutX="528.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../imagenes/ig.png" />
+                  <Image url="@../Imagenes/PlatosFuertes/ig.png" />
                </image>
             </ImageView>
          </children>
       </AnchorPane>
-      <ImageView fitHeight="115.0" fitWidth="115.0" layoutX="24.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../imagenes/PlatosFuertes/Carbonara.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="114.0" fitWidth="115.0" layoutX="177.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../imagenes/PlatosFuertes/Fetu.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="114.0" fitWidth="115.0" layoutX="316.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../imagenes/PlatosFuertes/trene.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="113.0" fitWidth="115.0" layoutX="461.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../imagenes/PlatosFuertes/spa.png" />
-         </image>
-      </ImageView>
+      <ImageView fx:id="pastaCarbonara" fitHeight="115.0" fitWidth="115.0" layoutX="24.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="pastaFetu" fitHeight="114.0" fitWidth="115.0" layoutX="177.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="pastaTrene" fitHeight="114.0" fitWidth="115.0" layoutX="316.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="pastaBolo" fitHeight="113.0" fitWidth="115.0" layoutX="461.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true" />
       <Text fill="#1800ec" layoutX="22.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Platos Fuertes: Pastas">
          <font>
             <Font name="Times New Roman" size="27.0" />
