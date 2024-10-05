@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.util.Objects;
@@ -33,6 +34,12 @@ public class LasanaMenu {
     public Button LasPollo;
     @FXML
     public Button selecVolver;
+    @FXML
+    public Text precioLasañaBolo;
+    @FXML
+    public Text precioLasanaMix;
+    @FXML
+    public Text precioLasanaPollo;
 
     public void initialize(){
         Image Bolonesa = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/imagenes/PlatosFuertes/BOLOÑESA.png")));
