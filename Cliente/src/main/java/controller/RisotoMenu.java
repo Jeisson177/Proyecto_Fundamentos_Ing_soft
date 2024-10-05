@@ -8,7 +8,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import repository.RisotoRepositorio;
 
 import java.util.Objects;
 
@@ -33,6 +35,15 @@ public class RisotoMenu {
     public Button risotoHongos;
     @FXML
     public Button selecVolver;
+    @FXML
+    public Text precioRisotoVeg;
+    @FXML
+    public Text precioRisotoSal;
+    @FXML
+    public Text precioRisotoHon;
+
+
+    private RisotoRepositorio risoto=new RisotoRepositorio();
 
     public void initialize(){
         Image vegetariano = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/imagenes/PlatosFuertes/vegetariano.png")));
@@ -42,6 +53,10 @@ public class RisotoMenu {
         RisotoVeg.setImage(vegetariano);
         RisotoHon.setImage(hongos);
         RisotoSal.setImage(imgSalmon);
+
+        precioRisotoHon.setText(String.valueOf(risoto.getPrecios("Risotto de Hongos"))+" COP");
+        precioRisotoSal.setText(String.valueOf(risoto.getPrecios("Risotto de Salmon"))+" COP");
+        precioRisotoVeg.setText(String.valueOf(risoto.getPrecios("Risotto Vegetariano"))+" COP");
     }
 
     @FXML

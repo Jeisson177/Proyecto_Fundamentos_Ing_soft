@@ -8,7 +8,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import repository.PastaRepositorio;
 
 import java.util.Objects;
 
@@ -37,6 +39,16 @@ public class PastaMenu {
     public ImageView pastaTrene;
     @FXML
     public ImageView pastaBolo;
+    @FXML
+    public Text precioPastaCar;
+    @FXML
+    public Text precioPastaFetu;
+    @FXML
+    public Text precioPastaTrene;
+    @FXML
+    public Text precioPastaSpa;
+
+    private PastaRepositorio pasta=new PastaRepositorio();
 
     public void initialize(){
         Image carbonara = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/imagenes/PlatosFuertes/Carbonara.png")));
@@ -48,6 +60,11 @@ public class PastaMenu {
         pastaFetu.setImage(fetu);
         pastaTrene.setImage(trene);
         pastaBolo.setImage(bolo);
+
+        precioPastaFetu.setText(String.valueOf(pasta.getPrecios("Fettuccine alla Puttanesca"))+" COP");
+        precioPastaSpa.setText(String.valueOf(pasta.getPrecios("Pasta alla Carbonara"))+" COP");
+        precioPastaTrene.setText(String.valueOf(pasta.getPrecios("Trenette al Pesto"))+" COP");
+        precioPastaCar.setText(String.valueOf(pasta.getPrecios("Pasta alla Carbonara"))+" COP");
     }
 
     @FXML

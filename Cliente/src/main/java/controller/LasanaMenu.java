@@ -10,6 +10,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import repository.LasanaRepositorio;
 
 import java.util.Objects;
 
@@ -35,11 +36,13 @@ public class LasanaMenu {
     @FXML
     public Button selecVolver;
     @FXML
-    public Text precioLasañaBolo;
+    public Text precioLasanaBolo;
     @FXML
     public Text precioLasanaMix;
     @FXML
     public Text precioLasanaPollo;
+
+    private LasanaRepositorio lasana=new LasanaRepositorio();
 
     public void initialize(){
         Image Bolonesa = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/imagenes/PlatosFuertes/BOLOÑESA.png")));
@@ -49,6 +52,10 @@ public class LasanaMenu {
         LasanaBolo.setImage(Bolonesa);
         LasanaMixta.setImage(Mixta);
         LasanaPollo.setImage(Pollo);
+
+        precioLasanaMix.setText(String.valueOf(lasana.getPrecios("Lasagna Mixta"))+" COP");
+        precioLasanaBolo.setText(String.valueOf(lasana.getPrecios("Lasagna Bolognese"))+" COP");
+        precioLasanaPollo.setText(String.valueOf(lasana.getPrecios("Lasagna de Pollo"))+" COP");
 
     }
 

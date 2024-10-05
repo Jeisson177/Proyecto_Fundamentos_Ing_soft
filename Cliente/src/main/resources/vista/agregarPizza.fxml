@@ -68,5 +68,8 @@
       <Button layoutX="429.0" layoutY="313.0" mnemonicParsing="false" text="Ninguno" />
       <Button fx:id="selecVolver" layoutX="224.0" layoutY="356.0" mnemonicParsing="false" onAction="#onClickVolver" text="Volver" />
       <Button fx:id="agregarP" layoutX="434.0" layoutY="114.0" mnemonicParsing="false" onAction="#onClickAgregarP" prefHeight="26.0" prefWidth="146.0" text="Agregar al Carrito" />
+      <Text fx:id="precioPersonal" layoutX="235.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="84.685546875" />
+      <Text fx:id="precioMediana" layoutX="362.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="84.685546875" />
+      <Text fx:id="precioFamiliar" layoutX="491.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="84.685546875" />
    </children>
 </AnchorPane>
