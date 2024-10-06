@@ -13,67 +13,51 @@
          <children>
             <Text fill="WHITE" layoutX="20.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bella Ventura">
                <font>
-                  <Font name="Candara" size="24.0" />
+                  <Font name="Times New Roman Italic" size="24.0" />
                </font>
             </Text>
             <ImageView fitHeight="48.0" fitWidth="51.0" layoutX="538.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../imagenes/ig.png" />
+                  <Image url="@../Imagenes/PlatosFuertes/ig.png" />
                </image>
             </ImageView>
-            <Button fx:id="selecHome" layoutX="268.0" layoutY="19.0" mnemonicParsing="false" onAction="#onClickHome" text="Home">
+            <Button fx:id="selecHome" layoutX="268.0" layoutY="19.0" mnemonicParsing="false" onAction="#onClickHome" style="-fx-background-color: black; -fx-text-fill: WHITE; -fx-font-style: italic;" text="Home" underline="true">
                <font>
                   <Font name="Times New Roman" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="selecMenu" layoutX="353.0" layoutY="19.0" mnemonicParsing="false" onAction="#onClickMenu" text="Menu">
+            <Button fx:id="selecMenu" layoutX="353.0" layoutY="19.0" mnemonicParsing="false" onAction="#onClickMenu" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-style: italic;" text="Menu" underline="true">
                <font>
                   <Font name="Times New Roman" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="selecReservar" layoutX="441.0" layoutY="20.0" mnemonicParsing="false" onAction="#onClickReservar" text="Reservar">
+            <Button fx:id="selecReservar" layoutX="441.0" layoutY="20.0" mnemonicParsing="false" onAction="#onClickReservar" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-style: italic;" text="Reservar" underline="true">
                <font>
                   <Font name="Times New Roman" size="15.0" />
                </font>
             </Button>
          </children>
       </AnchorPane>
-      <ImageView fitHeight="280.0" fitWidth="148.0" layoutY="65.0" pickOnBounds="true">
-         <image>
-            <Image url="@../imagenes/pizza.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="280.0" fitWidth="160.0" layoutX="148.0" layoutY="65.0" pickOnBounds="true">
-         <image>
-            <Image url="@../imagenes/Pasta.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="280.0" fitWidth="154.0" layoutX="308.0" layoutY="66.0" pickOnBounds="true">
-         <image>
-            <Image url="@../imagenes/L1.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="280.0" fitWidth="148.0" layoutX="460.0" layoutY="65.0" pickOnBounds="true">
-         <image>
-            <Image url="@../imagenes/risoto.png" />
-         </image>
-      </ImageView>
-      <Button fx:id="selecPizza" layoutX="32.0" layoutY="173.0" mnemonicParsing="false" onAction="#onClickPizza" text="Pizzas">
+      <ImageView fx:id="Pizza" fitHeight="280.0" fitWidth="148.0" layoutY="65.0" pickOnBounds="true" />
+      <ImageView fx:id="Pasta" fitHeight="280.0" fitWidth="160.0" layoutX="148.0" layoutY="65.0" pickOnBounds="true" />
+      <ImageView fx:id="Lasagna" fitHeight="280.0" fitWidth="154.0" layoutX="308.0" layoutY="66.0" pickOnBounds="true" />
+      <ImageView fx:id="Risoto" fitHeight="280.0" fitWidth="148.0" layoutX="460.0" layoutY="65.0" pickOnBounds="true" />
+      <Button fx:id="selecPizza" layoutX="14.0" layoutY="159.0" mnemonicParsing="false" onAction="#onClickPizza" style="-fx-background-color: transpare; -fx-text-fill: white; -fx-font-size: 30px; -fx-font-weight: bold;" text="Pizzas">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="10.0" />
+         </font>
+      </Button>
+      <Button fx:id="selecPasta" layoutX="166.0" layoutY="159.0" mnemonicParsing="false" onAction="#onClickPasta" style="-fx-background-color: transpare; -fx-text-fill: white; -fx-font-size: 30px; -fx-font-weight: bold;" text="Pastas">
          <font>
             <Font name="Times New Roman" size="21.0" />
          </font>
       </Button>
-      <Button fx:id="selecPasta" layoutX="187.0" layoutY="173.0" mnemonicParsing="false" onAction="#onClickPasta" text="Pastas">
+      <Button fx:id="selecLasagna" layoutX="311.0" layoutY="159.0" mnemonicParsing="false" onAction="#onClickLa" prefHeight="66.0" prefWidth="148.0" style="-fx-background-color: transpare; -fx-font-size: 26px; -fx-text-fill: white; -fx-font-weight: bold;" text="Lasagnas">
          <font>
-            <Font name="Times New Roman" size="21.0" />
+            <Font name="Times New Roman Bold" size="21.0" />
          </font>
       </Button>
-      <Button fx:id="selecLasagna" layoutX="331.0" layoutY="173.0" mnemonicParsing="false" onAction="#onClickLa" text="Lasagnas">
-         <font>
-            <Font name="Times New Roman" size="21.0" />
-         </font>
-      </Button>
-      <Button fx:id="selecRisoto" layoutX="492.0" layoutY="173.0" mnemonicParsing="false" onAction="#onClickRisoto" text="Risoto">
+      <Button fx:id="selecRisoto" layoutX="472.0" layoutY="159.0" mnemonicParsing="false" onAction="#onClickRisoto" style="-fx-background-color: transpare; -fx-text-fill: white; -fx-font-size: 30px; -fx-font-weight: bold;" text="Risoto">
          <font>
             <Font name="Times New Roman" size="21.0" />
          </font>

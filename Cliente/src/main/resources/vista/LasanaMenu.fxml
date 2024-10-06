@@ -7,22 +7,30 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PlatosFuertes">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LasanaMenu">
    <children>
       <AnchorPane prefHeight="62.0" prefWidth="600.0" style="-fx-background-color: black;">
          <children>
             <Text fill="#faf8f8" layoutX="25.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bella Ventura">
                <font>
-                  <Font name="Times New Roman" size="19.0" />
+                  <Font size="19.0" />
                </font>
             </Text>
-            <Button fx:id="selecHome" layoutX="221.0" layoutY="17.0" mnemonicParsing="false" onAction="#onClickHome" text="Home" />
-            <Button fx:id="selecMenu" layoutX="325.0" layoutY="17.0" mnemonicParsing="false" onAction="#onClickMenu" text="Menu" />
-            <Button fx:id="selecReservar" layoutX="417.0" layoutY="17.0" mnemonicParsing="false" onAction="#onClickReservar" text="Reservar" />
+            <Button fx:id="selecHome" layoutX="221.0" layoutY="17.0" mnemonicParsing="false" onAction="#onClickHome" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-style: italic;" text="Home" underline="true">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
+            <Button fx:id="selecMenu" layoutX="325.0" layoutY="17.0" mnemonicParsing="false" onAction="#onClickMenu" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-style: italic;" text="Menu" underline="true">
+               <font>
+                  <Font name="Times New Roman" size="15.0" />
+               </font></Button>
+            <Button fx:id="selecReservar" layoutX="417.0" layoutY="17.0" mnemonicParsing="false" onAction="#onClickReservar" style="-fx-background-color: bl; -fx-text-fill: white; -fx-font-style: italic;" text="Reservar" underline="true">
+               <font>
+                  <Font name="Times New Roman" size="15.0" />
+               </font></Button>
             <ImageView fitHeight="49.0" fitWidth="52.0" layoutX="532.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../imagenes/ig.png" />
+                  <Image url="@../Imagenes/PlatosFuertes/ig.png" />
                </image>
             </ImageView>
          </children>
@@ -32,26 +40,15 @@
             <Font name="Times New Roman" size="23.0" />
          </font>
       </Text>
-      <ImageView fitHeight="123.0" fitWidth="142.0" layoutX="33.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../imagenes/BOLOÑESA.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="123.0" fitWidth="126.0" layoutX="240.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../imagenes/Mixta.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="123.0" fitWidth="124.0" layoutX="431.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../imagenes/pollo.png" />
-         </image>
-      </ImageView>
+      <ImageView fx:id="LasanaBolo" fitHeight="123.0" fitWidth="142.0" layoutX="33.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="LasanaMixta" fitHeight="123.0" fitWidth="126.0" layoutX="240.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="LasanaPollo" fitHeight="123.0" fitWidth="124.0" layoutX="431.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true" />
       <Button fx:id="LasBolonesa" layoutX="44.0" layoutY="270.0" mnemonicParsing="false" onAction="#onClickLasBolonesa" text="Lasaña Boloñesa" />
       <Button fx:id="LasMixta" layoutX="260.0" layoutY="270.0" mnemonicParsing="false" onAction="#onClickLasMixta" text="Lasaña Mixta" />
       <Button fx:id="LasPollo" layoutX="452.0" layoutY="270.0" mnemonicParsing="false" onAction="#onClickLasPollo" text="Lasaña Pollo" />
-      <Text layoutX="65.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20.000 COP" />
-      <Text layoutX="271.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="40.000 COP" />
-      <Text layoutX="462.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20.000 COP" />
+      <Text fx:id="precioLasanaBolo" layoutX="58.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="75.20000000000005" />
+      <Text fx:id="precioLasanaMix" layoutX="265.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="75.20000000000005" />
+      <Text fx:id="precioLasanaPollo" layoutX="455.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="75.20000000000005" />
+      <Button fx:id="selecVolver" layoutX="28.0" layoutY="351.0" mnemonicParsing="false" onAction="#onClickVolver" text="Volver a platos fuertes" />
    </children>
 </AnchorPane>
