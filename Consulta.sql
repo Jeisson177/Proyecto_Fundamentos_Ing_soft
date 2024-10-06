@@ -1,4 +1,3 @@
--- -------------------------------------------------------------------------- Eliminación de tablas
 -- Eliminar tabla INGREDIENTE_PLATO (dependiente)`proyecto ingesoft`
 DROP TABLE IF EXISTS INGREDIENTE_PLATO;
 
@@ -31,7 +30,7 @@ DROP TABLE IF EXISTS Horarios;
 
 -- Eliminar tabla dias 
 DROP TABLE IF EXISTS Dias;
--- --------------------------------------------------------------------------- Creación de tablas
+-- ----------------------------------- Creación de tablas
 -- Creación tabla ingrediente
 CREATE TABLE INGREDIENTE (
     ID_INGREDIENTE INT AUTO_INCREMENT PRIMARY KEY,
@@ -72,7 +71,7 @@ CREATE TABLE INGREDIENTE_PLATO(
 
 -- Creación tabla mesa
 CREATE TABLE MESA(
-	 ID_MESA INT AUTO_INCREMENT PRIMARY KEY,
+	 ID_MESA INT AUTO_INCREMENT PRIMARY KEY, -- preguntar
 	 CAPACIDAD INT,
     UBICACION_X INT,
     UBICACION_Y INT
@@ -271,9 +270,6 @@ INSERT INTO PLATO (nombre, descripcion, precio, categoria) VALUES('Pizza Cuatro 
 INSERT INTO PLATO (nombre, descripcion, precio, categoria) VALUES('Pizza Margarita Familiar', 'Pizza clasica con salsa de tomate, mozzarella y albahaca', 18000,'Plato fuerte');
 INSERT INTO PLATO (nombre, descripcion, precio, categoria) VALUES('Pizza Pepperoni Familiar', 'Pizza con pepperoni, salsa de tomate y mozzarella',18000, 'Plato fuerte');
 INSERT INTO PLATO (nombre, descripcion, precio, categoria) VALUES('Pizza Napolitana Familiar', 'Pizza con anchoas, aceitunas y tomate triturado',18000,'Plato fuerte');
-INSERT INTO PLATO (nombre, descripcion, precio, categoria) VALUES('Coca cola', 'Botella de coca cola', 7000,'Bebida'); 
-INSERT INTO PLATO (nombre, descripcion, precio, categoria) VALUES('Fanta', 'Fanta en botella', 5000,'Bebida');
-INSERT INTO PLATO (nombre, descripcion, precio, categoria) VALUES('Quatro', 'Quatro en botella', 6000,'Bebida');
 
 -- Inserción INGREDIENTE_plato
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (1, 1, 100); -- Avellana (100g)
@@ -420,9 +416,8 @@ INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (45, 5
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (45, 56, 300);  -- Mozzarella (300g)
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (45, 60, 90);   -- Pepperoni (90g)
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (46, 58, 150);   -- Salsa de tomate (150ml)
-INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (47, 86, 1);   -- cocacola (1u)
-INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (48, 87, 1);   -- Fanta (1u)
-INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (49, 85, 1);   -- Quatro negras (1u)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (46, 57, 60);   -- Anchoas (60g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (46, 38, 30);   -- Aceitunas negras (30g)
 
 -- Inserciones en la tabla INGREDIENTE_INV
 INSERT INTO INGREDIENTE_INV (ID_INGREDIENTE, CANTIDAD_INV, FECHA_VEN, FECHA_INGRESO, UNIDAD) VALUES(1, 5000, '2025-12-31', '2024-09-22', 'g');   -- Avellana
@@ -514,13 +509,26 @@ INSERT INTO INGREDIENTE_INV (ID_INGREDIENTE, CANTIDAD_INV, FECHA_VEN, FECHA_INGR
 INSERT INTO INGREDIENTE_INV (ID_INGREDIENTE, CANTIDAD_INV, FECHA_VEN, FECHA_INGRESO, UNIDAD) VALUES(87, 50, '2025-10-31', '2024-09-22', 'Unidades');  -- Fanta Naranja
 
 -- Inserción de mesas
--- PENDIENTE agregar ubicación
-INSERT INTO mesa (CAPACIDAD) VALUES (4);
-INSERT INTO mesa (CAPACIDAD) VALUES (4);
-INSERT INTO mesa (CAPACIDAD) VALUES (4);
-INSERT INTO mesa (CAPACIDAD) VALUES (4);
-INSERT INTO mesa (CAPACIDAD) VALUES (4);
-INSERT INTO mesa (CAPACIDAD) VALUES (4);
+INSERT INTO mesa (CAPACIDAD, UBICACION_X, UBICACION_Y) VALUES (10, 318.0, 137.0); -- bntm1
+INSERT INTO mesa (CAPACIDAD, UBICACION_X, UBICACION_Y) VALUES (4, 332.0, 171.0); -- bntm2
+INSERT INTO mesa (CAPACIDAD, UBICACION_X, UBICACION_Y) VALUES (4, 313.0, 188.0); -- bntm3
+INSERT INTO mesa (CAPACIDAD, UBICACION_X, UBICACION_Y) VALUES (4, 331.0, 189.0); -- bntm4
+INSERT INTO mesa (CAPACIDAD, UBICACION_X, UBICACION_Y) VALUES (4, 295.0, 205.0); -- bntm5
+INSERT INTO mesa (CAPACIDAD, UBICACION_X, UBICACION_Y) VALUES (4, 313.0, 205.0); -- bntm6
+INSERT INTO mesa (CAPACIDAD, UBICACION_X, UBICACION_Y) VALUES (4, 332.0, 205.0); -- bntm7
+INSERT INTO mesa (CAPACIDAD, UBICACION_X, UBICACION_Y) VALUES (4, 295.0, 224.0); -- bntm8
+INSERT INTO mesa (CAPACIDAD, UBICACION_X, UBICACION_Y) VALUES (4, 313.0, 225.0); -- bntm9
+INSERT INTO mesa (CAPACIDAD, UBICACION_X, UBICACION_Y) VALUES (4, 332.0, 223.0); -- bntm10
+INSERT INTO mesa (CAPACIDAD, UBICACION_X, UBICACION_Y) VALUES (4, 296.0, 242.0); -- bntm11
+INSERT INTO mesa (CAPACIDAD, UBICACION_X, UBICACION_Y) VALUES (4, 313.0, 243.0); -- bntm12
+INSERT INTO mesa (CAPACIDAD, UBICACION_X, UBICACION_Y) VALUES (4, 332.0, 243.0); -- bntm13
+INSERT INTO mesa (CAPACIDAD, UBICACION_X, UBICACION_Y) VALUES (6, 358.0, 174.0); -- bntm14
+INSERT INTO mesa (CAPACIDAD, UBICACION_X, UBICACION_Y) VALUES (6, 390.0, 182.0); -- bntm15
+INSERT INTO mesa (CAPACIDAD, UBICACION_X, UBICACION_Y) VALUES (6, 411.0, 211.0); -- bntm16
+INSERT INTO mesa (CAPACIDAD, UBICACION_X, UBICACION_Y) VALUES (6, 411.0, 242.0); -- bntm17
+INSERT INTO mesa (CAPACIDAD, UBICACION_X, UBICACION_Y) VALUES (6, 389.0, 275.0); -- bntm18
+INSERT INTO mesa (CAPACIDAD, UBICACION_X, UBICACION_Y) VALUES (6, 359.0, 283.0); -- bntm19
+
 
 -- Inserciones en la tabla usuario
 INSERT INTO Usuario (NOMBRE, EMAIL, TELEFONO, ROL, CONTRASENA) VALUES
@@ -560,17 +568,16 @@ INSERT INTO RESERVA (ID_CLIENTE, ID_MESA, FECHA_HORA) VALUES
 (6, 6, '2024-10-07 19:00:00'),  -- Sexta reserva
 (7, 1, '2024-10-07 21:00:00');  -- Séptima reserva (última reserva antes de cierre)
 
--- Inserciones en la tabla menu
+
 INSERT INTO MENU (ID_MENU, NOMBRE, DESCRIPCION) VALUES (1, 'Menu Bella Venture', 'Menu estilo italiano');
 
--- Inserciones en la tabla MENU_PLATO
+
 INSERT INTO MENU_PLATO (ID_MENU, ID_PLATO) VALUES
 (1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (1, 8), (1, 9), (1, 10), (1, 11), (1, 12), (1, 13), 
 (1, 14), (1, 15), (1, 16), (1, 17), (1, 18), (1, 19), (1, 20), (1, 21), (1, 22), (1, 23), (1, 24), 
 (1, 25), (1, 26), (1, 27), (1, 28), (1, 29), (1, 30), (1, 31), (1, 32), (1, 33), (1, 34), (1, 35), 
 (1, 36), (1, 37), (1, 38), (1, 39), (1, 40), (1, 41), (1, 42), (1, 43), (1, 44), (1, 45), (1, 46);
 
--- Insertar los días de la semana
 INSERT INTO Dias (nombre_dia,intervalo) VALUES
 ('Lunes',120),
 ('Martes',120),

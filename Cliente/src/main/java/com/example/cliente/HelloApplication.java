@@ -10,14 +10,12 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/vista/PlatosFuertes.fxml"));
-
-        Scene scene = new Scene(fxmlLoader.load(), 400, 400);
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/vista/Menu.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 700, 400);
         stage.setTitle("menucito");
         stage.setScene(scene);
         stage.show();
     }
-
     public static void main(String[] args) {
         launch();
     }

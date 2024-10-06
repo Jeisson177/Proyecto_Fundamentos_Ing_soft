@@ -1,0 +1,83 @@
+Index: Cliente/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\"\r\n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\r\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd\">\r\n  <modelVersion>4.0.0</modelVersion>\r\n\r\n  <groupId>com.example</groupId>\r\n  <artifactId>Cliente</artifactId>\r\n  <version>1.0-SNAPSHOT</version>\r\n  <name>Cliente</name>\r\n\r\n  <properties>\r\n    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>\r\n<junit.version>5.9.2</junit.version>  </properties>\r\n\r\n  <dependencies>\r\n    <dependency>\r\n      <groupId>org.openjfx</groupId>\r\n      <artifactId>javafx-controls</artifactId>\r\n      <version>17.0.6</version>\r\n    </dependency>\r\n    <dependency>\r\n      <groupId>org.openjfx</groupId>\r\n      <artifactId>javafx-fxml</artifactId>\r\n      <version>17.0.6</version>\r\n    </dependency>\r\n\r\n<dependency>\r\n      <groupId>org.junit.jupiter</groupId>\r\n      <artifactId>junit-jupiter-api</artifactId>\r\n      <version>${junit.version}</version>\r\n      <scope>test</scope>\r\n    </dependency>\r\n    <dependency>\r\n      <groupId>org.junit.jupiter</groupId>\r\n      <artifactId>junit-jupiter-engine</artifactId>\r\n      <version>${junit.version}</version>\r\n      <scope>test</scope>\r\n    </dependency>  </dependencies>\r\n\r\n  <build>\r\n    <plugins>\r\n      <plugin>\r\n        <groupId>org.apache.maven.plugins</groupId>\r\n        <artifactId>maven-compiler-plugin</artifactId>\r\n        <version>3.11.0</version>\r\n        <configuration>\r\n          <source>22</source>\r\n          <target>22</target>\r\n        </configuration>\r\n      </plugin>\r\n      <plugin>\r\n        <groupId>org.openjfx</groupId>\r\n        <artifactId>javafx-maven-plugin</artifactId>\r\n        <version>0.0.8</version>\r\n        <executions>\r\n          <execution>\r\n            <!-- Default configuration for running with: mvn clean javafx:run -->\r\n            <id>default-cli</id>\r\n            <configuration>\r\n              <mainClass>com.example.cliente/com.example.cliente.HelloApplication</mainClass>\r\n              <launcher>app</launcher>\r\n              <jlinkZipName>app</jlinkZipName>\r\n              <jlinkImageName>app</jlinkImageName>\r\n              <noManPages>true</noManPages>\r\n              <stripDebug>true</stripDebug>\r\n              <noHeaderFiles>true</noHeaderFiles>\r\n            </configuration>\r\n          </execution>\r\n        </executions>\r\n      </plugin>\r\n    </plugins>\r\n  </build>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Cliente/pom.xml b/Cliente/pom.xml
+--- a/Cliente/pom.xml	(revision 7d8fd5c3bd2b065d696d01ee6118a148f7ea6e85)
++++ b/Cliente/pom.xml	(date 1727571049989)
+@@ -11,21 +11,22 @@
+ 
+   <properties>
+     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+-<junit.version>5.9.2</junit.version>  </properties>
++    <junit.version>5.9.2</junit.version>
++    <javafx.version>22</javafx.version> <!-- Definir versión de JavaFX -->
++  </properties>
+ 
+   <dependencies>
+     <dependency>
+       <groupId>org.openjfx</groupId>
+       <artifactId>javafx-controls</artifactId>
+-      <version>17.0.6</version>
++      <version>22</version>
+     </dependency>
+     <dependency>
+       <groupId>org.openjfx</groupId>
+       <artifactId>javafx-fxml</artifactId>
+-      <version>17.0.6</version>
++      <version>22</version>
+     </dependency>
+-
+-<dependency>
++    <dependency>
+       <groupId>org.junit.jupiter</groupId>
+       <artifactId>junit-jupiter-api</artifactId>
+       <version>${junit.version}</version>
+@@ -36,7 +37,8 @@
+       <artifactId>junit-jupiter-engine</artifactId>
+       <version>${junit.version}</version>
+       <scope>test</scope>
+-    </dependency>  </dependencies>
++    </dependency>
++  </dependencies>
+ 
+   <build>
+     <plugins>
+@@ -55,20 +57,24 @@
+         <version>0.0.8</version>
+         <executions>
+           <execution>
+-            <!-- Default configuration for running with: mvn clean javafx:run -->
+             <id>default-cli</id>
+             <configuration>
+-              <mainClass>com.example.cliente/com.example.cliente.HelloApplication</mainClass>
+-              <launcher>app</launcher>
+-              <jlinkZipName>app</jlinkZipName>
+-              <jlinkImageName>app</jlinkImageName>
+-              <noManPages>true</noManPages>
+-              <stripDebug>true</stripDebug>
+-              <noHeaderFiles>true</noHeaderFiles>
++              <mainClass>com.example.cliente.HelloApplication</mainClass>
++              <options>
++                <option>--module-path</option>
++                <option>${maven.project.basedir}/target/classes</option>
++                <option>--add-modules</option>
++                <option>javafx.controls,javafx.fxml</option> <!-- Especificar módulos de JavaFX -->
++              </options>
+             </configuration>
+           </execution>
+         </executions>
+       </plugin>
+     </plugins>
++    <resources>
++      <resource>
++        <directory>src/main/resources</directory>
++      </resource>
++    </resources>
+   </build>
+-</project>
+\ No newline at end of file
++</project>
