@@ -18,7 +18,7 @@
                     <Font size="24.0" />
                 </font>
             </Text>
-            <Button layoutX="365.0" layoutY="8.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Menú" textFill="WHITE">
+            <Button fx:id="botonMenu" onAction="#irMenu" layoutX="365.0" layoutY="8.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Menú" textFill="WHITE">
                 <font>
                     <Font size="17.0" />
                 </font>
@@ -41,7 +41,7 @@
             <VBox alignment="CENTER" spacing="5">
                 <ImageView fx:id="antipastiImage" fitHeight="340.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="false" />
             </VBox>
-            <Button fx:id="antipastiMenu" layoutX="32.0" layoutY="178.0" onAction="#onHelloButtonClick" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color:transparent; -fx-text-fill: white; -fx-font-size: 17px;" text="ANTIPASTI" />
+            <Button fx:id="antipastiMenu" layoutX="32.0" layoutY="178.0" onAction="#abrirAntipasti" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color:transparent; -fx-text-fill: white; -fx-font-size: 17px;" text="ANTIPASTI" />
         </Pane>
 
         <!-- Segundo panel con imagen y botón -->

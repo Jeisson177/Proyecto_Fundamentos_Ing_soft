@@ -1,5 +1,6 @@
 package controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -19,6 +20,7 @@ public class MenuControl {
     public ImageView postresImage;
     public ImageView bebidasImage;
     public Button botonbebidasImage;
+    public Button botonMenu;
 
     @FXML
     public void initialize() {
@@ -36,7 +38,7 @@ public class MenuControl {
     }
 
     @FXML
-    private void onHelloButtonClick() {
+    private void abrirAntipasti() {
         try {
             // Carga la nueva ventana
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Antipasti.fxml"));
@@ -73,5 +75,25 @@ public class MenuControl {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public void irMenu(ActionEvent actionEvent) {
+        try {
+            // Carga la nueva ventana
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Menu.fxml"));
+            Parent root = loader.load();
+
+            // Crea una nueva escena
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Menu"); // Título de la nueva ventana
+            stage.show();
+
+            // Opcionalmente, cierra la ventana actual
+            ((Stage) botonMenu.getScene().getWindow()).close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 }
