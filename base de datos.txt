@@ -10,15 +10,22 @@ DROP TABLE IF EXISTS INGREDIENTE_INV;
 
 -- Eliminar tabla usuario (dependiente)`proyecto ingesoft`
 DROP TABLE IF EXISTS Usuario;
+-- Eliminar tabla usuario (dependiente)`proyecto ingesoft`
+DROP TABLE IF EXISTS Usuario;
 
 -- Eliminar tabla Mesa (dependiente)`proyecto ingesoft`
 DROP TABLE IF EXISTS MESA;
 
 -- Eliminar tabla Mesa (dependiente)`proyecto ingesoft`
+-- Eliminar tabla Mesa (dependiente)`proyecto ingesoft`
 DROP TABLE IF EXISTS MENU_PLATO;
 
 -- Eliminar tabla INGREDIENTE (tabla principal)
+-- Eliminar tabla INGREDIENTE (tabla principal)
 DROP TABLE IF EXISTS MENU;
+
+-- Eliminar tabla INGREDIENTE (tabla principal)
+DROP TABLE IF EXISTS ingrediente;
 
 -- Eliminar tabla INGREDIENTE (tabla principal)
 DROP TABLE IF EXISTS ingrediente;
@@ -71,6 +78,7 @@ CREATE TABLE INGREDIENTE_PLATO(
 );
 
 -- Creación tabla mesa
+-- Creación tabla mesa
 CREATE TABLE MESA(
 	 ID_MESA INT AUTO_INCREMENT PRIMARY KEY, -- preguntar
 	 CAPACIDAD INT,
@@ -81,8 +89,19 @@ CREATE TABLE MESA(
 -- Creación de tabla usuario
 CREATE TABLE Usuario(
 	 ID_USUARIO INT AUTO_INCREMENT PRIMARY KEY,
+    UBICACION_X INT,
+    UBICACION_Y INT
+);
+
+-- Creación de tabla usuario
+CREATE TABLE Usuario(
+	 ID_USUARIO INT AUTO_INCREMENT PRIMARY KEY,
 	 NOMBRE VARCHAR(255),
 	 EMAIL VARCHAR(255),
+	 TELEFONO VARCHAR(255),
+	 ROL VARCHAR(255),
+	 CONTRASENA VARCHAR(255),
+	 CONSTRAINT chk_rol CHECK (ROL IN ('Cliente', 'Mesero', 'Administrador'))
 	 TELEFONO VARCHAR(255),
 	 ROL VARCHAR(255),
 	 CONTRASENA VARCHAR(255),
@@ -97,6 +116,7 @@ CREATE TABLE RESERVA(
 	 FECHA_HORA DATETIME,
 	 -- ESTADO VARCHAR (255),
 	 FOREIGN KEY (ID_MESA) REFERENCES MESA(ID_MESA),
+	 FOREIGN KEY (ID_CLIENTE) REFERENCES USUARIO(ID_USUARIO)
 	 FOREIGN KEY (ID_CLIENTE) REFERENCES USUARIO(ID_USUARIO)
 	 -- CONSTRAINT chk_est CHECK (ESTADO IN ('Confirmado', 'Cancelado', 'Pendiente'))
 );	
@@ -118,12 +138,14 @@ CREATE TABLE MENU_PLATO(
 );
 
 -- Creación tabla días 
+-- Creación tabla días 
 CREATE TABLE Dias (
     id_dia INT AUTO_INCREMENT PRIMARY KEY,
     nombre_dia VARCHAR(20) NOT NULL,
     intervalo INT -- intervalo que se demora un cliente en comer
 );
 
+-- Creación tabla horarios
 -- Creación tabla horarios
 CREATE TABLE Horarios (
     id_horario INT AUTO_INCREMENT PRIMARY KEY,
@@ -271,6 +293,9 @@ INSERT INTO PLATO (nombre, descripcion, precio, categoria) VALUES('Pizza Cuatro 
 INSERT INTO PLATO (nombre, descripcion, precio, categoria) VALUES('Pizza Margarita Familiar', 'Pizza clasica con salsa de tomate, mozzarella y albahaca', 18000,'Plato fuerte');
 INSERT INTO PLATO (nombre, descripcion, precio, categoria) VALUES('Pizza Pepperoni Familiar', 'Pizza con pepperoni, salsa de tomate y mozzarella',18000, 'Plato fuerte');
 INSERT INTO PLATO (nombre, descripcion, precio, categoria) VALUES('Pizza Napolitana Familiar', 'Pizza con anchoas, aceitunas y tomate triturado',18000,'Plato fuerte');
+INSERT INTO PLATO (nombre, descripcion, precio, categoria) VALUES('Coca cola', 'Botella de coca cola', 7000,'Bebida'); 
+INSERT INTO PLATO (nombre, descripcion, precio, categoria) VALUES('Fanta', 'Fanta en botella', 5000,'Bebida');
+INSERT INTO PLATO (nombre, descripcion, precio, categoria) VALUES('Quatro', 'Quatro en botella', 6000,'Bebida');
 
 -- Inserción INGREDIENTE_plato
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (1, 1, 100); -- Avellana (100g)
@@ -290,6 +315,7 @@ INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (6, 9,
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (6, 10, 60); -- Café expreso (60ml)
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (6, 11, 2);  -- Cacao en polvo (2g)
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (7, 12, 150); -- Crema de leche (150ml)
+INSERT INTO ingrediente_plato (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (7, 13, 1);   -- Esencia de vainilla (1ml)
 INSERT INTO ingrediente_plato (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (7, 13, 1);   -- Esencia de vainilla (1ml)
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (7, 8, 30);   -- Azúcar (30g)
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (8, 15, 100); -- Helado de vainilla (100ml)
@@ -311,6 +337,7 @@ INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (11, 3
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (12, 25, 50);   -- Parmesano (50g)
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (12, 44, 50);   -- Queso de cabra (50g)
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (12, 50 ,50);   -- Queso brie (50g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (12, 50 ,50);   -- Queso brie (50g)
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (12, 51, 50);   -- Queso gorgonzola (50g)
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (13, 39, 100);  -- Lechuga Romana (100g)
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (13, 40, 150);  -- Pechuga de pollo (150g)
@@ -325,6 +352,7 @@ INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (15, 4
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (15, 37, 30);   -- Tomates cherry (30g)
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (15, 38, 10);   -- Aceitunas negras (10g)
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (15, 46, 10);   -- Vinagreta balsámica (10ml)
+INSERT INTO ingrediente_plato (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (16, 56, 100);  -- Mozzarella (100g)
 INSERT INTO ingrediente_plato (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (16, 56, 100);  -- Mozzarella (100g)
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (16, 51, 30);   -- Gorgonzola (30g)
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (16, 25, 20);   -- Parmesano (20g)
@@ -417,10 +445,12 @@ INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (45, 5
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (45, 56, 300);  -- Mozzarella (300g)
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (45, 60, 90);   -- Pepperoni (90g)
 INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (46, 58, 150);   -- Salsa de tomate (150ml)
-INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (46, 57, 60);   -- Anchoas (60g)
-INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (46, 38, 30);   -- Aceitunas negras (30g)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (47, 86, 1);   -- cocacola (1u)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (48, 87, 1);   -- Fanta (1u)
+INSERT INTO INGREDIENTE_PLATO (ID_PLATO, ID_INGREDIENTE, Cantidad) VALUES (49, 85, 1);   -- Quatro negras (1u)
 
 -- Inserciones en la tabla INGREDIENTE_INV
+INSERT INTO INGREDIENTE_INV (ID_INGREDIENTE, CANTIDAD_INV, FECHA_VEN, FECHA_INGRESO, UNIDAD) VALUES(1, 5000, '2025-12-31', '2024-09-22', 'g');   -- Avellana
 INSERT INTO INGREDIENTE_INV (ID_INGREDIENTE, CANTIDAD_INV, FECHA_VEN, FECHA_INGRESO, UNIDAD) VALUES(1, 5000, '2025-12-31', '2024-09-22', 'g');   -- Avellana
 INSERT INTO INGREDIENTE_INV (ID_INGREDIENTE, CANTIDAD_INV, FECHA_VEN, FECHA_INGRESO, UNIDAD) VALUES(2, 1000, '2025-12-31', '2024-09-22', 'g'); -- Limon
 INSERT INTO INGREDIENTE_INV (ID_INGREDIENTE, CANTIDAD_INV, FECHA_VEN, FECHA_INGRESO, UNIDAD) VALUES(3, 3000, '2025-11-30', '2024-09-22', 'g');   -- Frambuesa
@@ -580,14 +610,20 @@ INSERT INTO MENU_PLATO (ID_MENU, ID_PLATO) VALUES
 (1, 14), (1, 15), (1, 16), (1, 17), (1, 18), (1, 19), (1, 20), (1, 21), (1, 22), (1, 23), (1, 24), 
 (1, 25), (1, 26), (1, 27), (1, 28), (1, 29), (1, 30), (1, 31), (1, 32), (1, 33), (1, 34), (1, 35), 
 (1, 36), (1, 37), (1, 38), (1, 39), (1, 40), (1, 41), (1, 42), (1, 43), (1, 44), (1, 45), (1, 46);
+(1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7), (1, 8), (1, 9), (1, 10), (1, 11), (1, 12), (1, 13), 
+(1, 14), (1, 15), (1, 16), (1, 17), (1, 18), (1, 19), (1, 20), (1, 21), (1, 22), (1, 23), (1, 24), 
+(1, 25), (1, 26), (1, 27), (1, 28), (1, 29), (1, 30), (1, 31), (1, 32), (1, 33), (1, 34), (1, 35), 
+(1, 36), (1, 37), (1, 38), (1, 39), (1, 40), (1, 41), (1, 42), (1, 43), (1, 44), (1, 45), (1, 46);
 
 -- Insertar los días de la semana
 INSERT INTO Dias (nombre_dia,intervalo) VALUES
 ('Lunes',120),
 ('Martes',120),
 ('Miercoles',120),
+('Miercoles',120),
 ('Jueves',120),
 ('Viernes',120),
+('Sabado',120),
 ('Sabado',120),
 ('Domingo',120);
 

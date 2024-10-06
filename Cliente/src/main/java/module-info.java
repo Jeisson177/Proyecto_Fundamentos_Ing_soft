@@ -3,6 +3,7 @@ module com.example.cliente {
     requires javafx.fxml;
     requires java.sql;
 
+
     opens com.example.cliente to javafx.fxml;
     exports com.example.cliente;
     exports controller;

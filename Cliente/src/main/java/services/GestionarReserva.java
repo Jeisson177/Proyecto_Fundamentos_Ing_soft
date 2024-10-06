@@ -1,14 +1,13 @@
 package services;
 
 import controller.MesaControl;
-import repository.ReservaRepository;
-
 import java.sql.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import repository.ReservaRepository;
 
 public class GestionarReserva {
     private MesaControl mesa= new MesaControl();
@@ -20,7 +19,7 @@ public class GestionarReserva {
 
         // Conectar a la base de datos
         try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/proyecto ingesoft", "root", "cl")) {
-    //try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3307/proyecto ingesoft", "root", "cl")) {
+
             // Obtener el día de la semana de la fecha seleccionada
             String nombreDia = obtenerNombreDia(fechaSeleccionada);
 

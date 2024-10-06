@@ -1,5 +1,6 @@
 package controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -8,6 +9,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
+import services.RedireccionGeneral;
 
 import java.util.Objects;
 
@@ -18,7 +20,10 @@ public class MenuControl {
     public ImageView platoFuerteImage;
     public ImageView postresImage;
     public ImageView bebidasImage;
+    public Button botonbebidasImage;
+    public Button botonMenu;
 
+    private RedireccionGeneral Ira=new RedireccionGeneral();
     @FXML
     public void initialize() {
         // Cargar la imagen al inicializar la vista
@@ -35,22 +40,17 @@ public class MenuControl {
     }
 
     @FXML
-    private void onHelloButtonClick() {
-        try {
-            // Carga la nueva ventana
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Antipasti.fxml"));
-            Parent root = loader.load();
+    private void abrirAntipasti() {
+        Ira.IrAntipasti(antipastiMenu);
+    }
 
-            // Crea una nueva escena
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Antipasti"); // Título de la nueva ventana
-            stage.show();
+    @FXML
+    private void abrirBebidas() {
+        Ira.IrBebidas(botonbebidasImage);
+    }
 
-            // Opcionalmente, cierra la ventana actual
-            ((Stage) antipastiMenu.getScene().getWindow()).close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public void irMenu(ActionEvent actionEvent) {
+       Ira.IrMenu(botonMenu);
+
     }
 }

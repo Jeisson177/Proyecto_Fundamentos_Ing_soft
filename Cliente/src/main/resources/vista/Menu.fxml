@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuControl">
 
     <Pane prefHeight="61.0" prefWidth="722.0" style="-fx-background-color: black;">
         <children>
-            <Text fill="WHITE" layoutX="14.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0"
-                  style="-fx-font-weight: dream avenue;" text="Bella Ventura">
+            <Text fill="WHITE" layoutX="14.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: dream avenue;" text="Bella Ventura">
                 <font>
-                    <Font size="24.0"/>
+                    <Font size="24.0" />
                 </font>
             </Text>
-            <Button layoutX="365.0" layoutY="8.0" mnemonicParsing="false" style="-fx-background-color: black;"
-                    text="Menú" textFill="WHITE">
+            <Button fx:id="botonMenu" onAction="#irMenu" layoutX="365.0" layoutY="8.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Menú" textFill="WHITE">
                 <font>
-                    <Font size="17.0"/>
+                    <Font size="17.0" />
                 </font>
             </Button>
-            <Button layoutX="438.0" layoutY="9.0" mnemonicParsing="false" style="-fx-background-color: black;"
-                    text="Reservar" textFill="WHITE" underline="true">
+            <Button layoutX="438.0" layoutY="9.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Reservar" textFill="WHITE" underline="true">
                 <font>
-                    <Font size="17.0"/>
+                    <Font size="17.0" />
                 </font>
             </Button>
-            <Button layoutX="289.0" layoutY="8.0" mnemonicParsing="false" style="-fx-background-color: black;"
-                    text="home" textFill="WHITE" underline="true">
+            <Button layoutX="289.0" layoutY="8.0" mnemonicParsing="false" style="-fx-background-color: black;" text="home" textFill="WHITE" underline="true">
                 <font>
-                    <Font size="17.0"/>
+                    <Font size="17.0" />
                 </font>
             </Button>
         </children>
@@ -39,40 +39,33 @@
         <!-- Primer panel con imagen y botón -->
         <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;">
             <VBox alignment="CENTER" spacing="5">
-                <ImageView fx:id="antipastiImage" fitHeight="340.0" fitWidth="173.0" pickOnBounds="true"  preserveRatio="false"/>
+                <ImageView fx:id="antipastiImage" fitHeight="340.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="false" />
             </VBox>
-            <Button fx:id="antipastiMenu" layoutX="32.0" layoutY="178.0" prefHeight="45.0" prefWidth="110.0" onAction="#onHelloButtonClick"
-                    style="-fx-background-color:transparent; -fx-text-fill: white; -fx-font-size: 17px;"
-                    text="ANTIPASTI"/>
+            <Button fx:id="antipastiMenu" layoutX="32.0" layoutY="178.0" onAction="#abrirAntipasti" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color:transparent; -fx-text-fill: white; -fx-font-size: 17px;" text="ANTIPASTI" />
         </Pane>
 
         <!-- Segundo panel con imagen y botón -->
         <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;">
             <VBox alignment="CENTER" spacing="5">
-                <ImageView fx:id="platoFuerteImage" fitHeight="340.0" fitWidth="173.0" pickOnBounds="true"  preserveRatio="false"/>
+                <ImageView fx:id="platoFuerteImage" fitHeight="340.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="false" />
             </VBox>
-            <Button layoutX="8.0" layoutY="178.0" prefHeight="45.0" prefWidth="156.0"
-                    style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 17px;"
-                    text="PLATOS FUERTES"/>
+            <Button layoutX="8.0" layoutY="178.0" prefHeight="45.0" prefWidth="156.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 17px;" text="PLATOS FUERTES" />
         </Pane>
 
         <!-- Tercer panel con imagen y botón -->
         <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;">
             <VBox alignment="CENTER" spacing="5">
-                <ImageView fx:id="postresImage" fitHeight="340.0" fitWidth="173.0" pickOnBounds="true"  preserveRatio="false"/>
+                <ImageView fx:id="postresImage" fitHeight="340.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="false" />
             </VBox>
-            <Button layoutX="32.0" layoutY="178.0" prefHeight="45.0" prefWidth="110.0"
-                    style="-fx-background-color: transparent; -fx-text-fill: white;-fx-font-size: 17px;" text="POSTRE"/>
+            <Button layoutX="32.0" layoutY="178.0" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: transparent; -fx-text-fill: white;-fx-font-size: 17px;" text="POSTRE" />
         </Pane>
 
         <!-- Cuarto panel con imagen y botón -->
         <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;">
             <VBox alignment="CENTER" spacing="5">
-                <ImageView fx:id="bebidasImage" fitHeight="340.0" fitWidth="173.0" pickOnBounds="true"  preserveRatio="false"/>
+                <ImageView fx:id="bebidasImage" fitHeight="340.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="false" />
             </VBox>
-            <Button layoutX="32.0" layoutY="178.0" prefHeight="45.0" prefWidth="110.0"
-                    style="-fx-background-color: transparent; -fx-text-fill: white;-fx-font-size: 17px;"
-                    text="BEBIDAS"/>
+            <Button fx:id="botonbebidasImage" layoutX="32.0" layoutY="178.0" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: transparent; -fx-text-fill: white;-fx-font-size: 17px;" text="BEBIDAS" onAction="#abrirBebidas" />
         </Pane>
     </HBox>
 </AnchorPane>

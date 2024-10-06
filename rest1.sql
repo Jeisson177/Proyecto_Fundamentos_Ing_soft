@@ -1,4 +1,4 @@
--- -------------------------------------------------------------------------- Eliminación de tablas
+`proyecto ingesoft`-- -------------------------------------------------------------------------- Eliminación de tablas
 -- Eliminar tabla INGREDIENTE_PLATO (dependiente)`proyecto ingesoft`
 DROP TABLE IF EXISTS INGREDIENTE_PLATO;
 

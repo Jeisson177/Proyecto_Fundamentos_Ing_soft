@@ -8,9 +8,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import services.GestionarReserva;
-import java.util.Set;
-import java.util.HashSet;
-
+import services.RedireccionGeneral;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -35,7 +33,8 @@ public class ReservaControl {
     private ObservableList<String> horariosDisponibles = FXCollections.observableArrayList();
 
     private GestionarReserva gestionarReserva = new GestionarReserva();  // Usar el servicio
-    private MesaControl mesa= new MesaControl();
+
+    private RedireccionGeneral Ira=new RedireccionGeneral();
     @FXML
     public void initialize() {
         // Asociar la columna con los datos
@@ -88,15 +87,15 @@ public class ReservaControl {
     }
     @FXML
     public void IrMenu(ActionEvent actionEvent) {
-        // Implementación futura
+       Ira.IrMenu(btnMenu);
     }
     @FXML
     public void IrHome(ActionEvent actionEvent) {
-        // Implementación futura
+        Ira.IrHome(btnHome);
     }
     @FXML
     public void IrReserva(ActionEvent actionEvent) {
-        // Implementación futura
+        Ira.IrReserva(btnReserva);
     }
     @FXML
     public void Reservar(ActionEvent actionEvent) {
