@@ -10,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import repository.PostreRepositorio;
 
 import java.util.Objects;
 
@@ -44,6 +45,8 @@ public class Postrecontrol {
     @FXML
     public Label preciocannolini;
 
+    private PostreRepositorio postre =new PostreRepositorio();
+
     @FXML
     public void initialize() {
         // Cargar la imagen al inicializar la vista
@@ -63,7 +66,10 @@ public class Postrecontrol {
         instaimage.setImage(img6);
         imagenletrapostres.setImage(img7);
 
-
+        precioaffogato.setText(String.valueOf(postre.getPrecios("Affogato"))+" COP");
+        preciotiramisu.setText(String.valueOf(postre.getPrecios("Tiramisu"))+" COP");
+        preciopannacota.setText(String.valueOf(postre.getPrecios("Panna Cotta"))+" COP");
+        preciocannolini.setText(String.valueOf(postre.getPrecios("Cannoli"))+" COP");
     }
 
     @FXML

@@ -2,7 +2,6 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
@@ -56,7 +55,7 @@
                 </graphic>
             </Button>
             <Label layoutX="36.0" layoutY="137.0" text="TIRAMISU" />
-            <Label fx:id="preciotiramisu" layoutX="52.0" layoutY="163.0" text="text" />
+            <Label fx:id="preciotiramisu" layoutX="25.0" layoutY="163.0" prefHeight="17.0" prefWidth="74.0" />
         </children>
     </Pane>
     <Pane layoutX="299.0" layoutY="150.0" prefHeight="185.0" prefWidth="125.0">
@@ -67,7 +66,7 @@
                 </graphic>
             </Button>
             <Label layoutX="26.0" layoutY="137.0" text="PANNA COTA" />
-            <Label fx:id="preciopannacota" layoutX="53.0" layoutY="163.0" text="text" />
+            <Label fx:id="preciopannacota" layoutX="26.0" layoutY="163.0" prefHeight="17.0" prefWidth="74.0" />
         </children>
     </Pane>
     <Pane layoutX="439.0" layoutY="150.0" prefHeight="185.0" prefWidth="125.0">
@@ -78,7 +77,7 @@
                 </graphic>
             </Button>
             <Label layoutX="32.0" layoutY="138.0" text="AFFOGATO" />
-            <Label fx:id="precioaffogato" layoutX="52.0" layoutY="163.0" text="text" />
+            <Label fx:id="precioaffogato" layoutX="26.0" layoutY="163.0" prefHeight="17.0" prefWidth="74.0" />
         </children>
     </Pane>
     <Pane layoutX="583.0" layoutY="150.0" prefHeight="185.0" prefWidth="125.0">
@@ -89,7 +88,7 @@
                 </graphic>
             </Button>
             <Label layoutX="36.0" layoutY="137.0" text="CANNOLINI" />
-            <Label fx:id="preciocannolini" layoutX="58.0" layoutY="163.0" text="text" />
+            <Label fx:id="preciocannolini" layoutX="26.0" layoutY="163.0" prefHeight="17.0" prefWidth="74.0" />
         </children>
     </Pane>
 </AnchorPane>

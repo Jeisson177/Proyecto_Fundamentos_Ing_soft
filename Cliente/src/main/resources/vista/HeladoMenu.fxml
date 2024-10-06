@@ -21,12 +21,12 @@
     </Pane>
     <Pane layoutX="-1.0" layoutY="48.0" prefHeight="351.0" prefWidth="277.0" style="-fx-background-color: WHITE;">
         <children>
-            <Button fx:id="volverPostres" layoutX="64.0" layoutY="292.0" mnemonicParsing="false" onAction="#clickHELADO" style="-fx-background-color: black;" text="Regresar a Postres" textFill="WHITE" underline="true">
+            <ImageView fx:id="heladogrande" fitHeight="351.0" fitWidth="277.0" pickOnBounds="true" preserveRatio="false" />
+            <Button fx:id="volverPostres" layoutX="58.0" layoutY="286.0" mnemonicParsing="false" onAction="#clickHELADO" style="-fx-background-color: black;" text="Regresar a Postres" textFill="WHITE" underline="true">
                 <font>
                     <Font size="17.0" />
                 </font>
             </Button>
-            <ImageView fx:id="heladogrande" fitHeight="351.0" fitWidth="277.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="false" />
         </children>
     </Pane>
     <Pane layoutX="276.0" layoutY="48.0" prefHeight="40.0" prefWidth="445.0" style="-fx-background-color: WHITE; -fx-background-color: ;">
@@ -52,7 +52,7 @@
                 </graphic>
             </Button>
             <Label layoutX="27.0" layoutY="93.0" text="AVELLANA" />
-            <Label fx:id="precioavellana" layoutX="46.0" layoutY="108.0" text="text" />
+            <Label fx:id="precioavellana" layoutX="17.0" layoutY="108.0" prefHeight="17.0" prefWidth="77.0" textAlignment="CENTER" />
         </children>
     </Pane>
     <Pane layoutX="440.0" layoutY="90.0" prefHeight="130.0" prefWidth="112.0">
@@ -63,7 +63,7 @@
                 </graphic>
             </Button>
             <Label layoutX="37.0" layoutY="93.0" text="LIMÓN" />
-            <Label fx:id="preciolimon" layoutX="46.0" layoutY="108.0" text="text" />
+            <Label fx:id="preciolimon" layoutX="18.0" layoutY="108.0" prefHeight="17.0" prefWidth="77.0" />
         </children>
     </Pane>
     <Pane layoutX="579.0" layoutY="90.0" prefHeight="130.0" prefWidth="112.0">
@@ -74,7 +74,7 @@
                 </graphic>
             </Button>
             <Label layoutX="23.0" layoutY="93.0" text="FRAMBUESA" />
-            <Label fx:id="frambuesa" layoutX="46.0" layoutY="108.0" text="text" />
+            <Label fx:id="precioframbuesa" layoutX="18.0" layoutY="108.0" prefHeight="17.0" prefWidth="77.0" textAlignment="CENTER" />
         </children>
     </Pane>
     <Pane layoutX="361.0" layoutY="230.0" prefHeight="130.0" prefWidth="112.0">
@@ -85,7 +85,7 @@
                 </graphic>
             </Button>
             <Label layoutX="39.0" layoutY="93.0" text="FRESA" />
-            <Label fx:id="preciofresa" layoutX="46.0" layoutY="108.0" text="text" />
+            <Label fx:id="preciofresa" layoutX="17.0" layoutY="108.0" prefHeight="17.0" prefWidth="77.0" textAlignment="CENTER" />
         </children>
     </Pane>
     <Pane layoutX="523.0" layoutY="230.0" prefHeight="151.0" prefWidth="112.0">
@@ -98,7 +98,7 @@
             <Label layoutX="25.0" layoutY="95.0" text="CHOCOLATE" />
             <Label layoutX="36.0" layoutY="105.0" text="PICANTE" />
             <Label layoutX="41.0" layoutY="114.0" text="DULCE" />
-            <Label fx:id="preciochocolate" layoutX="46.0" layoutY="129.0" text="text" />
+            <Label fx:id="preciochocolate" layoutX="25.0" layoutY="129.0" prefHeight="17.0" prefWidth="67.0" textAlignment="CENTER" />
         </children>
     </Pane>
 </AnchorPane>
