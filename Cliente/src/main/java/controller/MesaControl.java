@@ -75,6 +75,8 @@ public class MesaControl {
                         // Asignar la posición de la mesa desde la base de datos
                         mesaButton.setLayoutX(ubicacionX);
                         mesaButton.setLayoutY(ubicacionY);
+
+                        //mesaButton.setVisible(true);
                     }
                 }
             } catch (SQLException e) {
