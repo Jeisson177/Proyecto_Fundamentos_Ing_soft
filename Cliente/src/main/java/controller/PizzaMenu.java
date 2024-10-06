@@ -9,6 +9,7 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import services.RedireccionGeneral;
 
 import java.util.Objects;
 
@@ -33,6 +34,7 @@ public class PizzaMenu {
     public Button Pmargarita;
     @FXML
     public Button selecVolver;
+    private RedireccionGeneral Ira=new RedireccionGeneral();
 
     public void initialize(){
         Image margarita= new Image(Objects.requireNonNull(getClass().getResourceAsStream("/imagenes/PlatosFuertes/Margarita.png")));
@@ -46,22 +48,7 @@ public class PizzaMenu {
 
     @FXML
     public void onClickVolver(ActionEvent actionEvent) {
-        try {
-            // Carga la nueva ventana
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/PlatosFuertes.fxml"));
-            Parent root = loader.load();
-
-            // Crea una nueva escena
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Platos Fuertes"); // Título de la nueva ventana
-            stage.show();
-
-            //Opcionalmente, cierra la ventana actual
-            ((Stage) selecVolver.getScene().getWindow()).close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        Ira.IrPlatosFuertes(selecVolver);
     }
 
     @FXML
@@ -145,13 +132,16 @@ public class PizzaMenu {
 
     @FXML
     public void onClickHome(ActionEvent actionEvent) {
+        Ira.IrHome(selecHome);
     }
 
     @FXML
     public void onClickMenu(ActionEvent actionEvent) {
+        Ira.IrMenu(selecMenu);
     }
 
     @FXML
     public void onClickReservar(ActionEvent actionEvent) {
+        Ira.IrReserva(selecReservar);
     }
 }

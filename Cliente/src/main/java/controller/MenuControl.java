@@ -9,6 +9,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
+import services.RedireccionGeneral;
 
 import java.util.Objects;
 
@@ -22,6 +23,7 @@ public class MenuControl {
     public Button botonbebidasImage;
     public Button botonMenu;
 
+    private RedireccionGeneral Ira=new RedireccionGeneral();
     @FXML
     public void initialize() {
         // Cargar la imagen al inicializar la vista
@@ -39,61 +41,16 @@ public class MenuControl {
 
     @FXML
     private void abrirAntipasti() {
-        try {
-            // Carga la nueva ventana
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Antipasti.fxml"));
-            Parent root = loader.load();
-
-            // Crea una nueva escena
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Antipasti"); // Título de la nueva ventana
-            stage.show();
-
-            // Opcionalmente, cierra la ventana actual
-            ((Stage) antipastiMenu.getScene().getWindow()).close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        Ira.IrAntipasti(antipastiMenu);
     }
 
     @FXML
     private void abrirBebidas() {
-        try {
-            // Carga la nueva ventana
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Bebidas.fxml"));
-            Parent root = loader.load();
-
-            // Crea una nueva escena
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Bebidas"); // Título de la nueva ventana
-            stage.show();
-
-            // Opcionalmente, cierra la ventana actual
-            ((Stage) botonbebidasImage.getScene().getWindow()).close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        Ira.IrBebidas(botonbebidasImage);
     }
 
     public void irMenu(ActionEvent actionEvent) {
-        try {
-            // Carga la nueva ventana
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Menu.fxml"));
-            Parent root = loader.load();
-
-            // Crea una nueva escena
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Menu"); // Título de la nueva ventana
-            stage.show();
-
-            // Opcionalmente, cierra la ventana actual
-            ((Stage) botonMenu.getScene().getWindow()).close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+       Ira.IrMenu(botonMenu);
 
     }
 }

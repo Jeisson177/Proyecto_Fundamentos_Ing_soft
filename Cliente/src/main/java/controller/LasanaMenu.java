@@ -11,6 +11,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import repository.LasanaRepositorio;
+import services.RedireccionGeneral;
 
 import java.util.Objects;
 
@@ -42,6 +43,7 @@ public class LasanaMenu {
     @FXML
     public Text precioLasanaPollo;
 
+    private RedireccionGeneral Ira=new RedireccionGeneral();
     private LasanaRepositorio lasana=new LasanaRepositorio();
 
     public void initialize(){
@@ -61,42 +63,32 @@ public class LasanaMenu {
 
     @FXML
     public void onClickHome(ActionEvent actionEvent) {
+        Ira.IrHome(selecHome);
     }
 
     @FXML
     public void onClickMenu(ActionEvent actionEvent) {
+        Ira.IrMenu(selecMenu);
     }
 
     @FXML
     public void onClickReservar(ActionEvent actionEvent) {
+        Ira.IrReserva(selecReservar);
     }
 
     @FXML
     public void onClickVolver(ActionEvent actionEvent) {
-        try {
-            // Carga la nueva ventana
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/PlatosFuertes.fxml"));
-            Parent root = loader.load();
-
-            // Crea una nueva escena
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Platos Fuertes"); // Título de la nueva ventana
-            stage.show();
-
-            //Opcionalmente, cierra la ventana actual
-            ((Stage) selecVolver.getScene().getWindow()).close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        Ira.IrPlatosFuertes(selecVolver);
     }
 
     @FXML
     public void onClickLasBolonesa(ActionEvent actionEvent) {
+
     }
 
     @FXML
     public void onClickLasMixta(ActionEvent actionEvent) {
+
     }
 
     @FXML

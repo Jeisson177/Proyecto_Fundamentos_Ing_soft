@@ -11,6 +11,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import services.RedireccionGeneral;
 
 import java.util.Objects;
 
@@ -40,6 +41,7 @@ public class PlatosFuertes {
     public ImageView Pasta;
     @FXML
     public ImageView Risoto;
+    private RedireccionGeneral Ira=new RedireccionGeneral();
 
     public void initialize(){
         Image pizza = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/imagenes/PlatosFuertes/pizza.png")));
@@ -56,92 +58,35 @@ public class PlatosFuertes {
     }
 
     public void onClickPizza(ActionEvent actionEvent) {
-        try {
-            // Carga la nueva ventana
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/PizzaMenu.fxml"));
-            Parent root = loader.load();
-
-            // Crea una nueva escena
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Menu Pizza"); // Título de la nueva ventana
-            stage.show();
-
-            //Opcionalmente, cierra la ventana actual
-            ((Stage) selecPizza.getScene().getWindow()).close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        Ira.IrPizzaMenu(selecPizza);
     }
 
     public void onClickPasta(ActionEvent actionEvent) {
-        try {
-            // Carga la nueva ventana
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/PastaMenu.fxml"));
-            Parent root = loader.load();
-
-            // Crea una nueva escena
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Menu Pasta"); // Título de la nueva ventana
-            stage.show();
-
-            //Opcionalmente, cierra la ventana actual
-            ((Stage) selecPasta.getScene().getWindow()).close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        Ira.IrPasta(selecPasta);
     }
 
     public void onClickLa(ActionEvent actionEvent) {
-        try {
-            // Carga la nueva ventana
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/LasanaMenu.fxml"));
-            Parent root = loader.load();
-
-            // Crea una nueva escena
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Menu Lasaña"); // Título de la nueva ventana
-            stage.show();
-
-            //Opcionalmente, cierra la ventana actual
-            ((Stage) selecLasagna.getScene().getWindow()).close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        Ira.IrLasanaMenu(selecLasagna);
     }
 
     public void onClickRisoto(ActionEvent actionEvent) {
-        try {
-            // Carga la nueva ventana
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/RisotoMenu.fxml"));
-            Parent root = loader.load();
-
-            // Crea una nueva escena
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Menu Risoto"); // Título de la nueva ventana
-            stage.show();
-
-            //Opcionalmente, cierra la ventana actual
-            ((Stage) selecRisoto.getScene().getWindow()).close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        Ira.IrRisotoMenu(selecRisoto);
     }
 
 
-    public void onClick(ActionEvent actionEvent) {
+    public void onClick(ActionEvent actionEvent) {//nose que sea este onclick
     }
 
     public void onClickHome(ActionEvent actionEvent) {
+        Ira.IrHome(selecHome);
     }
 
     public void onClickMenu(ActionEvent actionEvent) {
+        Ira.IrMenu(selecMenu);
     }
 
     public void onClickReservar(ActionEvent actionEvent) {
+        Ira.IrReserva(selecReservar);
     }
 
 }

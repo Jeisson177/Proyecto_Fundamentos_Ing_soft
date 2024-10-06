@@ -11,6 +11,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import repository.agregarPizzaRepositorio;
+import services.RedireccionGeneral;
 
 import java.util.Objects;
 
@@ -35,6 +36,7 @@ public class agregarPizza {
 
     private String tipoPizza;
 
+    private RedireccionGeneral Ira=new RedireccionGeneral();
     private agregarPizzaRepositorio pizza=new agregarPizzaRepositorio();
 
     public void setTipoPizza(String tipoPizza) {
@@ -73,22 +75,7 @@ public class agregarPizza {
 
     @FXML
     public void onClickVolver(ActionEvent actionEvent) {
-        try {
-            // Carga la nueva ventana
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/PizzaMenu.fxml"));
-            Parent root = loader.load();
-
-            // Crea una nueva escena
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Platos Fuertes"); // Título de la nueva ventana
-            stage.show();
-
-            //Opcionalmente, cierra la ventana actual
-            ((Stage) selecVolver.getScene().getWindow()).close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        Ira.IrPizzaMenu(selecVolver);
     }
 
     @FXML
