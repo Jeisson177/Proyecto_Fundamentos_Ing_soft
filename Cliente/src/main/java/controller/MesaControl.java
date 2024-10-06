@@ -48,8 +48,8 @@ public class MesaControl {
     }
 
     private void cargarPosicion() {
-            //String url = "jdbc:mysql://localhost:3307/proyecto ingesoft";
-            String url = "jdbc:mysql://localhost:3306/proyecto ingesoft";
+            String url = "jdbc:mysql://localhost:3307/proyecto ingesoft";
+            //String url = "jdbc:mysql://localhost:3306/proyecto ingesoft";
             String user = "root";
             String password = "cl";
 

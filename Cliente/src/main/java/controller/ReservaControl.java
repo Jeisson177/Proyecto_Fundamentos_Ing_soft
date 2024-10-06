@@ -1,5 +1,6 @@
 package controller;
 
+import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -38,7 +39,7 @@ public class ReservaControl {
     @FXML
     public void initialize() {
         // Asociar la columna con los datos
-        horariosColumn.setCellValueFactory(data -> new javafx.beans.property.SimpleStringProperty(data.getValue()));
+        horariosColumn.setCellValueFactory(data -> new SimpleStringProperty(data.getValue()));
         Tabla.setItems(horariosDisponibles);  // Vincula la lista observable al TableView
     }
 
@@ -50,6 +51,9 @@ public class ReservaControl {
         if (fechaSeleccionada != null) {
             try {
                 // Consultar los horarios disponibles para la fecha seleccionada y la mesa especificada
+
+                MesaControl mesa = new MesaControl();
+
                 List<String> horarios = gestionarReserva.obtenerHorariosDisponibles(fechaSeleccionada, mesa.getMesa());
 
                 if (horarios.isEmpty()) {
