@@ -19,7 +19,6 @@ public class GestionarReserva {
 
         // Conectar a la base de datos
         try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/proyecto ingesoft", "root", "cl")) {
-
             // Obtener el día de la semana de la fecha seleccionada
             String nombreDia = obtenerNombreDia(fechaSeleccionada);
 
@@ -84,7 +83,7 @@ public class GestionarReserva {
 
         // Consulta SQL para insertar una nueva reserva
         String query = "INSERT INTO RESERVA (ID_CLIENTE, ID_MESA, FECHA_HORA) VALUES (?, ?, ?)";
-
+        
         try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/proyecto ingesoft", "root", "cl")) {
             try (PreparedStatement stmt = connection.prepareStatement(query)) {
                 // Asignamos los valores a los parámetros de la consulta

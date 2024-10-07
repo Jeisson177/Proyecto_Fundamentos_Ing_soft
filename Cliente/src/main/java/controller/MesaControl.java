@@ -145,6 +145,12 @@ public class MesaControl {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/ReservaFecha.fxml"));
             Parent root = loader.load();
 
+            // Obtén el controlador de la nueva ventana
+            ReservaControl reservaControl = loader.getController();
+
+            // Pasa la mesa seleccionada al controlador de la reserva
+            reservaControl.setMesaSeleccionada(mesaSeleccionada);
+
             // Crea una nueva escena
             Stage stage = new Stage();
             stage.setScene(new Scene(root));

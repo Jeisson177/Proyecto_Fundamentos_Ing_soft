@@ -36,6 +36,8 @@ public class ReservaControl {
     private GestionarReserva gestionarReserva = new GestionarReserva();  // Usar el servicio
 
     private RedireccionGeneral Ira=new RedireccionGeneral();
+    private int mesaSeleccionada;
+
     @FXML
     public void initialize() {
         // Asociar la columna con los datos
@@ -119,4 +121,7 @@ public class ReservaControl {
 
     }
 
+    public void setMesaSeleccionada(int mesaSeleccionada) {
+        this.mesaSeleccionada = mesaSeleccionada;
+    }
 }
