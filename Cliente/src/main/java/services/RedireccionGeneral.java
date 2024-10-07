@@ -48,7 +48,7 @@ public class RedireccionGeneral {
 
     public void IrReserva(Button Reserva) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Antipasti.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Mesa.fxml"));
             Parent root = loader.load();
 
             // Crea una nueva escena
@@ -84,7 +84,7 @@ public class RedireccionGeneral {
 
     public void IrPlatosFuertes(Button platofuerte) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/PatosFuertes.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/PlatosFuertes.fxml"));
             Parent root = loader.load();
 
             // Crea una nueva escena

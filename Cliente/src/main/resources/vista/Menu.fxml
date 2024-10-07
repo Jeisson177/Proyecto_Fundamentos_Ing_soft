@@ -18,7 +18,7 @@
                     <Font size="24.0" />
                 </font>
             </Text>
-            <Button fx:id="botonMenu" onAction="#irMenu" layoutX="365.0" layoutY="8.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Menú" textFill="WHITE">
+            <Button fx:id="botonMenu" layoutX="365.0" layoutY="8.0" mnemonicParsing="false" onAction="#irMenu" style="-fx-background-color: black;" text="Menú" textFill="WHITE">
                 <font>
                     <Font size="17.0" />
                 </font>
@@ -49,7 +49,7 @@
             <VBox alignment="CENTER" spacing="5">
                 <ImageView fx:id="platoFuerteImage" fitHeight="340.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="false" />
             </VBox>
-            <Button layoutX="8.0" layoutY="178.0" prefHeight="45.0" prefWidth="156.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 17px;" text="PLATOS FUERTES" />
+            <Button fx:id="botonPlatosFuertes" layoutX="8.0" layoutY="178.0" onAction="#IrPlatosFuertes" prefHeight="45.0" prefWidth="156.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 17px;" text="PLATOS FUERTES" />
         </Pane>
 
         <!-- Tercer panel con imagen y botón -->
@@ -57,7 +57,7 @@
             <VBox alignment="CENTER" spacing="5">
                 <ImageView fx:id="postresImage" fitHeight="340.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="false" />
             </VBox>
-            <Button layoutX="32.0" layoutY="178.0" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: transparent; -fx-text-fill: white;-fx-font-size: 17px;" text="POSTRE" />
+            <Button fx:id="botonPostre" layoutX="32.0" layoutY="178.0" onAction="#IrPostre" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: transparent; -fx-text-fill: white;-fx-font-size: 17px;" text="POSTRE" />
         </Pane>
 
         <!-- Cuarto panel con imagen y botón -->
@@ -65,7 +65,7 @@
             <VBox alignment="CENTER" spacing="5">
                 <ImageView fx:id="bebidasImage" fitHeight="340.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="false" />
             </VBox>
-            <Button fx:id="botonbebidasImage" layoutX="32.0" layoutY="178.0" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: transparent; -fx-text-fill: white;-fx-font-size: 17px;" text="BEBIDAS" onAction="#abrirBebidas" />
+            <Button fx:id="botonbebidasImage" layoutX="32.0" layoutY="178.0" onAction="#abrirBebidas" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: transparent; -fx-text-fill: white;-fx-font-size: 17px;" text="BEBIDAS" />
         </Pane>
     </HBox>
 </AnchorPane>

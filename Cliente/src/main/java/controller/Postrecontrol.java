@@ -11,7 +11,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import repository.PostreRepositorio;
-
+import services.RedireccionGeneral;
 import java.util.Objects;
 
 public class Postrecontrol {
@@ -46,6 +46,7 @@ public class Postrecontrol {
     public Label preciocannolini;
 
     private PostreRepositorio postre =new PostreRepositorio();
+    private RedireccionGeneral Ira=new RedireccionGeneral();
 
     @FXML
     public void initialize() {
@@ -112,4 +113,16 @@ public class Postrecontrol {
             e.printStackTrace();
         }
     }
+  public void irAPantallaMenu(ActionEvent event) {
+       Ira.IrMenu(volverMenu);
+    }
+
+    /*public void irAPantallaHome(ActionEvent event) {
+        Ira.IrHome(botonHome);
+    }
+
+    public void irAPantallaReserva(ActionEvent actionEvent) {
+        Ira.IrReserva(botonReservar);
+
+    }*/
 }
