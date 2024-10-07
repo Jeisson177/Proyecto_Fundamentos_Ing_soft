@@ -17,6 +17,21 @@
                     <Font size="24.0" />
                 </font>
             </Text>
+         <Button fx:id="botonHome" layoutX="318.0" layoutY="11.0" mnemonicParsing="false" onAction="#IrMenu" style="-fx-background-color: bl;" text="Home" textFill="WHITE" underline="true">
+            <font>
+               <Font size="15.0" />
+            </font>
+         </Button>
+         <Button fx:id="botonMenu" layoutX="411.0" layoutY="12.0" mnemonicParsing="false" onAction="#IrMenu" style="-fx-background-color: bl;" text="Menu" textFill="WHITE" underline="true">
+            <font>
+               <Font size="15.0" />
+            </font>
+         </Button>
+         <Button fx:id="botonReservar" layoutX="494.0" layoutY="11.0" mnemonicParsing="false" onAction="#IrReserva" style="-fx-background-color: bl;" text="Reservar" textFill="WHITE" underline="true">
+            <font>
+               <Font size="15.0" />
+            </font>
+         </Button>
         </children>
     </Pane>
     <Pane layoutX="-1.0" layoutY="48.0" prefHeight="351.0" prefWidth="277.0" style="-fx-background-color: WHITE;">
@@ -32,11 +47,6 @@
     <Pane layoutX="276.0" layoutY="48.0" prefHeight="40.0" prefWidth="445.0" style="-fx-background-color: WHITE; -fx-background-color: ;">
         <children>
             <ImageView fx:id="heladosletra" fitHeight="37.0" fitWidth="112.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" />
-            <Button fx:id="volverMenu" layoutX="223.0" layoutY="13.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="22.0" prefWidth="89.0" style="-fx-background-color: black;" text="Regresar a menú" textFill="WHITE" underline="true">
-                <font>
-                    <Font size="10.0" />
-                </font>
-            </Button>
             <Button fx:id="agregaraorden" layoutX="342.0" layoutY="13.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="22.0" prefWidth="89.0" style="-fx-background-color: black;" text="Agregar a Orden" textFill="WHITE" underline="true">
                 <font>
                     <Font size="10.0" />

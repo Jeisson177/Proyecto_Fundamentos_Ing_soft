@@ -140,10 +140,7 @@ public class AntipastiControl {
 
     @FXML
 
-    public void menuButtonClick(ActionEvent actionEvent) {
-        Ira.IrMenu(menuBoton);
-
-    }
+    public void menuButtonClick(ActionEvent actionEvent) { Ira.IrMenu(menuBoton); }
 
     public void reservarButtonClick(ActionEvent actionEvent) {
        Ira.IrReserva(reservarBoton);

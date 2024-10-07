@@ -17,15 +17,15 @@
                   <Font name="Times New Roman Italic" size="20.0" />
                </font>
             </Text>
-            <Button fx:id="selecHome" layoutX="223.0" layoutY="21.0" mnemonicParsing="false" onAction="#onClickHome" style="-fx-background-color: bl; -fx-text-fill: white;" text="Home" underline="true">
+            <Button fx:id="selecHome" layoutX="223.0" layoutY="21.0" mnemonicParsing="false" onAction="#IrHome" style="-fx-background-color: bl; -fx-text-fill: white;" text="Home" underline="true">
                <font>
                   <Font name="Times New Roman Italic" size="15.0" />
                </font></Button>
-            <Button fx:id="selecReservar" layoutX="317.0" layoutY="21.0" mnemonicParsing="false" onAction="#onClickReservar" style="-fx-background-color: bl; -fx-text-fill: white;" text="Menu" underline="true">
+            <Button fx:id="selecReservar" layoutX="317.0" layoutY="21.0" mnemonicParsing="false" onAction="#IrMenu" style="-fx-background-color: bl; -fx-text-fill: white;" text="Menu" underline="true">
                <font>
                   <Font name="Times New Roman Italic" size="15.0" />
                </font></Button>
-            <Button fx:id="selecMenu" layoutX="411.0" layoutY="21.0" mnemonicParsing="false" onAction="#onClickMenu" style="-fx-background-color: bl; -fx-text-fill: white;" text="Reservar" underline="true">
+            <Button fx:id="selecMenu" layoutX="411.0" layoutY="21.0" mnemonicParsing="false" onAction="#IrReserva" style="-fx-background-color: bl; -fx-text-fill: white;" text="Reservar" underline="true">
                <font>
                   <Font name="Times New Roman Italic" size="15.0" />
                </font></Button>

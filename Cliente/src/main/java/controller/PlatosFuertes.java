@@ -2,15 +2,9 @@ package controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.text.Text;
-import javafx.stage.Stage;
 import services.RedireccionGeneral;
 
 import java.util.Objects;
@@ -41,6 +35,7 @@ public class PlatosFuertes {
     public ImageView Pasta;
     @FXML
     public ImageView Risoto;
+
     private RedireccionGeneral Ira=new RedireccionGeneral();
 
     public void initialize(){
@@ -85,7 +80,7 @@ public class PlatosFuertes {
         Ira.IrMenu(selecMenu);
     }
 
-    public void onClickReservar(ActionEvent actionEvent) {
+    public void onClickReserva(ActionEvent actionEvent) {
         Ira.IrReserva(selecReservar);
     }
 

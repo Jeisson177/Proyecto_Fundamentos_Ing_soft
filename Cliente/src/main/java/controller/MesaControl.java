@@ -10,6 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import services.RedireccionGeneral;
 
 import java.sql.*;
 import java.util.HashSet;
@@ -33,6 +34,7 @@ public class MesaControl {
     public Button bntm11, bntm12, bntm13, bntm14, bntm15, bntm16, bntm17, bntm18, bntm19;
     public Button btnHorarios;
 
+    private RedireccionGeneral Ira = new RedireccionGeneral();
 
     private int mesaSeleccionada=0;
     @FXML
@@ -114,31 +116,12 @@ public class MesaControl {
         }
     }
 
-    @FXML
-    public void Irhome(ActionEvent actionEvent) {
+    public void IrHome(ActionEvent actionEvent) { Ira.IrHome(btnhome);
     }
-    @FXML
-    public void irReserva(ActionEvent actionEvent) {
-       
+
+    public void IrMenu(ActionEvent actionEvent) { Ira.IrMenu(btnMenu);
     }
-    @FXML
-    public void IrMenu(ActionEvent actionEvent) {
-        try {
-            // Carga la nueva ventana
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Menu.fxml"));
-            Parent root = loader.load();
-
-            // Crea una nueva escena
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Menu"); // Título de la nueva ventana
-            stage.show();
-
-            // Opcionalmente, cierra la ventana actual
-            ((Stage) btnMenu.getScene().getWindow()).close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public void IrReserva(ActionEvent actionEvent) {Ira.IrReserva(btnReservar);
     }
 
     @FXML

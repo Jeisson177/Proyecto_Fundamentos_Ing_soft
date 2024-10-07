@@ -11,6 +11,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import repository.HeladosRepositorio;
+import services.RedireccionGeneral;
 
 
 import java.util.Objects;
@@ -19,6 +20,12 @@ public class Heladoscontrol {
 
     @FXML
     public Label precioframbuesa;
+    @FXML
+    public Button botonHome;
+    @FXML
+    public Button botonMenu;
+    @FXML
+    public Button botonReservar;
     @FXML
     private ImageView heladoavellana;
     @FXML
@@ -53,6 +60,8 @@ public class Heladoscontrol {
     public Label preciochocolate;
 
     private HeladosRepositorio helado =new HeladosRepositorio();
+
+    private RedireccionGeneral Ira = new RedireccionGeneral();
 
     @FXML
     public void initialize() {
@@ -105,5 +114,13 @@ public class Heladoscontrol {
     }
 
     public void onHelloButtonClick(ActionEvent actionEvent) {
+    }
+
+    public void IrHome(ActionEvent actionEvent) { Ira.IrHome(botonHome);
+    }
+
+    public void IrMenu(ActionEvent actionEvent) { Ira.IrMenu(botonMenu);
+    }
+    public void IrReserva(ActionEvent actionEvent) {Ira.IrReserva(botonReservar);
     }
 }

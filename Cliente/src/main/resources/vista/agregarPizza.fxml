@@ -14,12 +14,12 @@
          <children>
             <Text fill="WHITE" layoutX="14.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bella Ventura">
                <font>
-                  <Font name="Times New Roman Italic" size="20.0" />
+                  <Font size="20.0" />
                </font>
             </Text>
-            <Button layoutX="209.0" layoutY="17.0" mnemonicParsing="false" style="-fx-background-color: bl; -fx-text-fill: white;" text="Home" underline="true">
+            <Button fx:id="botonHome" layoutX="209.0" layoutY="17.0" mnemonicParsing="false" onAction="#IrHome" style="-fx-background-color: bl; -fx-text-fill: white;" text="Home" underline="true">
                <font>
-                  <Font name="Times New Roman Italic" size="15.0" />
+                  <Font size="15.0" />
                </font>
             </Button>
             <ImageView fitHeight="49.0" fitWidth="62.0" layoutX="517.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
@@ -27,14 +27,14 @@
                   <Image url="@../Imagenes/PlatosFuertes/ig.png" />
                </image>
             </ImageView>
-            <Button layoutX="308.0" layoutY="17.0" mnemonicParsing="false" style="-fx-background-color: bl; -fx-text-fill: white;" text="Menu" underline="true">
+            <Button fx:id="botonMenu" layoutX="308.0" layoutY="17.0" mnemonicParsing="false" onAction="#IrMenu" style="-fx-background-color: bl; -fx-text-fill: white;" text="Menu" underline="true">
                <font>
-                  <Font name="Times New Roman Italic" size="15.0" />
+                  <Font size="15.0" />
                </font>
             </Button>
-            <Button layoutX="403.0" layoutY="17.0" mnemonicParsing="false" style="-fx-background-color: bl; -fx-text-fill: white;" text="Reservar" underline="true">
+            <Button fx:id="botonReservar" layoutX="403.0" layoutY="17.0" mnemonicParsing="false" onAction="#IrReserva" style="-fx-background-color: bl; -fx-text-fill: white;" text="Reservar" underline="true">
                <font>
-                  <Font name="Times New Roman Italic" size="15.0" />
+                  <Font size="15.0" />
                </font>
             </Button>
          </children>

@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GaseosasControl">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GaseosasControl">
    <children>
       <Pane prefHeight="77.0" prefWidth="600.0" style="-fx-background-color: black;">
          <children>
@@ -17,17 +17,17 @@
                   <Font size="24.0" />
                </font>
             </Text>
-            <Button fx:id="botonHome" layoutX="309.0" layoutY="20.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Home" textFill="WHITE" underline="true" onAction="#irAPantallaHome">
+            <Button fx:id="botonHome" layoutX="309.0" layoutY="20.0" mnemonicParsing="false" onAction="#IrHome" style="-fx-background-color: black;" text="Home" textFill="WHITE" underline="true">
                <font>
                   <Font size="17.0" />
                </font>
             </Button>
-            <Button fx:id="botonReservar" layoutX="492.0" layoutY="20.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Reservar" textFill="WHITE" underline="true">
+            <Button fx:id="botonReservar" layoutX="492.0" layoutY="20.0" mnemonicParsing="false" onAction="#IrReserva" style="-fx-background-color: black;" text="Reservar" textFill="WHITE" underline="true">
                <font>
                   <Font size="17.0" />
                </font>
             </Button>
-            <Button fx:id="botonMenu" layoutX="400.0" layoutY="22.0" mnemonicParsing="false" style="-fx-background-color: black;" text="Menú" textFill="WHITE" underline="true" onAction="#irAPantallaMenu">
+            <Button fx:id="botonMenu" layoutX="400.0" layoutY="22.0" mnemonicParsing="false" onAction="#IrMenu" style="-fx-background-color: black;" text="Menú" textFill="WHITE" underline="true">
                <font>
                   <Font size="17.0" />
                </font>
@@ -46,7 +46,7 @@
                   <Font size="22.0" />
                </font>
             </Text>
-            <Button fx:id="botonRegresar" layoutX="493.0" layoutY="14.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="86.0" style="-fx-background-color: blue;" text="Regresar" textFill="WHITE" onAction="#irAPantallaBebidas"/>
+            <Button fx:id="botonRegresar" layoutX="493.0" layoutY="14.0" mnemonicParsing="false" onAction="#irAPantallaBebidas" prefHeight="38.0" prefWidth="86.0" style="-fx-background-color: blue;" text="Regresar" textFill="WHITE" />
             <Pane layoutX="257.0" layoutY="217.0" prefHeight="29.0" prefWidth="68.0" style="-fx-background-color: blue;">
                <children>
                   <Text fx:id="textoPrecio4" fill="WHITE" layoutX="23.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />

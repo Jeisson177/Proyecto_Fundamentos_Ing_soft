@@ -115,17 +115,12 @@ public class BebidaControl {
         }
     }
 
-    public void irAPantallaMenu(ActionEvent event) {
-        Ira.IrMenu(botonMenu);
+    public void IrHome(ActionEvent actionEvent) { Ira.IrHome(botonHome);
     }
 
-    public void irAPantallaHome(ActionEvent event) {
-        Ira.IrHome(botonHome);
+    public void IrMenu(ActionEvent actionEvent) { Ira.IrMenu(botonMenu);
     }
-
-    public void irAPantallaReserva(ActionEvent actionEvent) {
-        Ira.IrReserva(botonReservar);
-
+    public void IrReserva(ActionEvent actionEvent) {Ira.IrReserva(botonReservar);
     }
 }
 

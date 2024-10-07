@@ -17,6 +17,12 @@ import java.util.Objects;
 public class Postrecontrol {
 
     @FXML
+    public Button botonHome;
+    @FXML
+    public Button botonMenu;
+    @FXML
+    public Button botonReservar;
+    @FXML
     private ImageView gelatoimage;
     @FXML
     private ImageView tiramisuimage;
@@ -113,16 +119,11 @@ public class Postrecontrol {
             e.printStackTrace();
         }
     }
-  public void irAPantallaMenu(ActionEvent event) {
-       Ira.IrMenu(volverMenu);
+    public void IrHome(ActionEvent actionEvent) { Ira.IrHome(botonHome);
     }
 
-    /*public void irAPantallaHome(ActionEvent event) {
-        Ira.IrHome(botonHome);
+    public void IrMenu(ActionEvent actionEvent) { Ira.IrMenu(botonMenu);
     }
-
-    public void irAPantallaReserva(ActionEvent actionEvent) {
-        Ira.IrReserva(botonReservar);
-
-    }*/
+    public void IrReserva(ActionEvent actionEvent) {Ira.IrReserva(botonReservar);
+    }
 }

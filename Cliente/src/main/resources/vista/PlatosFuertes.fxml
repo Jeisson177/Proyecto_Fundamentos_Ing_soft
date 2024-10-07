@@ -31,7 +31,7 @@
                   <Font name="Times New Roman" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="selecReservar" layoutX="441.0" layoutY="20.0" mnemonicParsing="false" onAction="#onClickReservar" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-style: italic;" text="Reservar" underline="true">
+            <Button fx:id="selecReservar" layoutX="441.0" layoutY="20.0" mnemonicParsing="false" onAction="#onClickReserva" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-style: italic;" text="Reservar" underline="true">
                <font>
                   <Font name="Times New Roman" size="15.0" />
                </font>

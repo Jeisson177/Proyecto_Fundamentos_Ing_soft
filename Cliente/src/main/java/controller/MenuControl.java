@@ -24,6 +24,8 @@ public class MenuControl {
     public Button botonMenu;
     public Button botonPlatosFuertes;
     public Button botonPostre;
+    public Button botonReservar;
+    public Button botonHome;
 
     private RedireccionGeneral Ira=new RedireccionGeneral();
     @FXML
@@ -61,5 +63,13 @@ public class MenuControl {
     public void irMenu(ActionEvent actionEvent) {
        Ira.IrMenu(botonMenu);
 
+    }
+
+    public void IrHome(ActionEvent actionEvent) { Ira.IrHome(botonHome);
+    }
+
+    public void IrMenu(ActionEvent actionEvent) { Ira.IrMenu(botonMenu);
+    }
+    public void IrReserva(ActionEvent actionEvent) {Ira.IrReserva(botonReservar);
     }
 }

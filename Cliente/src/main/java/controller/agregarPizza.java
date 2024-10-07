@@ -33,10 +33,18 @@ public class agregarPizza {
     public Text precioMediana;
     @FXML
     public Text precioFamiliar;
+    @FXML
+    public Button botonHome;
+    @FXML
+    public Button botonMenu;
+    @FXML
+    public Button botonReservar;
+
 
     private String tipoPizza;
 
     private RedireccionGeneral Ira=new RedireccionGeneral();
+
     private agregarPizzaRepositorio pizza=new agregarPizzaRepositorio();
 
     public void setTipoPizza(String tipoPizza) {
@@ -80,5 +88,13 @@ public class agregarPizza {
 
     @FXML
     public void onClickAgregarP(ActionEvent actionEvent) {
+    }
+
+    public void IrHome(ActionEvent actionEvent) { Ira.IrHome(botonHome);
+    }
+
+    public void IrMenu(ActionEvent actionEvent) { Ira.IrMenu(botonMenu);
+    }
+    public void IrReserva(ActionEvent actionEvent) {Ira.IrReserva(botonReservar);
     }
 }

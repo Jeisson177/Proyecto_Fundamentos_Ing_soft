@@ -130,18 +130,11 @@ public class PizzaMenu {
         }
     }
 
-    @FXML
-    public void onClickHome(ActionEvent actionEvent) {
-        Ira.IrHome(selecHome);
+    public void IrHome(ActionEvent actionEvent) { Ira.IrHome(selecHome);
     }
 
-    @FXML
-    public void onClickMenu(ActionEvent actionEvent) {
-        Ira.IrMenu(selecMenu);
+    public void IrMenu(ActionEvent actionEvent) { Ira.IrMenu(selecMenu);
     }
-
-    @FXML
-    public void onClickReservar(ActionEvent actionEvent) {
-        Ira.IrReserva(selecReservar);
+    public void IrReserva(ActionEvent actionEvent) {Ira.IrReserva(selecReservar);
     }
 }
