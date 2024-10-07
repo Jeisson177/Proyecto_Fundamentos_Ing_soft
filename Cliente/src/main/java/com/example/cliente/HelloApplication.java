@@ -12,7 +12,7 @@ public class HelloApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/vista/Mesa.fxml"));
 
         Scene scene = new Scene(fxmlLoader.load(), 700, 400);
-        stage.setTitle("menucito");
+        stage.setTitle("Bella Venture");
         stage.setScene(scene);
         stage.show();
     }

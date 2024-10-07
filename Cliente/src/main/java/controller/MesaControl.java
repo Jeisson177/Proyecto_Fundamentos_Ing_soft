@@ -10,6 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import services.GestionarReserva;
 import services.RedireccionGeneral;
 
 import java.sql.*;
@@ -136,6 +137,7 @@ public class MesaControl {
 
     // Método para obtener la mesa seleccionada (número entero)
     public int getMesa() {
+
         return mesaSeleccionada;
     }
 
@@ -144,6 +146,11 @@ public class MesaControl {
             // Carga la nueva ventana
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/ReservaFecha.fxml"));
             Parent root = loader.load();
+            // Obtener el controlador de la nueva ventana
+            ReservaControl reservaControl = loader.getController();
+
+            // Pasar la instancia de MesaControl a ReservaControl
+            reservaControl.setMesaControl(this);  // Pasar la instancia actual de MesaControl
 
             // Crea una nueva escena
             Stage stage = new Stage();

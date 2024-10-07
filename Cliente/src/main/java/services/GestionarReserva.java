@@ -10,9 +10,11 @@ import java.util.List;
 import repository.ReservaRepository;
 
 public class GestionarReserva {
-    private MesaControl mesa= new MesaControl();
+    private MesaControl mesa;
     private ReservaRepository reservaRepo = new ReservaRepository();
-
+    public GestionarReserva(MesaControl mesa) {
+        this.mesa = mesa;
+    }
     // Método para obtener los horarios disponibles en un día específico y para una mesa específica
     public List<String> obtenerHorariosDisponibles(LocalDate fechaSeleccionada, int mesa) throws SQLException {
         List<String> horariosDisponibles = new ArrayList<>();
