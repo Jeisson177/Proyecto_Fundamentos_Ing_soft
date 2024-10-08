@@ -23,7 +23,7 @@
             </ImageView>
             <Button fx:id="selecHome" layoutX="268.0" layoutY="19.0" mnemonicParsing="false" onAction="#onClickHome" style="-fx-background-color: black; -fx-text-fill: WHITE; -fx-font-style: italic;" text="Home" underline="true">
                <font>
-                  <Font name="Times New Roman" size="15.0" />
+                  <Font size="15.0" />
                </font>
             </Button>
             <Button fx:id="selecMenu" layoutX="353.0" layoutY="19.0" mnemonicParsing="false" onAction="#onClickMenu" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-style: italic;" text="Menu" underline="true">
@@ -62,7 +62,7 @@
             <Font name="Times New Roman" size="21.0" />
          </font>
       </Button>
-      <Button fx:id="selecAtras" layoutX="6.0" layoutY="307.0" mnemonicParsing="false" onAction="#onClick" text="Atras">
+      <Button fx:id="selecAtras" layoutX="6.0" layoutY="307.0" mnemonicParsing="false" onAction="#onClickAtras" text="Atras">
          <font>
             <Font name="Times New Roman" size="14.0" />
          </font>
