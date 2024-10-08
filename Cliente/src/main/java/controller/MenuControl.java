@@ -66,10 +66,14 @@ public class MenuControl {
     }
 
     public void IrHome(ActionEvent actionEvent) { Ira.IrHome(botonHome);
+
     }
 
-    public void IrMenu(ActionEvent actionEvent) { Ira.IrMenu(botonMenu);
-    }
+
     public void IrReserva(ActionEvent actionEvent) {Ira.IrReserva(botonReservar);
+    }
+
+    public void IrMenu(ActionEvent actionEvent) {
+        Ira.IrMenu(botonMenu);
     }
 }
