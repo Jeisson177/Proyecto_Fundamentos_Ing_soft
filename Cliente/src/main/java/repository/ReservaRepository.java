@@ -7,7 +7,7 @@ import javafx.scene.control.Alert;
 
 public class ReservaRepository {
 
-    private static final String URL = "jdbc:mysql://localhost:3306/`proyecto ingesoft`";
+    private static final String URL = "jdbc:mysql://localhost:3306/proyecto ingesoft";
     //private static final String URL  = "jdbc:mysql://localhost:3307/proyecto ingesoft";
     private static final String USER = "root";
     private static final String PASSWORD = "cl";

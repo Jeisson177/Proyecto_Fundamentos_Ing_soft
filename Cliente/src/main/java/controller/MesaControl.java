@@ -29,6 +29,8 @@ public class MesaControl {
     public Button btnReservar;
     public Button btnhome;
 
+    public int idUuario;
+
     @FXML
     public Button bntm1, bntm2, bntm3, bntm4, bntm5, bntm6, bntm7, bntm8, bntm9, bntm10;
     @FXML
@@ -162,5 +164,8 @@ public class MesaControl {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    public void setIdUsuario(int id){
+        idUuario=id;
     }
 }
