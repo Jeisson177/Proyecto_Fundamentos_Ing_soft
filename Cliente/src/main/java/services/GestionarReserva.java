@@ -77,7 +77,7 @@ public class GestionarReserva {
     }
 
     public boolean GReserva(LocalDate calendario, String hora) {
-        int idCliente = 1; // Supongamos que siempre es el cliente 1. Esto puede ser dinámico.
+        int idCliente = mesa.idUuario; // Supongamos que siempre es el cliente 1. Esto puede ser dinámico.
         int idMesa = mesa.getMesa();
 
         // Combina la fecha (calendario) y la hora (hora) en una cadena de fecha y hora
