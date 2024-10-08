@@ -69,7 +69,7 @@ public class PlatosFuertes {
     }
 
 
-    public void onClick(ActionEvent actionEvent) {//nose que sea este onclick
+    public void onClickAtras(ActionEvent actionEvent) { Ira.IrMenu(selecAtras);
     }
 
     public void onClickHome(ActionEvent actionEvent) {
