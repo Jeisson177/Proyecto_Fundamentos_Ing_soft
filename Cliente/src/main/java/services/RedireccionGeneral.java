@@ -12,7 +12,7 @@ public class RedireccionGeneral {
 
     public void IrHome(Button Home) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Menu.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Home.fxml"));
             Parent root = loader.load();
 
             // Crea una nueva escena
@@ -48,7 +48,7 @@ public class RedireccionGeneral {
 
     public void IrReserva(Button Reserva) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Mesa.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Login.fxml"));
             Parent root = loader.load();
 
             // Crea una nueva escena
