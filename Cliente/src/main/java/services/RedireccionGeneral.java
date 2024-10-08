@@ -120,7 +120,7 @@ public class RedireccionGeneral {
 
     public void IrPostre(Button Postre) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Postrecontrol.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/PostreMenu.fxml"));
             Parent root = loader.load();
 
             // Crea una nueva escena
