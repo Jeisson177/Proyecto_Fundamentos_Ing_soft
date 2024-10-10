@@ -1,4 +1,3 @@
-
 Links: 
 SSD: https://livejaverianaedu-my.sharepoint.com/:w:/g/personal/pedraza_n_javeriana_edu_co1/EZocjNWNS35LujbAThDK39AB5DO-TPykCauHLLem6JDsSg?e=UE14u4
 SRS: https://livejaverianaedu-my.sharepoint.com/:w:/g/personal/jocelyne-gonzalez_javeriana_edu_co/EcCTz8RAGLJNke3lFnHU6w0B-8gFO8kDqysZzYp62TU26w?e=rpUQIv
@@ -11,5 +10,3 @@ Diagrama de navegación Clientes: https://miro.com/welcomeonboard/Vm1wdzI1V3ZWSj
 
 Reporte Gerencial 1: https://livejaverianaedu-my.sharepoint.com/:w:/g/personal/jocelyne-gonzalez_javeriana_edu_co/EWnOsO89yzZKhBHVSiY2tLMBvlZ4MloqFb8UBagxTp1rTw?rtime=qMCldWjp3Eg
 Reporte Gerencial 2: 
-
-Pruebas de CLiente: https://livejaverianaedu-my.sharepoint.com/:x:/g/personal/jocelyne-gonzalez_javeriana_edu_co/EUosoRqAelFDtGez2WdqvqMBMs0X9GjV44B5MBr5K3gddw?e=LyLLYT
