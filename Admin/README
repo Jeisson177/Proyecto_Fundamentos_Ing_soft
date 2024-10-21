@@ -8,10 +8,10 @@ CRUD completo (Crear, Leer, Actualizar, Eliminar) de las reservas
 Gestión del inventario de alimentos (añadir o quitar ingredientes)
 Creación, modificación o eliminación de platos en el menú
 Gestión de usuarios (meseros y clientes)
-Estructura del Proyecto
 El proyecto está organizado en las siguientes capas:
 
 Vista (vista):
+Estructura del Proyecto
 
 La interfaz de usuario que interactúa con el administrador para gestionar reservas, facturas, inventario y platos.
 Ubicación: /src/main/resources/vista/

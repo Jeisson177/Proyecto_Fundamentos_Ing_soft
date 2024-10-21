@@ -4,7 +4,164 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fd8ff85-b94a-4b81-b0f1-01c765de323a" name="Changes" comment="" />
+    <list default="true" id="1fd8ff85-b94a-4b81-b0f1-01c765de323a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Admin/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/java/com/example/admin/admin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/java/controller/InicioControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/java/controller/menu/Antipasti.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/java/controller/menu/AntipastiControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/java/controller/menu/BebidaControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/java/controller/menu/GaseosasControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/java/controller/menu/Heladoscontrol.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/java/controller/menu/HomeControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/java/controller/menu/LasanaMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/java/controller/menu/MenuControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/java/controller/menu/MesaControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/java/controller/menu/PastaMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/java/controller/menu/PizzaMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/java/controller/menu/PlatosFuertes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/java/controller/menu/Postrecontrol.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/java/controller/menu/ReservaControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/java/controller/menu/RisotoMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/java/controller/menu/VinosControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/java/controller/menu/agregarPizza.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/java/controller/menu/loginControl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/java/repository/HeladosRepositorio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/java/repository/LasanaRepositorio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/java/repository/PastaRepositorio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/java/repository/PlatoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/java/repository/PostreRepositorio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/java/repository/ReservaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/java/repository/RisotoRepositorio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/java/repository/UsuarioRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/java/repository/agregarPizzaRepositorio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/java/repository/bebidasRepositorio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/java/services/GestionarReserva.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/java/services/RedireccionGeneral.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/Bebidas1/Agua.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/Bebidas1/AguaConGas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/Bebidas1/Champagne.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/Bebidas1/Gaseosas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/Bebidas1/vinos.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/Gaseosas/cocacola.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/Gaseosas/fanta.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/Gaseosas/gaseosas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/Gaseosas/quatro.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/Imagenes/helados/AVELLANA_IMAGE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/Imagenes/helados/CHOCOLATE_IMAGE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/Imagenes/helados/FRAMBUESA_IMAGE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/Imagenes/helados/FRESA_IMAGE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/Imagenes/helados/HELADOSLETRA_IMAGE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/Imagenes/helados/HELADOS_IMAGE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/Imagenes/helados/LIMON_IMAGE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/Imagenes/postres/AFFOGATO_IMAGE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/Imagenes/postres/CANNOLINI_IMAGE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/Imagenes/postres/GELATO_IMAGE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/Imagenes/postres/INSTA_IMAGE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/Imagenes/postres/PANNACOTA_IMAGE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/Imagenes/postres/POSTRESLETRA_IMAGE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/Imagenes/postres/TIRAMISU_IMAGE.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/PlatosFuertes/4quesos.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/PlatosFuertes/BOLOÑESA.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/PlatosFuertes/Carbonara.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/PlatosFuertes/Fetu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/PlatosFuertes/Hongos.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/PlatosFuertes/L1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/PlatosFuertes/Marga.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/PlatosFuertes/Margarita.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/PlatosFuertes/Mixta.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/PlatosFuertes/Pasta.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/PlatosFuertes/Pep.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/PlatosFuertes/Quesos.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/PlatosFuertes/Salmon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/PlatosFuertes/ig.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/PlatosFuertes/peper.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/PlatosFuertes/pizza.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/PlatosFuertes/pollo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/PlatosFuertes/risoto.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/PlatosFuertes/spa.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/PlatosFuertes/trene.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/PlatosFuertes/vegetariano.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/Portada/bellaV.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/Portada/portada.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/Vinos/rosa.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/Vinos/tinto.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/Vinos/vinos.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/Vinos/white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/antipasti/carpaccio_res.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/antipasti/carpaccio_salmon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/antipasti/ensalada_cesar_romana.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/antipasti/ensalada_portobello.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/antipasti/ensalada_ventresca.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/antipasti/focaccia_dolce.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/antipasti/focaccia_genovese.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/antipasti/focaccia_pugliese.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/antipasti/focaccia_veneta.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/antipasti/tabal_quesos.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/home/home.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/home/imagen1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/home/imagen2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/home/imagen3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/login/imagen1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/login/pidr.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/login/pizq.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/menuPrincipal/1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/menuPrincipal/port_antipasti.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/menuPrincipal/port_bebidas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/menuPrincipal/port_platos_fuertes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/menuPrincipal/port_postres.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/mesa/distribucionMesa.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/Imagenes/mesa/fondomesa.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/Inicio.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/Antipasti.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/Bebidas.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/HeladoMenu.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/Home.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/LasanaMenu.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/Login.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/Menu.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/Mesa.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/PastaMenu.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/PizzaMenu.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/PlatosFuertes.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/PostreMenu.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/ReservaFecha.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/RisotoMenu.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/agregarPizza.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/gaseosas.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/vinos.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cliente/src/main/java/com/example/admin/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/README" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/README" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/java/com/example/cliente/HelloApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/resources/vista/Antipasti.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/resources/vista/Antipasti.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/resources/vista/Bebidas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/resources/vista/Bebidas.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/resources/vista/HeladoMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/resources/vista/HeladoMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/resources/vista/Home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/resources/vista/Home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/resources/vista/LasanaMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/resources/vista/LasanaMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/resources/vista/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/resources/vista/Login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/resources/vista/Menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/resources/vista/Menu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/resources/vista/Mesa.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/resources/vista/Mesa.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/resources/vista/PastaMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/resources/vista/PastaMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/resources/vista/PizzaMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/resources/vista/PizzaMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/resources/vista/PlatosFuertes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/resources/vista/PlatosFuertes.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/resources/vista/PostreMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/resources/vista/PostreMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/resources/vista/ReservaFecha.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/resources/vista/ReservaFecha.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/resources/vista/RisotoMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/resources/vista/RisotoMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/resources/vista/agregarPizza.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/resources/vista/agregarPizza.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/resources/vista/gaseosas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/resources/vista/gaseosas.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/resources/vista/vinos.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/resources/vista/vinos.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +170,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -70,13 +228,15 @@
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "develop",
     "ignore.preview.features.used": "true",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Jocel/Downloads/Proyecto_Fundamentos_Ing_soft/Cliente",
+    "last_opened_file_path": "C:/Users/jeiss/OneDrive/Documentos/universidad/10 decimo semestre/Fundamentos ing soft/Proyecto_Fundamentos_Ing_soft/Admin",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -85,17 +245,25 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2591623",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jeiss\OneDrive\Documentos\universidad\10 decimo semestre\Fundamentos ing soft\Proyecto_Fundamentos_Ing_soft\Admin" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jeiss\OneDrive\Documentos\universidad\10 decimo semestre\Fundamentos ing soft\Proyecto_Fundamentos_Ing_soft\Admin\src\main\resources\vista\menu" />
+    </key>
+  </component>
   <component name="RunManager">
-    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.cliente.HelloApplication" />
-      <module name="Cliente" />
+    <configuration name="admin" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.admin.admin" />
+      <module name="Cliente (1)" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.cliente.*" />
+          <option name="PATTERN" value="com.example.admin.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -105,7 +273,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.HelloApplication" />
+        <item itemvalue="Application.admin" />
       </list>
     </recent_temporary>
   </component>
@@ -133,6 +301,8 @@
       <workItem from="1727577652510" duration="1324000" />
       <workItem from="1727809683234" duration="1056000" />
       <workItem from="1727889556684" duration="50000" />
+      <workItem from="1729383639707" duration="2005000" />
+      <workItem from="1729533941512" duration="2634000" />
     </task>
     <servers />
   </component>
