@@ -44,6 +44,10 @@ public class PastaMenu {
     public Text precioPastaTrene;
     @FXML
     public Text precioPastaSpa;
+    public Text dispoCarbonara;
+    public Text dispoPuttanesca;
+    public Text dispoPesto;
+    public Text dispoBolonesa;
 
     private RedireccionGeneral Ira=new RedireccionGeneral();
     private PastaRepositorio pasta=new PastaRepositorio();
@@ -63,6 +67,11 @@ public class PastaMenu {
         precioPastaSpa.setText(String.valueOf(pasta.getPrecios("Pasta alla Carbonara"))+" COP");
         precioPastaTrene.setText(String.valueOf(pasta.getPrecios("Trenette al Pesto"))+" COP");
         precioPastaCar.setText(String.valueOf(pasta.getPrecios("Pasta alla Carbonara"))+" COP");
+
+        dispoBolonesa.setText(pasta.getDispo("Pasta alla Carbonara"));
+        dispoCarbonara.setText(pasta.getDispo("Pasta alla Carbonora"));
+        dispoPesto.setText(pasta.getDispo("Trenette al Pesto"));
+        dispoPuttanesca.setText(pasta.getDispo("Fettuccine alla Puttanesca"));
     }
 
     public void IrHome(ActionEvent actionEvent) { Ira.IrHome(selecHome);
