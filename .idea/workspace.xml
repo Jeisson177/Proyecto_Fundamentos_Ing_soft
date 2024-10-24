@@ -5,19 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fd8ff85-b94a-4b81-b0f1-01c765de323a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/java/controller/menu/AntipastiControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/java/controller/menu/AntipastiControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/java/controller/menu/BebidaControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/java/controller/menu/BebidaControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menu/AntipastiControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menu/AntipastiControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menu/BebidaControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menu/BebidaControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menu/GaseosasControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menu/GaseosasControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menu/VinosControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menu/VinosControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/repository/menu/bebidasRepositorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/repository/menu/bebidasRepositorio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/Antipasti.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/Antipasti.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/Bebidas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/Bebidas.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/gaseosas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/gaseosas.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/vinos.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/vinos.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/src/main/java/controller/menu/Postrecontrol.java" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/java/controller/menu/Postrecontrol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menu/Heladoscontrol.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menu/Heladoscontrol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menu/Postrecontrol.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menu/Postrecontrol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/repository/menu/HeladosRepositorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/repository/menu/HeladosRepositorio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/repository/menu/PostreRepositorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/repository/menu/PostreRepositorio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/HeladoMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/HeladoMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/PostreMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/PostreMenu.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

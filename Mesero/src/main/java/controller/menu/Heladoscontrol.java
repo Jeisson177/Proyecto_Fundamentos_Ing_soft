@@ -12,6 +12,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import repository.menu.HeladosRepositorio;
 import services.RedireccionGeneral;
+import javafx.scene.text.Text;
 
 
 import java.util.Objects;
@@ -58,6 +59,11 @@ public class Heladoscontrol {
     public Label preciofresa;
     @FXML
     public Label preciochocolate;
+    public Text dispoAvellana;
+    public Text dispoChocPicante;
+    public Text dispoFresa;
+    public Text dispolimon;
+    public Text dispoFrambuesa;
 
     private HeladosRepositorio helado =new HeladosRepositorio();
 
@@ -89,6 +95,12 @@ public class Heladoscontrol {
         preciochocolate.setText(String.valueOf(helado.getPrecios("Gelato Cioccolato con Peperoncino"))+" COP");
         preciofresa.setText(String.valueOf(helado.getPrecios("Gelato Fragola (Fresa)"))+" COP");
         preciolimon.setText(String.valueOf(helado.getPrecios("Gelato Limone (Limon)"))+" COP");
+
+        dispoAvellana.setText(helado.getDispo("Gelato Bacio (Avellana)"));
+        dispoFrambuesa.setText(helado.getDispo("Gelato Lampone (Frambuesa)"));
+        dispoChocPicante.setText(helado.getDispo("Gelato Cioccolato con Peperoncino"));
+        dispoFresa.setText(helado.getDispo("Gelato Fragola (Fresa)"));
+        dispolimon.setText(helado.getDispo("Gelato Limone (Limon)"));
 
     }
 
