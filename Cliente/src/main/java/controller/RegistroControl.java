@@ -11,7 +11,16 @@ import javafx.stage.Stage;
 import repository.UsuarioRepository;
 import services.RedireccionGeneral;
 
-public class loginControl {
+public class RegistroControl {
+    @FXML
+    public TextField labNombre;
+    @FXML
+    public TextField LabTel;
+    @FXML
+    public TextField labUser;
+    @FXML
+    public TextField LabClave;
+
     @FXML
     public Button btnHome;
     @FXML
@@ -19,23 +28,13 @@ public class loginControl {
     @FXML
     public Button btnReservar;
     @FXML
-    public Button btnRegistrar;
-    @FXML
-    public TextField labUser;
-    @FXML
-    public TextField LabClave;
-    public Button btnLogin;
-    public Button btnVerReservas;
+    public Button btnRegistrarse;
 
     private UsuarioRepository log=new UsuarioRepository();
     private RedireccionGeneral Ira = new RedireccionGeneral();
 
-
     @FXML
-    public void IrHome(ActionEvent actionEvent) {
-        Ira.IrHome(btnHome);
-
-    }
+    public void IrHome(ActionEvent actionEvent) {Ira.IrHome(btnHome);}
     @FXML
     public void IrMenu(ActionEvent actionEvent) {
         Ira.IrMenu(btnMenu);
@@ -44,13 +43,18 @@ public class loginControl {
     public void IrReserva(ActionEvent actionEvent) {
         Ira.IrReserva(btnReservar);
     }
+
     @FXML
     public void IrMesa(ActionEvent actionEvent) {
         String email = labUser.getText();
         String password = LabClave.getText();
-        int idUsuario = log.AutentificarUsuario(email, password);  // Autenticación de usuario
+        String nombre = labNombre.getText();
+        String telefono = LabTel.getText();
 
-        if (idUsuario != -1) {  // Si la autenticación es exitosa
+        int idUsuario = log.CrearUsuario(email, password, nombre, telefono);  // Registrar usuario
+
+
+        if (idUsuario != -1) {
             try {
                 // Carga la nueva ventana
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Mesa.fxml"));
@@ -69,14 +73,13 @@ public class loginControl {
                 stage.show();
 
                 // Opcionalmente, cerrar la ventana actual
-                ((Stage) btnRegistrar.getScene().getWindow()).close();
+                ((Stage) btnRegistrarse.getScene().getWindow()).close();
             } catch (Exception e) {
                 e.printStackTrace();
             }
         } else {
-            System.out.println("Error: Usuario o contraseña incorrecta.");
+            // Muestra un mensaje de error
+            System.out.println("Error al crear el usuario");
         }
     }
-
-    public void IrRegistro(ActionEvent actionEvent) { Ira.IrRegistro(btnLogin);}
 }
