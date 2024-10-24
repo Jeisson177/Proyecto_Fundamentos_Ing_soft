@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.menu.Heladoscontrol">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Heladoscontrol">
     <Pane prefHeight="48.0" prefWidth="723.0" style="-fx-background-color: black;">
         <children>
             <ImageView fx:id="instaimage" fitHeight="48.0" fitWidth="53.0" layoutX="669.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" />
