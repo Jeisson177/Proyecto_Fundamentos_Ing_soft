@@ -29,6 +29,9 @@ public class GaseosasControl {
     public Text textoPrecio4;
     public Text textoPrecioFanta;
     public Text textoPrecioCoca;
+    public Text dispo4;
+    public Text dispoFanta;
+    public Text dispoCoca;
 
     private bebidasRepositorio bebida=new bebidasRepositorio();
     private RedireccionGeneral Ira=new RedireccionGeneral();
@@ -61,6 +64,10 @@ public class GaseosasControl {
         textoPrecio4.setText(String.valueOf(bebida.getPrecios("Quatro")));
         textoPrecioFanta.setText(String.valueOf(bebida.getPrecios("Fanta")));
         textoPrecioCoca.setText(String.valueOf(bebida.getPrecios("Coca cola")));
+
+        dispo4.setText(bebida.getDispo("Quatro"));
+        dispoCoca.setText(bebida.getDispo("Coca cola"));
+        dispoFanta.setText(bebida.getDispo("Fanta"));
     }
 
     public void irAPantallaBebidas(ActionEvent event) {

@@ -11,7 +11,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.w3c.dom.Text;
+import repository.menu.bebidasRepositorio;
 import services.RedireccionGeneral;
+import repository.menu.antipastiRepositorio;
 
 import java.util.Objects;
 
@@ -19,6 +22,7 @@ import java.sql.*;
 
 public class AntipastiControl {
 
+    private antipastiRepositorio rep=new antipastiRepositorio();
     @FXML
     public ImageView carpaccioResImage;
     public ImageView carpaccioSalmonImage;
@@ -45,6 +49,17 @@ public class AntipastiControl {
     public Label ensaldaPortobelloPrecio;
     public Label ensaladaVentrescaPrecio;
     public Label tablaQuesosPrecio;
+    public Text dispoCarRes;
+    public Text dispoCarSal;
+    public Text dispoFocGen;
+    public Text dispoFocDolce;
+    public Text dispoFocVe;
+    public Text dispoFocPu;
+    public Text dispoCesar;
+    public Text dispoPorto;
+    public Text dispoVen;
+    public Text dispoTabQuesos;
+
 
     private RedireccionGeneral Ira=new RedireccionGeneral();
     @FXML
@@ -73,69 +88,29 @@ public class AntipastiControl {
         ensaladaVentrescaImage.setImage(img9);
         tablaQuesosImage.setImage(img10);
 
-        cargarPreciosEntrada();
+        carpaccioResPrecio.setText(String.valueOf(rep.getPrecios("Carpaccio de Res")));
+        carpaccioSalmonPrecio.setText(String.valueOf(rep.getPrecios("Carpaccio de Salmon")));
+        focacciaGenovesePrecio.setText(String.valueOf(rep.getPrecios("Focaccia Genovese")));
+        focacciaVenetaPrecio.setText(String.valueOf(rep.getPrecios("Focaccia Veneta")));
+        focacciaDolcePrecio.setText(String.valueOf(rep.getPrecios("Focaccia Dolce")));
+        focacciaPugliesePrecio.setText(String.valueOf(rep.getPrecios("Focaccia Pugliese")));
+        ensaladaCesarRomanaPrecio.setText(String.valueOf(rep.getPrecios("Ensalada Cesar Romana")));
+        ensaldaPortobelloPrecio.setText(String.valueOf(rep.getPrecios("Ensalada de Portobello")));
+        ensaladaVentrescaPrecio.setText(String.valueOf(rep.getPrecios("Ensalada de Ventresca")));
+        tablaQuesosPrecio.setText(String.valueOf(rep.getPrecios("Tabla de quesos")));
 
-    }
 
-    private void cargarPreciosEntrada() {
-        //String url = "jdbc:mysql://localhost:3307/proyecto ingesoft";
-        String url = "jdbc:mysql://localhost:3306/proyecto ingesoft";
-        String user = "root";
-        String password = "cl";
+        dispoCarRes.setTextContent(rep.getDispo("Carpaccio de Res"));
+        dispoCarSal.setTextContent(rep.getDispo("Carpaccio de Salmon"));
+        dispoFocGen.setTextContent(rep.getDispo("Focaccia Genovese"));
+        dispoFocDolce.setTextContent(rep.getDispo("Focaccia Dolce"));
+        dispoFocVe.setTextContent(rep.getDispo("Focaccia Veneta"));
+        dispoFocPu.setTextContent(rep.getDispo("Focaccia Pugliese"));
+        dispoCesar.setTextContent(rep.getDispo("Ensalada Cesar Romana"));
+        dispoPorto.setTextContent(rep.getDispo("Ensalada de Portobello"));
+        dispoVen.setTextContent(rep.getDispo("Ensalada de Ventresca"));
+        dispoTabQuesos.setTextContent(rep.getDispo("Tabla de quesos"));
 
-        try (Connection connection = DriverManager.getConnection(url, user, password)) {
-            String query = "SELECT NOMBRE, PRECIO FROM PLATO WHERE CATEGORIA = 'Entrada'";
-            PreparedStatement statement = connection.prepareStatement(query);
-            ResultSet resultSet = statement.executeQuery();
-
-            while (resultSet.next()) {
-                String nombre = resultSet.getString("NOMBRE");
-                int precio = resultSet.getInt("PRECIO");
-
-                // Asignar los precios a los Labels correspondientes
-                switch (nombre) {
-                    case "Carpaccio de Res":
-                        carpaccioResPrecio.setText(precio + " COP");
-                        break;
-                    case "Carpaccio de Salmon":
-                        carpaccioSalmonPrecio.setText(precio + " COP");
-                        break;
-                    case "Focaccia Genovese":
-                        focacciaGenovesePrecio.setText(precio + " COP");
-                        break;
-                    case "Focaccia Dolce":
-                        focacciaDolcePrecio.setText(precio + " COP");
-                        break;
-                    case "Focaccia Veneta":
-                        focacciaVenetaPrecio.setText(precio + " COP");
-                        break;
-                    case "Focaccia Pugliese":
-                        focacciaPugliesePrecio.setText(precio + " COP");
-                        break;
-                    case "Ensalada Cesar Romana":
-                        ensaladaCesarRomanaPrecio.setText(precio + " COP");
-                        break;
-                    case "Ensalada de Portobello":
-                        ensaldaPortobelloPrecio.setText(precio + " COP");
-                        break;
-                    case "Ensalada de Ventresca":
-                        ensaladaVentrescaPrecio.setText(precio + " COP");
-                        break;
-                    case "Tabla de Quesos":
-                        tablaQuesosPrecio.setText(precio + " COP");
-                        break;
-                }
-            }
-
-        } catch (SQLException e) {
-            {  // Especificar el tipo de excepción
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("Error de Conexión");
-                alert.setHeaderText("No se pudo conectar con la base de datos");
-                alert.setContentText(e.getMessage());  // Mostrar el error específico
-                alert.showAndWait();
-            }
-        }
     }
 
     @FXML

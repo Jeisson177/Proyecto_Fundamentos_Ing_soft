@@ -38,6 +38,9 @@ public class RisotoMenu {
     public Text precioRisotoSal;
     @FXML
     public Text precioRisotoHon;
+    public Text dispoVeg;
+    public Text dispoSal;
+    public Text dispoHon;
 
     private RedireccionGeneral Ira=new RedireccionGeneral();
     private RisotoRepositorio risoto=new RisotoRepositorio();
@@ -54,6 +57,10 @@ public class RisotoMenu {
         precioRisotoHon.setText(String.valueOf(risoto.getPrecios("Risotto de Hongos"))+" COP");
         precioRisotoSal.setText(String.valueOf(risoto.getPrecios("Risotto de Salmon"))+" COP");
         precioRisotoVeg.setText(String.valueOf(risoto.getPrecios("Risotto Vegetariano"))+" COP");
+
+        dispoHon.setText(risoto.getDispo("Risotto de Hongos"));
+        dispoSal.setText(risoto.getDispo("Risotto de Salmon"));
+        dispoVeg.setText(risoto.getDispo("Risotto Vegetariano"));
     }
 
     @FXML

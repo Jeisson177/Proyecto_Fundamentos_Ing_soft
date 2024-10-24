@@ -1,4 +1,4 @@
-package com.example.Mesero;
+package com.example.Cliente;
 
 import java.io.IOException;
 import javafx.application.Application;

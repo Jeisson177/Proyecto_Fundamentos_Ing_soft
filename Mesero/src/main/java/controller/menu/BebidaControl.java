@@ -37,6 +37,9 @@ public class BebidaControl {
     public Text textoPrecioAguaGas;
     public Text textoPrecioChampagne;
     public Text textoPrecioAgua;
+    public Text dispoAgua;
+    public Text dispoAguaGas;
+    public Text dispoCham;
 
     private bebidasRepositorio bebida=new bebidasRepositorio();
     private RedireccionGeneral Ira=new RedireccionGeneral();
@@ -78,6 +81,10 @@ public class BebidaControl {
         textoPrecioAgua.setText(String.valueOf(bebida.getPrecios("Agua")));
         textoPrecioAguaGas.setText(String.valueOf(bebida.getPrecios("Agua con gas")));
         textoPrecioChampagne.setText(String.valueOf(bebida.getPrecios("Champagne")));
+
+        dispoAgua.setText(bebida.getDispo("Agua"));
+        dispoAguaGas.setText(bebida.getDispo("Agua con gas"));
+        dispoCham.setText(bebida.getDispo("Champagne"));
 
     }
 

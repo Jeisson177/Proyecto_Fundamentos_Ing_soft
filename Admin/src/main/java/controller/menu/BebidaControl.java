@@ -38,6 +38,7 @@ public class BebidaControl {
     public Text textoPrecioChampagne;
     public Text textoPrecioAgua;
 
+
     private bebidasRepositorio bebida=new bebidasRepositorio();
     private RedireccionGeneral Ira=new RedireccionGeneral();
     @FXML
