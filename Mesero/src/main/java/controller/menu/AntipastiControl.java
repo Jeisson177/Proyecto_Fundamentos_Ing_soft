@@ -49,16 +49,16 @@ public class AntipastiControl {
     public Label ensaldaPortobelloPrecio;
     public Label ensaladaVentrescaPrecio;
     public Label tablaQuesosPrecio;
-    public Text dispoCarRes;
-    public Text dispoCarSal;
-    public Text dispoFocGen;
-    public Text dispoFocDolce;
-    public Text dispoFocVe;
-    public Text dispoFocPu;
-    public Text dispoCesar;
-    public Text dispoPorto;
-    public Text dispoVen;
-    public Text dispoTabQuesos;
+    public javafx.scene.text.Text dispoCarRes;
+    public javafx.scene.text.Text dispoCarSal;
+    public javafx.scene.text.Text dispoFocGen;
+    public javafx.scene.text.Text dispoFocDol;
+    public javafx.scene.text.Text dispoFocVe;
+    public javafx.scene.text.Text dispoFocPu;
+    public javafx.scene.text.Text dispoCesar;
+    public javafx.scene.text.Text dispoPorto;
+    public javafx.scene.text.Text dispoVen;
+    public javafx.scene.text.Text dispoTabQuesos;
 
 
     private RedireccionGeneral Ira=new RedireccionGeneral();
@@ -67,6 +67,8 @@ public class AntipastiControl {
 
         // Cargar la imagen al inicializar la vista
         Image img1 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/antipasti/carpaccio_res.png")));
+        System.out.println(getClass().getResource("/Imagenes/antipasti/carpaccio_res.png"));
+
         Image img2 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/antipasti/carpaccio_salmon.png")));
         Image img3 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/antipasti/focaccia_genovese.png")));
         Image img4 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/antipasti/focaccia_dolce.png")));
@@ -100,16 +102,16 @@ public class AntipastiControl {
         tablaQuesosPrecio.setText(String.valueOf(rep.getPrecios("Tabla de quesos")));
 
 
-        dispoCarRes.setTextContent(rep.getDispo("Carpaccio de Res"));
-        dispoCarSal.setTextContent(rep.getDispo("Carpaccio de Salmon"));
-        dispoFocGen.setTextContent(rep.getDispo("Focaccia Genovese"));
-        dispoFocDolce.setTextContent(rep.getDispo("Focaccia Dolce"));
-        dispoFocVe.setTextContent(rep.getDispo("Focaccia Veneta"));
-        dispoFocPu.setTextContent(rep.getDispo("Focaccia Pugliese"));
-        dispoCesar.setTextContent(rep.getDispo("Ensalada Cesar Romana"));
-        dispoPorto.setTextContent(rep.getDispo("Ensalada de Portobello"));
-        dispoVen.setTextContent(rep.getDispo("Ensalada de Ventresca"));
-        dispoTabQuesos.setTextContent(rep.getDispo("Tabla de quesos"));
+        dispoCarRes.setText(rep.getDispo("Carpaccio de Res"));
+        dispoCarSal.setText(rep.getDispo("Carpaccio de Salmon"));
+        dispoFocGen.setText(rep.getDispo("Focaccia Genovese"));
+        dispoFocDol.setText(rep.getDispo("Focaccia Dolce"));
+        dispoFocVe.setText(rep.getDispo("Focaccia Veneta"));
+        dispoFocPu.setText(rep.getDispo("Focaccia Pugliese"));
+        dispoCesar.setText(rep.getDispo("Ensalada Cesar Romana"));
+        dispoPorto.setText(rep.getDispo("Ensalada de Portobello"));
+        dispoVen.setText(rep.getDispo("Ensalada de Ventresca"));
+        dispoTabQuesos.setText(rep.getDispo("Tabla de quesos"));
 
     }
 
