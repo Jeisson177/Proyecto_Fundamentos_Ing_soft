@@ -1,0 +1,101 @@
+Proyecto de Gestión de Reservas, Facturación e Inventario para Administradores
+Descripción del Proyecto
+Este proyecto implementa una aplicación de gestión de reservas, facturación e inventario desde el punto de vista del administrador, siguiendo el patrón de diseño Vista-Controlador-Negocio. El administrador tiene acceso a todas las funcionalidades del sistema, incluidas la gestión de reservas, el manejo del inventario de alimentos, y la creación y modificación de platos en el menú. Además, puede consultar todas las facturas generadas y realizar análisis por mes.
+
+Características principales:
+Consulta del histórico completo de facturas o filtradas por mes
+CRUD completo (Crear, Leer, Actualizar, Eliminar) de las reservas
+Gestión del inventario de alimentos (añadir o quitar ingredientes)
+Creación, modificación o eliminación de platos en el menú
+Gestión de usuarios (meseros y clientes)
+El proyecto está organizado en las siguientes capas:
+
+Vista (vista):
+Estructura del Proyecto
+
+La interfaz de usuario que interactúa con el administrador para gestionar reservas, facturas, inventario y platos.
+Ubicación: /src/main/resources/vista/
+Controlador (Controller):
+
+Controla las interacciones entre la Vista y la capa de Negocio. Procesa las solicitudes del administrador y actualiza la Vista según las acciones realizadas en la capa de Negocio.
+Ubicación: /src/main/java/controller/
+Negocio (Business Logic):
+
+Contiene las reglas de negocio para gestionar el histórico de facturas, las reservas, los alimentos en inventario y los platos del menú. Define las validaciones y los cálculos necesarios para el correcto funcionamiento del sistema.
+Ubicación: /src/main/java/services/
+Repositorio (Repository):
+
+Se encarga de la persistencia de los datos. Implementa el patrón Repository para interactuar con la base de datos, permitiendo realizar operaciones CRUD en las facturas, reservas, alimentos y platos del menú.
+Ubicación: /src/main/java/repository/
+Requisitos
+Lenguaje: Java.
+Base de datos:MySQL.
+Instalación
+Clonar el repositorio:
+
+bash
+Copiar código
+git clone https://github.com/Jeisson177/Proyecto_Fundamentos_Ing_soft.git
+Configurar la base de datos:
+
+Crear una base de datos usando el script SQL proporcionado en /db/setup.sql.
+Configurar las credenciales de acceso a la base de datos en el archivo /src/resources/dbconfig.properties.
+Compilar el proyecto (si es necesario):
+
+Copiar código
+mvn clean install
+Ejecutar la aplicación:
+
+Uso
+Autenticación
+El administrador debe iniciar sesión con credenciales autorizadas para acceder al sistema.
+
+Gestión de Facturas
+Consulta del Histórico Completo de Facturas:
+El administrador puede visualizar todas las facturas generadas en el sistema desde el panel de administración.
+Consulta de Facturas por Mes:
+El administrador puede filtrar las facturas para ver solo las correspondientes a un mes específico. Esta funcionalidad permite analizar las ventas por períodos.
+Gestión de Reservas (CRUD)
+Crear Reserva:
+
+El administrador puede crear nuevas reservas manualmente si es necesario.
+Modificar Reserva:
+
+Las reservas existentes pueden ser actualizadas (cambio de fechas, número de comensales, etc.).
+Eliminar Reserva:
+
+El administrador puede eliminar reservas canceladas o incorrectas.
+Ver Reservas:
+
+El administrador puede consultar todas las reservas, incluidas las activas y canceladas.
+Gestión del Inventario de Alimentos
+Añadir Alimentos:
+El administrador puede añadir nuevos ingredientes al inventario, necesarios para la preparación de platos del menú.
+Eliminar Alimentos:
+Los alimentos que ya no están disponibles o que no se utilizarán más en el menú pueden ser eliminados del inventario.
+Modificar Alimentos:
+El administrador puede ajustar las cantidades de los alimentos en inventario, actualizar su precio o modificar sus detalles.
+Gestión de Platos del Menú (CRUD)
+Crear Platos:
+
+El administrador puede crear nuevos platos para el menú, especificando los ingredientes necesarios y el precio de venta.
+Modificar Platos:
+
+Los platos existentes pueden ser actualizados para cambiar ingredientes, precios, descripciones, o cualquier otra característica.
+Eliminar Platos:
+
+Los platos que ya no forman parte del menú pueden ser eliminados.
+Ver Platos del Menú:
+
+El administrador puede consultar todos los platos disponibles en el menú actual, junto con sus descripciones y precios.
+Arquitectura
+Vista-Controlador-Negocio: La aplicación está estructurada en capas modulares que separan la interfaz de usuario, la lógica de negocio y el acceso a datos, facilitando la escalabilidad y el mantenimiento.
+Repository Pattern: El acceso a los datos está encapsulado en la capa de repositorio, permitiendo que la lógica de negocio sea independiente de la implementación de la base de datos.
+Contribuciones
+Las contribuciones son bienvenidas. Para contribuir, sigue estos pasos:
+
+Haz un fork del repositorio.
+Crea una nueva rama (git checkout -b feature/nueva-funcionalidad).
+Realiza tus cambios y haz un commit (git commit -m 'Agregar nueva funcionalidad').
+Sube tus cambios (git push origin feature/nueva-funcionalidad).
+Abre un pull request.

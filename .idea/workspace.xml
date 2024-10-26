@@ -4,18 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< Updated upstream
     <list default="true" id="1fd8ff85-b94a-4b81-b0f1-01c765de323a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cliente/src/main/java/com/example/cliente/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/java/com/example/cliente/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cliente/src/main/java/controller/Antipasti.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/java/controller/Antipasti.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cliente/src/main/java/controller/MenuControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/java/controller/MenuControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cliente/src/main/resources/vista/Antipasti.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/resources/vista/Antipasti.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cliente/src/main/resources/vista/Menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/resources/vista/Menu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/com/example/Mesero/Mesero.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/com/example/Mesero/Mesero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menu/AntipastiControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menu/AntipastiControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/Antipasti.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/Antipasti.fxml" afterDir="false" />
     </list>
-=======
-    <list default="true" id="1fd8ff85-b94a-4b81-b0f1-01c765de323a" name="Changes" comment="" />
->>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +20,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -50,60 +46,29 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
+    &quot;lastFilter&quot;: {
     &quot;state&quot;: &quot;OPEN&quot;,
     &quot;assignee&quot;: &quot;JocelyneGonzalezHernandez&quot;
-  }
-}</component>
+    }
+    }</component>
   <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Jeisson177/Proyecto_Fundamentos_Ing_soft.git&quot;,
     &quot;accountId&quot;: &quot;19f69f75-ca28-46a4-9103-87243a4383e7&quot;
-  }
-}</component>
+    }
+    }</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 3
-}</component>
+    &quot;customColor&quot;: &quot;&quot;,
+    &quot;associatedIndex&quot;: 3
+    }</component>
   <component name="ProjectId" id="2misdhORJuga1HwcAhQ0u1I2gMH" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-<<<<<<< Updated upstream
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.HelloApplication.executor": "Debug",
-    "Downloaded.Files.Path": "C:\\Users\\Jocel\\Downloads\\Proyecto_Fundamentos_Ing_soft",
-    "Downloaded.Files.Path.Enabled": "true",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "menu",
-    "ignore.preview.features.used": "true",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Jocel/Downloads/Proyecto_Fundamentos_Ing_soft/Cliente",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2591623",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
-  }
-}]]></component>
-<<<<<<< HEAD
-=======
-=======
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.HelloApplication.executor&quot;: &quot;Debug&quot;,
@@ -112,13 +77,15 @@
     &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
     &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
     &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;menu&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;mesero&quot;,
     &quot;ignore.preview.features.used&quot;: &quot;true&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jocel/Downloads/Proyecto_Fundamentos_Ing_soft/Cliente&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/jeiss/OneDrive/Documentos/universidad/10 decimo semestre/Fundamentos ing soft/Proyecto_Fundamentos_Ing_soft/Mesero&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -127,30 +94,54 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2591623&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
->>>>>>> develop
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="Proyecto_Fundamentos_Ing_soft" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="Proyecto_Fundamentos_Ing_soft" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jeiss\OneDrive\Documentos\universidad\10 decimo semestre\Fundamentos ing soft\Proyecto_Fundamentos_Ing_soft\Mesero" />
+      <recent name="C:\Users\jeiss\OneDrive\Documentos\universidad\10 decimo semestre\Fundamentos ing soft\Proyecto_Fundamentos_Ing_soft\Mesero\.idea" />
+      <recent name="C:\Users\jeiss\OneDrive\Documentos\universidad\10 decimo semestre\Fundamentos ing soft\Proyecto_Fundamentos_Ing_soft\Admin" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jeiss\OneDrive\Documentos\universidad\10 decimo semestre\Fundamentos ing soft\Proyecto_Fundamentos_Ing_soft\Admin\src\main\resources\vista\menu" />
+    </key>
   </component>
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
->>>>>>> develop
+  <component name="RunManager" selected="Application.Mesero">
+    <configuration name="Mesero" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.Mesero.Mesero" />
+      <module name="Mesero" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.Mesero.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="admin" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.admin.admin" />
+      <module name="Cliente (1)" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.admin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Mesero" />
+        <item itemvalue="Application.admin" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -173,15 +164,12 @@
       <workItem from="1727571665501" duration="3463000" />
       <workItem from="1727575151798" duration="2451000" />
       <workItem from="1727577652510" duration="1324000" />
-<<<<<<< HEAD
-      <workItem from="1727809683234" duration="1056000" />
-=======
-<<<<<<< Updated upstream
-=======
       <workItem from="1727809683234" duration="1056000" />
       <workItem from="1727889556684" duration="50000" />
->>>>>>> Stashed changes
->>>>>>> develop
+      <workItem from="1729383639707" duration="2005000" />
+      <workItem from="1729533941512" duration="4519000" />
+      <workItem from="1729714944755" duration="75000" />
+      <workItem from="1729720310144" duration="5210000" />
     </task>
     <servers />
   </component>
