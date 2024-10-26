@@ -34,7 +34,7 @@
         <TextField fx:id="labNombre" layoutX="226.0" layoutY="146.0" promptText="Nombre" />
         <TextField fx:id="LabTel" layoutX="226.0" layoutY="183.0" promptText="telefono" />
         <TextField fx:id="labUser" layoutX="226.0" layoutY="220.0" promptText="usuario" />
-        <TextField fx:id="LabClave" layoutX="226.0" layoutY="257.0" promptText="contrasena" />
+        <PasswordField fx:id="LabClave" layoutX="226.0" layoutY="257.0" promptText="contrasena" />
         <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../Imagenes/login/imagen1.png" />

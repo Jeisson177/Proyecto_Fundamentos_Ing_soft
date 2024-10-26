@@ -1,6 +1,8 @@
 package repository;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class UsuarioRepository {
     private static final String URL = "jdbc:mysql://localhost:3306/proyecto ingesoft";
@@ -31,6 +33,7 @@ public class UsuarioRepository {
             throw new RuntimeException(e);
         }
     }
+
     // Método para crear usuario
     public int CrearUsuario(String email, String contrasena, String nombre, String telefono) {
         String queryInsert = "INSERT INTO usuario (NOMBRE, EMAIL, TELEFONO, CONTRASENA, ROL) VALUES (?, ?, ?, ?, ?)";
@@ -62,6 +65,28 @@ public class UsuarioRepository {
             throw new RuntimeException(e);
         }
     }
+    //Método ConsultarReservas
+    public List<String> ConsultarReservas(int idUsuario) {
+        String query = "SELECT ID_RESERVA, ID_MESA, FECHA_HORA FROM RESERVA WHERE ID_CLIENTE = ?";
+        List<String> reservas = new ArrayList<>();
+        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
+            try (PreparedStatement stmt = connection.prepareStatement(query)) {
+                stmt.setInt(1, idUsuario);
 
+                try (ResultSet rs = stmt.executeQuery()) {
+                    while (rs.next()) {
+                        // Formatear la información de cada reserva
+                        String reserva = "Reserva ID: " + rs.getInt("ID_RESERVA") +
+                                ", Mesa: " + rs.getInt("ID_MESA") +
+                                ", Fecha y Hora: " + rs.getTimestamp("FECHA_HORA").toString();
+                        reservas.add(reserva);
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return reservas;
+    }
 
 }
