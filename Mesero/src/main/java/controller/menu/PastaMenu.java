@@ -68,11 +68,36 @@ public class PastaMenu {
         precioPastaTrene.setText(String.valueOf(pasta.getPrecios("Trenette al Pesto"))+" COP");
         precioPastaCar.setText(String.valueOf(pasta.getPrecios("Pasta alla Carbonara"))+" COP");
 
-        dispoBolonesa.setText(pasta.getDispo("Pasta alla Carbonara"));
-        dispoCarbonara.setText(pasta.getDispo("Pasta alla Carbonora"));
-        dispoPesto.setText(pasta.getDispo("Trenette al Pesto"));
-        dispoPuttanesca.setText(pasta.getDispo("Fettuccine alla Puttanesca"));
+        disponibilidad();
+
     }
+
+    public void disponibilidad (){
+        if (pasta.getDispo("Pasta alla Carbonara")==true){
+            dispoBolonesa.setText("Disponible");
+        }else{
+            dispoBolonesa.setText("No disponible");
+        }
+
+        if (pasta.getDispo("Pasta alla Carbonara")==true){
+            dispoCarbonara.setText("Disponible");
+        }else{
+            dispoCarbonara.setText("No disponible");
+        }
+
+        if (pasta.getDispo("Trenette al Pesto")==true){
+            dispoPesto.setText("Disponible");
+        }else{
+            dispoPesto.setText("No disponible");
+        }
+
+        if (pasta.getDispo("Fettuccine alla Puttanesca")==true){
+            dispoPuttanesca.setText("Disponible");
+        }else{
+            dispoPuttanesca.setText("No disponible");
+        }
+
+     }
 
     public void IrHome(ActionEvent actionEvent) { Ira.IrHome(selecHome);
     }

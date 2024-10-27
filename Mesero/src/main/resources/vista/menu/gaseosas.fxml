@@ -80,17 +80,17 @@
             <Button fx:id="botonImagenQuatro" layoutX="248.0" layoutY="88.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="86.0" style="-fx-background-color: white;" />
             <Button fx:id="botonImagenCoca" layoutX="362.0" layoutY="88.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="86.0" style="-fx-background-color: white;" />
             <Button fx:id="botonImagenFanta" layoutX="473.0" layoutY="88.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="86.0" style="-fx-background-color: white;" />
-            <Text fx:id="dispo4" fill="RED" layoutX="274.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+            <Text fx:id="dispo4" fill="RED" layoutX="257.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </Text>
-            <Text fx:id="dispoCoca" fill="RED" layoutX="388.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+            <Text fx:id="dispoCoca" fill="RED" layoutX="371.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </Text>
-            <Text fx:id="dispoFanta" fill="RED" layoutX="499.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+            <Text fx:id="dispoFanta" fill="RED" layoutX="483.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>

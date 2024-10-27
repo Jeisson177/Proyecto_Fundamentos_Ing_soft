@@ -83,10 +83,34 @@ public class Postrecontrol {
         preciopannacota.setText(String.valueOf(postre.getPrecios("Panna Cotta"))+" COP");
         preciocannolini.setText(String.valueOf(postre.getPrecios("Cannoli"))+" COP");
 
-        dispoCannolini.setText(postre.getDispo("Cannoli"));
-        dispoAffogato.setText(postre.getDispo("Affogato"));
-        dispoTiramisu.setText(postre.getDispo("Tiramisu"));
-        dispoPannaCota.setText(postre.getDispo("Panna Cota"));
+        disponibilidad();
+
+    }
+
+    public void disponibilidad (){
+        if (postre.getDispo("Cannoli")==true){
+            dispoCannolini.setText("Disponible");
+        }else{
+            dispoCannolini.setText("No disponible");
+        }
+
+        if (postre.getDispo("Affogato")==true){
+            dispoAffogato.setText("Disponible");
+        }else{
+            dispoAffogato.setText("No disponible");
+        }
+
+        if (postre.getDispo("Tiramisu")==true){
+            dispoTiramisu.setText("Disponible");
+        }else{
+            dispoTiramisu.setText("No disponible");
+        }
+
+        if (postre.getDispo("Panna Cotta")==true){
+            dispoPannaCota.setText("Disponible");
+        }else{
+            dispoPannaCota.setText("No disponible");
+        }
 
     }
 

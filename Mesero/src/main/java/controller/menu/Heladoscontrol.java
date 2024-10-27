@@ -96,14 +96,42 @@ public class Heladoscontrol {
         preciofresa.setText(String.valueOf(helado.getPrecios("Gelato Fragola (Fresa)"))+" COP");
         preciolimon.setText(String.valueOf(helado.getPrecios("Gelato Limone (Limon)"))+" COP");
 
-        dispoAvellana.setText(helado.getDispo("Gelato Bacio (Avellana)"));
-        dispoFrambuesa.setText(helado.getDispo("Gelato Lampone (Frambuesa)"));
-        dispoChocPicante.setText(helado.getDispo("Gelato Cioccolato con Peperoncino"));
-        dispoFresa.setText(helado.getDispo("Gelato Fragola (Fresa)"));
-        dispolimon.setText(helado.getDispo("Gelato Limone (Limon)"));
+        disponibilidad();
 
     }
 
+    public void disponibilidad (){
+        if (helado.getDispo("Gelato Bacio (Avellana)")==true){
+            dispoAvellana.setText("Disponible");
+        }else{
+            dispoAvellana.setText("No disponible");
+        }
+
+        if (helado.getDispo("Gelato Lampone (Frambuesa)")==true){
+            dispoFrambuesa.setText("Disponible");
+        }else{
+            dispoFrambuesa.setText("No disponible");
+        }
+
+        if (helado.getDispo("Gelato Cioccolato con Peperoncino")==true){
+            dispoChocPicante.setText("Disponible");
+        }else{
+            dispoChocPicante.setText("No disponible");
+        }
+
+        if (helado.getDispo("Gelato Fragola (Fresa)")==true){
+            dispoFresa.setText("Disponible");
+        }else{
+            dispoFresa.setText("No disponible");
+        }
+
+        if (helado.getDispo("Gelato Limone (Limon)")==true){
+            dispolimon.setText("Disponible");
+        }else{
+            dispolimon.setText("No disponible");
+        }
+
+    }
 
     public void clickHELADO(ActionEvent actionEvent) {
         try {

@@ -96,17 +96,17 @@
                   <Font name="System Bold" size="17.0" />
                </font>
             </Text>
-            <Text fx:id="dispoAgua" fill="RED" layoutX="59.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+            <Text fx:id="dispoAgua" fill="RED" layoutX="25.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No disponible">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Text>
-            <Text fx:id="dispoAguaGas" fill="RED" layoutX="171.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+            <Text fx:id="dispoAguaGas" fill="RED" layoutX="137.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No disponible">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
             </Text>
-            <Text fx:id="dispoCham" fill="RED" layoutX="397.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+            <Text fx:id="dispoCham" fill="RED" layoutX="362.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No disponible">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>

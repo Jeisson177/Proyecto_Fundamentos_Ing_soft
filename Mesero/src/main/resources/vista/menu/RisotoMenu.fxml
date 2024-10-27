@@ -50,17 +50,17 @@
       <Text fx:id="precioRisotoSal" layoutX="269.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="80.79999999999995" />
       <Text fx:id="precioRisotoHon" layoutX="453.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="80.79999999999995" />
       <Button fx:id="selecVolver" layoutX="51.0" layoutY="340.0" mnemonicParsing="false" onAction="#onClickVolver" text="Volver a Platos Fuertes" />
-      <Text fx:id="dispoVeg" fill="RED" layoutX="90.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+      <Text fx:id="dispoVeg" fill="RED" layoutX="67.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Text>
-      <Text fx:id="dispoSal" fill="RED" layoutX="290.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+      <Text fx:id="dispoSal" fill="RED" layoutX="262.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Text>
-      <Text fx:id="dispoHon" fill="RED" layoutX="477.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+      <Text fx:id="dispoHon" fill="RED" layoutX="431.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
