@@ -38,6 +38,10 @@ public class LasanaMenu {
     public Text precioLasanaMix;
     @FXML
     public Text precioLasanaPollo;
+    public Text dispoPollo;
+    public Text dispoBolo;
+    public Text dispoMixto;
+
 
     private RedireccionGeneral Ira=new RedireccionGeneral();
     private LasanaRepositorio lasana=new LasanaRepositorio();
@@ -54,6 +58,29 @@ public class LasanaMenu {
         precioLasanaMix.setText(String.valueOf(lasana.getPrecios("Lasagna Mixta"))+" COP");
         precioLasanaBolo.setText(String.valueOf(lasana.getPrecios("Lasagna Bolognese"))+" COP");
         precioLasanaPollo.setText(String.valueOf(lasana.getPrecios("Lasagna de Pollo"))+" COP");
+
+        disponibilidad();
+
+    }
+
+    public void disponibilidad (){
+        if (lasana.getDispo("Lasagna Bolognese")==true){
+            dispoBolo.setText("Disponible");
+        }else{
+            dispoBolo.setText("No disponible");
+        }
+
+        if (lasana.getDispo("Lasagna de Pollo")==true){
+            dispoPollo.setText("Disponible");
+        }else{
+            dispoPollo.setText("No disponible");
+        }
+
+        if (lasana.getDispo("Lasagna Mixta")==true){
+            dispoMixto.setText("Disponible");
+        }else{
+            dispoMixto.setText("No disponible");
+        }
 
     }
 

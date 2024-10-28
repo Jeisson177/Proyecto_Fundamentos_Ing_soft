@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.menu.Heladoscontrol">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.menu.Heladoscontrol">
     <Pane prefHeight="48.0" prefWidth="723.0" style="-fx-background-color: black;">
         <children>
             <ImageView fx:id="instaimage" fitHeight="48.0" fitWidth="53.0" layoutX="669.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" />
@@ -111,4 +111,29 @@
             <Label fx:id="preciochocolate" layoutX="25.0" layoutY="129.0" prefHeight="17.0" prefWidth="67.0" textAlignment="CENTER" />
         </children>
     </Pane>
+   <Text fx:id="dispoAvellana" fill="RED" layoutX="304.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+      <font>
+         <Font name="System Bold" size="16.0" />
+      </font>
+   </Text>
+   <Text fx:id="dispoLimon" fill="RED" layoutX="443.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+      <font>
+         <Font name="System Bold" size="16.0" />
+      </font>
+   </Text>
+   <Text fx:id="dispoFrambuesa" fill="RED" layoutX="592.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+      <font>
+         <Font name="System Bold" size="16.0" />
+      </font>
+   </Text>
+   <Text fx:id="dispoFresa" fill="RED" layoutX="363.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+      <font>
+         <Font name="System Bold" size="16.0" />
+      </font>
+   </Text>
+   <Text fx:id="dispoChocPicante" fill="RED" layoutX="520.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+      <font>
+         <Font name="System Bold" size="16.0" />
+      </font>
+   </Text>
 </AnchorPane>

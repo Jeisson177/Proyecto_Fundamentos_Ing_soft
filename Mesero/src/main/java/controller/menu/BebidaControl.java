@@ -37,6 +37,9 @@ public class BebidaControl {
     public Text textoPrecioAguaGas;
     public Text textoPrecioChampagne;
     public Text textoPrecioAgua;
+    public Text dispoAgua;
+    public Text dispoAguaGas;
+    public Text dispoCham;
 
     private bebidasRepositorio bebida=new bebidasRepositorio();
     private RedireccionGeneral Ira=new RedireccionGeneral();
@@ -79,6 +82,26 @@ public class BebidaControl {
         textoPrecioAguaGas.setText(String.valueOf(bebida.getPrecios("Agua con gas")));
         textoPrecioChampagne.setText(String.valueOf(bebida.getPrecios("Champagne")));
 
+        disponibilidad();
+
+    }
+
+    public void disponibilidad (){
+        if (bebida.getDispo("Agua")==true){
+            dispoAgua.setText("Disponible");
+        }else{
+            dispoAgua.setText("No disponible");
+        }
+        if (bebida.getDispo("Agua con gas")==true){
+            dispoAguaGas.setText("Disponible");
+        }else{
+            dispoAguaGas.setText("No disponible");
+        }
+        if (bebida.getDispo("Champagne")==true){
+            dispoCham.setText("Disponible");
+        }else{
+            dispoCham.setText("No disponible");
+        }
     }
 
     public void irAPantallaVinos(ActionEvent event) {

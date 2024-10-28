@@ -44,6 +44,10 @@ public class PastaMenu {
     public Text precioPastaTrene;
     @FXML
     public Text precioPastaSpa;
+    public Text dispoCarbonara;
+    public Text dispoPuttanesca;
+    public Text dispoPesto;
+    public Text dispoBolonesa;
 
     private RedireccionGeneral Ira=new RedireccionGeneral();
     private PastaRepositorio pasta=new PastaRepositorio();
@@ -63,7 +67,37 @@ public class PastaMenu {
         precioPastaSpa.setText(String.valueOf(pasta.getPrecios("Pasta alla Carbonara"))+" COP");
         precioPastaTrene.setText(String.valueOf(pasta.getPrecios("Trenette al Pesto"))+" COP");
         precioPastaCar.setText(String.valueOf(pasta.getPrecios("Pasta alla Carbonara"))+" COP");
+
+        disponibilidad();
+
     }
+
+    public void disponibilidad (){
+        if (pasta.getDispo("Pasta alla Carbonara")==true){
+            dispoBolonesa.setText("Disponible");
+        }else{
+            dispoBolonesa.setText("No disponible");
+        }
+
+        if (pasta.getDispo("Pasta alla Carbonara")==true){
+            dispoCarbonara.setText("Disponible");
+        }else{
+            dispoCarbonara.setText("No disponible");
+        }
+
+        if (pasta.getDispo("Trenette al Pesto")==true){
+            dispoPesto.setText("Disponible");
+        }else{
+            dispoPesto.setText("No disponible");
+        }
+
+        if (pasta.getDispo("Fettuccine alla Puttanesca")==true){
+            dispoPuttanesca.setText("Disponible");
+        }else{
+            dispoPuttanesca.setText("No disponible");
+        }
+
+     }
 
     public void IrHome(ActionEvent actionEvent) { Ira.IrHome(selecHome);
     }

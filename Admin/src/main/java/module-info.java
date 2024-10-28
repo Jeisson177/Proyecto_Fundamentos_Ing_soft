@@ -4,8 +4,8 @@ module com.example.cliente {
     requires java.sql;
 
 
-    opens com.example.Mesero to javafx.fxml;
-    exports com.example.Mesero;
+    opens com.example.admin to javafx.fxml;
+    exports com.example.admin;
     exports controller;
     opens controller to javafx.fxml;
     exports controller.menu;

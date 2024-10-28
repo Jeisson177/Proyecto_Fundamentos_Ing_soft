@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="375.0" prefWidth="722.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.menu.MesaControl">
+<AnchorPane prefHeight="375.0" prefWidth="722.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MesaControl">
    <children>
       <ImageView fx:id="fondoiz" fitHeight="319.0" fitWidth="203.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="fondodr" fitHeight="319.0" fitWidth="203.0" layoutX="519.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true" />

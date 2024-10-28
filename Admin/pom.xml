@@ -70,7 +70,7 @@
           <execution>
             <id>default-cli</id>
             <configuration>
-              <mainClass>com.example.Mesero.Mesero</mainClass>
+              <mainClass>com.example.admin.admin</mainClass>
               <options>
                 <option>--module-path</option>
                 <option>${maven.project.basedir}/target/classes</option>
