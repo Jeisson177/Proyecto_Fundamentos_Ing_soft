@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fd8ff85-b94a-4b81-b0f1-01c765de323a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/resources/vista/Inicio.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/Inicio.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/resources/vista/ModificarMesas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/ModificarMesas.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/Login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/com/example/Mesero/Mesero.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/com/example/Mesero/Mesero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menu/AntipastiControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menu/AntipastiControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/Antipasti.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/Antipasti.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -39,33 +40,23 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="OrdenMesero" />
+        <entry key="$PROJECT_DIR$" value="menu" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
+    &quot;lastFilter&quot;: {
     &quot;state&quot;: &quot;OPEN&quot;,
     &quot;assignee&quot;: &quot;JocelyneGonzalezHernandez&quot;
-  }
-}</component>
+    }
+    }</component>
   <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Jeisson177/Proyecto_Fundamentos_Ing_soft.git&quot;,
     &quot;accountId&quot;: &quot;19f69f75-ca28-46a4-9103-87243a4383e7&quot;
-  }
-}</component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="downloadSourcesAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
+    }
+    }</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -74,73 +65,50 @@
     &quot;associatedIndex&quot;: 3
     }</component>
   <component name="ProjectId" id="2misdhORJuga1HwcAhQ0u1I2gMH" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.HelloApplication.executor": "Debug",
-    "Application.Mesero.executor": "Run",
-    "Application.admin.executor": "Run",
-    "Application.usuarioC.executor": "Run",
-    "Downloaded.Files.Path": "C:\\Users\\Jocel\\Downloads\\Proyecto_Fundamentos_Ing_soft",
-    "Downloaded.Files.Path.Enabled": "true",
-    "JUnit.AppTest.autentificarUsuario_UsuarioExistente.executor": "Run",
-    "JUnit.AppTest.autentificarUsuario_UsuarioInexistente.executor": "Run",
-    "JUnit.AppTest.consultarReservas_UsuarioConReservas.executor": "Run",
-    "JUnit.AppTest.consultarReservas_UsuarioSinReservas.executor": "Run",
-    "JUnit.AppTest.crearUsuario_Exito.executor": "Run",
-    "JUnit.AppTest.crearUsuario_SinExito.executor": "Run",
-    "JUnit.AppTest.testFechaOcupada.executor": "Run",
-    "JUnit.AppTest.testGReserva.executor": "Run",
-    "JUnit.AppTest.testGuardarReserva.executor": "Run",
-    "JUnit.AppTest.testObtenerHorarioDia.executor": "Run",
-    "JUnit.AppTest.testObtenerHorariosDisponibles.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "mesero",
-    "ignore.preview.features.used": "true",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/jeiss/Documents/universidad/10 decimo semestre/Fundamentos ing soft/Proyecto_Fundamentos_Ing_soft/Mesero/src/main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2591623",
-    "settings.editor.selected.configurable": "preferences.JavaFX",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.HelloApplication.executor&quot;: &quot;Debug&quot;,
+    &quot;Downloaded.Files.Path&quot;: &quot;C:\\Users\\Jocel\\Downloads\\Proyecto_Fundamentos_Ing_soft&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;mesero&quot;,
+    &quot;ignore.preview.features.used&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/jeiss/OneDrive/Documentos/universidad/10 decimo semestre/Fundamentos ing soft/Proyecto_Fundamentos_Ing_soft/Mesero&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2591623&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\jeiss\Documents\universidad\10 decimo semestre\Fundamentos ing soft\Proyecto_Fundamentos_Ing_soft\Mesero\src\main" />
-      <recent name="C:\Users\jeiss\Documents\universidad\10 decimo semestre\Fundamentos ing soft\Proyecto_Fundamentos_Ing_soft\Admin\src\main\java\repository\menu" />
-      <recent name="C:\Users\jeiss\Documents\universidad\10 decimo semestre\Fundamentos ing soft\Proyecto_Fundamentos_Ing_soft\Admin\src\main\java\services" />
-      <recent name="C:\Users\jeiss\Documents\universidad\10 decimo semestre\Fundamentos ing soft\Proyecto_Fundamentos_Ing_soft\Admin\src\main\java\controller\menu" />
-      <recent name="C:\Users\jeiss\Documents\universidad\10 decimo semestre\Fundamentos ing soft\Proyecto_Fundamentos_Ing_soft\Mesero\src\main\java\repository\menu" />
+      <recent name="C:\Users\jeiss\OneDrive\Documentos\universidad\10 decimo semestre\Fundamentos ing soft\Proyecto_Fundamentos_Ing_soft\Mesero" />
+      <recent name="C:\Users\jeiss\OneDrive\Documentos\universidad\10 decimo semestre\Fundamentos ing soft\Proyecto_Fundamentos_Ing_soft\Mesero\.idea" />
+      <recent name="C:\Users\jeiss\OneDrive\Documentos\universidad\10 decimo semestre\Fundamentos ing soft\Proyecto_Fundamentos_Ing_soft\Admin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\jeiss\Documents\universidad\10 decimo semestre\Fundamentos ing soft\Proyecto_Fundamentos_Ing_soft\Mesero\src\main\java" />
       <recent name="C:\Users\jeiss\OneDrive\Documentos\universidad\10 decimo semestre\Fundamentos ing soft\Proyecto_Fundamentos_Ing_soft\Admin\src\main\resources\vista\menu" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="repository.menu" />
-    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Mesero">
     <configuration name="Mesero" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.Mesero.Mesero" />
       <module name="Mesero" />
@@ -154,9 +122,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="admin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="admin" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.example.admin.admin" />
-      <module name="Administrador" />
+      <module name="Cliente (1)" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.admin.*" />
@@ -167,62 +135,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Cliente" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pkg.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="pkg" />
-      <option name="MAIN_CLASS_NAME" value="pkg.AppTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AppTest.testGReserva" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Cliente" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pkg.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="pkg" />
-      <option name="MAIN_CLASS_NAME" value="pkg.AppTest" />
-      <option name="METHOD_NAME" value="testGReserva" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AppTest.testObtenerHorariosDisponibles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Cliente" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pkg.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="pkg" />
-      <option name="MAIN_CLASS_NAME" value="pkg.AppTest" />
-      <option name="METHOD_NAME" value="testObtenerHorariosDisponibles" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.admin" />
         <item itemvalue="Application.Mesero" />
-        <item itemvalue="JUnit.AppTest" />
-        <item itemvalue="JUnit.AppTest.testGReserva" />
-        <item itemvalue="JUnit.AppTest.testObtenerHorariosDisponibles" />
+        <item itemvalue="Application.admin" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -244,9 +170,6 @@
       <workItem from="1729533941512" duration="4519000" />
       <workItem from="1729714944755" duration="75000" />
       <workItem from="1729720310144" duration="5210000" />
-      <workItem from="1729797266663" duration="1245000" />
-      <workItem from="1730072852165" duration="689000" />
-      <workItem from="1730231433151" duration="1535000" />
     </task>
     <servers />
   </component>
@@ -263,15 +186,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.sql.SQLSyntaxErrorException" package="java.sql" />
-          <option name="timeStamp" value="4" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
