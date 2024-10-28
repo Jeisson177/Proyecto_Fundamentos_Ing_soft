@@ -63,11 +63,6 @@
             </Button>
             <Label layoutX="27.0" layoutY="93.0" text="AVELLANA" />
             <Label fx:id="precioavellana" layoutX="17.0" layoutY="108.0" prefHeight="17.0" prefWidth="77.0" textAlignment="CENTER" />
-         <Text fx:id="dispoAvellana" fill="RED" layoutX="39.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-            <font>
-               <Font name="System Bold" size="16.0" />
-            </font>
-         </Text>
         </children>
     </Pane>
     <Pane layoutX="440.0" layoutY="90.0" prefHeight="130.0" prefWidth="112.0">
@@ -79,11 +74,6 @@
             </Button>
             <Label layoutX="37.0" layoutY="93.0" text="LIMÓN" />
             <Label fx:id="preciolimon" layoutX="18.0" layoutY="108.0" prefHeight="17.0" prefWidth="77.0" />
-         <Text fx:id="dispoLimon" fill="RED" layoutX="39.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-            <font>
-               <Font name="System Bold" size="16.0" />
-            </font>
-         </Text>
         </children>
     </Pane>
     <Pane layoutX="579.0" layoutY="90.0" prefHeight="130.0" prefWidth="112.0">
@@ -95,11 +85,6 @@
             </Button>
             <Label layoutX="23.0" layoutY="93.0" text="FRAMBUESA" />
             <Label fx:id="precioframbuesa" layoutX="18.0" layoutY="108.0" prefHeight="17.0" prefWidth="77.0" textAlignment="CENTER" />
-         <Text fx:id="dispoFrambuesa" fill="RED" layoutX="40.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-            <font>
-               <Font name="System Bold" size="16.0" />
-            </font>
-         </Text>
         </children>
     </Pane>
     <Pane layoutX="361.0" layoutY="230.0" prefHeight="130.0" prefWidth="112.0">
@@ -111,11 +96,6 @@
             </Button>
             <Label layoutX="39.0" layoutY="93.0" text="FRESA" />
             <Label fx:id="preciofresa" layoutX="17.0" layoutY="108.0" prefHeight="17.0" prefWidth="77.0" textAlignment="CENTER" />
-         <Text fx:id="dispoFresa" fill="RED" layoutX="39.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-            <font>
-               <Font name="System Bold" size="16.0" />
-            </font>
-         </Text>
         </children>
     </Pane>
     <Pane layoutX="523.0" layoutY="230.0" prefHeight="151.0" prefWidth="112.0">
@@ -129,11 +109,31 @@
             <Label layoutX="36.0" layoutY="105.0" text="PICANTE" />
             <Label layoutX="41.0" layoutY="114.0" text="DULCE" />
             <Label fx:id="preciochocolate" layoutX="25.0" layoutY="129.0" prefHeight="17.0" prefWidth="67.0" textAlignment="CENTER" />
-         <Text fx:id="dispoChocPicante" fill="RED" layoutX="42.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-            <font>
-               <Font name="System Bold" size="16.0" />
-            </font>
-         </Text>
         </children>
     </Pane>
+   <Text fx:id="dispoAvellana" fill="RED" layoutX="304.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+      <font>
+         <Font name="System Bold" size="16.0" />
+      </font>
+   </Text>
+   <Text fx:id="dispoLimon" fill="RED" layoutX="443.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+      <font>
+         <Font name="System Bold" size="16.0" />
+      </font>
+   </Text>
+   <Text fx:id="dispoFrambuesa" fill="RED" layoutX="592.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+      <font>
+         <Font name="System Bold" size="16.0" />
+      </font>
+   </Text>
+   <Text fx:id="dispoFresa" fill="RED" layoutX="363.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+      <font>
+         <Font name="System Bold" size="16.0" />
+      </font>
+   </Text>
+   <Text fx:id="dispoChocPicante" fill="RED" layoutX="520.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+      <font>
+         <Font name="System Bold" size="16.0" />
+      </font>
+   </Text>
 </AnchorPane>

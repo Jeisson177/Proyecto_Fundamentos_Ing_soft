@@ -49,16 +49,16 @@ public class AntipastiControl {
     public Label ensaldaPortobelloPrecio;
     public Label ensaladaVentrescaPrecio;
     public Label tablaQuesosPrecio;
-    public Text dispoCarRes;
-    public Text dispoCarSal;
-    public Text dispoFocGen;
-    public Text dispoFocDolce;
-    public Text dispoFocVe;
-    public Text dispoFocPu;
-    public Text dispoCesar;
-    public Text dispoPorto;
-    public Text dispoVen;
-    public Text dispoTabQuesos;
+    public javafx.scene.text.Text dispoCarRes;
+    public javafx.scene.text.Text dispoCarSal;
+    public javafx.scene.text.Text dispoFocGen;
+    public javafx.scene.text.Text dispoFocDol;
+    public javafx.scene.text.Text dispoFocVe;
+    public javafx.scene.text.Text dispoFocPu;
+    public javafx.scene.text.Text dispoCesar;
+    public javafx.scene.text.Text dispoPorto;
+    public javafx.scene.text.Text dispoVen;
+    public javafx.scene.text.Text dispoTabQuesos;
 
 
     private RedireccionGeneral Ira=new RedireccionGeneral();
@@ -67,6 +67,8 @@ public class AntipastiControl {
 
         // Cargar la imagen al inicializar la vista
         Image img1 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/antipasti/carpaccio_res.png")));
+        System.out.println(getClass().getResource("/Imagenes/antipasti/carpaccio_res.png"));
+
         Image img2 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/antipasti/carpaccio_salmon.png")));
         Image img3 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/antipasti/focaccia_genovese.png")));
         Image img4 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/antipasti/focaccia_dolce.png")));
@@ -97,19 +99,72 @@ public class AntipastiControl {
         ensaladaCesarRomanaPrecio.setText(String.valueOf(rep.getPrecios("Ensalada Cesar Romana")));
         ensaldaPortobelloPrecio.setText(String.valueOf(rep.getPrecios("Ensalada de Portobello")));
         ensaladaVentrescaPrecio.setText(String.valueOf(rep.getPrecios("Ensalada de Ventresca")));
-        tablaQuesosPrecio.setText(String.valueOf(rep.getPrecios("Tabla de quesos")));
+        tablaQuesosPrecio.setText(String.valueOf(rep.getPrecios("Tabla de Quesos")));
 
+        disponibilidad();
 
-        dispoCarRes.setTextContent(rep.getDispo("Carpaccio de Res"));
-        dispoCarSal.setTextContent(rep.getDispo("Carpaccio de Salmon"));
-        dispoFocGen.setTextContent(rep.getDispo("Focaccia Genovese"));
-        dispoFocDolce.setTextContent(rep.getDispo("Focaccia Dolce"));
-        dispoFocVe.setTextContent(rep.getDispo("Focaccia Veneta"));
-        dispoFocPu.setTextContent(rep.getDispo("Focaccia Pugliese"));
-        dispoCesar.setTextContent(rep.getDispo("Ensalada Cesar Romana"));
-        dispoPorto.setTextContent(rep.getDispo("Ensalada de Portobello"));
-        dispoVen.setTextContent(rep.getDispo("Ensalada de Ventresca"));
-        dispoTabQuesos.setTextContent(rep.getDispo("Tabla de quesos"));
+    }
+
+    public void disponibilidad (){
+        if (rep.getDispo("Carpaccio de Res")==true){
+            dispoCarRes.setText("Disponible");
+        }else{
+            dispoCarRes.setText("No disponible");
+        }
+
+        if (rep.getDispo("Carpaccio de Salmon")==true){
+            dispoCarSal.setText("Disponible");
+        }else{
+            dispoCarSal.setText("No disponible");
+        }
+
+        if (rep.getDispo("Focaccia Genovese")==true){
+            dispoFocGen.setText("Disponible");
+        }else{
+            dispoFocGen.setText("No disponible");
+        }
+
+        if (rep.getDispo("Focaccia Dolce")==true){
+            dispoFocDol.setText("Disponible");
+        }else{
+            dispoFocDol.setText("No disponible");
+        }
+
+        if (rep.getDispo("Focaccia Veneta")==true){
+            dispoFocVe.setText("Disponible");
+        }else{
+            dispoFocVe.setText("No disponible");
+        }
+
+        if (rep.getDispo("Focaccia Pugliese")==true){
+            dispoFocPu.setText("Disponible");
+        }else{
+            dispoFocPu.setText("No disponible");
+        }
+
+        if (rep.getDispo("Ensalada Cesar Romana")==true){
+            dispoCesar.setText("Disponible");
+        }else{
+            dispoCesar.setText("No disponible");
+        }
+
+        if (rep.getDispo("Ensalada de Portobello")==true){
+            dispoPorto.setText("Disponible");
+        }else{
+            dispoPorto.setText("No disponible");
+        }
+
+        if (rep.getDispo("Ensalada de Ventresca")==true){
+            dispoVen.setText("Disponible");
+        }else{
+            dispoVen.setText("No disponible");
+        }
+
+        if (rep.getDispo("Tabla de Quesos")==true){
+            dispoTabQuesos.setText("Disponible");
+        }else{
+            dispoTabQuesos.setText("No disponible");
+        }
 
     }
 

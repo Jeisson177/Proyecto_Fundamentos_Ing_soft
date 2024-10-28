@@ -65,9 +65,25 @@ public class GaseosasControl {
         textoPrecioFanta.setText(String.valueOf(bebida.getPrecios("Fanta")));
         textoPrecioCoca.setText(String.valueOf(bebida.getPrecios("Coca cola")));
 
-        dispo4.setText(bebida.getDispo("Quatro"));
-        dispoCoca.setText(bebida.getDispo("Coca cola"));
-        dispoFanta.setText(bebida.getDispo("Fanta"));
+        disponibilidad();
+    }
+
+    public void disponibilidad (){
+        if (bebida.getDispo("Quatro")==true){
+            dispo4.setText("Disponible");
+        }else{
+            dispo4.setText("No disponible");
+        }
+        if (bebida.getDispo("Coca cola")==true){
+            dispoCoca.setText("Disponible");
+        }else{
+            dispoCoca.setText("No disponible");
+        }
+        if (bebida.getDispo("Fanta")==true){
+            dispoFanta.setText("Disponible");
+        }else{
+            dispoFanta.setText("No disponible");
+        }
     }
 
     public void irAPantallaBebidas(ActionEvent event) {

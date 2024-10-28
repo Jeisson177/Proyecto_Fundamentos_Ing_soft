@@ -66,9 +66,30 @@ public class VinosControl {
         textoPrecioTinto.setText(String.valueOf(bebida.getPrecios("Vino tinto")));
         textoPrecioBlanco.setText(String.valueOf(bebida.getPrecios("Vino blanco")));
 
-        dispoRosa.setText(bebida.getDispo("Vino rosado"));
-        dispoTinto.setText(bebida.getDispo("Vino tinto"));
-        dispoBlanco.setText(bebida.getDispo("Vino blanco"));
+       //dispoRosa.setText(bebida.getDispo("Vino rosado"));
+        //dispoTinto.setText(bebida.getDispo("Vino tinto"));
+        //dispoBlanco.setText(bebida.getDispo("Vino blanco"));
+
+        disponibilidad();
+
+    }
+
+    public void disponibilidad (){
+        if (bebida.getDispo("Vino rosado")==true){
+            dispoRosa.setText("Disponible");
+        }else{
+            dispoRosa.setText("No disponible");
+        }
+        if (bebida.getDispo("Vino tinto")==true){
+            dispoTinto.setText("Disponible");
+        }else{
+            dispoTinto.setText("No disponible");
+        }
+        if (bebida.getDispo("Vino blanco")==true){
+            dispoBlanco.setText("Disponible");
+        }else{
+            dispoBlanco.setText("No disponible");
+        }
     }
 
     public void irAPantallaBebidas(ActionEvent event) {
