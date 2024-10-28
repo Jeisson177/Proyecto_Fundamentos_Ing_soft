@@ -1,13 +1,11 @@
 package pkg;
 
-import com.example.Mesero.usuarioC;
+import com.example.Cliente.usuarioC;
 import org.junit.jupiter.api.Test;
+
 
 public class AppTest {
     @Test
     void probarHolaMundo() {
-       /* usuarioC U = new usuarioC();
-        String texto = controller.holaMundo();
-        assertEquals("Hola mundo", texto);*/
     }
 }
