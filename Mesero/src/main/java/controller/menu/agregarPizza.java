@@ -35,6 +35,9 @@ public class agregarPizza {
     public Button botonMenu;
     @FXML
     public Button botonReservar;
+    public Text dispoPersonal;
+    public Text dispoMediana;
+    public Text dispoFamiliar;
 
 
     private String tipoPizza;
@@ -58,6 +61,25 @@ public class agregarPizza {
             precioPersonal.setText(String.valueOf(pizza.getPrecios("Pizza Cuatro Quesos Personal"))+"COP");
             precioMediana.setText(String.valueOf(pizza.getPrecios("Pizza Cuatro Quesos Mediana"))+"COP");
             precioFamiliar.setText(String.valueOf(pizza.getPrecios("Pizza Cuatro Quesos Familiar"))+"COP");
+
+            if (pizza.getDispo("Pizza Cuatro Quesos Personal")==true){
+                dispoPersonal.setText("Disponible");
+            }else{
+                dispoPersonal.setText("No disponible");
+            }
+
+            if (pizza.getDispo("Pizza Cuatro Quesos Mediana")==true){
+                dispoMediana.setText("Disponible");
+            }else{
+                dispoMediana.setText("No disponible");
+            }
+
+            if (pizza.getDispo("Pizza Cuatro Quesos Familiar")==true){
+                dispoFamiliar.setText("Disponible");
+            }else{
+                dispoFamiliar.setText("No disponible");
+            }
+
         } else if (tipoPizza.equals("pepperoni")) {
             Image quesos = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/imagenes/PlatosFuertes/Pep.png")));
             pizzaSelec.setImage(quesos);
@@ -66,6 +88,25 @@ public class agregarPizza {
             precioPersonal.setText(String.valueOf(pizza.getPrecios("Pizza Pepperoni Personal"))+"COP");
             precioMediana.setText(String.valueOf(pizza.getPrecios("Pizza Pepperoni Mediana"))+"COP");
             precioFamiliar.setText(String.valueOf(pizza.getPrecios("Pizza Pepperoni Familiar"))+"COP");
+
+            if (pizza.getDispo("Pizza Pepperoni Personal")==true){
+                dispoPersonal.setText("Disponible");
+            }else{
+                dispoPersonal.setText("No disponible");
+            }
+
+            if (pizza.getDispo("Pizza Pepperoni Mediana")==true){
+                dispoMediana.setText("Disponible");
+            }else{
+                dispoMediana.setText("No disponible");
+            }
+
+            if (pizza.getDispo("Pizza Pepperoni Familiar")==true){
+                dispoFamiliar.setText("Disponible");
+            }else{
+                dispoFamiliar.setText("No disponible");
+            }
+
         } else if (tipoPizza.equals("margarita")) {
             Image quesos = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/imagenes/PlatosFuertes/Marga.png")));
             pizzaSelec.setImage(quesos);
@@ -74,6 +115,25 @@ public class agregarPizza {
             precioPersonal.setText(String.valueOf(pizza.getPrecios("Pizza Margarita Personal"))+"COP");
             precioMediana.setText(String.valueOf(pizza.getPrecios("Pizza Margarita Mediana"))+"COP");
             precioFamiliar.setText(String.valueOf(pizza.getPrecios("Pizza Margarita Familiar"))+"COP");
+
+            if (pizza.getDispo("Pizza Margarita Personal")==true){
+                dispoPersonal.setText("Disponible");
+            }else{
+                dispoPersonal.setText("No disponible");
+            }
+
+            if (pizza.getDispo("Pizza Margarita Mediana")==true){
+                dispoMediana.setText("Disponible");
+            }else{
+                dispoMediana.setText("No disponible");
+            }
+
+            if (pizza.getDispo("Pizza Margarita Familiar")==true){
+                dispoFamiliar.setText("Disponible");
+            }else{
+                dispoFamiliar.setText("No disponible");
+            }
+
         }
     }
 

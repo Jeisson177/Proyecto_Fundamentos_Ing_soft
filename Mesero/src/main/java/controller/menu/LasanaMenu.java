@@ -59,10 +59,28 @@ public class LasanaMenu {
         precioLasanaBolo.setText(String.valueOf(lasana.getPrecios("Lasagna Bolognese"))+" COP");
         precioLasanaPollo.setText(String.valueOf(lasana.getPrecios("Lasagna de Pollo"))+" COP");
 
-        dispoBolo.setText(lasana.getDispo("Lasagna Bolognese"));
-        dispoPollo.setText(lasana.getDispo("Lasagna de Pollo"));
-        dispoMixto.setText(lasana.getDispo("Lasagna Mixta"));
-        
+        disponibilidad();
+
+    }
+
+    public void disponibilidad (){
+        if (lasana.getDispo("Lasagna Bolognese")==true){
+            dispoBolo.setText("Disponible");
+        }else{
+            dispoBolo.setText("No disponible");
+        }
+
+        if (lasana.getDispo("Lasagna de Pollo")==true){
+            dispoPollo.setText("Disponible");
+        }else{
+            dispoPollo.setText("No disponible");
+        }
+
+        if (lasana.getDispo("Lasagna Mixta")==true){
+            dispoMixto.setText("Disponible");
+        }else{
+            dispoMixto.setText("No disponible");
+        }
 
     }
 

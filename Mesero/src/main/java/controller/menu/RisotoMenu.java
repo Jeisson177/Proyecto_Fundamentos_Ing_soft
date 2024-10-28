@@ -58,9 +58,29 @@ public class RisotoMenu {
         precioRisotoSal.setText(String.valueOf(risoto.getPrecios("Risotto de Salmon"))+" COP");
         precioRisotoVeg.setText(String.valueOf(risoto.getPrecios("Risotto Vegetariano"))+" COP");
 
-        dispoHon.setText(risoto.getDispo("Risotto de Hongos"));
-        dispoSal.setText(risoto.getDispo("Risotto de Salmon"));
-        dispoVeg.setText(risoto.getDispo("Risotto Vegetariano"));
+        disponibilidad();
+
+    }
+
+    public void disponibilidad (){
+        if (risoto.getDispo("Risotto de Hongos")==true){
+            dispoHon.setText("Disponible");
+        }else{
+            dispoHon.setText("No disponible");
+        }
+
+        if (risoto.getDispo("Risotto de Salmon")==true){
+            dispoSal.setText("Disponible");
+        }else{
+            dispoSal.setText("No disponible");
+        }
+
+        if (risoto.getDispo("Risotto Vegetariano")==true){
+            dispoVeg.setText("Disponible");
+        }else{
+            dispoVeg.setText("No disponible");
+        }
+
     }
 
     @FXML

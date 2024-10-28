@@ -53,22 +53,22 @@
       <Text fx:id="precioPastaFetu" layoutX="189.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="89.33673095703125" />
       <Text fx:id="precioPastaTrene" layoutX="329.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="89.33673095703125" />
       <Text fx:id="precioPastaSpa" layoutX="474.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="89.33673095703125" />
-      <Text fx:id="dispoCarbonara" fill="RED" layoutX="65.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+      <Text fx:id="dispoCarbonara" fill="RED" layoutX="29.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Text>
-      <Text fx:id="dispoPuttanesca" fill="RED" layoutX="217.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+      <Text fx:id="dispoPuttanesca" fill="RED" layoutX="177.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Text>
-      <Text fx:id="dispoPesto" fill="RED" layoutX="357.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+      <Text fx:id="dispoPesto" fill="RED" layoutX="321.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Text>
-      <Text fx:id="dispoBolonesa" fill="RED" layoutX="502.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+      <Text fx:id="dispoBolonesa" fill="RED" layoutX="474.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>

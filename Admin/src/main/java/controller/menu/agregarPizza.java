@@ -36,7 +36,6 @@ public class agregarPizza {
     @FXML
     public Button botonReservar;
 
-
     private String tipoPizza;
 
     private RedireccionGeneral Ira=new RedireccionGeneral();

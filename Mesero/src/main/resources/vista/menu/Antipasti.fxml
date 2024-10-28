@@ -15,7 +15,7 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.menu.AntipastiControl">
     <Pane prefHeight="61.0" prefWidth="722.0" style="-fx-background-color: black;">
         <children>
-            <Text fill="WHITE" layoutX="14.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: dream avenue;" text="Bella Ventura">
+            <Text fill="WHITE" layoutX="14.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: normal;" text="Bella Ventura">
                 <font>
                     <Font size="24.0" />
                 </font>
@@ -58,11 +58,6 @@
                     </graphic>
                 </Button>
                 <Label text="CARPACCIO DE RES" />
-            <Text fx:id="dispoCarRes" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-               <font>
-                  <Font name="System Bold" size="16.0" />
-               </font>
-            </Text>
                 <Label fx:id="carpaccioResPrecio" />
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
@@ -73,11 +68,6 @@
                         </graphic>
                     </Button>
                     <Label text="CARPACCIO DE SALMÓN" />
-               <Text fx:id="dispoCarSal" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-                  <font>
-                     <Font name="System Bold" size="16.0" />
-                  </font>
-               </Text>
                     <Label fx:id="carpaccioSalmonPrecio" />
                 </children>
             </VBox>
@@ -89,11 +79,6 @@
                         </graphic>
                     </Button>
                     <Label text="FOCACCIA GENOVESE" />
-               <Text fx:id="dispoFocGen" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-                  <font>
-                     <Font name="System Bold" size="16.0" />
-                  </font>
-               </Text>
                     <Label fx:id="focacciaGenovesePrecio" />
                 </children>
             </VBox>
@@ -105,11 +90,6 @@
                         </graphic>
                     </Button>
                     <Label text="FOCACCIA DOLCE" />
-               <Text fx:id="dispoFocDol" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-                  <font>
-                     <Font name="System Bold" size="16.0" />
-                  </font>
-               </Text>
                     <Label fx:id="focacciaDolcePrecio" />
                 </children>
             </VBox>
@@ -121,11 +101,6 @@
                         </graphic>
                     </Button>
                     <Label text="FOCACCIA VENETA" />
-               <Text fx:id="dispoFocVe" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-                  <font>
-                     <Font name="System Bold" size="16.0" />
-                  </font>
-               </Text>
                     <Label fx:id="focacciaVenetaPrecio" />
                 </children>
             </VBox>
@@ -186,27 +161,52 @@
             </VBox>
         </children>
     </GridPane>
-   <Text fx:id="dispoFocPu" fill="RED" layoutX="50.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+   <Text fx:id="dispoFocPu" fill="RED" layoutX="14.0" layoutY="386.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
       <font>
          <Font name="System Bold" size="16.0" />
       </font>
    </Text>
-   <Text fx:id="dispoCesar" fill="RED" layoutX="195.0" layoutY="375.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+   <Text fx:id="dispoCesar" fill="RED" layoutX="147.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
       <font>
          <Font name="System Bold" size="16.0" />
       </font>
    </Text>
-   <Text fx:id="dispoPorto" fill="RED" layoutX="344.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+   <Text fx:id="dispoPorto" fill="RED" layoutX="302.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="118.0">
       <font>
          <Font name="System Bold" size="16.0" />
       </font>
    </Text>
-   <Text fx:id="dispoVen" fill="RED" layoutX="492.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+   <Text fx:id="dispoVen" fill="RED" layoutX="452.0" layoutY="386.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
       <font>
          <Font name="System Bold" size="16.0" />
       </font>
    </Text>
-   <Text fx:id="dispoTabQuesos" fill="RED" layoutX="647.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+   <Text fx:id="dispoTabQuesos" fill="RED" layoutX="594.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+      <font>
+         <Font name="System Bold" size="16.0" />
+      </font>
+   </Text>
+   <Text fx:id="dispoCarRes" fill="RED" layoutX="7.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+      <font>
+         <Font name="System Bold" size="16.0" />
+      </font>
+   </Text>
+   <Text fx:id="dispoCarSal" fill="RED" layoutX="164.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+      <font>
+         <Font name="System Bold" size="16.0" />
+      </font>
+   </Text>
+   <Text fx:id="dispoFocGen" fill="RED" layoutX="304.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+      <font>
+         <Font name="System Bold" size="16.0" />
+      </font>
+   </Text>
+   <Text fx:id="dispoFocDol" fill="RED" layoutX="452.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+      <font>
+         <Font name="System Bold" size="16.0" />
+      </font>
+   </Text>
+   <Text fx:id="dispoFocVe" fill="RED" layoutX="594.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
       <font>
          <Font name="System Bold" size="16.0" />
       </font>
