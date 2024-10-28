@@ -5,12 +5,83 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fd8ff85-b94a-4b81-b0f1-01c765de323a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Admin/src/main/java/controller/ModificarMesasControl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/ModificarMesas.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/java/com/example/Mesero/admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/java/com/example/Mesero/admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/java/repository/modifificarRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/java/repository/modifificarRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/com/example/Mesero/Mesero.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/com/example/Mesero/Mesero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Bebidas1/Agua.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Bebidas1/Agua.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Bebidas1/AguaConGas.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Bebidas1/AguaConGas.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Bebidas1/Champagne.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Bebidas1/Champagne.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Bebidas1/Gaseosas.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Bebidas1/Gaseosas.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Bebidas1/vinos.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Bebidas1/vinos.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Gaseosas/cocacola.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Gaseosas/cocacola.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Gaseosas/fanta.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Gaseosas/fanta.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Gaseosas/gaseosas.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Gaseosas/gaseosas.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Gaseosas/quatro.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Gaseosas/quatro.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Imagenes/helados/AVELLANA_IMAGE.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Imagenes/helados/AVELLANA_IMAGE.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Imagenes/helados/CHOCOLATE_IMAGE.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Imagenes/helados/CHOCOLATE_IMAGE.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Imagenes/helados/FRAMBUESA_IMAGE.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Imagenes/helados/FRAMBUESA_IMAGE.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Imagenes/helados/FRESA_IMAGE.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Imagenes/helados/FRESA_IMAGE.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Imagenes/helados/HELADOSLETRA_IMAGE.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Imagenes/helados/HELADOSLETRA_IMAGE.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Imagenes/helados/HELADOS_IMAGE.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Imagenes/helados/HELADOS_IMAGE.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Imagenes/helados/LIMON_IMAGE.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Imagenes/helados/LIMON_IMAGE.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Imagenes/postres/AFFOGATO_IMAGE.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Imagenes/postres/AFFOGATO_IMAGE.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Imagenes/postres/CANNOLINI_IMAGE.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Imagenes/postres/CANNOLINI_IMAGE.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Imagenes/postres/GELATO_IMAGE.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Imagenes/postres/GELATO_IMAGE.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Imagenes/postres/INSTA_IMAGE.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Imagenes/postres/INSTA_IMAGE.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Imagenes/postres/PANNACOTA_IMAGE.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Imagenes/postres/PANNACOTA_IMAGE.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Imagenes/postres/POSTRESLETRA_IMAGE.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Imagenes/postres/POSTRESLETRA_IMAGE.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Imagenes/postres/TIRAMISU_IMAGE.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Imagenes/postres/TIRAMISU_IMAGE.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/4quesos.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/4quesos.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/BOLOÑESA.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/BOLOÑESA.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/Carbonara.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/Carbonara.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/Fetu.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/Fetu.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/Hongos.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/Hongos.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/L1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/L1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/Marga.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/Marga.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/Margarita.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/Margarita.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/Mixta.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/Mixta.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/Pasta.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/Pasta.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/Pep.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/Pep.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/Quesos.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/Quesos.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/Salmon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/Salmon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/ig.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/ig.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/peper.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/peper.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/pizza.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/pizza.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/pollo.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/pollo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/risoto.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/risoto.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/spa.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/spa.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/trene.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/trene.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/vegetariano.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/PlatosFuertes/vegetariano.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Portada/bellaV.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Portada/bellaV.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Portada/portada.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Portada/portada.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Vinos/rosa.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Vinos/rosa.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Vinos/tinto.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Vinos/tinto.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Vinos/vinos.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Vinos/vinos.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Vinos/white.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/Vinos/white.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/antipasti/carpaccio_res.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/antipasti/carpaccio_res.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/antipasti/carpaccio_salmon.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/antipasti/carpaccio_salmon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/antipasti/ensalada_cesar_romana.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/antipasti/ensalada_cesar_romana.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/antipasti/ensalada_portobello.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/antipasti/ensalada_portobello.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/antipasti/ensalada_ventresca.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/antipasti/ensalada_ventresca.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/antipasti/focaccia_dolce.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/antipasti/focaccia_dolce.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/antipasti/focaccia_genovese.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/antipasti/focaccia_genovese.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/antipasti/focaccia_pugliese.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/antipasti/focaccia_pugliese.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/antipasti/focaccia_veneta.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/antipasti/focaccia_veneta.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/antipasti/tabal_quesos.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/antipasti/tabal_quesos.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/home/home.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/home/home.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/home/imagen1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/home/imagen1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/home/imagen2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/home/imagen2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/home/imagen3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/home/imagen3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/login/imagen1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/login/imagen1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/login/pidr.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/login/pidr.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/login/pizq.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/login/pizq.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/menuPrincipal/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/menuPrincipal/1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/menuPrincipal/port_antipasti.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/menuPrincipal/port_antipasti.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/menuPrincipal/port_bebidas.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/menuPrincipal/port_bebidas.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/menuPrincipal/port_platos_fuertes.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/menuPrincipal/port_platos_fuertes.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/menuPrincipal/port_postres.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/menuPrincipal/port_postres.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/mesa/distribucionMesa.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/mesa/distribucionMesa.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/mesa/fondomesa.png" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/Imagenes/mesa/fondomesa.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +129,9 @@
     &quot;accountId&quot;: &quot;19f69f75-ca28-46a4-9103-87243a4383e7&quot;
     }
     }</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -82,11 +156,11 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "mesero",
+    "git-widget-placeholder": "modificarMesas",
     "ignore.preview.features.used": "true",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/jeiss/OneDrive/Documentos/universidad/10 decimo semestre/Fundamentos ing soft/Proyecto_Fundamentos_Ing_soft/Mesero",
+    "last_opened_file_path": "C:/Users/jeiss/OneDrive/Documentos/universidad/10 decimo semestre/Fundamentos ing soft/Proyecto_Fundamentos_Ing_soft/Mesero/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -109,7 +183,20 @@
       <recent name="C:\Users\jeiss\OneDrive\Documentos\universidad\10 decimo semestre\Fundamentos ing soft\Proyecto_Fundamentos_Ing_soft\Admin\src\main\resources\vista\menu" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Mesero">
+    <configuration name="Mesero" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.Mesero.Mesero" />
+      <module name="Mesero" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.Mesero.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="admin" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.example.admin.admin" />
       <module name="Cliente (1)" />
@@ -125,6 +212,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Mesero" />
         <item itemvalue="Application.admin" />
       </list>
     </recent_temporary>
@@ -157,6 +245,8 @@
       <workItem from="1729533941512" duration="4519000" />
       <workItem from="1729714944755" duration="75000" />
       <workItem from="1729720310144" duration="5210000" />
+      <workItem from="1729797266663" duration="1245000" />
+      <workItem from="1730072852165" duration="689000" />
     </task>
     <servers />
   </component>
