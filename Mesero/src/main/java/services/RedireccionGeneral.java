@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class RedireccionGeneral {
+public class  RedireccionGeneral {
 
     public void IrHome(Button Home) {
         try {
