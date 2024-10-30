@@ -43,9 +43,9 @@
       <ImageView fx:id="RisotoVeg" fitHeight="116.0" fitWidth="148.0" layoutX="48.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="RisotoSal" fitHeight="116.0" fitWidth="119.0" layoutX="250.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="RisotoHon" fitHeight="116.0" fitWidth="113.0" layoutX="437.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true" />
-      <Button fx:id="risotoVegetariano" layoutX="67.0" layoutY="255.0" mnemonicParsing="false" onAction="#onClickVegetariano" text="Vegetariano" />
-      <Button fx:id="risotoSalmon" layoutX="279.0" layoutY="255.0" mnemonicParsing="false" onAction="#onClickSalmon" text="Salmon" />
-      <Button fx:id="risotoHongos" layoutX="465.0" layoutY="255.0" mnemonicParsing="false" onAction="#onClickHongos" text="Hongos" />
+      <Button fx:id="risotoVegetariano" layoutX="53.0" layoutY="128.0" mnemonicParsing="false" onAction="#onClickVegetariano" prefHeight="116.0" prefWidth="138.0" style="-fx-background-color: transpare;" />
+      <Button fx:id="risotoSalmon" layoutX="254.0" layoutY="131.0" mnemonicParsing="false" onAction="#onClickSalmon" prefHeight="116.0" prefWidth="112.0" style="-fx-background-color: transpare;" />
+      <Button fx:id="risotoHongos" layoutX="439.0" layoutY="127.0" mnemonicParsing="false" onAction="#onClickHongos" prefHeight="116.0" prefWidth="106.0" style="-fx-background-color: transpare;" />
       <Text fx:id="precioRisotoVeg" layoutX="67.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="80.79999999999995" />
       <Text fx:id="precioRisotoSal" layoutX="269.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="80.79999999999995" />
       <Text fx:id="precioRisotoHon" layoutX="453.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="80.79999999999995" />
