@@ -36,6 +36,16 @@ public class UsuarioRepository {
 
     // Método para crear usuario
     public int CrearUsuario(String email, String contrasena, String nombre, String telefono) {
+        // Validación de campos vacíos
+        if (email == null || email.isEmpty() ||
+                contrasena == null || contrasena.isEmpty() ||
+                nombre == null || nombre.isEmpty() ||
+                telefono == null || telefono.isEmpty()) {
+
+            System.out.println("Error: Todos los campos deben estar completos.");
+            return -1; // Indica fallo debido a campos vacíos
+        }
+
         String queryInsert = "INSERT INTO usuario (NOMBRE, EMAIL, TELEFONO, CONTRASENA, ROL) VALUES (?, ?, ?, ?, ?)";
         String rol = "Cliente";
 
