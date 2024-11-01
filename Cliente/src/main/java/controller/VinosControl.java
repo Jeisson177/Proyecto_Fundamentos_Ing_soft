@@ -11,7 +11,8 @@ import javafx.scene.Scene;
 import javafx.scene.Node;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import repository.bebidasRepositorio;
+
+import services.AgregarPizzaService;
 import services.RedireccionGeneral;
 
 import java.io.IOException;
@@ -36,7 +37,7 @@ public class VinosControl {
     public Text textoPrecioTinto;
     public Text textoPrecioRosado;
 
-    private bebidasRepositorio bebida=new bebidasRepositorio();
+    private AgregarPizzaService bebida=new AgregarPizzaService();
 
     private RedireccionGeneral Ira=new RedireccionGeneral();
     @FXML

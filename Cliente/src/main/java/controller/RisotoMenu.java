@@ -2,15 +2,11 @@ package controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
-import repository.RisotoRepositorio;
+import services.AgregarPizzaService;
 import services.RedireccionGeneral;
 
 import java.util.Objects;
@@ -44,7 +40,7 @@ public class RisotoMenu {
     public Text precioRisotoHon;
 
     private RedireccionGeneral Ira=new RedireccionGeneral();
-    private RisotoRepositorio risoto=new RisotoRepositorio();
+    private AgregarPizzaService risoto=new AgregarPizzaService();
 
     public void initialize(){
         Image vegetariano = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/imagenes/PlatosFuertes/vegetariano.png")));

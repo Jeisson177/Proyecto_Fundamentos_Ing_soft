@@ -11,6 +11,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import repository.PostreRepositorio;
+import services.AgregarPizzaService;
 import services.RedireccionGeneral;
 import java.util.Objects;
 
@@ -51,7 +52,7 @@ public class Postrecontrol {
     @FXML
     public Label preciocannolini;
 
-    private PostreRepositorio postre =new PostreRepositorio();
+    private AgregarPizzaService postre =new AgregarPizzaService();
     private RedireccionGeneral Ira=new RedireccionGeneral();
 
     @FXML

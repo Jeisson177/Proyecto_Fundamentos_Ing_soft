@@ -10,7 +10,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import repository.LasanaRepositorio;
+import services.AgregarPizzaService;
 import services.RedireccionGeneral;
 
 import java.util.Objects;
@@ -44,7 +44,7 @@ public class LasanaMenu {
     public Text precioLasanaPollo;
 
     private RedireccionGeneral Ira=new RedireccionGeneral();
-    private LasanaRepositorio lasana=new LasanaRepositorio();
+    private AgregarPizzaService lasana=new AgregarPizzaService();
 
     public void initialize(){
         Image Bolonesa = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/imagenes/PlatosFuertes/BOLOÑESA.png")));

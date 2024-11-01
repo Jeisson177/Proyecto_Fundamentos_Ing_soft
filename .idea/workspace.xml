@@ -5,8 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fd8ff85-b94a-4b81-b0f1-01c765de323a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Cliente/src/main/java/repository/MesaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cliente/src/main/java/services/AgregarPizzaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cliente/src/main/java/services/MesaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cliente/src/main/java/services/loginService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/java/controller/AntipastiControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/java/controller/AntipastiControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/java/controller/BebidaControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/java/controller/BebidaControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/java/controller/GaseosasControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/java/controller/GaseosasControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/java/controller/Heladoscontrol.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/java/controller/Heladoscontrol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/java/controller/LasanaMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/java/controller/LasanaMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/java/controller/MesaControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/java/controller/MesaControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/java/controller/PastaMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/java/controller/PastaMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/java/controller/Postrecontrol.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/java/controller/Postrecontrol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/java/controller/RisotoMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/java/controller/RisotoMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/java/controller/VinosControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/java/controller/VinosControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/java/controller/agregarPizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/java/controller/agregarPizza.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/java/controller/loginControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/java/controller/loginControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/java/repository/HeladosRepositorio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/java/repository/LasanaRepositorio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/java/repository/PastaRepositorio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/java/repository/RisotoRepositorio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/java/repository/antipastiRepositorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/java/repository/antipastiRepositorio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/java/repository/bebidasRepositorio.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +38,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -42,20 +64,27 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "JocelyneGonzalezHernandez"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;JocelyneGonzalezHernandez&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Jeisson177/Proyecto_Fundamentos_Ing_soft.git",
-    "accountId": "19f69f75-ca28-46a4-9103-87243a4383e7"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Jeisson177/Proyecto_Fundamentos_Ing_soft.git&quot;,
+    &quot;accountId&quot;: &quot;19f69f75-ca28-46a4-9103-87243a4383e7&quot;
   }
-}]]></component>
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="downloadSourcesAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -65,6 +94,9 @@
     &quot;associatedIndex&quot;: 3
     }</component>
   <component name="ProjectId" id="2misdhORJuga1HwcAhQ0u1I2gMH" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -72,6 +104,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.HelloApplication.executor": "Debug",
+    "Application.usuarioC.executor": "Run",
     "Downloaded.Files.Path": "C:\\Users\\Jocel\\Downloads\\Proyecto_Fundamentos_Ing_soft",
     "Downloaded.Files.Path.Enabled": "true",
     "Repository.Attach.Annotations": "false",
@@ -85,7 +118,7 @@
     "ignore.preview.features.used": "true",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Jocel/Downloads/Proyecto_Fundamentos_Ing_soft/Cliente",
+    "last_opened_file_path": "C:/Users/jeiss/Documents/universidad/10 decimo semestre/Fundamentos ing soft/Proyecto_Fundamentos_Ing_soft/Mesero/pom.xml",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -94,7 +127,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2591623",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.archetype.catalogs",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -109,7 +142,7 @@
       <recent name="C:\Users\jeiss\OneDrive\Documentos\universidad\10 decimo semestre\Fundamentos ing soft\Proyecto_Fundamentos_Ing_soft\Admin\src\main\resources\vista\menu" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.admin">
+  <component name="RunManager" selected="Application.usuarioC">
     <configuration name="Mesero" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.Mesero.Mesero" />
       <module name="Mesero" />
@@ -136,8 +169,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="usuarioC" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.Cliente.usuarioC" />
+      <module name="Cliente" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.Cliente.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.usuarioC" />
         <item itemvalue="Application.Mesero" />
         <item itemvalue="Application.admin" />
       </list>

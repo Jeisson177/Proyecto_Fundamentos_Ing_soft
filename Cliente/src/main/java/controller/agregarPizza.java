@@ -11,6 +11,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import repository.agregarPizzaRepositorio;
+import services.AgregarPizzaService;
 import services.RedireccionGeneral;
 
 import java.util.Objects;
@@ -45,7 +46,7 @@ public class agregarPizza {
 
     private RedireccionGeneral Ira=new RedireccionGeneral();
 
-    private agregarPizzaRepositorio pizza=new agregarPizzaRepositorio();
+    private AgregarPizzaService pizza=new AgregarPizzaService();
 
     public void setTipoPizza(String tipoPizza) {
         this.tipoPizza = tipoPizza;
