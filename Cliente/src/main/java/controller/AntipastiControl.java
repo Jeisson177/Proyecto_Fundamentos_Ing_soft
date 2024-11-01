@@ -11,6 +11,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import services.AgregarPizzaService;
 import services.RedireccionGeneral;
 import repository.antipastiRepositorio;
 
@@ -48,7 +49,7 @@ public class AntipastiControl {
     public Label tablaQuesosPrecio;
 
     private RedireccionGeneral Ira=new RedireccionGeneral();
-    private antipastiRepositorio rep=new antipastiRepositorio();
+    private AgregarPizzaService rep=new AgregarPizzaService();
 
     @FXML
     public void initialize() {

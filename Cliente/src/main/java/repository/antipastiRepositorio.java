@@ -28,7 +28,7 @@ public class antipastiRepositorio {
         }
         return -1;  // Valor por defecto si no se encuentra el precio
     }
-    public String getDispo(String nombre){
+   /* public String getDispo(String nombre){
         String query = "SELECT   p.NOMBRE AS Plato, CASE  WHEN MIN(ii.CANTIDAD_INV >= ip.Cantidad) THEN 'Disponible' ELSE 'NO disponible' END AS Dispo FROM  PLATO p JOIN INGREDIENTE_PLATO ip ON p.ID_PLATO = ip.ID_PLATO JOIN INGREDIENTE_INV ii ON ip.ID_INGREDIENTE = ii.ID_INGREDIENTE WHERE p.NOMBRE = ? GROUP BY p.NOMBRE;";
         try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
             try (PreparedStatement stmt = connection.prepareStatement(query)) {
@@ -43,5 +43,5 @@ public class antipastiRepositorio {
             throw new RuntimeException(e);
         }
         return "No encontrado";
-    }
+    }*/
 }

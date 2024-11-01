@@ -12,6 +12,7 @@ import repository.UsuarioRepository;
 import services.RedireccionGeneral;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import services.loginService;
 
 import java.util.List;
 
@@ -31,7 +32,7 @@ public class loginControl {
     public Button btnLogin;
     public Button btnVerReservas;
 
-    private UsuarioRepository log=new UsuarioRepository();
+    private loginService log=new loginService();
     private RedireccionGeneral Ira = new RedireccionGeneral();
 
 
