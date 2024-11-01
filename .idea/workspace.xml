@@ -7,10 +7,6 @@
     <list default="true" id="1fd8ff85-b94a-4b81-b0f1-01c765de323a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cliente/src/main/resources/vista/PastaMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/resources/vista/PastaMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cliente/src/main/resources/vista/PizzaMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/resources/vista/PizzaMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cliente/src/main/resources/vista/RisotoMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/resources/vista/RisotoMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/PastaMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/PastaMenu.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,23 +37,23 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="menu" />
+        <entry key="$PROJECT_DIR$" value="OrdenMesero" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-    &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;JocelyneGonzalezHernandez&quot;
-    }
-    }</component>
-  <component name="GithubPullRequestsUISettings">{
-    &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Jeisson177/Proyecto_Fundamentos_Ing_soft.git&quot;,
-    &quot;accountId&quot;: &quot;19f69f75-ca28-46a4-9103-87243a4383e7&quot;
-    }
-    }</component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "JocelyneGonzalezHernandez"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Jeisson177/Proyecto_Fundamentos_Ing_soft.git",
+    "accountId": "19f69f75-ca28-46a4-9103-87243a4383e7"
+  }
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -76,7 +72,6 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.HelloApplication.executor": "Debug",
-    "Application.Mesero.executor": "Run",
     "Downloaded.Files.Path": "C:\\Users\\Jocel\\Downloads\\Proyecto_Fundamentos_Ing_soft",
     "Downloaded.Files.Path.Enabled": "true",
     "Repository.Attach.Annotations": "false",
@@ -86,11 +81,11 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "develop",
+    "git-widget-placeholder": "pruebasC",
     "ignore.preview.features.used": "true",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Nicolas Pedraza/Documents/DECIMO SEMESTRE/SISTEMAS/REDES/pr2",
+    "last_opened_file_path": "C:/Users/Jocel/Downloads/Proyecto_Fundamentos_Ing_soft/Cliente",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -114,7 +109,7 @@
       <recent name="C:\Users\jeiss\OneDrive\Documentos\universidad\10 decimo semestre\Fundamentos ing soft\Proyecto_Fundamentos_Ing_soft\Admin\src\main\resources\vista\menu" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Mesero">
+  <component name="RunManager" selected="Application.admin">
     <configuration name="Mesero" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.Mesero.Mesero" />
       <module name="Mesero" />
@@ -148,6 +143,14 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -170,6 +173,7 @@
       <workItem from="1729720310144" duration="5210000" />
       <workItem from="1729797266663" duration="1245000" />
       <workItem from="1730072852165" duration="689000" />
+      <workItem from="1730231433151" duration="1535000" />
     </task>
     <servers />
   </component>
