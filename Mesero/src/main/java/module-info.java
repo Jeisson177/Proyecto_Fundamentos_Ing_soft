@@ -8,6 +8,6 @@ module com.example.cliente {
     exports com.example.Mesero;
     exports controller;
     opens controller to javafx.fxml;
-    exports controller.menu;
-    opens controller.menu to javafx.fxml;
+    exports controller.menuMesero;
+    opens controller.menuMesero to javafx.fxml;
 }

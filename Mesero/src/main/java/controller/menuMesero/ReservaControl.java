@@ -1,4 +1,4 @@
-package controller.menu;
+package controller.menuMesero;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;

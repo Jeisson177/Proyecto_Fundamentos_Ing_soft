@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="551.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.menu.HomeControl">
+<AnchorPane prefHeight="400.0" prefWidth="551.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.menuMesero.HomeControl">
    <children>
       <ImageView fitHeight="89.0" fitWidth="581.0" layoutX="-15.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
          <image>

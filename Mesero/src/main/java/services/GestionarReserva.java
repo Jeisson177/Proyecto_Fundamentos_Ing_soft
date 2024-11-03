@@ -1,6 +1,6 @@
 package services;
 
-import controller.menu.MesaControl;
+import controller.menuMesero.MesaControl;
 import repository.menu.ReservaRepository;
 
 import java.sql.SQLException;

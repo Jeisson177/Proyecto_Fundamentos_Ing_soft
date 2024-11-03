@@ -1,4 +1,4 @@
-package controller.menu;
+package controller.menuMesero;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
