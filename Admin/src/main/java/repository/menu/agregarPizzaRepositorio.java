@@ -1,10 +1,6 @@
 package repository.menu;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class agregarPizzaRepositorio {
     private static final String URL = "jdbc:mysql://localhost:3306/proyecto ingesoft";

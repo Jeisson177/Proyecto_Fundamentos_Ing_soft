@@ -1,12 +1,12 @@
 package controller.menu;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.event.ActionEvent;
 import javafx.scene.text.Text;
-import repository.menu.bebidasRepositorio;
+import services.AgregarPizzaService;
 import services.RedireccionGeneral;
 
 import java.util.Objects;
@@ -30,7 +30,7 @@ public class GaseosasControl {
     public Text textoPrecioFanta;
     public Text textoPrecioCoca;
 
-    private bebidasRepositorio bebida=new bebidasRepositorio();
+    private AgregarPizzaService bebida=new AgregarPizzaService();
     private RedireccionGeneral Ira=new RedireccionGeneral();
     @FXML
     public void initialize() {

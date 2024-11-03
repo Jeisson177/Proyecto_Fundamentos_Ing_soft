@@ -1,18 +1,17 @@
 package controller.menu;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
-import repository.menu.HeladosRepositorio;
+import services.AgregarPizzaService;
 import services.RedireccionGeneral;
-
 
 import java.util.Objects;
 
@@ -59,7 +58,7 @@ public class Heladoscontrol {
     @FXML
     public Label preciochocolate;
 
-    private HeladosRepositorio helado =new HeladosRepositorio();
+    private AgregarPizzaService helado =new AgregarPizzaService();
 
     private RedireccionGeneral Ira = new RedireccionGeneral();
 
@@ -96,7 +95,7 @@ public class Heladoscontrol {
     public void clickHELADO(ActionEvent actionEvent) {
         try {
             // Carga la nueva ventana
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/menu/PostreMenu.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Postremenu.fxml"));
             Parent root = loader.load();
 
             // Crea una nueva escena

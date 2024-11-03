@@ -6,7 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
-import repository.menu.agregarPizzaRepositorio;
+import services.AgregarPizzaService;
 import services.RedireccionGeneral;
 
 import java.util.Objects;
@@ -36,11 +36,12 @@ public class agregarPizza {
     @FXML
     public Button botonReservar;
 
+
     private String tipoPizza;
 
     private RedireccionGeneral Ira=new RedireccionGeneral();
 
-    private agregarPizzaRepositorio pizza=new agregarPizzaRepositorio();
+    private AgregarPizzaService pizza=new AgregarPizzaService();
 
     public void setTipoPizza(String tipoPizza) {
         this.tipoPizza = tipoPizza;

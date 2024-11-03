@@ -1,5 +1,6 @@
 package controller.menu;
 
+import controller.ReservaControl;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,9 +11,10 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import services.MesaService;
 import services.RedireccionGeneral;
 
-import java.sql.*;
+import java.util.Map;
 import java.util.Objects;
 
 public class MesaControl {
@@ -35,6 +37,7 @@ public class MesaControl {
     public Button btnHorarios;
 
     private RedireccionGeneral Ira = new RedireccionGeneral();
+    private final MesaService mesaRepository = new MesaService();
 
     private int mesaSeleccionada=0;
     @FXML
@@ -42,7 +45,7 @@ public class MesaControl {
 
         Image img1 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/mesa/fondomesa.png")));
         Image img2= new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/mesa/fondomesa.png")));
-        
+
         fondodr.setImage(img1);
         fondoiz.setImage(img2);
 
@@ -50,46 +53,29 @@ public class MesaControl {
     }
 
     private void cargarPosicion() {
-            //String url = "jdbc:mysql://localhost:3307/proyecto ingesoft";
-            String url = "jdbc:mysql://localhost:3306/proyecto ingesoft";
-            String user = "root";
-            String password = "cl";
+        Map<Integer, Double[]> posicionesMesas = mesaRepository.obtenerPosicionesMesas();
 
+        if (posicionesMesas.isEmpty()) {
+            mostrarErrorConexion();
+            return;
+        }
 
-            try (Connection connection = DriverManager.getConnection(url, user, password)) {
-                String query = "SELECT ID_MESA, UBICACION_X, UBICACION_Y FROM MESA";
-
-
-                // Ejecutar la consulta para ubicación de los botones de mesas
-                PreparedStatement statement = connection.prepareStatement(query);
-                ResultSet resultSet = statement.executeQuery();
-
-                while (resultSet.next()) {
-                    int idMesa = resultSet.getInt("ID_MESA");
-                    double ubicacionX = resultSet.getDouble("UBICACION_X");
-                    double ubicacionY = resultSet.getDouble("UBICACION_Y");
-
-
-                    // Buscar el botón correspondiente a la mesa en función del ID de la mesa
-                    Button mesaButton = getMesaButton(idMesa);
-
-                    if (mesaButton != null) {
-                        // Asignar la posición de la mesa desde la base de datos
-                        mesaButton.setLayoutX(ubicacionX);
-                        mesaButton.setLayoutY(ubicacionY);
-
-                        //mesaButton.setVisible(true);
-                    }
-                }
-            } catch (SQLException e) {
-                // Especificar el tipo de excepción
-                    Alert alert = new Alert(Alert.AlertType.ERROR);
-                    alert.setTitle("Error de Conexión");
-                    alert.setHeaderText("No se pudo conectar con la base de datos");
-                    alert.setContentText(e.getMessage());  // Mostrar el error específico
-                    alert.showAndWait();
+        posicionesMesas.forEach((idMesa, ubicacion) -> {
+            Button mesaButton = getMesaButton(idMesa);
+            if (mesaButton != null) {
+                mesaButton.setLayoutX(ubicacion[0]);
+                mesaButton.setLayoutY(ubicacion[1]);
             }
+        });
     }
+    private void mostrarErrorConexion() {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Error de Conexión");
+        alert.setHeaderText("No se pudo conectar con la base de datos");
+        alert.setContentText("Por favor, revisa la conexión.");
+        alert.showAndWait();
+    }
+
     // Método auxiliar para obtener el botón de la mesa correspondiente por ID
     private Button getMesaButton(int idMesa) {
         switch (idMesa) {
@@ -143,7 +129,7 @@ public class MesaControl {
     public void irHorarios(ActionEvent actionEvent) {
         try {
             // Carga la nueva ventana
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/menu/ReservaFecha.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/ReservaFecha.fxml"));
             Parent root = loader.load();
             // Obtener el controlador de la nueva ventana
             ReservaControl reservaControl = loader.getController();

@@ -1,21 +1,21 @@
 package controller.menu;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.Node;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import repository.menu.bebidasRepositorio;
+import services.AgregarPizzaService;
 import services.RedireccionGeneral;
 
-import java.util.Objects;
 import java.io.IOException;
+import java.util.Objects;
 
 public class BebidaControl {
 
@@ -38,8 +38,7 @@ public class BebidaControl {
     public Text textoPrecioChampagne;
     public Text textoPrecioAgua;
 
-
-    private bebidasRepositorio bebida=new bebidasRepositorio();
+    private AgregarPizzaService bebida=new AgregarPizzaService();
     private RedireccionGeneral Ira=new RedireccionGeneral();
     @FXML
     public void initialize() {
@@ -85,7 +84,7 @@ public class BebidaControl {
     public void irAPantallaVinos(ActionEvent event) {
         try {
             // Cargar la nueva pantalla (vinos.fxml)
-            Parent vinosRoot = FXMLLoader.load(getClass().getResource("/vista/menu/vinos.fxml"));
+            Parent vinosRoot = FXMLLoader.load(getClass().getResource("/vista/Vinos.fxml"));
             Scene vinosScene = new Scene(vinosRoot);
 
             // Obtener el Stage actual usando el botón como referencia
@@ -102,7 +101,7 @@ public class BebidaControl {
     public void irAPantallaGaseosas(ActionEvent event) {
         try {
             // Cargar la nueva pantalla (vinos.fxml)
-            Parent gaseosaRoot = FXMLLoader.load(getClass().getResource("/vista/menu/gaseosas.fxml"));
+            Parent gaseosaRoot = FXMLLoader.load(getClass().getResource("/vista/gaseosas.fxml"));
             Scene gaseosaScene = new Scene(gaseosaRoot);
 
             // Obtener el Stage actual usando el botón como referencia

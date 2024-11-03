@@ -1,18 +1,18 @@
 package controller.menu;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import repository.menu.PostreRepositorio;
+import services.AgregarPizzaService;
 import services.RedireccionGeneral;
+
 import java.util.Objects;
 
 public class Postrecontrol {
@@ -42,6 +42,7 @@ public class Postrecontrol {
     public Button agregaraorden;
     @FXML
     public Button volverMenu;
+
     @FXML
     public Label preciotiramisu;
     @FXML
@@ -50,13 +51,8 @@ public class Postrecontrol {
     public Label precioaffogato;
     @FXML
     public Label preciocannolini;
-    public Text dispoTiramisu;
-    public Text dispoPannaCota;
-    public Text dispoAffogato;
-    public Text dispoCannolini;
 
-
-    private PostreRepositorio postre =new PostreRepositorio();
+    private AgregarPizzaService postre =new AgregarPizzaService();
     private RedireccionGeneral Ira=new RedireccionGeneral();
 
     @FXML
@@ -82,36 +78,6 @@ public class Postrecontrol {
         preciotiramisu.setText(String.valueOf(postre.getPrecios("Tiramisu"))+" COP");
         preciopannacota.setText(String.valueOf(postre.getPrecios("Panna Cotta"))+" COP");
         preciocannolini.setText(String.valueOf(postre.getPrecios("Cannoli"))+" COP");
-
-        disponibilidad();
-
-    }
-
-    public void disponibilidad (){
-        if (postre.getDispo("Cannoli")==true){
-            dispoCannolini.setText("Disponible");
-        }else{
-            dispoCannolini.setText("No disponible");
-        }
-
-        if (postre.getDispo("Affogato")==true){
-            dispoAffogato.setText("Disponible");
-        }else{
-            dispoAffogato.setText("No disponible");
-        }
-
-        if (postre.getDispo("Tiramisu")==true){
-            dispoTiramisu.setText("Disponible");
-        }else{
-            dispoTiramisu.setText("No disponible");
-        }
-
-        if (postre.getDispo("Panna Cotta")==true){
-            dispoPannaCota.setText("Disponible");
-        }else{
-            dispoPannaCota.setText("No disponible");
-        }
-
     }
 
     @FXML
@@ -139,7 +105,7 @@ public class Postrecontrol {
     public void clickPOSTRE(ActionEvent actionEvent) {
         try {
             // Carga la nueva ventana
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/menu/HeladoMenu.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Heladomenu.fxml"));
             Parent root = loader.load();
 
             // Crea una nueva escena

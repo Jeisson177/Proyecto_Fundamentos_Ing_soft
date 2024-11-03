@@ -6,7 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
-import repository.menu.PastaRepositorio;
+import services.AgregarPizzaService;
 import services.RedireccionGeneral;
 
 import java.util.Objects;
@@ -46,7 +46,7 @@ public class PastaMenu {
     public Text precioPastaSpa;
 
     private RedireccionGeneral Ira=new RedireccionGeneral();
-    private PastaRepositorio pasta=new PastaRepositorio();
+    private AgregarPizzaService pasta=new AgregarPizzaService();
 
     public void initialize(){
         Image carbonara = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/imagenes/PlatosFuertes/Carbonara.png")));
