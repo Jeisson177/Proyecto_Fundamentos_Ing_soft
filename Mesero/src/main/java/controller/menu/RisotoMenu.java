@@ -6,7 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
-import repository.menu.RisotoRepositorio;
+import services.AgregarPizzaService;
 import services.RedireccionGeneral;
 
 import java.util.Objects;
@@ -38,12 +38,9 @@ public class RisotoMenu {
     public Text precioRisotoSal;
     @FXML
     public Text precioRisotoHon;
-    public Text dispoVeg;
-    public Text dispoSal;
-    public Text dispoHon;
 
     private RedireccionGeneral Ira=new RedireccionGeneral();
-    private RisotoRepositorio risoto=new RisotoRepositorio();
+    private AgregarPizzaService risoto=new AgregarPizzaService();
 
     public void initialize(){
         Image vegetariano = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/imagenes/PlatosFuertes/vegetariano.png")));
@@ -57,30 +54,6 @@ public class RisotoMenu {
         precioRisotoHon.setText(String.valueOf(risoto.getPrecios("Risotto de Hongos"))+" COP");
         precioRisotoSal.setText(String.valueOf(risoto.getPrecios("Risotto de Salmon"))+" COP");
         precioRisotoVeg.setText(String.valueOf(risoto.getPrecios("Risotto Vegetariano"))+" COP");
-
-        disponibilidad();
-
-    }
-
-    public void disponibilidad (){
-        if (risoto.getDispo("Risotto de Hongos")==true){
-            dispoHon.setText("Disponible");
-        }else{
-            dispoHon.setText("No disponible");
-        }
-
-        if (risoto.getDispo("Risotto de Salmon")==true){
-            dispoSal.setText("Disponible");
-        }else{
-            dispoSal.setText("No disponible");
-        }
-
-        if (risoto.getDispo("Risotto Vegetariano")==true){
-            dispoVeg.setText("Disponible");
-        }else{
-            dispoVeg.setText("No disponible");
-        }
-
     }
 
     @FXML

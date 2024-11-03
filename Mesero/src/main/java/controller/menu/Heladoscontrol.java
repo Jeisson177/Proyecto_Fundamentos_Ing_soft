@@ -1,19 +1,17 @@
 package controller.menu;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
-import repository.menu.HeladosRepositorio;
+import services.AgregarPizzaService;
 import services.RedireccionGeneral;
-import javafx.scene.text.Text;
-
 
 import java.util.Objects;
 
@@ -59,13 +57,8 @@ public class Heladoscontrol {
     public Label preciofresa;
     @FXML
     public Label preciochocolate;
-    public Text dispoAvellana;
-    public Text dispoChocPicante;
-    public Text dispoFresa;
-    public Text dispolimon;
-    public Text dispoFrambuesa;
 
-    private HeladosRepositorio helado =new HeladosRepositorio();
+    private AgregarPizzaService helado =new AgregarPizzaService();
 
     private RedireccionGeneral Ira = new RedireccionGeneral();
 
@@ -96,47 +89,13 @@ public class Heladoscontrol {
         preciofresa.setText(String.valueOf(helado.getPrecios("Gelato Fragola (Fresa)"))+" COP");
         preciolimon.setText(String.valueOf(helado.getPrecios("Gelato Limone (Limon)"))+" COP");
 
-        disponibilidad();
-
     }
 
-    public void disponibilidad (){
-        if (helado.getDispo("Gelato Bacio (Avellana)")==true){
-            dispoAvellana.setText("Disponible");
-        }else{
-            dispoAvellana.setText("No disponible");
-        }
-
-        if (helado.getDispo("Gelato Lampone (Frambuesa)")==true){
-            dispoFrambuesa.setText("Disponible");
-        }else{
-            dispoFrambuesa.setText("No disponible");
-        }
-
-        if (helado.getDispo("Gelato Cioccolato con Peperoncino")==true){
-            dispoChocPicante.setText("Disponible");
-        }else{
-            dispoChocPicante.setText("No disponible");
-        }
-
-        if (helado.getDispo("Gelato Fragola (Fresa)")==true){
-            dispoFresa.setText("Disponible");
-        }else{
-            dispoFresa.setText("No disponible");
-        }
-
-        if (helado.getDispo("Gelato Limone (Limon)")==true){
-            dispolimon.setText("Disponible");
-        }else{
-            dispolimon.setText("No disponible");
-        }
-
-    }
 
     public void clickHELADO(ActionEvent actionEvent) {
         try {
             // Carga la nueva ventana
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/menu/PostreMenu.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Postremenu.fxml"));
             Parent root = loader.load();
 
             // Crea una nueva escena

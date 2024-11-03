@@ -1,9 +1,12 @@
 package repository.menu;
 
+import javafx.scene.control.Alert;
+
 import java.sql.*;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
-import javafx.scene.control.Alert;
+import java.time.format.DateTimeFormatter;
 
 public class ReservaRepository {
 
@@ -83,6 +86,17 @@ public class ReservaRepository {
 
     // Método para guardar una nueva reserva en la base de datos
     public boolean guardarReserva(int idCliente, int idMesa, String fechaHora) {
+        // Convertir la fechaHora proporcionada a LocalDateTime
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        LocalDateTime fechaHoraReserva = LocalDateTime.parse(fechaHora, formatter);
+
+        // Verificar si la fecha de reserva es anterior a la fecha y hora actual
+        LocalDateTime fechaActual = LocalDateTime.now();
+        if (fechaHoraReserva.isBefore(fechaActual)) {
+            System.out.println("Error: No se pueden hacer reservas en una fecha pasada.");
+            return false;
+        }
+
         String query = "INSERT INTO RESERVA (ID_CLIENTE, ID_MESA, FECHA_HORA) VALUES (?, ?, ?)";
 
         try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);

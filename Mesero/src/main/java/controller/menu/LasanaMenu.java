@@ -6,7 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
-import repository.menu.LasanaRepositorio;
+import services.AgregarPizzaService;
 import services.RedireccionGeneral;
 
 import java.util.Objects;
@@ -38,13 +38,9 @@ public class LasanaMenu {
     public Text precioLasanaMix;
     @FXML
     public Text precioLasanaPollo;
-    public Text dispoPollo;
-    public Text dispoBolo;
-    public Text dispoMixto;
-
 
     private RedireccionGeneral Ira=new RedireccionGeneral();
-    private LasanaRepositorio lasana=new LasanaRepositorio();
+    private AgregarPizzaService lasana=new AgregarPizzaService();
 
     public void initialize(){
         Image Bolonesa = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/imagenes/PlatosFuertes/BOLOÑESA.png")));
@@ -58,29 +54,6 @@ public class LasanaMenu {
         precioLasanaMix.setText(String.valueOf(lasana.getPrecios("Lasagna Mixta"))+" COP");
         precioLasanaBolo.setText(String.valueOf(lasana.getPrecios("Lasagna Bolognese"))+" COP");
         precioLasanaPollo.setText(String.valueOf(lasana.getPrecios("Lasagna de Pollo"))+" COP");
-
-        disponibilidad();
-
-    }
-
-    public void disponibilidad (){
-        if (lasana.getDispo("Lasagna Bolognese")==true){
-            dispoBolo.setText("Disponible");
-        }else{
-            dispoBolo.setText("No disponible");
-        }
-
-        if (lasana.getDispo("Lasagna de Pollo")==true){
-            dispoPollo.setText("Disponible");
-        }else{
-            dispoPollo.setText("No disponible");
-        }
-
-        if (lasana.getDispo("Lasagna Mixta")==true){
-            dispoMixto.setText("Disponible");
-        }else{
-            dispoMixto.setText("No disponible");
-        }
 
     }
 
