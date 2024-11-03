@@ -10,9 +10,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import repository.PostreRepositorio;
 import services.AgregarPizzaService;
-import services.RedireccionGeneral;
+
 import java.util.Objects;
 
 public class Postrecontrol {

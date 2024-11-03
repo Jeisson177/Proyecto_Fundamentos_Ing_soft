@@ -6,8 +6,8 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import repository.menu.RedireccionGeneral;
 import services.GestionarReserva;
-import services.RedireccionGeneral;
 
 import java.time.LocalDate;
 import java.util.List;

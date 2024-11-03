@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.menu.AntipastiControl">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.menu.AntipastiControl">
     <Pane prefHeight="61.0" prefWidth="722.0" style="-fx-background-color: black;">
         <children>
             <Text fill="WHITE" layoutX="14.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: normal;" text="Bella Ventura">
@@ -21,11 +14,6 @@
                 </font>
             </Text>
             <Button fx:id="menuBoton" layoutX="365.0" layoutY="8.0" mnemonicParsing="false" onAction="#menuButtonClick" style="-fx-background-color: black;" text="Menú" textFill="WHITE">
-                <font>
-                    <Font size="17.0" />
-                </font>
-            </Button>
-            <Button fx:id="reservarBoton" layoutX="438.0" layoutY="9.0" mnemonicParsing="false" onAction="#reservarButtonClick" style="-fx-background-color: black;" text="Reservar" textFill="WHITE" underline="true">
                 <font>
                     <Font size="17.0" />
                 </font>

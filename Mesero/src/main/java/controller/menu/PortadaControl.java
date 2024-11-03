@@ -3,7 +3,7 @@ package controller.menu;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import services.RedireccionGeneral;
+import repository.menu.RedireccionGeneral;
 
 public class PortadaControl {
 

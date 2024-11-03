@@ -9,7 +9,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import repository.UsuarioRepository;
-import services.RedireccionGeneral;
 
 public class RegistroControl {
     @FXML

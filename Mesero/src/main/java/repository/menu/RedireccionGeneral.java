@@ -1,4 +1,4 @@
-package services;
+package repository.menu;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -79,6 +79,23 @@ public class RedireccionGeneral {
             ((Stage) login.getScene().getWindow()).close();
         } catch (IOException e) {
             System.err.println("Error al cargar la vista Login: " + e.getMessage());
+        }
+    }
+    public void IrRegistro(Button login) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/menu/Registro.fxml"));
+            Parent root = loader.load();
+
+            // Crea una nueva escena
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Registro"); // Título de la nueva ventana
+            stage.show();
+
+            // Opcionalmente, cierra la ventana actual
+            ((Stage) login.getScene().getWindow()).close();
+        } catch (IOException e) {
+            System.err.println("Error al cargar la vista Registro: " + e.getMessage());
         }
     }
 

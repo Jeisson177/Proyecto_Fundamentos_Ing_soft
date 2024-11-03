@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.menu.GaseosasControl">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.menu.GaseosasControl">
    <children>
       <Pane prefHeight="77.0" prefWidth="600.0" style="-fx-background-color: black;">
          <children>
@@ -18,11 +15,6 @@
                </font>
             </Text>
             <Button fx:id="botonHome" layoutX="309.0" layoutY="20.0" mnemonicParsing="false" onAction="#IrHome" style="-fx-background-color: black;" text="Home" textFill="WHITE" underline="true">
-               <font>
-                  <Font size="17.0" />
-               </font>
-            </Button>
-            <Button fx:id="botonReservar" layoutX="492.0" layoutY="20.0" mnemonicParsing="false" onAction="#IrReserva" style="-fx-background-color: black;" text="Reservar" textFill="WHITE" underline="true">
                <font>
                   <Font size="17.0" />
                </font>

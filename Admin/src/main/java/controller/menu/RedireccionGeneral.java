@@ -1,4 +1,4 @@
-package services;
+package controller.menu;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

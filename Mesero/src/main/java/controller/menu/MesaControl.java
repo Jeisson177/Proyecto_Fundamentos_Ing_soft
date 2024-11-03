@@ -1,6 +1,5 @@
 package controller.menu;
 
-import controller.ReservaControl;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,8 +10,8 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import repository.menu.RedireccionGeneral;
 import services.MesaService;
-import services.RedireccionGeneral;
 
 import java.util.Map;
 import java.util.Objects;

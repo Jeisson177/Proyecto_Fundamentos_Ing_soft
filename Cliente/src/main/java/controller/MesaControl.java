@@ -10,15 +10,10 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
-import services.GestionarReserva;
 import services.MesaService;
-import services.RedireccionGeneral;
 
-import java.sql.*;
-import java.util.HashSet;
 import java.util.Map;
 import java.util.Objects;
-import java.util.Set;
 
 public class MesaControl {
 

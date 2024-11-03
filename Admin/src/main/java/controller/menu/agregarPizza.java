@@ -7,7 +7,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import services.AgregarPizzaService;
-import services.RedireccionGeneral;
 
 import java.util.Objects;
 

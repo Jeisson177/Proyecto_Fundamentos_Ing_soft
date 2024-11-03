@@ -10,8 +10,8 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import repository.menu.RedireccionGeneral;
 import services.AgregarPizzaService;
-import services.RedireccionGeneral;
 
 import java.util.Objects;
 

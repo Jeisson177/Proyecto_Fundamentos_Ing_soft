@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InicioControl">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InicioControlAdmin">
    <children>
       <Button fx:id="btnplato" layoutX="144.0" layoutY="200.0" mnemonicParsing="false" text="Modificar plato" />
       <Button fx:id="btnInventario" layoutX="130.0" layoutY="142.0" mnemonicParsing="false" text="Modificar inventario" />

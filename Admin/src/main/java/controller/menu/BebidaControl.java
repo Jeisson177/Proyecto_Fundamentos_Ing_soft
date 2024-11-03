@@ -12,7 +12,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import services.AgregarPizzaService;
-import services.RedireccionGeneral;
 
 import java.io.IOException;
 import java.util.Objects;

@@ -1,23 +1,14 @@
 package controller;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
 import services.AgregarPizzaService;
-import services.RedireccionGeneral;
-import repository.antipastiRepositorio;
 
 import java.util.Objects;
-
-import java.sql.*;
 
 public class AntipastiControl {
 
