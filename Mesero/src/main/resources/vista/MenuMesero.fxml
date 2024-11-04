@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuMeseroControl">
+    <Rectangle arcHeight="5.0" arcWidth="5.0" height="49.0" layoutY="-6.0" stroke="BLACK" strokeType="INSIDE" width="610.0" />
+    <Rectangle arcHeight="5.0" arcWidth="5.0" height="6.0" layoutY="161.0" stroke="BLACK" strokeType="INSIDE" width="606.0" />
+   <Button fx:id="menu_button" layoutY="43.0" mnemonicParsing="false" onAction="#menu_click" prefHeight="106.0" prefWidth="606.0">
+      <graphic>
+         <ImageView fitHeight="150.0" fitWidth="594.0" pickOnBounds="true" preserveRatio="true" />
+      </graphic></Button>
+    <Button fx:id="atender_reserva" layoutX="228.0" layoutY="249.0" mnemonicParsing="false" onAction="#atender_reserva_click" prefHeight="49.0" prefWidth="151.0" text="Atender Reserva" />
+    <Button fx:id="imprimir_factura" layoutX="230.0" layoutY="323.0" mnemonicParsing="false" onAction="#imprimir_factura_click" prefHeight="49.0" prefWidth="151.0" text="Imprimir Factura" />
+</AnchorPane>
