@@ -1,6 +1,6 @@
 package controller.menu;
 
-import controller.agregarPizza;
+import controller.menu.agregarPizza;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

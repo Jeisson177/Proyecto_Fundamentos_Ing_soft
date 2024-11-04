@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="375.0" prefWidth="722.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.menu.MesaControl">
+<AnchorPane prefHeight="375.0" prefWidth="722.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.menu.MesaControl">
    <children>
       <ImageView fx:id="fondoiz" fitHeight="319.0" fitWidth="203.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="fondodr" fitHeight="319.0" fitWidth="203.0" layoutX="519.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true" />
@@ -20,11 +17,6 @@
                </font>
             </Text>
             <Button fx:id="btnMenu" layoutX="365.0" layoutY="8.0" mnemonicParsing="false" onAction="#IrMenu" style="-fx-background-color: black;" text="Menú" textFill="WHITE" underline="true">
-               <font>
-                  <Font size="17.0" />
-               </font>
-            </Button>
-            <Button fx:id="btnReservar" layoutX="438.0" layoutY="9.0" mnemonicParsing="false" onAction="#IrReserva" style="-fx-background-color: black;" text="Reservar" textFill="WHITE" underline="true">
                <font>
                   <Font size="17.0" />
                </font>

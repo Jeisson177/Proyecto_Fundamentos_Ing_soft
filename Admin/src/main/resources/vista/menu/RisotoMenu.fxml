@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="396.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.menu.RisotoMenu">
+<AnchorPane prefHeight="396.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.menu.RisotoMenu">
    <children>
       <AnchorPane prefHeight="67.0" prefWidth="600.0" style="-fx-background-color: black;">
          <children>
@@ -26,10 +24,6 @@
                   <Font name="Times New Roman Italic" size="15.0" />
                </font></Button>
             <Button fx:id="selecMenu" layoutX="332.0" layoutY="21.0" mnemonicParsing="false" onAction="#onClickMenu" style="-fx-background-color: bl; -fx-text-fill: white;" text="Menu" underline="true">
-               <font>
-                  <Font name="Times New Roman Italic" size="15.0" />
-               </font></Button>
-            <Button fx:id="selecReservar" layoutX="410.0" layoutY="21.0" mnemonicParsing="false" onAction="#onClickReservar" style="-fx-background-color: bl; -fx-text-fill: white;" text="Reservar" underline="true">
                <font>
                   <Font name="Times New Roman Italic" size="15.0" />
                </font></Button>

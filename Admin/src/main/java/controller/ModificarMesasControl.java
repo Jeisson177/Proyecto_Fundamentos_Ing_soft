@@ -27,6 +27,7 @@ public class ModificarMesasControl {
     public TextField fieldXposicion;
     @FXML
     public TextField fieldYposicion;
+    public Button btnModificar;
     private int idMesaSeleccionada = -1;
 
     private  modifificarRepository mesaRepository = new  modifificarRepository();

@@ -1,4 +1,4 @@
-package repository.menu;
+package controller.menuMesero;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

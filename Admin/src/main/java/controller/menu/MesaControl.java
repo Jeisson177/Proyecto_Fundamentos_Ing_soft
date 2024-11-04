@@ -1,6 +1,6 @@
 package controller.menu;
 
-import controller.ReservaControl;
+import controller.menu.ReservaControl;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

@@ -6,7 +6,6 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
-import repository.menu.RedireccionGeneral;
 import services.AgregarPizzaService;
 
 import java.util.Objects;

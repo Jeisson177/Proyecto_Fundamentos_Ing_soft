@@ -1,6 +1,6 @@
 package controller.menu;
 
-import controller.MesaControl;
+import controller.menu.MesaControl;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
