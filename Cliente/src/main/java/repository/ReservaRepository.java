@@ -10,9 +10,9 @@ import javafx.scene.control.Alert;
 
 public class ReservaRepository {
 
-    private static final String URL = "jdbc:mysql://localhost:3306/proyecto ingesoft";
-    private static final String USER = "root";
-    private static final String PASSWORD = "cl";
+    private static final String URL = "jdbc:h2:file:./cliente";
+    private static final String USER = "sa";
+    private static final String PASSWORD = "";
 
     // Clase interna para encapsular la información del horario del día
     public static class HorarioDia {
