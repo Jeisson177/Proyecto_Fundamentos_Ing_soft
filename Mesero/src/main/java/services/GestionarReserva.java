@@ -1,8 +1,8 @@
 package services;
 
 import controller.menuMesero.MesaControl;
-import repository.menu.ReservaRepository;
-
+import repository.ConsultarReservasRepository;
+import model.Reserva;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -10,42 +10,31 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class GestionarReserva {
     private MesaControl mesa;
-    private ReservaRepository reservaRepo;
+    private ConsultarReservasRepository reservaRepo;
 
     public GestionarReserva(MesaControl mesa) {
         this.mesa = mesa;
-        this.reservaRepo = new ReservaRepository();
+        this.reservaRepo = new ConsultarReservasRepository();
     }
 
-    // Método para obtener los horarios disponibles en un día específico y para una mesa específica
     public List<String> obtenerHorariosDisponibles(LocalDate fechaSeleccionada, int mesaId) throws SQLException {
         List<String> horariosDisponibles = new ArrayList<>();
-
-        // Obtener el nombre del día de la semana
         String nombreDia = obtenerNombreDia(fechaSeleccionada);
-
-        // Obtener intervalo, apertura y cierre desde el repositorio
-        ReservaRepository.HorarioDia horarioDia = reservaRepo.obtenerHorarioDia(nombreDia);
-
+        ConsultarReservasRepository.HorarioDia horarioDia = reservaRepo.obtenerHorarioDia(nombreDia);
         if (horarioDia != null) {
-            // Calcular los horarios disponibles
             LocalTime horaActual = horarioDia.getHoraApertura();
             while (horaActual.isBefore(horarioDia.getHoraCierre())) {
-                // Verificar si el horario está ocupado para la mesa
                 if (!reservaRepo.FechaOcupada(fechaSeleccionada, horaActual, mesaId)) {
                     horariosDisponibles.add(horaActual.format(DateTimeFormatter.ofPattern("HH:mm")));
                 }
-                horaActual = horaActual.plusMinutes(horarioDia.getIntervalo());  // Avanzar en el intervalo
+                horaActual = horaActual.plusMinutes(horarioDia.getIntervalo());
             }
         }
-
         return horariosDisponibles;
     }
 
-    // Método auxiliar para obtener el nombre del día de la semana
     private String obtenerNombreDia(LocalDate fecha) {
         switch (fecha.getDayOfWeek()) {
             case MONDAY: return "Lunes";
@@ -60,13 +49,26 @@ public class GestionarReserva {
     }
 
     public boolean GReserva(LocalDate calendario, String hora) {
-        int idCliente = mesa.idUuario; // Obtener el ID del cliente
-        int idMesa = mesa.getMesa();   // Obtener el ID de la mesa
-
-        // Combinar la fecha y la hora en un formato correcto
+        int idCliente = mesa.idUuario;
+        int idMesa = mesa.getMesa();
         String fechaHora = calendario.toString() + " " + hora;
-
-        // Usar el repositorio para guardar la reserva
         return reservaRepo.guardarReserva(idCliente, idMesa, fechaHora);
+    }
+
+    public void mostrarReservas(List<Reserva> reservas) {
+        for (Reserva reserva : reservas) {
+            System.out.println("ID Reserva: " + reserva.getIdReserva() +
+                    ", ID Cliente: " + reserva.getIdCliente() +
+                    ", ID Mesa: " + reserva.getIdMesa() +
+                    ", Fecha y Hora: " + reserva.getFechaHora());
+        }
+    }
+
+    public int getMesa() {
+        return mesa.getMesa();
+    }
+
+    public Reserva obtenerReservaPorId(int idReserva) {
+        return reservaRepo.obtenerReservaPorId(idReserva);
     }
 }

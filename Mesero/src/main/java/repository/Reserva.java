@@ -1,23 +1,21 @@
 package model;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Reserva {
     private int idReserva;
     private int idCliente;
     private int idMesa;
-    private LocalDate fechaHora;
-    private String estado;
+    private LocalDateTime fechaHora;
 
-    public Reserva(int idReserva, int idCliente, int idMesa, LocalDate fechaHora, String estado) {
+    public Reserva(int idReserva, int idCliente, int idMesa, LocalDateTime fechaHora) {
         this.idReserva = idReserva;
         this.idCliente = idCliente;
         this.idMesa = idMesa;
         this.fechaHora = fechaHora;
-        this.estado = estado;
     }
 
-    // Getters
     public int getIdReserva() {
         return idReserva;
     }
@@ -30,15 +28,15 @@ public class Reserva {
         return idMesa;
     }
 
-    public LocalDate getFechaHora() {
+    public LocalDateTime getFechaHora() {
         return fechaHora;
     }
 
-    public String getEstado() {
-        return estado;
+    public String getFecha() {
+        return fechaHora.toLocalDate().toString();
     }
 
-    public void setEstado(String estado) {
-        this.estado = estado;
+    public String getHora() {
+        return fechaHora.toLocalTime().format(DateTimeFormatter.ofPattern("HH:mm"));
     }
 }

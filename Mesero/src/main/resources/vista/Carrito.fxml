@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.ControladorCarrito">
+    <children>
+        <Label text="Carrito" style="-fx-font-size: 24px;"/>
+        <ListView fx:id="listaPlatos" AnchorPane.topAnchor="30" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" />
+        <Button text="Finalizar Pedido" fx:id="botonFinalizar" AnchorPane.bottomAnchor="10" AnchorPane.leftAnchor="10" />
+        <Button text="Vaciar Carrito" fx:id="botonVaciar" AnchorPane.bottomAnchor="10" AnchorPane.rightAnchor="10" />
+    </children>
+</AnchorPane>

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Mesero/Mesero.iml" filepath="$PROJECT_DIR$/Mesero/Mesero.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Proyecto_Fundamentos_Ing_soft.iml" filepath="$PROJECT_DIR$/.idea/Proyecto_Fundamentos_Ing_soft.iml" />
     </modules>
   </component>

@@ -1,5 +1,4 @@
-package controller;
-
+/*
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -83,4 +82,4 @@ public class ReservasControl {
     public void ConsultarReserva(ActionEvent event) {
         consultarReservas();
     }
-}
+}*/

@@ -2,19 +2,18 @@ package repository;
 
 import javafx.scene.control.Alert;
 import model.Reserva;
-import controller.ReservasControl;
 import java.sql.*;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class consultarReservasRepository {
-    private static final String URL = "jdbc:mysql://localhost:3306/proyecto ingesoft";
+public class ConsultarReservasRepository {
+    private static final String URL = "jdbc:mysql://localhost:3306/proyecto_ingesoft";
     private static final String USER = "root";
     private static final String PASSWORD = "cl";
 
-    // Clase interna para encapsular la información del horario del día
     public static class HorarioDia {
         private int intervalo;
         private LocalTime horaApertura;
@@ -39,7 +38,6 @@ public class consultarReservasRepository {
         }
     }
 
-    // Método para obtener el horario de un día específico
     public HorarioDia obtenerHorarioDia(String nombreDia) {
         String query = "SELECT intervalo, hora_apertura, hora_cierre FROM Dias d JOIN Horarios h ON d.id_dia = h.id_dia WHERE nombre_dia = ?";
 
@@ -62,7 +60,6 @@ public class consultarReservasRepository {
         return null;
     }
 
-    // Método para obtener las reservas en una fecha específica
     public List<Reserva> obtenerReservasPorFecha(LocalDate fechaConsulta) {
         List<Reserva> reservas = new ArrayList<>();
         String query = "SELECT ID_RESERVA, ID_CLIENTE, ID_MESA, FECHA_HORA FROM RESERVA WHERE DATE(FECHA_HORA) = ?";
@@ -77,8 +74,8 @@ public class consultarReservasRepository {
                     int idReserva = rs.getInt("ID_RESERVA");
                     int idCliente = rs.getInt("ID_CLIENTE");
                     int idMesa = rs.getInt("ID_MESA");
-                    LocalDate fechaHora = rs.getTimestamp("FECHA_HORA").toLocalDateTime().toLocalDate(); // Cambié aquí
-                    reservas.add(new Reserva(idReserva, idCliente, idMesa, fechaHora, null)); // Se pasa null para el estado
+                    LocalDateTime fechaHora = rs.getTimestamp("FECHA_HORA").toLocalDateTime();
+                    reservas.add(new Reserva(idReserva, idCliente, idMesa, fechaHora));
                 }
             }
         } catch (SQLException e) {
@@ -87,25 +84,6 @@ public class consultarReservasRepository {
         return reservas;
     }
 
-    public void atenderReserva(int idReserva) {
-        String query = "UPDATE RESERVA SET ESTADO = 'Atendida' WHERE ID_RESERVA = ?"; // Asegúrate de que la tabla tenga esta columna
-
-        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
-             PreparedStatement stmt = connection.prepareStatement(query)) {
-
-            stmt.setInt(1, idReserva);
-            int rowsAffected = stmt.executeUpdate();
-            if (rowsAffected > 0) {
-                System.out.println("Reserva atendida con éxito: " + idReserva);
-            } else {
-                System.out.println("No se encontró la reserva con ID: " + idReserva);
-            }
-        } catch (SQLException e) {
-            mostrarAlertaError(e);
-        }
-    }
-
-    // Método para eliminar una reserva de la base de datos
     public boolean eliminarReserva(int idReserva) {
         String query = "DELETE FROM RESERVA WHERE ID_RESERVA = ?";
 
@@ -121,7 +99,70 @@ public class consultarReservasRepository {
         return false;
     }
 
-    // Método para mostrar alertas en caso de error de conexión
+    // Método para verificar si la fecha está ocupada
+    public boolean FechaOcupada(LocalDate fecha, LocalTime hora, int mesaId) {
+        String query = "SELECT COUNT(*) FROM RESERVA WHERE DATE(FECHA_HORA) = ? AND HOUR(FECHA_HORA) = ? AND ID_MESA = ?";
+
+        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+             PreparedStatement stmt = connection.prepareStatement(query)) {
+
+            stmt.setDate(1, Date.valueOf(fecha));
+            stmt.setInt(2, hora.getHour());
+            stmt.setInt(3, mesaId);
+
+            try (ResultSet rs = stmt.executeQuery()) {
+                if (rs.next()) {
+                    return rs.getInt(1) > 0; // Si hay reservas, retorna true
+                }
+            }
+        } catch (SQLException e) {
+            mostrarAlertaError(e);
+        }
+        return false; // No hay reservas
+    }
+
+    // Nuevo método para obtener una reserva por ID
+    public Reserva obtenerReservaPorId(int idReserva) {
+        String query = "SELECT ID_CLIENTE, ID_MESA, FECHA_HORA FROM RESERVA WHERE ID_RESERVA = ?";
+        Reserva reserva = null;
+
+        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+             PreparedStatement stmt = connection.prepareStatement(query)) {
+
+            stmt.setInt(1, idReserva);
+
+            try (ResultSet rs = stmt.executeQuery()) {
+                if (rs.next()) {
+                    int idCliente = rs.getInt("ID_CLIENTE");
+                    int idMesa = rs.getInt("ID_MESA");
+                    LocalDateTime fechaHora = rs.getTimestamp("FECHA_HORA").toLocalDateTime();
+                    reserva = new Reserva(idReserva, idCliente, idMesa, fechaHora);
+                }
+            }
+        } catch (SQLException e) {
+            mostrarAlertaError(e);
+        }
+        return reserva; // Retorna la reserva encontrada o null si no existe
+    }
+
+    public boolean guardarReserva(int idCliente, int idMesa, String fechaHora) {
+        String query = "INSERT INTO RESERVA (ID_CLIENTE, ID_MESA, FECHA_HORA) VALUES (?, ?, ?)";
+
+        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+             PreparedStatement stmt = connection.prepareStatement(query)) {
+
+            stmt.setInt(1, idCliente);
+            stmt.setInt(2, idMesa);
+            stmt.setTimestamp(3, Timestamp.valueOf(fechaHora));
+
+            int rowsAffected = stmt.executeUpdate();
+            return rowsAffected > 0; // Devuelve true si se insertó correctamente
+        } catch (SQLException e) {
+            mostrarAlertaError(e);
+        }
+        return false; // Devuelve false si hubo un error
+    }
+
     private void mostrarAlertaError(SQLException e) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Error de Conexión");

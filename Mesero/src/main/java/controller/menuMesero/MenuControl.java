@@ -1,5 +1,6 @@
 package controller.menuMesero;
 
+import com.example.Mesero.Carrito;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -23,6 +24,11 @@ public class MenuControl {
     public Button botonHome;
 
     private RedireccionGeneral Ira=new RedireccionGeneral();
+    private Carrito carrito;
+
+    public MenuControl() {
+        this.carrito = new Carrito();
+    }
     @FXML
     public void initialize() {
         // Cargar la imagen al inicializar la vista
