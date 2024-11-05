@@ -12,7 +12,7 @@ public class Mesero extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/vista/Inicio.fxml"));
 
         Scene scene = new Scene(fxmlLoader.load(), 700, 400);
-        stage.setTitle("Bella Venture admnistrator");
+        stage.setTitle("Bella Venture Mesero");
         stage.setScene(scene);
         stage.show();
     }
