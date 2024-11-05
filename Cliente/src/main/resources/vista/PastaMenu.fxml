@@ -56,6 +56,6 @@
       <Text layoutX="40.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pasta Carbonara" />
       <Text layoutX="197.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pasta Fetuccini" />
       <Text layoutX="335.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pasta Trennette" />
-      <Text layoutX="460.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Spaguetti a la boloñesa" />
+      <Text layoutX="472.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Spaggeti Boloñesa" />
    </children>
 </AnchorPane>

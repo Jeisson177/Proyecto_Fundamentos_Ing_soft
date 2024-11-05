@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fd8ff85-b94a-4b81-b0f1-01c765de323a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cliente/src/main/resources/vista/LasanaMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/resources/vista/LasanaMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/LasanaMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/LasanaMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/PastaMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/PastaMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/PizzaMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/PizzaMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/RisotoMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/RisotoMenu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cliente/src/main/resources/vista/PastaMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/resources/vista/PastaMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cliente/src/main/resources/vista/PizzaMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/resources/vista/PizzaMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cliente/src/main/resources/vista/RisotoMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/resources/vista/RisotoMenu.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
