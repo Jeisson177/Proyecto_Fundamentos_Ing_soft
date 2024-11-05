@@ -5,23 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fd8ff85-b94a-4b81-b0f1-01c765de323a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/Carrito.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/ControladorCarrito.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mesero/src/main/java/repository/ConsultarReservasRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mesero/src/main/resources/vista/Carrito.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/com/example/Mesero/Mesero.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/com/example/Mesero/Mesero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/InicioControlMesero.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/InicioControlMesero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/ReservasConCitaControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/ReservasConCitaControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/ReservasControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/ReservasControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/MenuControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/MenuControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/repository/Reserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/repository/Reserva.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/repository/consultarReservasRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/services/GestionarReserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/services/GestionarReserva.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/vista/MenuMesero.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/vista/MenuMesero.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/vista/ReservasConCita.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/vista/ReservasConCita.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/services/RedireccionGeneral.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/services/RedireccionGeneral.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,9 +66,6 @@
     &quot;associatedIndex&quot;: 3
     }</component>
   <component name="ProjectId" id="2misdhORJuga1HwcAhQ0u1I2gMH" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -115,16 +101,12 @@
   }
 }]]></component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="repository" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\jeiss\OneDrive\Documentos\universidad\10 decimo semestre\Fundamentos ing soft\Proyecto_Fundamentos_Ing_soft\Mesero" />
       <recent name="C:\Users\jeiss\OneDrive\Documentos\universidad\10 decimo semestre\Fundamentos ing soft\Proyecto_Fundamentos_Ing_soft\Mesero\.idea" />
       <recent name="C:\Users\jeiss\OneDrive\Documentos\universidad\10 decimo semestre\Fundamentos ing soft\Proyecto_Fundamentos_Ing_soft\Admin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\delux\Documents\GitHub\Proyecto_Fundamentos_Ing_soft\Mesero\src\main\resources\vista" />
       <recent name="C:\Users\jeiss\OneDrive\Documentos\universidad\10 decimo semestre\Fundamentos ing soft\Proyecto_Fundamentos_Ing_soft\Admin\src\main\resources\vista\menu" />
     </key>
   </component>
@@ -134,7 +116,7 @@
       <module name="Mesero" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="controller.*" />
+          <option name="PATTERN" value="com.example.Mesero.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -191,7 +173,6 @@
       <workItem from="1729714944755" duration="75000" />
       <workItem from="1729720310144" duration="5210000" />
       <workItem from="1730053769935" duration="19465000" />
-      <workItem from="1730761886885" duration="12925000" />
     </task>
     <servers />
   </component>
