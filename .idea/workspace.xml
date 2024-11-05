@@ -5,48 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fd8ff85-b94a-4b81-b0f1-01c765de323a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/java/com/example/admin/admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/java/com/example/admin/admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/java/controller/InicioControlAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/java/controller/InicioControlAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/java/controller/ModificarMesasControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/java/controller/ModificarMesasControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/resources/vista/Inicio.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/Inicio.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/Antipasti.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/Antipasti.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/Bebidas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/Bebidas.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/HeladoMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/HeladoMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/Home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/Home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/LasanaMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/LasanaMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/Login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/Menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/Menu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/Mesa.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/Mesa.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/PastaMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/PastaMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/PizzaMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/PizzaMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/PlatosFuertes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/PlatosFuertes.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/PostreMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/PostreMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/ReservaFecha.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/ReservaFecha.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/RisotoMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/RisotoMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/agregarPizza.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/agregarPizza.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/gaseosas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/gaseosas.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/vinos.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/menu/vinos.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/AntipastiControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/AntipastiControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/BebidaControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/BebidaControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/GaseosasControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/GaseosasControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/Heladoscontrol.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/Heladoscontrol.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/HomeControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/HomeControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/LasanaMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/LasanaMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/MenuControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/MenuControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/MesaControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/MesaControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/PastaMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/PastaMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/PizzaMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/PizzaMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/PlatosFuertes.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/PlatosFuertes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/PortadaControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/PortadaControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/Postrecontrol.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/Postrecontrol.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/RegistroControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/RegistroControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/ReservaControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/ReservaControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/RisotoMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/RisotoMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/VinosControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/VinosControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/agregarPizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/agregarPizza.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/loginControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/loginControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/repository/menu/RedireccionGeneral.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/RedireccionGeneral.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/resources/vista/LasanaMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/resources/vista/LasanaMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/resources/vista/PastaMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/resources/vista/PastaMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/resources/vista/PizzaMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/resources/vista/PizzaMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente/src/main/resources/vista/RisotoMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Cliente/src/main/resources/vista/RisotoMenu.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +109,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "modificarMesas",
+    "git-widget-placeholder": "develop",
     "ignore.preview.features.used": "true",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
