@@ -11,6 +11,7 @@ import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Optional;
 
 public class InicioControlMesero {
 
@@ -20,19 +21,18 @@ public class InicioControlMesero {
     public Button btnMenu;
     public Button btnAtdSinReserva;
 
-    // Booleano para saber si ya se está atendiendo una reserva
-    // Si no se ha atendido una aparece una advertencia
-    private boolean reservaatendida = false;
+    // Variable estática para gestionar el estado de la reserva atendida
+    private static Optional<Reserva> reservaAtendida = Optional.empty();
 
     @FXML
     public void IrAtenderConReserva(ActionEvent actionEvent) {
-        reservaatendida = true;
         cargarPantalla("/vista/ReservasConCita.fxml");
     }
 
     @FXML
     public void IrImprimirFactura(ActionEvent actionEvent) {
-        if (reservaatendida) {
+        // Verifica si la reserva ha sido atendida antes de permitir la impresión
+        if (reservaAtendida.isPresent()) {
             cargarPantalla("/vista/Factura.fxml");
         } else {
             mostrarAdvertencia();
@@ -46,12 +46,11 @@ public class InicioControlMesero {
 
     @FXML
     public void IrAtenderSinReserva(ActionEvent actionEvent) {
-
-        reservaatendida = true; // asumo que se atiende algo
-        // cargarPantalla("/vista/Menu.fxml"); // idea para despues
+        // Aquí podrías simular que se atiende una reserva sin cita si fuera necesario
+        // reservaAtendida = Optional.of(new Reserva()); // Simulación de atender sin reserva
+        // cargarPantalla("/vista/Menu.fxml");
     }
 
-    @FXML
     private void cargarPantalla(String fxmlFile) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
@@ -65,7 +64,6 @@ public class InicioControlMesero {
         }
     }
 
-    @FXML
     private void mostrarAdvertencia() {
         Alert alerta = new Alert(Alert.AlertType.WARNING,
                 "No se ha atendido ninguna reserva, ¿Deseas atender una ahora?",
@@ -76,5 +74,15 @@ public class InicioControlMesero {
                 IrAtenderConReserva(null);
             }
         });
+    }
+
+    // Método estático para establecer la reserva atendida
+    public static void setReservaAtendida(Reserva reserva) {
+        reservaAtendida = Optional.of(reserva);
+    }
+
+    // Método opcional para verificar si hay una reserva atendida
+    public static boolean isReservaAtendida() {
+        return reservaAtendida.isPresent();
     }
 }

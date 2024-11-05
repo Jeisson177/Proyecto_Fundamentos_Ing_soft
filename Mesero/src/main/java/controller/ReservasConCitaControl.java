@@ -1,94 +1,76 @@
 package controller;
 
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
 import controller.menuMesero.MesaControl;
-import model.Reserva;
+import javafx.fxml.FXML;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.event.ActionEvent;
+import javafx.scene.control.cell.PropertyValueFactory;
 import services.GestionarReserva;
+
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.List;
 
 public class ReservasConCitaControl {
+
     @FXML
-    private DatePicker calendario;
+    private TableView<Reserva> tabla_reservas;
+    @FXML
+    private TableColumn<Reserva, String> fechaColumn;
+    @FXML
+    private TableColumn<Reserva, String> horaColumn;
+    @FXML
+    private TableColumn<Reserva, Integer> mesaColumn;
+    @FXML
+    private DatePicker Calendario;
     @FXML
     private Button btnConsultar;
     @FXML
     private Button btnAtender;
-    @FXML
-    private TableView<Reserva> tabla_reservas;
-    @FXML
-    private TableColumn<Reserva, String> horariosColumn;
 
     private GestionarReserva gestionarReserva;
 
     public ReservasConCitaControl() {
-        MesaControl mesaControl = new MesaControl();
-        this.gestionarReserva = new GestionarReserva(mesaControl);
+        this.gestionarReserva = new GestionarReserva(new MesaControl());
+    }
+
+    // Inicializa las columnas del TableView para las reservas
+    public void initialize() {
+        fechaColumn.setCellValueFactory(new PropertyValueFactory<>("fecha"));
+        horaColumn.setCellValueFactory(new PropertyValueFactory<>("hora"));
+        mesaColumn.setCellValueFactory(new PropertyValueFactory<>("idMesa"));
     }
 
     @FXML
-    public void initialize() {
-        horariosColumn.setCellValueFactory(new PropertyValueFactory<>("fechaHora"));
-
-        btnConsultar.setOnAction(event -> consultarHorarios());
-        btnAtender.setOnAction(event -> atenderReserva());
-    }
-
-    private void consultarHorarios() {
-        LocalDate fechaSeleccionada = calendario.getValue();
+    private void ConsultarReserva(ActionEvent actionEvent) {
+        LocalDate fechaSeleccionada = Calendario.getValue();
         if (fechaSeleccionada != null) {
-            try {
-                int mesaId = gestionarReserva.getMesa(); // Obtener el ID de la mesa actual
-                List<String> horariosDisponibles = gestionarReserva.obtenerHorariosDisponibles(fechaSeleccionada, mesaId);
-
-                tabla_reservas.getItems().clear();
-                for (String horario : horariosDisponibles) {
-                    // Asumiendo que '0' es un valor por defecto para idReserva, idCliente y idMesa no se utilizan aquí
-                    Reserva reserva = new Reserva(0, 0, mesaId, LocalDateTime.parse(fechaSeleccionada + "T" + horario));
-                    tabla_reservas.getItems().add(reserva);
-                }
-            } catch (Exception e) {
-                mostrarAlerta("Error al obtener los horarios disponibles: " + e.getMessage());
-            }
+            List<Reserva> reservas = gestionarReserva.obtenerReservasPorFecha(fechaSeleccionada);
+            tabla_reservas.getItems().setAll(reservas);
         } else {
-            mostrarAlerta("Por favor, selecciona una fecha.");
+            showAlert("Por favor, selecciona una fecha.");
         }
     }
 
-    private void atenderReserva() {
+    @FXML
+    private void Atender(ActionEvent actionEvent) {
         Reserva reservaSeleccionada = tabla_reservas.getSelectionModel().getSelectedItem();
         if (reservaSeleccionada != null) {
-            LocalDate fechaSeleccionada = calendario.getValue();
-            String hora = reservaSeleccionada.getFechaHora().toLocalTime().toString(); // Extraer solo la hora
-
-            boolean reservaExitosa = gestionarReserva.GReserva(fechaSeleccionada, hora);
-            if (reservaExitosa) {
-                mostrarAlerta("Reserva atendida exitosamente.");
-            } else {
-                mostrarAlerta("Error al atender la reserva.");
-            }
+            InicioControlMesero.setReservaAtendida(reservaSeleccionada);
+            showAlert("Reserva atendida exitosamente.");
         } else {
-            mostrarAlerta("Por favor, selecciona una reserva para atender.");
+            showAlert("Por favor, selecciona una reserva.");
         }
     }
 
-    private void mostrarAlerta(String mensaje) {
-        Alert alert = new Alert(Alert.AlertType.WARNING);
-        alert.setTitle("Advertencia");
+    private void showAlert(String mensaje) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("aaaaa prueba");
         alert.setHeaderText(null);
         alert.setContentText(mensaje);
         alert.showAndWait();
-    }
-
-    public void Atender(ActionEvent event) {
-        atenderReserva();
-    }
-
-    public void ConsultarReserva(ActionEvent event) {
-        consultarHorarios();
     }
 }

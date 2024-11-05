@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="442.0" prefWidth="516.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControladorCarrito">
+    <children>
+        <TableView fx:id="tableViewCarrito" layoutX="14.0" layoutY="14.0" prefHeight="300.0" prefWidth="489.0">
+            <columns>
+                <TableColumn fx:id="colNombre" prefWidth="156.99999523162842" text="Nombre del Plato" />
+                <TableColumn fx:id="colPrecioUnidad" prefWidth="135.00001525878906" text="Precio por Unidad" />
+                <TableColumn fx:id="colCantidad" prefWidth="56.666656494140625" text="Cantidad" />
+                <TableColumn fx:id="colPrecioTotal" prefWidth="139.0" text="Precio Total" />
+            </columns>
+        </TableView>
+        <Button fx:id="btnEliminar" layoutX="34.0" layoutY="320.0" text="Eliminar del Carrito" />
+        <Button fx:id="btnTotal" layoutX="384.0" layoutY="320.0" text="Calcular Total" />
+        <Button fx:id="btnCrearFactura" layoutY="384.0" prefHeight="58.0" prefWidth="516.0" text="Crear Factura" />
+        <Text fx:id="textTotal" layoutX="231.0" layoutY="369.0" text="Total: $0.0" />
+    </children>
+</AnchorPane>

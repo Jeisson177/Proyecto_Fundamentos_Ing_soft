@@ -12,6 +12,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 public class ReservaControl {
+
     @FXML
     public Button btnReservar;
     @FXML
@@ -30,37 +31,42 @@ public class ReservaControl {
     private Button btnConsultar;
 
     private ObservableList<String> horariosDisponibles = FXCollections.observableArrayList();
-    private MesaControl mesaControl;  // Aquí almacenamos la instancia de MesaControl
-    private GestionarReserva gestionarReserva;  // No la inicializamos todavía
+    private MesaControl mesaControl;
+    private GestionarReserva gestionarReserva;
+    private int idUsuario; // Nuevo campo para almacenar el ID del usuario
 
+    // Método para configurar MesaControl y GestionarReserva
     public void setMesaControl(MesaControl mesaControl) {
         this.mesaControl = mesaControl;
-        this.gestionarReserva = new GestionarReserva(mesaControl);  // Inicializamos GestionarReserva con la instancia correcta
+        this.gestionarReserva = new GestionarReserva(mesaControl);
+    }
+
+    // Método para configurar el ID del usuario (llamado cuando se carga la sesión del usuario)
+    public void setIdUsuario(int idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
     private RedireccionGeneral Ira = new RedireccionGeneral();
 
     @FXML
     public void initialize() {
-        // Asociar la columna con los datos
         horariosColumn.setCellValueFactory(data -> new SimpleStringProperty(data.getValue()));
-        Tabla.setItems(horariosDisponibles);  // Vincula la lista observable al TableView
+        Tabla.setItems(horariosDisponibles);
     }
 
     @FXML
     public void ConsultarReserva(ActionEvent actionEvent) {
-        LocalDate fechaSeleccionada = Calendario.getValue();  // Obtener la fecha seleccionada del DatePicker
+        LocalDate fechaSeleccionada = Calendario.getValue();
 
-        if (fechaSeleccionada != null && mesaControl != null) {  // Asegúrate de que mesaControl no es null
+        if (fechaSeleccionada != null && mesaControl != null) {
             try {
-                // Consultar los horarios disponibles para la fecha seleccionada y la mesa especificada
                 List<String> horarios = gestionarReserva.obtenerHorariosDisponibles(fechaSeleccionada, mesaControl.getMesa());
 
                 if (horarios.isEmpty()) {
                     horariosDisponibles.clear();
                     horariosDisponibles.add("No hay horarios disponibles para la fecha " + fechaSeleccionada);
                 } else {
-                    horariosDisponibles.setAll(horarios);  // Mostrar los horarios disponibles
+                    horariosDisponibles.setAll(horarios);
                 }
                 Tabla.refresh();
             } catch (Exception e) {
@@ -72,20 +78,32 @@ public class ReservaControl {
         }
     }
 
-    private void mostrarAlertaError(String titulo, String contenido, int tipo) {
-        if (tipo == 1) {  // error
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle(titulo);
-            alert.setHeaderText(null);
-            alert.setContentText(contenido);
-            alert.showAndWait();
-        } else {  // confirmación
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            alert.setTitle(titulo);
-            alert.setHeaderText(null);
-            alert.setContentText(contenido);
-            alert.showAndWait();
+    @FXML
+    public void Reservar(ActionEvent actionEvent) {
+        String horaSeleccionada = this.Tabla.getSelectionModel().getSelectedItem();
+        if (horaSeleccionada == null) {
+            mostrarAlertaError("ERROR", "No has seleccionado una hora", 1);
+        } else {
+            LocalDate fechaSeleccionada = Calendario.getValue();
+            if (gestionarReserva.crearReserva(fechaSeleccionada, horaSeleccionada, idUsuario)) {
+                mostrarAlertaError("Aprobado", "La reserva fue hecha satisfactoriamente", 2);
+            } else {
+                mostrarAlertaError("ERROR", "No se realizó la reserva", 1);
+            }
         }
+    }
+
+    private void mostrarAlertaError(String titulo, String contenido, int tipo) {
+        Alert alert;
+        if (tipo == 1) {
+            alert = new Alert(Alert.AlertType.ERROR);
+        } else {
+            alert = new Alert(Alert.AlertType.CONFIRMATION);
+        }
+        alert.setTitle(titulo);
+        alert.setHeaderText(null);
+        alert.setContentText(contenido);
+        alert.showAndWait();
     }
 
     @FXML
@@ -101,20 +119,5 @@ public class ReservaControl {
     @FXML
     public void IrReserva(ActionEvent actionEvent) {
         Ira.IrReserva(btnReserva);
-    }
-
-    @FXML
-    public void Reservar(ActionEvent actionEvent) {
-        String h = this.Tabla.getSelectionModel().getSelectedItem();
-        if (h == null) {
-            mostrarAlertaError("ERROR", "No has seleccionado hora", 1);
-        } else {
-            LocalDate fechaSeleccionada = Calendario.getValue();
-            if (gestionarReserva.GReserva(fechaSeleccionada, h)) {
-                mostrarAlertaError("Aprobado", "La reserva fue hecha satisfactoriamente", 2);
-            } else {
-                mostrarAlertaError("ERROR", "No se realizó la reserva", 1);
-            }
-        }
     }
 }

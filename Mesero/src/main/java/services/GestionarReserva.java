@@ -2,7 +2,8 @@ package services;
 
 import controller.menuMesero.MesaControl;
 import repository.ConsultarReservasRepository;
-import model.Reserva;
+import controller.Reserva;
+
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -11,8 +12,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GestionarReserva {
-    private MesaControl mesa;
-    private ConsultarReservasRepository reservaRepo;
+
+    private final MesaControl mesa;
+    private final ConsultarReservasRepository reservaRepo;
 
     public GestionarReserva(MesaControl mesa) {
         this.mesa = mesa;
@@ -23,10 +25,11 @@ public class GestionarReserva {
         List<String> horariosDisponibles = new ArrayList<>();
         String nombreDia = obtenerNombreDia(fechaSeleccionada);
         ConsultarReservasRepository.HorarioDia horarioDia = reservaRepo.obtenerHorarioDia(nombreDia);
+
         if (horarioDia != null) {
             LocalTime horaActual = horarioDia.getHoraApertura();
             while (horaActual.isBefore(horarioDia.getHoraCierre())) {
-                if (!reservaRepo.FechaOcupada(fechaSeleccionada, horaActual, mesaId)) {
+                if (!reservaRepo.fechaOcupada(fechaSeleccionada, horaActual, mesaId)) {
                     horariosDisponibles.add(horaActual.format(DateTimeFormatter.ofPattern("HH:mm")));
                 }
                 horaActual = horaActual.plusMinutes(horarioDia.getIntervalo());
@@ -35,6 +38,7 @@ public class GestionarReserva {
         return horariosDisponibles;
     }
 
+    
     private String obtenerNombreDia(LocalDate fecha) {
         switch (fecha.getDayOfWeek()) {
             case MONDAY: return "Lunes";
@@ -48,27 +52,16 @@ public class GestionarReserva {
         }
     }
 
-    public boolean GReserva(LocalDate calendario, String hora) {
-        int idCliente = mesa.idUuario;
+
+    public boolean crearReserva(LocalDate fecha, String hora, int idUsuario) {
         int idMesa = mesa.getMesa();
-        String fechaHora = calendario.toString() + " " + hora;
-        return reservaRepo.guardarReserva(idCliente, idMesa, fechaHora);
+        String fechaHora = fecha + " " + hora;
+        return reservaRepo.guardarReserva(idUsuario, idMesa, fechaHora);
     }
 
-    public void mostrarReservas(List<Reserva> reservas) {
-        for (Reserva reserva : reservas) {
-            System.out.println("ID Reserva: " + reserva.getIdReserva() +
-                    ", ID Cliente: " + reserva.getIdCliente() +
-                    ", ID Mesa: " + reserva.getIdMesa() +
-                    ", Fecha y Hora: " + reserva.getFechaHora());
-        }
-    }
 
-    public int getMesa() {
-        return mesa.getMesa();
-    }
 
-    public Reserva obtenerReservaPorId(int idReserva) {
-        return reservaRepo.obtenerReservaPorId(idReserva);
+    public List<Reserva> obtenerReservasPorFecha(LocalDate fecha) {
+        return reservaRepo.obtenerReservasPorFecha(fecha);
     }
 }
