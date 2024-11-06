@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class agregarPizzaRepositorio {
-    private static final String URL = "jdbc:h2:file:./cliente";
+    private static final String URL = "jdbc:h2:file:~/cliente";
     private static final String USER = "sa";
     private static final String PASSWORD = "";
 

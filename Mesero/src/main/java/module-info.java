@@ -2,6 +2,7 @@ module com.example.cliente {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.sql;
+    requires com.h2database;
 
 
     opens com.example.Mesero to javafx.fxml;
