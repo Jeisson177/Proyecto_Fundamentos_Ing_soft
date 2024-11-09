@@ -1,7 +1,9 @@
 package repository;
 
 import java.sql.*;
-import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 public class modificarInventarioRepository {
 
@@ -39,7 +41,6 @@ public class modificarInventarioRepository {
             return unidad;
         }
 
-        // Método toString() para facilitar la impresión de los datos
         @Override
         public String toString() {
             return "InventarioAlimento{" +
@@ -51,32 +52,28 @@ public class modificarInventarioRepository {
         }
     }
 
-
-    // Método para obtener el inventario y el nombre de un alimento específico
-    public InventarioAlimento obtenerInventarioAlimento(String nombreAlimento) {
+    // Metodo para obtener todos los registros de inventario
+    public List<InventarioAlimento> obtenerTodosLosInventarios() {
+        List<InventarioAlimento> lista = new ArrayList<>();
         String query = "SELECT i.nombre, ii.cantidad_inv, ii.fecha_ven, ii.unidad " +
                 "FROM INGREDIENTE i " +
-                "JOIN INGREDIENTE_INV ii ON i.id_ingrediente = ii.id_ingrediente " +
-                "WHERE i.nombre = ?";
+                "JOIN INGREDIENTE_INV ii ON i.id_ingrediente = ii.id_ingrediente";
 
         try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
-             PreparedStatement stmt = connection.prepareStatement(query)) {
+             PreparedStatement stmt = connection.prepareStatement(query);
+             ResultSet rs = stmt.executeQuery()) {
 
-            stmt.setString(1, nombreAlimento);
+            while (rs.next()) {
+                String nombre = rs.getString("nombre");
+                int cantidadInv = rs.getInt("cantidad_inv");
+                Date fechaVen = rs.getDate("fecha_ven");
+                String unidad = rs.getString("unidad");
 
-            try (ResultSet rs = stmt.executeQuery()) {
-                if (rs.next()) {
-                    String nombre = rs.getString("nombre");
-                    int cantidadInv = rs.getInt("cantidad_inv");
-                    Date fechaVen = rs.getDate("fecha_ven");
-                    String unidad = rs.getString("unidad");
-                    return new InventarioAlimento(nombre, cantidadInv, fechaVen, unidad);
-                }
+                lista.add(new InventarioAlimento(nombre, cantidadInv, fechaVen, unidad));
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return null;
+        return lista;
     }
-
 }
