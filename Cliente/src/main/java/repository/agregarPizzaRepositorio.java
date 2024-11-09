@@ -7,9 +7,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class agregarPizzaRepositorio {
-    private static final String URL = "jdbc:mysql://localhost:3306/proyecto ingesoft";
-    private static final String USER = "root";
-    private static final String PASSWORD = "cl";
+    private static final String URL = "jdbc:h2:file:./cliente";
+    private static final String USER = "sa";
+    private static final String PASSWORD = "";
 
     public int getPrecios(String nombrePizza) {
         String query = "SELECT PRECIO FROM PLATO WHERE nombre = ?";

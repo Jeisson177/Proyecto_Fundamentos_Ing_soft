@@ -6,6 +6,9 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModificarMesasControl">
    <children>
@@ -38,6 +41,15 @@
       <TextField fx:id="fieldYposicion" layoutX="55.0" layoutY="187.0" promptText="Nuevo valor" style="-fx-background-color: #E0E0E0;" />
       <Label layoutX="37.0" layoutY="157.0" text="X:" />
       <Label layoutX="37.0" layoutY="190.0" text="Y:" />
-      <Button fx:id="btnModificar" layoutX="78.0" layoutY="232.0" mnemonicParsing="false" onAction="#actualizarPosicion" text="Modificar" />
+      <Button fx:id="btnModificar" layoutX="78.0" layoutY="232.0" mnemonicParsing="false" onAction="#actualizarPosicion" style="-fx-background-color: Black;" text="Modificar" textFill="WHITE" />
+      <Pane prefHeight="69.0" prefWidth="600.0" style="-fx-background-color: EFB810;">
+         <children>
+            <Text fill="WHITE" layoutX="31.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bella Ventura &gt; Panel administrativo &gt; Editar mesas">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>
