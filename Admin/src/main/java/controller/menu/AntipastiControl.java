@@ -91,9 +91,7 @@ public class AntipastiControl {
 
     public void menuButtonClick(ActionEvent actionEvent) { Ira.IrMenu(menuBoton); }
 
-    public void reservarButtonClick(ActionEvent actionEvent) {
-       Ira.IrReserva(reservarBoton);
-    }
+
 
     public void homeButtonClick(ActionEvent actionEvent) {
         Ira.IrHome(homeBoton);
