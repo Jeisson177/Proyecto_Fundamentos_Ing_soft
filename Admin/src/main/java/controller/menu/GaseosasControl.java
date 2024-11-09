@@ -71,8 +71,7 @@ public class GaseosasControl {
 
     public void IrMenu(ActionEvent actionEvent) { Ira.IrMenu(botonMenu);
     }
-    public void IrReserva(ActionEvent actionEvent) {Ira.IrReserva(botonReservar);
-    }
+
 
 }
 

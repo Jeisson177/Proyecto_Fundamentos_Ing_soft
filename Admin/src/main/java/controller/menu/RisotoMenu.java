@@ -65,10 +65,6 @@ public class RisotoMenu {
         Ira.IrHome(selecHome);
     }
 
-    @FXML
-    public void onClickReservar(ActionEvent actionEvent) {
-        Ira.IrReserva(selecReservar);
-    }
 
     @FXML
     public void onClickVolver(ActionEvent actionEvent) {
