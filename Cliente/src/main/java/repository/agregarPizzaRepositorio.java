@@ -7,9 +7,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class agregarPizzaRepositorio {
-    private static final String URL = "jdbc:h2:file:./cliente";
-    private static final String USER = "sa";
-    private static final String PASSWORD = "";
+    private static final Credenciales c=new Credenciales();
+
+    private static final String URL = c.getURL();
+    private static final String USER = c.getUser();
+    private static final String PASSWORD = c.getPassword();
 
     public int getPrecios(String nombrePizza) {
         String query = "SELECT PRECIO FROM PLATO WHERE nombre = ?";
