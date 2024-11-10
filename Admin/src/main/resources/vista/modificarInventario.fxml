@@ -32,7 +32,7 @@
                </font>
             </Button>
          </children></AnchorPane>
-        <TableView fx:id="tablaInventario" layoutX="95.0" layoutY="104.0" prefHeight="226.0" prefWidth="410.0" style="-fx-text-fill: black;">
+        <TableView fx:id="tablaInventario" layoutX="55.0" layoutY="128.0" prefHeight="226.0" prefWidth="410.0" style="-fx-text-fill: black;">
             <columns>
                 <TableColumn fx:id="columnaNombre" prefWidth="100.0" text="Nombre" />
                 <TableColumn fx:id="columnaCantidad" prefWidth="100.0" text="Cantidad" />
@@ -40,5 +40,12 @@
                 <TableColumn fx:id="columnaUnidad" prefWidth="100.0" text="Unidad" />
             </columns>
         </TableView>
+      <Text fill="#240cd9" layoutX="25.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inventario Ingredientes">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Text>
+      <Button fx:id="selecAgregar" layoutX="495.0" layoutY="174.0" mnemonicParsing="false" onAction="#IrAgregarInventario" prefHeight="52.0" prefWidth="71.0" text="Agregar" />
+      <Button fx:id="selecEliminar" layoutX="495.0" layoutY="253.0" mnemonicParsing="false" onAction="#IrEliminarInventario" prefHeight="52.0" prefWidth="71.0" text="Eliminar" />
     </children>
 </AnchorPane>

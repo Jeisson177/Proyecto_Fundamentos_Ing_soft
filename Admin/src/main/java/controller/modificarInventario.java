@@ -26,6 +26,10 @@ public class modificarInventario {
     @FXML
     public Button selecMenu;
     @FXML
+    public Button selecAgregar;
+    @FXML
+    public Button selecEliminar;
+    @FXML
     private TableView<modificarInventarioRepository.InventarioAlimento> tablaInventario;
     @FXML
     private TableColumn<modificarInventarioRepository.InventarioAlimento, String> columnaNombre;
@@ -70,5 +74,11 @@ public class modificarInventario {
     }
 
     public void IrMenu(ActionEvent actionEvent) { Ira.IrMenu(selecMenu);
+    }
+
+    public void IrAgregarInventario(ActionEvent actionEvent) {
+    }
+
+    public void IrEliminarInventario(ActionEvent actionEvent) {
     }
 }
