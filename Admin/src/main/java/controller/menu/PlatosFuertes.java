@@ -79,9 +79,7 @@ public class PlatosFuertes {
         Ira.IrMenu(selecMenu);
     }
 
-    public void onClickReserva(ActionEvent actionEvent) {
-        Ira.IrReserva(selecReservar);
-    }
+
 
 }
 
