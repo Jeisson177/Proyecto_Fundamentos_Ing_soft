@@ -61,8 +61,7 @@ public class LasanaMenu {
 
     public void IrMenu(ActionEvent actionEvent) { Ira.IrMenu(selecMenu);
     }
-    public void IrReserva(ActionEvent actionEvent) {Ira.IrReserva(selecReservar);
-    }
+
 
     @FXML
     public void onClickVolver(ActionEvent actionEvent) {

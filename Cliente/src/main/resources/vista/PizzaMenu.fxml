@@ -60,5 +60,8 @@
          </font>
       </Button>
       <Button fx:id="selecVolver" layoutX="29.0" layoutY="364.0" mnemonicParsing="false" onAction="#onClickVolver" text="Volver a Platos Fuertes" />
+      <Text layoutX="63.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza 4 Quesos" />
+      <Text layoutX="254.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza Pepperonni" />
+      <Text layoutX="452.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza Margarita" />
    </children>
 </AnchorPane>

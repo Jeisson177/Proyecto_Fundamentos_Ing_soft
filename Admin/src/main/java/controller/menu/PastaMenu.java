@@ -69,8 +69,7 @@ public class PastaMenu {
 
     public void IrMenu(ActionEvent actionEvent) { Ira.IrMenu(selecMenu);
     }
-    public void IrReserva(ActionEvent actionEvent) {Ira.IrReserva(selecReservar);
-    }
+
 
     @FXML
     public void onClickCarbonara(ActionEvent actionEvent) {

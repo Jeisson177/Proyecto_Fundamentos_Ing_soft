@@ -65,9 +65,6 @@ public class MenuControl {
     }
 
 
-    public void IrReserva(ActionEvent actionEvent) {Ira.IrReserva(botonReservar);
-    }
-
     public void IrMenu(ActionEvent actionEvent) {
         Ira.IrMenu(botonMenu);
     }
