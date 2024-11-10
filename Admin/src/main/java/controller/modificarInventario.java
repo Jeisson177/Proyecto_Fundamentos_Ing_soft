@@ -27,6 +27,7 @@ public class modificarInventario {
     private modificarInventarioRepository repository = new modificarInventarioRepository();
 
 
+    @FXML
     public void initialize() {
         // Configurar las columnas para asociarse con los campos de InventarioAlimento
         columnaNombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));

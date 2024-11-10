@@ -2,7 +2,7 @@ module com.example.cliente {
     requires javafx.controls;
     requires javafx.fxml;
     requires java.sql;
-
+    opens repository to javafx.base;
 
     opens com.example.admin to javafx.fxml;
     exports com.example.admin;
