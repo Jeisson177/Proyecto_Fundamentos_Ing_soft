@@ -46,8 +46,7 @@ public class InicioControlMesero {
 
     @FXML
     public void IrAtenderSinReserva(ActionEvent actionEvent) {
-        // Aquí podrías simular que se atiende una reserva sin cita si fuera necesario
-        // reservaAtendida = Optional.of(new Reserva()); // Simulación de atender sin reserva
+        // reservaAtendida = Optional.of(new Reserva()); // simulación de atender sin reserva
         // cargarPantalla("/vista/Menu.fxml");
     }
 
