@@ -45,7 +45,7 @@
             <Font size="23.0" />
          </font>
       </Text>
-      <Button fx:id="selecAgregar" layoutX="495.0" layoutY="174.0" mnemonicParsing="false" onAction="#IrAgregarInventario" prefHeight="52.0" prefWidth="71.0" text="Agregar" />
-      <Button fx:id="selecEliminar" layoutX="495.0" layoutY="253.0" mnemonicParsing="false" onAction="#IrEliminarInventario" prefHeight="52.0" prefWidth="71.0" text="Eliminar" />
+      <Button fx:id="selecAgregar" layoutX="495.0" layoutY="174.0" mnemonicParsing="false" onAction="#IrModificarInventario" prefHeight="52.0" prefWidth="71.0" text="Agregar" />
+      <Button fx:id="selecEliminar" layoutX="495.0" layoutY="253.0" mnemonicParsing="false" onAction="#IrModificarInventario" prefHeight="52.0" prefWidth="71.0" text="Eliminar" />
     </children>
 </AnchorPane>

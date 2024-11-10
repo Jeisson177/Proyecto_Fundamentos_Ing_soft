@@ -1,16 +1,21 @@
 package controller;
 
 import controller.menu.RedireccionGeneral;
+import controller.menu.agregarPizza;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 import repository.modificarInventarioRepository;
 
 
@@ -76,9 +81,60 @@ public class modificarInventario {
     public void IrMenu(ActionEvent actionEvent) { Ira.IrMenu(selecMenu);
     }
 
-    public void IrAgregarInventario(ActionEvent actionEvent) {
-    }
+    public void IrModificarInventario(ActionEvent actionEvent) {
 
-    public void IrEliminarInventario(ActionEvent actionEvent) {
+        Button sourceButton = (Button) actionEvent.getSource(); // Detecta qué botón fue presionado
+        // Variable para almacenar el cambio del inventario
+        String modificacionInventario = "";
+
+        // Comparar el texto del botón o usar el ID del botón para determinar cuál fue seleccionado
+        if (sourceButton.equals(selecAgregar)) {
+            modificacionInventario  = "Agregar";
+            try {
+                // Carga la nueva ventana
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/AgregarOeliminarInventario.fxml"));
+                Parent root = loader.load();
+
+                // Obtén el controlador de la nueva vista
+                AgregarOeliminarInventario AgregarAlInventario = loader.getController();
+
+                AgregarAlInventario.setAgregarOeliminar(modificacionInventario);
+
+                // Crea una nueva escena
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.setTitle("Agregar al inventario"); // Título de la nueva ventana
+                stage.show();
+
+                //Opcionalmente, cierra la ventana actual
+                ((Stage) selecAgregar.getScene().getWindow()).close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }else if(sourceButton.equals(selecEliminar)){
+            modificacionInventario  = "Eliminar";
+            try {
+                // Carga la nueva ventana
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/AgregarOeliminarInventario.fxml"));
+                Parent root = loader.load();
+
+                // Obtén el controlador de la nueva vista
+                AgregarOeliminarInventario AgregarAlInventario = loader.getController();
+
+                AgregarAlInventario.setAgregarOeliminar(modificacionInventario);
+
+                // Crea una nueva escena
+                Stage stage = new Stage();
+                stage.setScene(new Scene(root));
+                stage.setTitle("Eliminar del inventario"); // Título de la nueva ventana
+                stage.show();
+
+                //Opcionalmente, cierra la ventana actual
+                ((Stage) selecEliminar.getScene().getWindow()).close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        }
     }
 }
