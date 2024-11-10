@@ -2,16 +2,11 @@ package controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
-import repository.agregarPizzaRepositorio;
-import services.RedireccionGeneral;
+import services.AgregarPizzaService;
 
 import java.util.Objects;
 
@@ -45,7 +40,7 @@ public class agregarPizza {
 
     private RedireccionGeneral Ira=new RedireccionGeneral();
 
-    private agregarPizzaRepositorio pizza=new agregarPizzaRepositorio();
+    private AgregarPizzaService pizza=new AgregarPizzaService();
 
     public void setTipoPizza(String tipoPizza) {
         this.tipoPizza = tipoPizza;

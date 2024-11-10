@@ -2,16 +2,11 @@ package controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
-import repository.PastaRepositorio;
-import services.RedireccionGeneral;
+import services.AgregarPizzaService;
 
 import java.util.Objects;
 
@@ -50,7 +45,7 @@ public class PastaMenu {
     public Text precioPastaSpa;
 
     private RedireccionGeneral Ira=new RedireccionGeneral();
-    private PastaRepositorio pasta=new PastaRepositorio();
+    private AgregarPizzaService pasta=new AgregarPizzaService();
 
     public void initialize(){
         Image carbonara = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/imagenes/PlatosFuertes/Carbonara.png")));

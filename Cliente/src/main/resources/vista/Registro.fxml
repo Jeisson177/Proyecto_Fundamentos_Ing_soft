@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="380.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegistroControl">
+    <children>
+        <Pane prefHeight="58.0" prefWidth="600.0" style="-fx-background-color: black;">
+            <children>
+                <Line endX="200.29287719726562" endY="16.0" layoutX="33.0" layoutY="58.0" startX="-33.00001525878906" startY="16.0" />
+                <Label layoutX="14.0" layoutY="14.0" text="Bella Ventura" textAlignment="JUSTIFY" textFill="WHITE">
+                    <font>
+                        <Font size="21.0" />
+                    </font>
+                </Label>
+                <Button fx:id="btnHome" layoutX="325.0" layoutY="14.0" mnemonicParsing="false" onAction="#IrHome" style="-fx-background-color: black;" text="Home" textFill="WHITE" />
+                <Button fx:id="btnMenu" layoutX="424.0" layoutY="14.0" mnemonicParsing="false" onAction="#IrMenu" style="-fx-background-color: black;" text="Menu" textFill="WHITE" />
+                <Button fx:id="btnReservar" layoutX="523.0" layoutY="14.0" mnemonicParsing="false" onAction="#IrReserva" style="-fx-background-color: black;" text="Reservar" textFill="WHITE" />
+            </children>
+        </Pane>
+        <ImageView fitHeight="307.0" fitWidth="184.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Imagenes/login/pizq.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="307.0" fitWidth="148.0" layoutX="452.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Imagenes/login/pidr.png" />
+            </image>
+        </ImageView>
+        <TextField fx:id="labNombre" layoutX="226.0" layoutY="146.0" promptText="Nombre" />
+        <TextField fx:id="LabTel" layoutX="226.0" layoutY="183.0" promptText="telefono" />
+        <TextField fx:id="labUser" layoutX="226.0" layoutY="220.0" promptText="usuario" />
+        <PasswordField fx:id="LabClave" layoutX="226.0" layoutY="257.0" promptText="contrasena" />
+        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Imagenes/login/imagen1.png" />
+            </image>
+        </ImageView>
+        <Line endX="182.0" layoutX="418.0" layoutY="74.0" startX="-17.0" />
+        <Button fx:id="btnRegistrarse" layoutX="263.0" layoutY="304.0" mnemonicParsing="false" onAction="#IrMesa" text="Registrarse" />
+    </children>
+</AnchorPane>

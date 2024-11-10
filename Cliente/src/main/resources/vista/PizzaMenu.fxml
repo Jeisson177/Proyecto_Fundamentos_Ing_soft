@@ -44,21 +44,24 @@
             <Font name="Times New Roman" size="31.0" />
          </font>
       </Text>
-      <Button fx:id="P4quesos" layoutX="41.0" layoutY="279.0" mnemonicParsing="false" onAction="#seleccionarpizza" prefHeight="26.0" prefWidth="106.0" text="Pizza 4 quesos" textAlignment="CENTER">
+      <Button fx:id="P4quesos" layoutX="33.0" layoutY="137.0" mnemonicParsing="false" onAction="#seleccionarpizza" prefHeight="126.0" prefWidth="138.0" style="-fx-background-color: transpare;" textAlignment="CENTER">
          <font>
             <Font name="Times New Roman" size="13.0" />
          </font>
       </Button>
-      <Button fx:id="Ppepperoni" layoutX="245.0" layoutY="279.0" mnemonicParsing="false" onAction="#seleccionarpizza" text="Pizza Pepperoni">
+      <Button fx:id="Ppepperoni" layoutX="232.0" layoutY="140.0" mnemonicParsing="false" onAction="#seleccionarpizza" prefHeight="134.0" prefWidth="138.0" style="-fx-background-color: transpare;">
          <font>
             <Font name="Times New Roman" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="Pmargarita" layoutX="438.0" layoutY="279.0" mnemonicParsing="false" onAction="#seleccionarpizza" text="Pizza Margarita">
+      <Button fx:id="Pmargarita" layoutX="428.0" layoutY="135.0" mnemonicParsing="false" onAction="#seleccionarpizza" prefHeight="126.0" prefWidth="130.0" style="-fx-background-color: transpare;">
          <font>
             <Font name="Times New Roman" size="14.0" />
          </font>
       </Button>
       <Button fx:id="selecVolver" layoutX="29.0" layoutY="364.0" mnemonicParsing="false" onAction="#onClickVolver" text="Volver a Platos Fuertes" />
+      <Text layoutX="63.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza 4 Quesos" />
+      <Text layoutX="254.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza Pepperonni" />
+      <Text layoutX="452.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza Margarita" />
    </children>
 </AnchorPane>

@@ -10,8 +10,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import repository.HeladosRepositorio;
-import services.RedireccionGeneral;
+
+import services.AgregarPizzaService;
 
 
 import java.util.Objects;
@@ -59,7 +59,7 @@ public class Heladoscontrol {
     @FXML
     public Label preciochocolate;
 
-    private HeladosRepositorio helado =new HeladosRepositorio();
+    private AgregarPizzaService helado =new AgregarPizzaService();
 
     private RedireccionGeneral Ira = new RedireccionGeneral();
 

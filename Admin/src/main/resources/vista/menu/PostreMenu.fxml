@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.menu.Postrecontrol">
+    <ImageView fitHeight="400.0" fitWidth="722.0" opacity="0.0">
+
+    </ImageView>
+    <Pane prefHeight="48.0" prefWidth="723.0" style="-fx-background-color: black;">
+        <children>
+            <ImageView fx:id="instaimage" fitHeight="48.0" fitWidth="53.0" layoutX="669.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" />
+            <Text fill="WHITE" layoutX="14.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: dream avenue;" text="Bella Ventura">
+                <font>
+                    <Font size="24.0" />
+                </font>
+            </Text>
+         <Button fx:id="botonHome" layoutX="300.0" layoutY="8.0" mnemonicParsing="false" onAction="#IrHome" style="-fx-background-color: bl;" text="Home" textFill="WHITE" underline="true">
+            <font>
+               <Font size="15.0" />
+            </font>
+         </Button>
+         <Button fx:id="botonMenu" layoutX="401.0" layoutY="8.0" mnemonicParsing="false" onAction="#IrMenu" style="-fx-background-color: bl;" text="Menu" textFill="WHITE" underline="true">
+            <font>
+               <Font size="15.0" />
+            </font>
+         </Button>
+        </children>
+    </Pane>
+    <Pane layoutX="1.0" layoutY="48.0" prefHeight="68.0" prefWidth="722.0" style="-fx-background-color: WHITE;">
+        <children>
+            <Button fx:id="volverMenu" layoutX="365.0" layoutY="9.0" mnemonicParsing="false" onAction="#IrMenu" style="-fx-background-color: black;" text="Regresar a menú" textFill="WHITE" underline="true">
+                <font>
+                    <Font size="17.0" />
+                </font>
+            </Button>
+            <Button fx:id="agregaraorden" layoutX="559.0" layoutY="9.0" mnemonicParsing="false" onAction="#onHelloButtonClick" style="-fx-background-color: black;" text="Agregar a Orden" textFill="WHITE" underline="true">
+                <font>
+                    <Font size="17.0" />
+                </font>
+            </Button>
+            <ImageView fx:id="imagenletrapostres" fitHeight="68.0" fitWidth="255.0" pickOnBounds="true" preserveRatio="true" />
+        </children>
+    </Pane>
+    <Pane layoutX="11.0" layoutY="150.0" prefHeight="185.0" prefWidth="125.0">
+        <children>
+            <Button layoutX="5.0" layoutY="10.0" onAction="#clickPOSTRE" prefHeight="121.0" prefWidth="116.0">
+                <graphic>
+                    <ImageView fx:id="gelatoimage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="false" />
+                </graphic>
+            </Button>
+            <Label layoutX="41.0" layoutY="137.0" text="GELATO" />
+        </children>
+    </Pane>
+    <Pane layoutX="152.0" layoutY="150.0" prefHeight="185.0" prefWidth="125.0">
+        <children>
+            <Button layoutX="5.0" layoutY="10.0" prefHeight="121.0" prefWidth="116.0">
+                <graphic>
+                    <ImageView fx:id="tiramisuimage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="false" />
+                </graphic>
+            </Button>
+            <Label layoutX="36.0" layoutY="137.0" text="TIRAMISU" />
+            <Label fx:id="preciotiramisu" layoutX="25.0" layoutY="163.0" prefHeight="17.0" prefWidth="74.0" />
+        </children>
+    </Pane>
+    <Pane layoutX="299.0" layoutY="150.0" prefHeight="185.0" prefWidth="125.0">
+        <children>
+            <Button layoutX="5.0" layoutY="10.0" prefHeight="121.0" prefWidth="116.0">
+                <graphic>
+                    <ImageView fx:id="pannacotaimage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="false" />
+                </graphic>
+            </Button>
+            <Label layoutX="26.0" layoutY="137.0" text="PANNA COTA" />
+            <Label fx:id="preciopannacota" layoutX="26.0" layoutY="163.0" prefHeight="17.0" prefWidth="74.0" />
+        </children>
+    </Pane>
+    <Pane layoutX="439.0" layoutY="150.0" prefHeight="185.0" prefWidth="125.0">
+        <children>
+            <Button layoutX="5.0" layoutY="10.0" prefHeight="121.0" prefWidth="116.0">
+                <graphic>
+                    <ImageView fx:id="affogatoimage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="false" />
+                </graphic>
+            </Button>
+            <Label layoutX="32.0" layoutY="138.0" text="AFFOGATO" />
+            <Label fx:id="precioaffogato" layoutX="26.0" layoutY="163.0" prefHeight="17.0" prefWidth="74.0" />
+        </children>
+    </Pane>
+    <Pane layoutX="583.0" layoutY="150.0" prefHeight="185.0" prefWidth="125.0">
+        <children>
+            <Button layoutX="5.0" layoutY="10.0" prefHeight="121.0" prefWidth="116.0">
+                <graphic>
+                    <ImageView fx:id="cannoliimage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="false" />
+                </graphic>
+            </Button>
+            <Label layoutX="36.0" layoutY="137.0" text="CANNOLINI" />
+            <Label fx:id="preciocannolini" layoutX="26.0" layoutY="163.0" prefHeight="17.0" prefWidth="74.0" />
+        </children>
+    </Pane>
+</AnchorPane>

@@ -8,8 +8,11 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import repository.UsuarioRepository;
-import services.RedireccionGeneral;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import services.loginService;
+
+import java.util.List;
 
 public class loginControl {
     @FXML
@@ -24,8 +27,10 @@ public class loginControl {
     public TextField labUser;
     @FXML
     public TextField LabClave;
+    public Button btnLogin;
+    public Button btnVerReservas;
 
-    private UsuarioRepository log=new UsuarioRepository();
+    private loginService log=new loginService();
     private RedireccionGeneral Ira = new RedireccionGeneral();
 
 
@@ -42,6 +47,8 @@ public class loginControl {
     public void IrReserva(ActionEvent actionEvent) {
         Ira.IrReserva(btnReservar);
     }
+    @FXML
+    public void IrRegistro(ActionEvent actionEvent) { Ira.IrRegistro(btnLogin);}
     @FXML
     public void IrMesa(ActionEvent actionEvent) {
         String email = labUser.getText();
@@ -75,5 +82,39 @@ public class loginControl {
             System.out.println("Error: Usuario o contraseña incorrecta.");
         }
     }
+    @FXML
+    public void IrVerReservas(ActionEvent actionEvent) {
+        String email = labUser.getText();
+        String password = LabClave.getText();
+        int idUsuario = log.AutentificarUsuario(email, password);  // Autenticación de usuario
 
+        if (idUsuario != -1) {  // Si la autenticación es exitosa
+            // Obtener reservas del usuario
+            List<String> reservas = log.ConsultarReservas(idUsuario);
+
+            if (!reservas.isEmpty()) {
+                // Crear una cadena con todas las reservas
+                StringBuilder reservasTexto = new StringBuilder("Reservas del usuario:\n");
+                for (String reserva : reservas) {
+                    reservasTexto.append("- ").append(reserva).append("\n");
+                }
+
+                // Mostrar ventana emergente con las reservas
+                Alert alert = new Alert(AlertType.INFORMATION);
+                alert.setTitle("Reservas del Usuario");
+                alert.setHeaderText("Reservas actuales del usuario:");
+                alert.setContentText(reservasTexto.toString());
+                alert.showAndWait();
+            } else {
+                // Mostrar mensaje si no hay reservas
+                Alert alert = new Alert(AlertType.INFORMATION);
+                alert.setTitle("Reservas del Usuario");
+                alert.setHeaderText(null);
+                alert.setContentText("No hay reservas para este usuario.");
+                alert.showAndWait();
+            }
+        } else {
+            System.out.println("Error: Usuario o contraseña incorrecta.");
+        }
+    }
 }

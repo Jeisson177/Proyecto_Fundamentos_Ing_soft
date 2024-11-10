@@ -5,16 +5,10 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.Node;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
-import repository.bebidasRepositorio;
-import services.RedireccionGeneral;
 
-import java.io.IOException;
+import services.AgregarPizzaService;
+
 import java.util.Objects;
 
 public class VinosControl {
@@ -36,7 +30,7 @@ public class VinosControl {
     public Text textoPrecioTinto;
     public Text textoPrecioRosado;
 
-    private bebidasRepositorio bebida=new bebidasRepositorio();
+    private AgregarPizzaService bebida=new AgregarPizzaService();
 
     private RedireccionGeneral Ira=new RedireccionGeneral();
     @FXML

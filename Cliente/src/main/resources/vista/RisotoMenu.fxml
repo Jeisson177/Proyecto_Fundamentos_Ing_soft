@@ -40,15 +40,18 @@
             <Font name="Times New Roman" size="25.0" />
          </font>
       </Text>
-      <ImageView fx:id="RisotoVeg" fitHeight="116.0" fitWidth="148.0" layoutX="48.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="RisotoVeg" fitHeight="116.0" fitWidth="148.0" layoutX="45.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="RisotoSal" fitHeight="116.0" fitWidth="119.0" layoutX="250.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="RisotoHon" fitHeight="116.0" fitWidth="113.0" layoutX="437.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true" />
-      <Button fx:id="risotoVegetariano" layoutX="67.0" layoutY="255.0" mnemonicParsing="false" onAction="#onClickVegetariano" text="Vegetariano" />
-      <Button fx:id="risotoSalmon" layoutX="279.0" layoutY="255.0" mnemonicParsing="false" onAction="#onClickSalmon" text="Salmon" />
-      <Button fx:id="risotoHongos" layoutX="465.0" layoutY="255.0" mnemonicParsing="false" onAction="#onClickHongos" text="Hongos" />
-      <Text fx:id="precioRisotoVeg" layoutX="67.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="80.79999999999995" />
+      <Button fx:id="risotoVegetariano" layoutX="50.0" layoutY="128.0" mnemonicParsing="false" onAction="#onClickVegetariano" prefHeight="116.0" prefWidth="138.0" style="-fx-background-color: transpare;" />
+      <Button fx:id="risotoSalmon" layoutX="254.0" layoutY="131.0" mnemonicParsing="false" onAction="#onClickSalmon" prefHeight="116.0" prefWidth="112.0" style="-fx-background-color: transpare;" />
+      <Button fx:id="risotoHongos" layoutX="439.0" layoutY="127.0" mnemonicParsing="false" onAction="#onClickHongos" prefHeight="116.0" prefWidth="106.0" style="-fx-background-color: transpare;" />
+      <Text fx:id="precioRisotoVeg" layoutX="79.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="80.79999999999995" />
       <Text fx:id="precioRisotoSal" layoutX="269.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="80.79999999999995" />
       <Text fx:id="precioRisotoHon" layoutX="453.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="80.79999999999995" />
       <Button fx:id="selecVolver" layoutX="51.0" layoutY="340.0" mnemonicParsing="false" onAction="#onClickVolver" text="Volver a Platos Fuertes" />
+      <Text layoutX="69.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Risoto Vegetariano" />
+      <Text layoutX="271.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Risoto Salmon" />
+      <Text layoutX="453.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Risoto Hongos" />
    </children>
 </AnchorPane>

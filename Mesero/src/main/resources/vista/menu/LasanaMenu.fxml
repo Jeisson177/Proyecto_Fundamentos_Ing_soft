@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.menuMesero.LasanaMenu">
+   <children>
+      <AnchorPane prefHeight="62.0" prefWidth="600.0" style="-fx-background-color: black;">
+         <children>
+            <Text fill="#faf8f8" layoutX="25.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bella Ventura">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <Button fx:id="selecHome" layoutX="221.0" layoutY="17.0" mnemonicParsing="false" onAction="#IrHome" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-style: italic;" text="Home" underline="true">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
+            <Button fx:id="selecMenu" layoutX="325.0" layoutY="17.0" mnemonicParsing="false" onAction="#IrMenu" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-style: italic;" text="Menu" underline="true">
+               <font>
+                  <Font name="Times New Roman" size="15.0" />
+               </font></Button>
+            <ImageView fitHeight="49.0" fitWidth="52.0" layoutX="532.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Imagenes/PlatosFuertes/ig.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Text fill="#3206e4" layoutX="22.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Platos Furertes: Lasañas">
+         <font>
+            <Font name="Times New Roman" size="23.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="LasanaBolo" fitHeight="123.0" fitWidth="142.0" layoutX="33.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="LasanaMixta" fitHeight="123.0" fitWidth="126.0" layoutX="240.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="LasanaPollo" fitHeight="123.0" fitWidth="124.0" layoutX="431.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="LasBolonesa" layoutX="33.0" layoutY="131.0" mnemonicParsing="false" onAction="#onClickLasBolonesa" prefHeight="123.0" prefWidth="142.0" style="-fx-background-color: transpare;" />
+      <Button fx:id="LasMixta" layoutX="241.0" layoutY="131.0" mnemonicParsing="false" onAction="#onClickLasMixta" prefHeight="123.0" prefWidth="126.0" style="-fx-background-color: transpare;" />
+      <Button fx:id="LasPollo" layoutX="431.0" layoutY="131.0" mnemonicParsing="false" onAction="#onClickLasPollo" prefHeight="123.0" prefWidth="124.0" style="-fx-background-color: transpare;" />
+      <Text fx:id="precioLasanaBolo" layoutX="58.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="75.20000000000005" />
+      <Text fx:id="precioLasanaMix" layoutX="265.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="75.20000000000005" />
+      <Text fx:id="precioLasanaPollo" layoutX="455.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="75.20000000000005" />
+      <Button fx:id="selecVolver" layoutX="28.0" layoutY="351.0" mnemonicParsing="false" onAction="#onClickVolver" text="Volver a platos fuertes" />
+      <Text fx:id="dispoBolo" fill="RED" layoutX="44.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text fx:id="dispoMixto" fill="RED" layoutX="260.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text fx:id="dispoPollo" fill="RED" layoutX="452.0" layoutY="333.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="60.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lasaña Boloñesa" />
+      <Text layoutX="270.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lasaña Mixta" />
+      <Text layoutX="460.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lasaña Pollo" />
+   </children>
+</AnchorPane>

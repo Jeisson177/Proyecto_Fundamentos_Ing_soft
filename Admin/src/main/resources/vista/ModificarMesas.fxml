@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModificarMesasControl">
+   <children>
+      <ImageView fitHeight="187.0" fitWidth="254.0" layoutX="228.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagenes/mesa/distribucionMesa.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="bntm2" layoutX="342.0" layoutY="181.0" minHeight="1.0" minWidth="1.0" mnemonicParsing="false" onAction="#SeleccionarMesa" prefHeight="11.0" prefWidth="11.0" style="-fx-background-color: #E0E0E0;" />
+      <Button fx:id="bntm3" layoutX="323.0" layoutY="198.0" minHeight="1.0" minWidth="1.0" mnemonicParsing="false" onAction="#SeleccionarMesa" prefHeight="11.0" prefWidth="11.0" style="-fx-background-color: #E0E0E0;" />
+      <Button fx:id="bntm4" layoutX="341.0" layoutY="199.0" minHeight="1.0" minWidth="1.0" mnemonicParsing="false" onAction="#SeleccionarMesa" prefHeight="11.0" prefWidth="11.0" style="-fx-background-color: #E0E0E0;" />
+      <Button fx:id="bntm5" layoutX="305.0" layoutY="215.0" minHeight="1.0" minWidth="1.0" mnemonicParsing="false" onAction="#SeleccionarMesa" prefHeight="11.0" prefWidth="11.0" style="-fx-background-color: #E0E0E0;" />
+      <Button fx:id="bntm6" layoutX="323.0" layoutY="215.0" minHeight="1.0" minWidth="1.0" mnemonicParsing="false" onAction="#SeleccionarMesa" prefHeight="11.0" prefWidth="11.0" style="-fx-background-color: #E0E0E0;" />
+      <Button fx:id="bntm7" layoutX="342.0" layoutY="215.0" minHeight="1.0" minWidth="1.0" mnemonicParsing="false" onAction="#SeleccionarMesa" prefHeight="11.0" prefWidth="11.0" style="-fx-background-color: #E0E0E0;" />
+      <Button fx:id="bntm8" layoutX="305.0" layoutY="234.0" minHeight="1.0" minWidth="1.0" mnemonicParsing="false" onAction="#SeleccionarMesa" prefHeight="11.0" prefWidth="11.0" style="-fx-background-color: #E0E0E0;" />
+      <Button fx:id="bntm9" layoutX="323.0" layoutY="235.0" minHeight="1.0" minWidth="1.0" mnemonicParsing="false" onAction="#SeleccionarMesa" prefHeight="11.0" prefWidth="11.0" style="-fx-background-color: #E0E0E0;" />
+      <Button fx:id="bntm10" layoutX="342.0" layoutY="233.0" minHeight="1.0" minWidth="1.0" mnemonicParsing="false" onAction="#SeleccionarMesa" prefHeight="11.0" prefWidth="11.0" style="-fx-background-color: #E0E0E0;" />
+      <Button fx:id="bntm11" layoutX="306.0" layoutY="252.0" minHeight="1.0" minWidth="1.0" mnemonicParsing="false" onAction="#SeleccionarMesa" prefHeight="11.0" prefWidth="11.0" style="-fx-background-color: #E0E0E0;" />
+      <Button fx:id="bntm12" layoutX="323.0" layoutY="253.0" minHeight="1.0" minWidth="1.0" mnemonicParsing="false" onAction="#SeleccionarMesa" prefHeight="11.0" prefWidth="11.0" style="-fx-background-color: #E0E0E0;" />
+      <Button fx:id="bntm13" layoutX="342.0" layoutY="253.0" minHeight="1.0" minWidth="1.0" mnemonicParsing="false" onAction="#SeleccionarMesa" prefHeight="11.0" prefWidth="11.0" style="-fx-background-color: #E0E0E0;" />
+      <Button fx:id="bntm14" layoutX="368.0" layoutY="184.0" minHeight="1.0" minWidth="1.0" mnemonicParsing="false" onAction="#SeleccionarMesa" prefHeight="16.0" prefWidth="17.0" style="-fx-background-color: #E0E0E0;" />
+      <Button fx:id="bntm15" layoutX="400.0" layoutY="192.0" minHeight="1.0" minWidth="1.0" mnemonicParsing="false" onAction="#SeleccionarMesa" prefHeight="16.0" prefWidth="17.0" style="-fx-background-color: #E0E0E0;" />
+      <Button fx:id="bntm16" layoutX="421.0" layoutY="221.0" minHeight="1.0" minWidth="1.0" mnemonicParsing="false" onAction="#SeleccionarMesa" prefHeight="16.0" prefWidth="17.0" style="-fx-background-color: #E0E0E0;" />
+      <Button fx:id="bntm17" layoutX="421.0" layoutY="252.0" minHeight="1.0" minWidth="1.0" mnemonicParsing="false" onAction="#SeleccionarMesa" prefHeight="16.0" prefWidth="17.0" style="-fx-background-color: #E0E0E0;" />
+      <Button fx:id="bntm18" layoutX="399.0" layoutY="285.0" minHeight="1.0" minWidth="1.0" mnemonicParsing="false" onAction="#SeleccionarMesa" prefHeight="16.0" prefWidth="17.0" style="-fx-background-color: #E0E0E0;" />
+      <Button fx:id="bntm19" layoutX="369.0" layoutY="293.0" minHeight="1.0" minWidth="1.0" mnemonicParsing="false" onAction="#SeleccionarMesa" prefHeight="16.0" prefWidth="17.0" style="-fx-background-color: #E0E0E0;" />
+      <Button fx:id="bntm1" layoutX="329.0" layoutY="149.0" minHeight="1.0" minWidth="1.0" mnemonicParsing="false" onAction="#SeleccionarMesa" prefHeight="16.0" prefWidth="17.0" style="-fx-background-color: #E0E0E0;" />
+      <TextField fx:id="fieldXposicion" layoutX="55.0" layoutY="153.0" promptText="Nuevo valor" style="-fx-background-color: #E0E0E0;" />
+      <Label fx:id="labelIdMesa" layoutX="37.0" layoutY="105.0" prefHeight="34.0" prefWidth="173.0" text="Ubicación actual de mesa: " wrapText="true" />
+      <TextField fx:id="fieldYposicion" layoutX="55.0" layoutY="187.0" promptText="Nuevo valor" style="-fx-background-color: #E0E0E0;" />
+      <Label layoutX="37.0" layoutY="157.0" text="X:" />
+      <Label layoutX="37.0" layoutY="190.0" text="Y:" />
+      <Button fx:id="btnModificar" layoutX="78.0" layoutY="232.0" mnemonicParsing="false" onAction="#actualizarPosicion" style="-fx-background-color: Black;" text="Modificar" textFill="WHITE" />
+      <Pane prefHeight="69.0" prefWidth="600.0" style="-fx-background-color: EFB810;">
+         <children>
+            <Text fill="WHITE" layoutX="31.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bella Ventura &gt; Panel administrativo &gt; Editar mesas">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

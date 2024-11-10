@@ -2,16 +2,11 @@ package controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
-import repository.LasanaRepositorio;
-import services.RedireccionGeneral;
+import services.AgregarPizzaService;
 
 import java.util.Objects;
 
@@ -44,7 +39,7 @@ public class LasanaMenu {
     public Text precioLasanaPollo;
 
     private RedireccionGeneral Ira=new RedireccionGeneral();
-    private LasanaRepositorio lasana=new LasanaRepositorio();
+    private AgregarPizzaService lasana=new AgregarPizzaService();
 
     public void initialize(){
         Image Bolonesa = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/imagenes/PlatosFuertes/BOLOÑESA.png")));

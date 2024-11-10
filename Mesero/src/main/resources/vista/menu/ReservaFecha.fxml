@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="357.0" prefWidth="722.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.menuMesero.ReservaControl">
+   <children>
+      <Pane prefHeight="47.0" prefWidth="722.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fill="WHITE" layoutX="14.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: dream avenue;" text="Bella Ventura">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <!-- Añadimos un HBox para los botones -->
+            <HBox layoutX="280.0" layoutY="8.0" spacing="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Button fx:id="btnHome" mnemonicParsing="false" onAction="#IrHome" style="-fx-background-color: black;" text="home" textFill="WHITE" underline="true">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnMenu" mnemonicParsing="false" onAction="#IrMenu" style="-fx-background-color: black;" text="Menú" textFill="WHITE" underline="true">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <Button fx:id="btnConsultar" layoutX="178.0" layoutY="235.0" onAction="#ConsultarReserva" text="Consultar" />
+      <DatePicker fx:id="Calendario" layoutX="124.0" layoutY="114.0" />
+      <Line endX="6.0" endY="150.0" layoutX="382.0" layoutY="151.0" startX="6.0" startY="-58.0" />
+      <Text layoutX="441.0" layoutY="314.0" lineSpacing="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recuerde que solo se aceptan reservas con maximo 2 semanas de antelación" wrappingWidth="250.0" />
+      <TableView fx:id="Tabla" layoutX="453.0" layoutY="110.0" prefHeight="174.0" prefWidth="153.0">
+        <columns>
+          <TableColumn fx:id="horariosColumn" prefWidth="155.0" text="Horarios disponibles" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnReservar" layoutX="613.0" layoutY="166.0" mnemonicParsing="false" onAction="#Reservar" prefHeight="47.0" prefWidth="97.0" text="Hacer reserva" />
+   </children>
+</AnchorPane>
