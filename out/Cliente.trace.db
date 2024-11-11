@@ -1,0 +1,50 @@
+2024-11-11 16:37:04.061851-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PLATO" not found (this database is empty); SQL statement:
+SELECT PRECIO FROM PLATO WHERE nombre = ? [42104-232]
+2024-11-11 16:41:34.281292-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PLATO" not found (this database is empty); SQL statement:
+SELECT PRECIO FROM plato WHERE nombre = ? [42104-232]
+2024-11-11 16:45:42.005247-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PLATO" not found (this database is empty); SQL statement:
+SELECT PRECIO FROM plato WHERE nombre = ? [42104-232]
+2024-11-11 16:45:52.806799-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PLATO" not found (this database is empty); SQL statement:
+SELECT PRECIO FROM PLATO WHERE nombre = ? [42104-232]
+2024-11-11 16:48:59.790450-05:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PLATO" not found (this database is empty); SQL statement:
+SELECT PRECIO FROM PLATO WHERE nombre = ? [42104-232]
+2024-11-11 16:54:36.733296-05:00 database: flush
+org.h2.message.DbException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/jeiss/Documents/universidad/10 decimo semestre/Fundamentos ing soft/Proyecto_Fundamentos_Ing_soft/out/Cliente.mv.db [2.3.232/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/jeiss/Documents/universidad/10 decimo semestre/Fundamentos ing soft/Proyecto_Fundamentos_Ing_soft/out/Cliente.mv.db [2.3.232/7]" [50000-232]
+	at com.h2database@2.3.232/org.h2.message.DbException.get(DbException.java:212)
+	at com.h2database@2.3.232/org.h2.message.DbException.convert(DbException.java:407)
+	at com.h2database@2.3.232/org.h2.mvstore.db.Store.lambda$new$0(Store.java:122)
+	at com.h2database@2.3.232/org.h2.mvstore.MVStore.handleException(MVStore.java:1546)
+	at com.h2database@2.3.232/org.h2.mvstore.MVStore.panic(MVStore.java:371)
+	at com.h2database@2.3.232/org.h2.mvstore.MVStore.<init>(MVStore.java:291)
+	at com.h2database@2.3.232/org.h2.mvstore.MVStore$Builder.open(MVStore.java:2035)
+	at com.h2database@2.3.232/org.h2.mvstore.db.Store.<init>(Store.java:133)
+	at com.h2database@2.3.232/org.h2.engine.Database.<init>(Database.java:326)
+	at com.h2database@2.3.232/org.h2.engine.Engine.openSession(Engine.java:92)
+	at com.h2database@2.3.232/org.h2.engine.Engine.openSession(Engine.java:222)
+	at com.h2database@2.3.232/org.h2.engine.Engine.createSession(Engine.java:201)
+	at com.h2database@2.3.232/org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:344)
+	at com.h2database@2.3.232/org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at com.h2database@2.3.232/org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:682)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at com.example.cliente/persistencia.DBConnectionManager.getConnection(DBConnectionManager.java:23)
+	at com.example.cliente/Init.DBInitializer.initDB(DBInitializer.java:22)
+	at com.example.cliente/Init.DBInitializer.main(DBInitializer.java:31)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Error General : "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/jeiss/Documents/universidad/10 decimo semestre/Fundamentos ing soft/Proyecto_Fundamentos_Ing_soft/out/Cliente.mv.db [2.3.232/7]"
+General error: "org.h2.mvstore.MVStoreException: The file is locked: C:/Users/jeiss/Documents/universidad/10 decimo semestre/Fundamentos ing soft/Proyecto_Fundamentos_Ing_soft/out/Cliente.mv.db [2.3.232/7]" [50000-232]
+	at com.h2database@2.3.232/org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at com.h2database@2.3.232/org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 20 more
+Caused by: org.h2.mvstore.MVStoreException: The file is locked: C:/Users/jeiss/Documents/universidad/10 decimo semestre/Fundamentos ing soft/Proyecto_Fundamentos_Ing_soft/out/Cliente.mv.db [2.3.232/7]
+	at com.h2database@2.3.232/org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at com.h2database@2.3.232/org.h2.mvstore.SingleFileStore.lockFileChannel(SingleFileStore.java:143)
+	at com.h2database@2.3.232/org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:117)
+	at com.h2database@2.3.232/org.h2.mvstore.SingleFileStore.open(SingleFileStore.java:81)
+	at com.h2database@2.3.232/org.h2.mvstore.MVStore.<init>(MVStore.java:286)
+	... 14 more

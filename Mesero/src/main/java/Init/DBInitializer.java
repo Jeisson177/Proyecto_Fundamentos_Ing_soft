@@ -19,8 +19,9 @@ public class DBInitializer {
     }
 
     public void initDB() {
-        try (Connection conn = connMgr.getConnection();) {
-            String sqlFile = this.getClass().getResource("/Consulta.sql").getFile();
+        try (Connection conn = connMgr.getConnection()) {
+
+            String sqlFile = "./db/Consulta.sql";
             RunScript.execute(conn, new FileReader(sqlFile));
         } catch (SQLException | FileNotFoundException e) {
             e.printStackTrace();

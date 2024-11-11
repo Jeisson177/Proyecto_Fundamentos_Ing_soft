@@ -1,9 +1,10 @@
 package repository;
 
 public class Credenciales {
-    private String URL="jdbc:mysql://localhost:3306/proyecto ingesoft";
-    private String User="root";
-    private String password="cl";
+    private static final String URL = "jdbc:h2:file:./db/Cliente";
+
+    private static final String User="sa";
+    private static final String password="";
 
 
 

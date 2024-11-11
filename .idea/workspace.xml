@@ -5,9 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fd8ff85-b94a-4b81-b0f1-01c765de323a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Mesero/src/main/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mesero/src/main/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mesero/src/main/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mesero/src/main/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Proyecto_Fundamentos_Ing_soft.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Proyecto_Fundamentos_Ing_soft.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/com/example/Mesero/Mesero.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/com/example/Mesero/Mesero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cliente.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/Cliente.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Consulta.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/Consulta.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/Init/DBInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/Init/DBInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/BebidaControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/BebidaControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/persistencia/DBConnectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/persistencia/DBConnectionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/repository/Credenciales.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/repository/Credenciales.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cliente.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/cliente.trace.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +73,6 @@
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="downloadSourcesAutomatically" value="true" />
-        <option name="workspaceImportForciblyTurnedOn" value="true" />
       </MavenImportingSettings>
     </option>
   </component>
@@ -83,8 +93,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.DBInitializer.executor": "Run",
     "Application.HelloApplication.executor": "Debug",
-    "Application.Mesero.executor": "Debug",
+    "Application.Mesero.executor": "Run",
     "Application.admin.executor": "Run",
     "Application.usuarioC.executor": "Run",
     "Downloaded.Files.Path": "C:\\Users\\Jocel\\Downloads\\Proyecto_Fundamentos_Ing_soft",
@@ -120,7 +131,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2591623",
-    "settings.editor.selected.configurable": "preferences.JavaFX",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -133,6 +144,7 @@
       <recent name="C:\Users\jeiss\Documents\universidad\10 decimo semestre\Fundamentos ing soft\Proyecto_Fundamentos_Ing_soft\Mesero\src\main\java\repository\menu" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jeiss\Documents\universidad\10 decimo semestre\Fundamentos ing soft\Proyecto_Fundamentos_Ing_soft\db" />
       <recent name="C:\Users\jeiss\Documents\universidad\10 decimo semestre\Fundamentos ing soft\Proyecto_Fundamentos_Ing_soft\Admin\src\main\resources\vista" />
       <recent name="C:\Users\jeiss\Documents\universidad\10 decimo semestre\Fundamentos ing soft\Proyecto_Fundamentos_Ing_soft\Mesero\src\main\java" />
       <recent name="C:\Users\jeiss\OneDrive\Documentos\universidad\10 decimo semestre\Fundamentos ing soft\Proyecto_Fundamentos_Ing_soft\Admin\src\main\resources\vista\menu" />
@@ -141,7 +153,20 @@
       <recent name="repository.menu" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Mesero">
+    <configuration name="DBInitializer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Init.DBInitializer" />
+      <module name="Mesero" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Init.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Mesero" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.Mesero.Mesero" />
       <module name="Mesero" />
@@ -199,39 +224,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppTest.testObtenerHorariosDisponibles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Cliente" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="pkg.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="pkg" />
-      <option name="MAIN_CLASS_NAME" value="pkg.AppTest" />
-      <option name="METHOD_NAME" value="testObtenerHorariosDisponibles" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.admin" />
         <item itemvalue="Application.Mesero" />
-        <item itemvalue="JUnit.AppTest" />
+        <item itemvalue="Application.DBInitializer" />
         <item itemvalue="JUnit.AppTest.testGReserva" />
-        <item itemvalue="JUnit.AppTest.testObtenerHorariosDisponibles" />
+        <item itemvalue="JUnit.AppTest" />
+        <item itemvalue="Application.admin" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.19416.15" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.19416.15" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -282,19 +283,9 @@
           <option name="timeStamp" value="4" />
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Mesero/src/main/java/Init/DBInitializer.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Mesero/src/main/java/com/example/Mesero/Mesero.java</url>
-          <line>14</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Mesero/src/main/java/com/example/Mesero/Mesero.java</url>
-          <line>12</line>
-          <option name="timeStamp" value="7" />
+          <url>file://$PROJECT_DIR$/Mesero/src/main/java/repository/menu/agregarPizzaRepositorio.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
