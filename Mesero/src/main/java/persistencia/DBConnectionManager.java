@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class DBConnectionManager implements IDBConnectionManager {
 
-    private static final String JDBC_URL = "jdbc:h2:file:./out/Cliente";
+    private static final String JDBC_URL = "jdbc:h2:file:C:/Users/lenovo1/Documents/GitHub/Proyecto_Fundamentos_Ing_soft/db/Cliente";
 
     private static final String USER = "sa";
     private static final String PASSWORD = "";
