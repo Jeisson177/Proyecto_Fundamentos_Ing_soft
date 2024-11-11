@@ -83,7 +83,7 @@ public class BebidaControl {
     public void irAPantallaVinos(ActionEvent event) {
         try {
             // Cargar la nueva pantalla (vinos.fxml)
-            Parent vinosRoot = FXMLLoader.load(getClass().getResource("/vista/Vinos.fxml"));
+            Parent vinosRoot = FXMLLoader.load(getClass().getResource("/vista/menu/Vinos.fxml"));
             Scene vinosScene = new Scene(vinosRoot);
 
             // Obtener el Stage actual usando el botón como referencia

@@ -12,7 +12,7 @@ public class Mesero extends Application {
     public void start(Stage stage) throws IOException {
         DBConnectionManager connMgr = new DBConnectionManager();
 
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/vista/menu/Antipasti.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/vista/menu/PostreMenu.fxml"));
 
         Scene scene = new Scene(fxmlLoader.load(), 700, 400);
         stage.setTitle("Bella Venture mesero");

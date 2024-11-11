@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1fd8ff85-b94a-4b81-b0f1-01c765de323a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/persistencia/DBConnectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/persistencia/DBConnectionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/com/example/Mesero/Mesero.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/com/example/Mesero/Mesero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/repository/Credenciales.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/repository/Credenciales.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/Cliente.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/Cliente.mv.db" afterDir="false" />
     </list>
@@ -143,7 +143,7 @@
       <recent name="repository.menu" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Mesero">
     <configuration name="DBInitializer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Init.DBInitializer" />
       <module name="Mesero" />
@@ -272,11 +272,6 @@
           <properties class="java.sql.SQLSyntaxErrorException" package="java.sql" />
           <option name="timeStamp" value="4" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Mesero/src/main/java/repository/menu/agregarPizzaRepositorio.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
