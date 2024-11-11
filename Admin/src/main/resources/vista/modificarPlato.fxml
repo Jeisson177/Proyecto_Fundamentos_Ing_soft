@@ -4,15 +4,17 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="664.0" prefWidth="680.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23" fx:controller="controller.modificarPlato">
+<AnchorPane prefHeight="664.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.modificarPlato">
     <children>
-        <Text layoutX="40.0" layoutY="84.0" style="-fx-font-size: 20px;" text="Modificar Platos" />
+        <Text fill="#0617fa" layoutX="40.0" layoutY="123.0" style="-fx-font-size: 20px;" text="Modificar Platos" />
 
         <!-- Tabla de platos -->
-        <TableView fx:id="tablaPlatos" layoutX="40.0" layoutY="104.0" prefHeight="200.0" prefWidth="600.0">
+        <TableView fx:id="tablaPlatos" layoutX="40.0" layoutY="143.0" prefHeight="200.0" prefWidth="600.0">
             <columns>
                 <TableColumn fx:id="columnaNombre" prefWidth="150.0" text="Nombre" />
                 <TableColumn fx:id="columnaDescripcion" prefWidth="200.0" text="Descripción" />
@@ -22,15 +24,15 @@
         </TableView>
 
         <!-- Campos para modificar un plato -->
-        <TextField fx:id="nombreField" layoutX="40.0" layoutY="324.0" promptText="Nombre del plato" />
-        <TextField fx:id="descripcionField" layoutX="200.0" layoutY="324.0" promptText="Descripción" />
-        <TextField fx:id="precioField" layoutX="360.0" layoutY="324.0" promptText="Precio (COP)" />
-        <TextField fx:id="categoriaField" layoutX="526.0" layoutY="323.0" prefHeight="26.0" prefWidth="131.0" promptText="Categoría" />
+        <TextField fx:id="nombreField" layoutX="40.0" layoutY="363.0" promptText="Nombre del plato" />
+        <TextField fx:id="descripcionField" layoutX="200.0" layoutY="363.0" promptText="Descripción" />
+        <TextField fx:id="precioField" layoutX="360.0" layoutY="363.0" promptText="Precio (COP)" />
+        <TextField fx:id="categoriaField" layoutX="526.0" layoutY="362.0" prefHeight="26.0" prefWidth="131.0" promptText="Categoría" />
 
         <!-- Botones de acción -->
-        <Button fx:id="guardarCambios" layoutX="40.0" layoutY="364.0" onAction="#guardarCambios" text="Guardar Cambios" />
+        <Button fx:id="guardarCambios" layoutX="462.0" layoutY="624.0" onAction="#guardarCambios" text="Guardar Cambios" />
         <!-- Botón para eliminar un ingrediente del plato -->
-        <Button fx:id="eliminarIngrediente" layoutX="170.0" layoutY="364.0" onAction="#eliminarIngredienteDelPlato" text="Eliminar Ingrediente del Plato" />
+        <Button fx:id="eliminarIngrediente" layoutX="40.0" layoutY="624.0" onAction="#eliminarIngredienteDelPlato" text="Eliminar Ingrediente del Plato" />
 
 
         <!-- Tabla de ingredientes disponibles -->
@@ -49,6 +51,27 @@
         </TableView>
 
         <!-- Botón para agregar ingredientes -->
-        <Button fx:id="agregarIngrediente" layoutX="270.0" layoutY="624.0" onAction="#agregarIngredienteAlPlato" text="Agregar Ingrediente" />
+        <Button fx:id="agregarIngrediente" layoutX="250.0" layoutY="624.0" onAction="#agregarIngredienteAlPlato" text="Agregar Ingrediente al Plato" />
+      <AnchorPane prefHeight="59.0" prefWidth="680.0" style="-fx-background-color: black;">
+         <children>
+            <Text fill="WHITE" layoutX="21.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bella Ventura">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="InstaImage" fitHeight="55.0" fitWidth="69.0" layoutX="590.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="selecHome" layoutX="250.0" layoutY="17.0" mnemonicParsing="false" onAction="#IrHome" style="-fx-background-color: transpare;" text="Home" textFill="WHITE" underline="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="selecMenu" layoutX="368.0" layoutY="17.0" mnemonicParsing="false" onAction="#IrMenu" style="-fx-background-color: transpare;" text="Menu" textFill="WHITE" underline="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Button fx:id="selecInicio" layoutX="546.0" layoutY="102.0" mnemonicParsing="false" onAction="#IrInicio" style="-fx-background-color: Black;" text="Volver a Inicio" textFill="WHITE" />
     </children>
 </AnchorPane>

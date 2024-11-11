@@ -24,6 +24,10 @@ public class AgregarOeliminarInventario {
     @FXML
     public Button AgregarOeliminar;
     @FXML
+    public Button selecInicio;
+    @FXML
+    public Button selecAnterior;
+    @FXML
     private TableView<modificarInventarioRepository.InventarioAlimento> tablaInventario;
     @FXML
     private TableColumn<modificarInventarioRepository.InventarioAlimento, String> columnaNombre;
@@ -45,7 +49,7 @@ public class AgregarOeliminarInventario {
     private TextField unidadField;
 
     private String modificacionInventario;
-    private RedireccionGeneral Ira = new RedireccionGeneral();
+    private RedirijirAdmin Ira = new RedirijirAdmin();
     private modificarInventarioRepository repository = new modificarInventarioRepository();
 
     public void setAgregarOeliminar(String modificacionInventario) {
@@ -119,5 +123,13 @@ public class AgregarOeliminarInventario {
 
     public void IrMenu(ActionEvent actionEvent) {
         Ira.IrMenu(selecMenu);
+    }
+
+    public void IrInicio(ActionEvent actionEvent) {
+        Ira.IrInicio(selecInicio);
+    }
+
+    public void IrAnterior(ActionEvent actionEvent) {
+        Ira.IrAnterior(selecAnterior);
     }
 }

@@ -35,6 +35,8 @@ public class modificarInventario {
     @FXML
     public Button selecEliminar;
     @FXML
+    public Button selecInicio;
+    @FXML
     private TableView<modificarInventarioRepository.InventarioAlimento> tablaInventario;
     @FXML
     private TableColumn<modificarInventarioRepository.InventarioAlimento, String> columnaNombre;
@@ -45,7 +47,7 @@ public class modificarInventario {
     @FXML
     private TableColumn<modificarInventarioRepository.InventarioAlimento, String> columnaUnidad;
 
-    private RedireccionGeneral Ira=new RedireccionGeneral();
+    private RedirijirAdmin Ira=new RedirijirAdmin();
 
     private modificarInventarioRepository repository = new modificarInventarioRepository();
 
@@ -79,6 +81,9 @@ public class modificarInventario {
     }
 
     public void IrMenu(ActionEvent actionEvent) { Ira.IrMenu(selecMenu);
+    }
+
+    public void IrInicio(ActionEvent actionEvent) { Ira.IrInicio(selecInicio);
     }
 
     public void IrModificarInventario(ActionEvent actionEvent) {

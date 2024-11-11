@@ -2,16 +2,31 @@ package controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import repository.modificarPlatoRepository;
 import repository.modificarPlatoRepository.Plato;
 import repository.modificarPlatoRepository.Ingrediente;
+
+import java.util.Objects;
 
 public class modificarPlato {
 
     @FXML
     public Button agregarIngrediente;
+    @FXML
+    public Button eliminarIngrediente;
+    @FXML
+    public ImageView InstaImage;
+    @FXML
+    public Button selecHome;
+    @FXML
+    public Button selecMenu;
+    @FXML
+    public Button selecInicio;
     @FXML
     private TableView<Plato> tablaPlatos;
     @FXML
@@ -41,11 +56,16 @@ public class modificarPlato {
     private TableView<Ingrediente> tablaIngredientesPlato;
     @FXML
     private TableColumn<Ingrediente, String> columnaIngredientePlato;
-    
+
+    private RedirijirAdmin Ira = new RedirijirAdmin();
+
     private final modificarPlatoRepository repository = new modificarPlatoRepository();
 
     @FXML
     public void initialize() {
+
+        Image ig = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/imagenes/PlatosFuertes/ig.png")));
+        InstaImage.setImage(ig);
         // Configuración de columnas de la tabla de platos
         columnaNombre.setCellValueFactory(cellData -> cellData.getValue().nombreProperty());
         columnaDescripcion.setCellValueFactory(cellData -> cellData.getValue().descripcionProperty());
@@ -126,4 +146,18 @@ public class modificarPlato {
             cargarIngredientesPlato(plato.getId());
         }
     }
+
+    public void IrHome(ActionEvent actionEvent) {
+        Ira.IrHome(selecHome);
+    }
+
+    public void IrMenu(ActionEvent actionEvent) {
+        Ira.IrMenu(selecMenu);
+    }
+
+    public void IrInicio(ActionEvent actionEvent) {
+        Ira.IrInicio(selecInicio);
+    }
+
+
 }
