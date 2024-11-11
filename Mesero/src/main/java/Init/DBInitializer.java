@@ -4,14 +4,17 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.sql.Connection;
 import java.sql.SQLException;
+
 import org.h2.tools.RunScript;
-import repository.DBConnectionManager;
+
+import persistencia.DBConnectionManager;
+import persistencia.IDBConnectionManager;
 
 public class DBInitializer {
 
-    private DBConnectionManager connMgr;
+    private IDBConnectionManager connMgr;
 
-    public DBInitializer(DBConnectionManager connMgr) {
+    public DBInitializer(IDBConnectionManager connMgr) {
         this.connMgr = connMgr;
     }
 
