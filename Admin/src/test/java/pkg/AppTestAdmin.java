@@ -3,6 +3,7 @@ package pkg;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import repository.AdminRepository;
+import repository.Credenciales;
 import repository.modifificarRepository;
 
 import javafx.geometry.Point2D;
@@ -43,7 +44,7 @@ public class AppTestAdmin {
         assertEquals(posicionEsperada.getX(), posicionObtenida.getX(), 0.001);
         assertEquals(posicionEsperada.getY(), posicionObtenida.getY(), 0.001);
     }
-
+    
 
 
 }
