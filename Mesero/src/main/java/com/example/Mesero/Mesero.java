@@ -5,10 +5,13 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import persistencia.DBConnectionManager;
 
 public class Mesero extends Application {
     @Override
     public void start(Stage stage) throws IOException {
+        DBConnectionManager connMgr = new DBConnectionManager();
+
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/vista/menu/Antipasti.fxml"));
 
         Scene scene = new Scene(fxmlLoader.load(), 700, 400);
