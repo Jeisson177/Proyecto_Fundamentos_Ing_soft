@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="664.0" prefWidth="680.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23" fx:controller="controller.modificarPlato">
+    <children>
+        <Text layoutX="40.0" layoutY="84.0" style="-fx-font-size: 20px;" text="Modificar Platos" />
+
+        <!-- Tabla de platos -->
+        <TableView fx:id="tablaPlatos" layoutX="40.0" layoutY="104.0" prefHeight="200.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="columnaNombre" prefWidth="150.0" text="Nombre" />
+                <TableColumn fx:id="columnaDescripcion" prefWidth="200.0" text="Descripción" />
+                <TableColumn fx:id="columnaPrecio" prefWidth="100.0" text="Precio (COP)" />
+                <TableColumn fx:id="columnaCategoria" prefWidth="100.0" text="Categoría" />
+            </columns>
+        </TableView>
+
+        <!-- Campos para modificar un plato -->
+        <TextField fx:id="nombreField" layoutX="40.0" layoutY="324.0" promptText="Nombre del plato" />
+        <TextField fx:id="descripcionField" layoutX="200.0" layoutY="324.0" promptText="Descripción" />
+        <TextField fx:id="precioField" layoutX="360.0" layoutY="324.0" promptText="Precio (COP)" />
+        <TextField fx:id="categoriaField" layoutX="526.0" layoutY="323.0" prefHeight="26.0" prefWidth="131.0" promptText="Categoría" />
+
+        <!-- Botones de acción -->
+        <Button fx:id="guardarCambios" layoutX="40.0" layoutY="364.0" onAction="#guardarCambios" text="Guardar Cambios" />
+        <!-- Botón para eliminar un ingrediente del plato -->
+        <Button fx:id="eliminarIngrediente" layoutX="170.0" layoutY="364.0" onAction="#eliminarIngredienteDelPlato" text="Eliminar Ingrediente del Plato" />
+
+
+        <!-- Tabla de ingredientes disponibles -->
+        <TableView fx:id="tablaIngredientes" layoutX="40.0" layoutY="404.0" prefHeight="200.0" prefWidth="250.0">
+            <columns>
+                <TableColumn fx:id="columnaNombreIngrediente" prefWidth="150.0" text="Nombre" />
+            </columns>
+        </TableView>
+
+        <!-- Tabla de ingredientes del plato -->
+        <TableView fx:id="tablaIngredientesPlato" layoutX="320.0" layoutY="404.0" prefHeight="200.0" prefWidth="250.0">
+            <columns>
+                <TableColumn fx:id="columnaIngredientePlato" prefWidth="150.0" text="Ingrediente" />
+                <TableColumn fx:id="columnaCantidadIngrediente" prefWidth="100.0" text="Cantidad" />
+            </columns>
+        </TableView>
+
+        <!-- Botón para agregar ingredientes -->
+        <Button fx:id="agregarIngrediente" layoutX="270.0" layoutY="624.0" onAction="#agregarIngredienteAlPlato" text="Agregar Ingrediente" />
+    </children>
+</AnchorPane>

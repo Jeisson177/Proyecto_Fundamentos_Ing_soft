@@ -28,4 +28,22 @@ public class RedirijirAdmin {
         }
     }
 
+    public void IrMenu(Button Menu) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Menu.fxml"));
+            Parent root = loader.load();
+
+            // Crea una nueva escena
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Home"); // Título de la nueva ventana
+            stage.show();
+
+            // Opcionalmente, cierra la ventana actual
+            ((Stage) Menu.getScene().getWindow()).close();
+        } catch (IOException e) {
+            System.err.println("Error al cargar la vista Home: " + e.getMessage());
+        }
+    }
+
 }
