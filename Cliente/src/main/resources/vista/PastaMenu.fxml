@@ -49,9 +49,13 @@
       <Button fx:id="Pastrene" layoutX="317.0" layoutY="140.0" mnemonicParsing="false" onAction="#onClickTrene" prefHeight="98.0" prefWidth="106.0" style="-fx-background-color: transpare;" />
       <Button fx:id="PasBolonesa" layoutX="461.0" layoutY="139.0" mnemonicParsing="false" onAction="#onClickBolonesa" prefHeight="98.0" prefWidth="106.0" style="-fx-background-color: transpare;" />
       <Button fx:id="selecVolver" layoutX="22.0" layoutY="328.0" mnemonicParsing="false" onAction="#onClickVolver" text="Volver a Platos Fuertes" />
-      <Text fx:id="precioPastaCar" layoutX="43.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="89.33673095703125" />
+      <Text fx:id="precioPastaCar" layoutX="36.0" layoutY="290.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="89.33673095703125" />
       <Text fx:id="precioPastaFetu" layoutX="192.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="89.33673095703125" />
       <Text fx:id="precioPastaTrene" layoutX="332.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="89.33673095703125" />
       <Text fx:id="precioPastaSpa" layoutX="477.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="89.33673095703125" />
+      <Text layoutX="40.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pasta Carbonara" />
+      <Text layoutX="197.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pasta Fetuccini" />
+      <Text layoutX="335.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pasta Trennette" />
+      <Text layoutX="472.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Spaggeti Boloñesa" />
    </children>
 </AnchorPane>

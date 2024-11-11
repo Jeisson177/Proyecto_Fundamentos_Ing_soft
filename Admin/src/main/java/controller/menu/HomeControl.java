@@ -26,10 +26,8 @@ public class HomeControl {
     public void IrMenu(ActionEvent actionEvent) {
         Ira.IrMenu(btnMenu);
     }
-    @FXML
-    public void IrReservar(ActionEvent actionEvent) {
-        Ira.IrReserva(btnReserva);
-    }
+
+
     @FXML
     public void IrSaber(ActionEvent actionEvent) {
 

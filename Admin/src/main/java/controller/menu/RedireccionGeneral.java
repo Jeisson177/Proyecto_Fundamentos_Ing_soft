@@ -12,7 +12,7 @@ public class RedireccionGeneral {
 
     public void IrHome(Button Home) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Home.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/menu/Home.fxml"));
             Parent root = loader.load();
 
             // Crea una nueva escena
@@ -30,7 +30,7 @@ public class RedireccionGeneral {
 
     public void IrMenu(Button Menu) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Menu.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/menu/Menu.fxml"));
             Parent root = loader.load();
 
             // Crea una nueva escena
@@ -46,62 +46,14 @@ public class RedireccionGeneral {
         }
     }
 
-    public void IrReserva(Button Reserva) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Login.fxml"));
-            Parent root = loader.load();
 
-            // Crea una nueva escena
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Login"); // Título de la nueva ventana
-            stage.show();
 
-            // Opcionalmente, cierra la ventana actual
-            ((Stage) Reserva.getScene().getWindow()).close();
-        } catch (IOException e) {
-            System.err.println("Error al cargar la vista Reserva: " + e.getMessage());
-        }
-    }
 
-    public void IrLogin(Button login) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Antipasti.fxml"));
-            Parent root = loader.load();
 
-            // Crea una nueva escena
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Login"); // Título de la nueva ventana
-            stage.show();
-
-            // Opcionalmente, cierra la ventana actual
-            ((Stage) login.getScene().getWindow()).close();
-        } catch (IOException e) {
-            System.err.println("Error al cargar la vista Login: " + e.getMessage());
-        }
-    }
-    public void IrRegistro(Button login) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Registro.fxml"));
-            Parent root = loader.load();
-
-            // Crea una nueva escena
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Registro"); // Título de la nueva ventana
-            stage.show();
-
-            // Opcionalmente, cierra la ventana actual
-            ((Stage) login.getScene().getWindow()).close();
-        } catch (IOException e) {
-            System.err.println("Error al cargar la vista Registro: " + e.getMessage());
-        }
-    }
 
     public void IrPlatosFuertes(Button platofuerte) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/PlatosFuertes.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/menu/PlatosFuertes.fxml"));
             Parent root = loader.load();
 
             // Crea una nueva escena
@@ -119,7 +71,7 @@ public class RedireccionGeneral {
 
     public void IrAntipasti(Button Antipasti) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Antipasti.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/menu/Antipasti.fxml"));
             Parent root = loader.load();
 
             // Crea una nueva escena
@@ -137,7 +89,7 @@ public class RedireccionGeneral {
 
     public void IrPostre(Button Postre) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/PostreMenu.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/menu/PostreMenu.fxml"));
             Parent root = loader.load();
 
             // Crea una nueva escena
@@ -155,7 +107,7 @@ public class RedireccionGeneral {
 
     public void IrBebidas(Button Bebidas) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Bebidas.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/menu/Bebidas.fxml"));
             Parent root = loader.load();
 
             // Crea una nueva escena
@@ -174,7 +126,7 @@ public class RedireccionGeneral {
     public void IrPizzaMenu(Button pizza){
         try {
             // Carga la nueva ventana
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/PizzaMenu.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/menu/PizzaMenu.fxml"));
             Parent root = loader.load();
 
             // Crea una nueva escena
@@ -193,7 +145,7 @@ public class RedireccionGeneral {
     public void IrPasta(Button pasta){
         try {
             // Carga la nueva ventana
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/PastaMenu.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/menu/PastaMenu.fxml"));
             Parent root = loader.load();
 
             // Crea una nueva escena
@@ -213,7 +165,7 @@ public class RedireccionGeneral {
     public void IrLasanaMenu(Button M){
         try {
             // Carga la nueva ventana
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/LasanaMenu.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/menu/LasanaMenu.fxml"));
             Parent root = loader.load();
 
             // Crea una nueva escena
@@ -233,7 +185,7 @@ public class RedireccionGeneral {
     public void IrRisotoMenu(Button M){
         try {
             // Carga la nueva ventana
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/RisotoMenu.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/menu/RisotoMenu.fxml"));
             Parent root = loader.load();
 
             // Crea una nueva escena

@@ -10,9 +10,11 @@ import javafx.scene.control.Alert;
 
 public class ReservaRepository {
 
-    private static final String URL = "jdbc:h2:file:./cliente";
-    private static final String USER = "sa";
-    private static final String PASSWORD = "";
+    private static final Credenciales c=new Credenciales();
+
+    private static final String URL = c.getURL();
+    private static final String USER = c.getUser();
+    private static final String PASSWORD = c.getPassword();
 
     // Clase interna para encapsular la información del horario del día
     public static class HorarioDia {
