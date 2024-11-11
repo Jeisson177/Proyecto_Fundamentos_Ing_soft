@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="311.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.menuMesero.PlatosFuertes">
+<AnchorPane prefHeight="311.0" prefWidth="608.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.menuMesero.PlatosFuertes">
    <children>
       <AnchorPane prefHeight="66.0" prefWidth="608.0" style="-fx-background-color: black;">
          <children>
@@ -19,11 +19,6 @@
                   <Image url="@../../Imagenes/PlatosFuertes/ig.png" />
                </image>
             </ImageView>
-            <Button fx:id="selecHome" layoutX="268.0" layoutY="19.0" mnemonicParsing="false" onAction="#onClickHome" style="-fx-background-color: black; -fx-text-fill: WHITE; -fx-font-style: italic;" text="Home" underline="true">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Button>
             <Button fx:id="selecMenu" layoutX="353.0" layoutY="19.0" mnemonicParsing="false" onAction="#onClickMenu" style="-fx-background-color: black; -fx-text-fill: white; -fx-font-style: italic;" text="Menu" underline="true">
                <font>
                   <Font name="Times New Roman" size="15.0" />

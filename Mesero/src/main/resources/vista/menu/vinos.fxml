@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.menuMesero.VinosControl">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.menuMesero.VinosControl">
    <children>
       <Pane prefHeight="69.0" prefWidth="600.0" style="-fx-background-color: black;">
          <children>
@@ -14,11 +14,6 @@
                   <Font size="24.0" />
                </font>
             </Text>
-            <Button fx:id="botonHome" layoutX="318.0" layoutY="15.0" mnemonicParsing="false" onAction="#irAPantallaHome" style="-fx-background-color: black;" text="Home" textFill="WHITE" underline="true">
-               <font>
-                  <Font size="17.0" />
-               </font>
-            </Button>
             <Button fx:id="botonMenu" layoutX="408.0" layoutY="16.0" mnemonicParsing="false" onAction="#irAPantallaMenu" style="-fx-background-color: black;" text="Menú" textFill="WHITE" underline="true">
                <font>
                   <Font size="17.0" />

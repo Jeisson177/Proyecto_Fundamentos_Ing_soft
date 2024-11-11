@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 public class Mesero extends Application {
     @Override
     public void start(Stage stage) throws IOException {
+        System.out.println(getClass().getResource("/vista/Inicio.fxml"));
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/vista/Inicio.fxml"));
 
         Scene scene = new Scene(fxmlLoader.load(), 700, 400);

@@ -11,6 +11,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import services.AgregarPizzaService;
+import services.PlatosServices;
 
 import java.util.Objects;
 
@@ -46,7 +47,7 @@ public class Heladoscontrol {
     @FXML
     public Button volverPostres;
     @FXML
-    public  Button volverMenu;
+    public Button volverMenu;
 
     @FXML
     public Label precioavellana;
@@ -57,15 +58,19 @@ public class Heladoscontrol {
     @FXML
     public Label preciochocolate;
 
-    private AgregarPizzaService helado =new AgregarPizzaService();
-
+    private PlatosServices heladoService = new PlatosServices();
     private RedireccionGeneral Ira = new RedireccionGeneral();
 
     @FXML
     public void initialize() {
-        // Cargar la imagen al inicializar la vista
+        // Cargar las imágenes al inicializar la vista
+        cargarImagenes();
+        cargarPrecios();
+    }
+
+    private void cargarImagenes() {
         Image img1 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/Imagenes/helados/AVELLANA_IMAGE.png")));
-        Image img2= new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/Imagenes/helados/LIMON_IMAGE.png")));
+        Image img2 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/Imagenes/helados/LIMON_IMAGE.png")));
         Image img3 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/Imagenes/helados/FRAMBUESA_IMAGE.png")));
         Image img4 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/Imagenes/helados/FRESA_IMAGE.png")));
         Image img5 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/Imagenes/helados/CHOCOLATE_IMAGE.png")));
@@ -73,7 +78,7 @@ public class Heladoscontrol {
         Image img7 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/Imagenes/postres/INSTA_IMAGE.png")));
         Image img8 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/Imagenes/helados/HELADOSLETRA_IMAGE.png")));
 
-        heladoavellana.setImage(img1); // Establecer la imagen en el ImageView
+        heladoavellana.setImage(img1);
         heladolimon.setImage(img2);
         heladoframbuesa.setImage(img3);
         heladofresa.setImage(img4);
@@ -81,44 +86,43 @@ public class Heladoscontrol {
         heladogrande.setImage(img6);
         instaimage.setImage(img7);
         heladosletra.setImage(img8);
-
-        precioavellana.setText(String.valueOf(helado.getPrecios("Gelato Bacio (Avellana)"))+" COP");
-        precioframbuesa.setText(String.valueOf(helado.getPrecios("Gelato Lampone (Frambuesa)"))+" COP");
-        preciochocolate.setText(String.valueOf(helado.getPrecios("Gelato Cioccolato con Peperoncino"))+" COP");
-        preciofresa.setText(String.valueOf(helado.getPrecios("Gelato Fragola (Fresa)"))+" COP");
-        preciolimon.setText(String.valueOf(helado.getPrecios("Gelato Limone (Limon)"))+" COP");
-
     }
 
+    private void cargarPrecios() {
+        precioavellana.setText(heladoService.obtenerPrecioPlato("Gelato Bacio (Avellana)") + " COP");
+        precioframbuesa.setText(heladoService.obtenerPrecioPlato("Gelato Lampone (Frambuesa)") + " COP");
+        preciochocolate.setText(heladoService.obtenerPrecioPlato("Gelato Cioccolato con Peperoncino") + " COP");
+        preciofresa.setText(heladoService.obtenerPrecioPlato("Gelato Fragola (Fresa)") + " COP");
+        preciolimon.setText(heladoService.obtenerPrecioPlato("Gelato Limone (Limon)") + " COP");
+    }
 
     public void clickHELADO(ActionEvent actionEvent) {
         try {
-            // Carga la nueva ventana
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Postremenu.fxml"));
             Parent root = loader.load();
-
-            // Crea una nueva escena
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
-            stage.setTitle("PostreMenu"); // Título de la nueva ventana
+            stage.setTitle("PostreMenu");
             stage.show();
-
-            // Opcionalmente, cierra la ventana actual
             ((Stage) volverMenu.getScene().getWindow()).close();
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 
     public void onHelloButtonClick(ActionEvent actionEvent) {
+        // Acción para un botón específico si se necesita
     }
 
-    public void IrHome(ActionEvent actionEvent) { Ira.IrHome(botonHome);
+    public void IrHome(ActionEvent actionEvent) {
+        Ira.IrHome(botonHome);
     }
 
-    public void IrMenu(ActionEvent actionEvent) { Ira.IrMenu(botonMenu);
+    public void IrMenu(ActionEvent actionEvent) {
+        Ira.IrMenu(botonMenu);
     }
-    public void IrReserva(ActionEvent actionEvent) {Ira.IrReserva(botonReservar);
+
+    public void IrReserva(ActionEvent actionEvent) {
+        Ira.IrReserva(botonReservar);
     }
 }

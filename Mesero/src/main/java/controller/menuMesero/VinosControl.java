@@ -6,7 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
-import services.AgregarPizzaService;
+import services.PlatosServices;
 
 import java.util.Objects;
 
@@ -16,7 +16,6 @@ public class VinosControl {
     public ImageView rosaImage;
     public ImageView tintoImage;
     public ImageView balncoImage;
-
 
     public Button botonHome;
     public Button botonReservar;
@@ -29,9 +28,9 @@ public class VinosControl {
     public Text textoPrecioTinto;
     public Text textoPrecioRosado;
 
-    private AgregarPizzaService bebida=new AgregarPizzaService();
+    private PlatosServices vinosService = new PlatosServices();
+    private RedireccionGeneral Ira = new RedireccionGeneral();
 
-    private RedireccionGeneral Ira=new RedireccionGeneral();
     @FXML
     public void initialize() {
         // Cargar las imágenes
@@ -39,11 +38,10 @@ public class VinosControl {
         Image img2 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/Vinos/tinto.png")));
         Image img3 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/Vinos/white.png")));
 
-
         // Crear nuevos ImageView para cada botón (no reutilizar los existentes)
         ImageView imageViewRosa = new ImageView(img1);
         ImageView imageViewTinto = new ImageView(img2);
-        ImageView imageViewBlanco= new ImageView(img3);
+        ImageView imageViewBlanco = new ImageView(img3);
 
         // Ajustar el tamaño de los ImageView si es necesario
         imageViewRosa.setFitHeight(100);
@@ -58,9 +56,10 @@ public class VinosControl {
         botonImagenTinto.setGraphic(imageViewTinto);
         botonImagenBlanco.setGraphic(imageViewBlanco);
 
-        textoPrecioRosado.setText(String.valueOf(bebida.getPrecios("Vino rosado")));
-        textoPrecioTinto.setText(String.valueOf(bebida.getPrecios("Vino tinto")));
-        textoPrecioBlanco.setText(String.valueOf(bebida.getPrecios("Vino blanco")));
+        // Cargar precios desde el servicio de Platos
+        textoPrecioRosado.setText(vinosService.obtenerPrecioPlato("Vino rosado") + " COP");
+        textoPrecioTinto.setText(vinosService.obtenerPrecioPlato("Vino tinto") + " COP");
+        textoPrecioBlanco.setText(vinosService.obtenerPrecioPlato("Vino blanco") + " COP");
     }
 
     public void irAPantallaBebidas(ActionEvent event) {
@@ -74,6 +73,4 @@ public class VinosControl {
     public void irAPantallaHome(ActionEvent event) {
         Ira.IrHome(botonHome);
     }
-
 }
-

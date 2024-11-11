@@ -10,7 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
-import services.AgregarPizzaService;
+import services.PlatosServices;
 
 import java.util.Objects;
 
@@ -51,12 +51,12 @@ public class Postrecontrol {
     @FXML
     public Label preciocannolini;
 
-    private AgregarPizzaService postre =new AgregarPizzaService();
-    private RedireccionGeneral Ira=new RedireccionGeneral();
+    private PlatosServices postreService = new PlatosServices();
+    private RedireccionGeneral Ira = new RedireccionGeneral();
 
     @FXML
     public void initialize() {
-        // Cargar la imagen al inicializar la vista
+        // Cargar las imágenes al inicializar la vista
         Image img1 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/Imagenes/postres/AFFOGATO_IMAGE.png")));
         Image img2 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/Imagenes/postres/CANNOLINI_IMAGE.png")));
         Image img3 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/Imagenes/postres/GELATO_IMAGE.png")));
@@ -65,7 +65,7 @@ public class Postrecontrol {
         Image img6 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/Imagenes/postres/INSTA_IMAGE.png")));
         Image img7 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/Imagenes/postres/POSTRESLETRA_IMAGE.png")));
 
-        affogatoimage.setImage(img1); // Establecer la imagen en el ImageView
+        affogatoimage.setImage(img1);
         cannoliimage.setImage(img2);
         gelatoimage.setImage(img3);
         pannacotaimage.setImage(img4);
@@ -73,57 +73,42 @@ public class Postrecontrol {
         instaimage.setImage(img6);
         imagenletrapostres.setImage(img7);
 
-        precioaffogato.setText(String.valueOf(postre.getPrecios("Affogato"))+" COP");
-        preciotiramisu.setText(String.valueOf(postre.getPrecios("Tiramisu"))+" COP");
-        preciopannacota.setText(String.valueOf(postre.getPrecios("Panna Cotta"))+" COP");
-        preciocannolini.setText(String.valueOf(postre.getPrecios("Cannoli"))+" COP");
+        // Cargar precios usando PlatosServices
+        precioaffogato.setText(postreService.obtenerPrecioPlato("Affogato") + " COP");
+        preciotiramisu.setText(postreService.obtenerPrecioPlato("Tiramisu") + " COP");
+        preciopannacota.setText(postreService.obtenerPrecioPlato("Panna Cotta") + " COP");
+        preciocannolini.setText(postreService.obtenerPrecioPlato("Cannoli") + " COP");
     }
-
-    @FXML
-    public void onHelloButtonClick() {
-        try {
-            // Carga la nueva ventana
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/.fxml"));
-            Parent root = loader.load();
-
-            // Crea una nueva escena
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Postremenu"); // Título de la nueva ventana
-            stage.show();
-
-            //Opcionalmente, cierra la ventana actual
-            ((Stage) volverMenu.getScene().getWindow()).close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
 
     @FXML
     public void clickPOSTRE(ActionEvent actionEvent) {
         try {
-            // Carga la nueva ventana
+            // Cargar la nueva ventana
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Heladomenu.fxml"));
             Parent root = loader.load();
 
             // Crea una nueva escena
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
-            stage.setTitle("Heladomenu"); // Título de la nueva ventana
+            stage.setTitle("Heladomenu");
             stage.show();
 
-            // Opcionalmente, cierra la ventana actual
+            // Cierra la ventana actual
             ((Stage) agregaraorden.getScene().getWindow()).close();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-    public void IrHome(ActionEvent actionEvent) { Ira.IrHome(botonHome);
+
+    public void IrHome(ActionEvent actionEvent) {
+        Ira.IrHome(botonHome);
     }
 
-    public void IrMenu(ActionEvent actionEvent) { Ira.IrMenu(botonMenu);
+    public void IrMenu(ActionEvent actionEvent) {
+        Ira.IrMenu(botonMenu);
     }
-    public void IrReserva(ActionEvent actionEvent) {Ira.IrReserva(botonReservar);
+
+    public void IrReserva(ActionEvent actionEvent) {
+        Ira.IrReserva(botonReservar);
     }
 }

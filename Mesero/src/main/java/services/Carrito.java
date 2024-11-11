@@ -6,10 +6,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Carrito {
+    private static Carrito instance;
     private List<PlatoCarrito> platosEnCarrito;
 
-    public Carrito() {
+    private Carrito() {
         this.platosEnCarrito = new ArrayList<>();
+    }
+
+    public static Carrito getInstance() {
+        if (instance == null) {
+            instance = new Carrito();
+        }
+        return instance;
     }
 
     public List<PlatoCarrito> obtenerPlatosEnCarrito() {
@@ -17,14 +25,13 @@ public class Carrito {
     }
 
     public void agregarPlato(Plato plato) {
-        // Buscar si el plato ya está en el carrito
         for (PlatoCarrito platoCarrito : platosEnCarrito) {
             if (platoCarrito.getPlato().equals(plato)) {
-                platoCarrito.incrementarCantidad();
-                return; // Salir después de incrementar la cantidad
+                platoCarrito.incrementarCantidad();  // Incrementa la cantidad si el plato ya está en el carrito
+                return;
             }
         }
-        // Si no se encontró, agregar uno nuevo
+        // Si no se encuentra, agregar uno nuevo con cantidad inicial de 1
         platosEnCarrito.add(new PlatoCarrito(plato));
     }
 

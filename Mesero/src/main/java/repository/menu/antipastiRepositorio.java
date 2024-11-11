@@ -1,13 +1,10 @@
 package repository.menu;
 
 import repository.Credenciales;
-
 import java.sql.*;
 
 public class antipastiRepositorio {
-    //String url = "jdbc:mysql://localhost:3307/proyecto ingesoft";
-    private static final Credenciales c=new Credenciales();
-
+    private static final Credenciales c = new Credenciales();
     private static final String URL = c.getURL();
     private static final String USER = c.getUser();
     private static final String PASSWORD = c.getPassword();
@@ -24,12 +21,24 @@ public class antipastiRepositorio {
                 }
             }
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException("Error al obtener el precio del plato: " + e.getMessage(), e);
         }
         return -1;  // Valor por defecto si no se encuentra el precio
     }
-   /* public String getDispo(String nombre){
-        String query = "SELECT   p.NOMBRE AS Plato, CASE  WHEN MIN(ii.CANTIDAD_INV >= ip.Cantidad) THEN 'Disponible' ELSE 'NO disponible' END AS Dispo FROM  PLATO p JOIN INGREDIENTE_PLATO ip ON p.ID_PLATO = ip.ID_PLATO JOIN INGREDIENTE_INV ii ON ip.ID_INGREDIENTE = ii.ID_INGREDIENTE WHERE p.NOMBRE = ? GROUP BY p.NOMBRE;";
+
+    public String getDispo(String nombre) {
+        String query = """
+            SELECT p.NOMBRE AS Plato, 
+                   CASE 
+                       WHEN MIN(ii.CANTIDAD_INV) >= MAX(ip.Cantidad) THEN 'Disponible' 
+                       ELSE 'No disponible' 
+                   END AS Dispo 
+            FROM PLATO p 
+            JOIN INGREDIENTE_PLATO ip ON p.ID_PLATO = ip.ID_PLATO 
+            JOIN INGREDIENTE_INV ii ON ip.ID_INGREDIENTE = ii.ID_INGREDIENTE 
+            WHERE p.NOMBRE = ? 
+            GROUP BY p.NOMBRE;
+        """;
         try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
             try (PreparedStatement stmt = connection.prepareStatement(query)) {
                 stmt.setString(1, nombre);  // Asigna el parámetro
@@ -40,8 +49,8 @@ public class antipastiRepositorio {
                 }
             }
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException("Error al verificar la disponibilidad del plato: " + e.getMessage(), e);
         }
         return "No encontrado";
-    }*/
+    }
 }

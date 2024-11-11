@@ -1,5 +1,7 @@
 package controller;
 
+import java.util.Objects;
+
 public class Plato {
     private final int idPlato;
     private String nombre;
@@ -27,5 +29,19 @@ public class Plato {
 
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
+    }
+
+    // Implementar equals() y hashCode() para comparar platos por nombre
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Plato plato = (Plato) o;
+        return Objects.equals(nombre, plato.nombre);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nombre);
     }
 }

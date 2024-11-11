@@ -11,9 +11,11 @@ import java.util.List;
 
 public class ConsultarReservasRepository {
 
-    private static final String URL = "jdbc:mysql://localhost:3306/proyecto_ingesoft";
-    private static final String USER = "root";
-    private static final String PASSWORD = "cl";
+    private static final Credenciales c=new Credenciales();
+
+    private static final String URL = c.getURL();
+    private static final String USER = c.getUser();
+    private static final String PASSWORD = c.getPassword();
 
     // Método para establecer conexión con la base de datos
     private Connection getConnection() throws SQLException {

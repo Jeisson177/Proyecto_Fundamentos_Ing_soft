@@ -1,13 +1,13 @@
 package controller;
 
-import javafx.beans.property.SimpleDoubleProperty;
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
 import services.Carrito;
 import controller.PlatoCarrito;
+import javafx.beans.property.SimpleDoubleProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
 
 public class ControladorCarrito {
 
@@ -33,7 +33,12 @@ public class ControladorCarrito {
     private Carrito carrito;
 
     public ControladorCarrito() {
-        this.carrito = new Carrito();
+        this.carrito = Carrito.getInstance();  // Usar la instancia singleton del carrito
+    }
+
+    public void setCarrito(Carrito carrito) {
+        this.carrito = carrito;
+        cargarPlatosEnCarrito();  // Actualiza la vista con los platos actuales del carrito
     }
 
     @FXML
@@ -42,6 +47,7 @@ public class ControladorCarrito {
         colPrecioUnidad.setCellValueFactory(cellData -> new SimpleDoubleProperty(cellData.getValue().getPlato().getPrecio()).asObject());
         colCantidad.setCellValueFactory(cellData -> new SimpleIntegerProperty(cellData.getValue().getCantidad()).asObject());
         colPrecioTotal.setCellValueFactory(cellData -> new SimpleDoubleProperty(cellData.getValue().getCostoTotal()).asObject());
+
         cargarPlatosEnCarrito();
         btnEliminar.setOnAction(event -> eliminarPlatoDelCarrito());
         btnTotal.setOnAction(event -> calcularTotal());
