@@ -130,6 +130,6 @@ public class AgregarOeliminarInventario {
     }
 
     public void IrAnterior(ActionEvent actionEvent) {
-        Ira.IrAnterior(selecAnterior);
+        Ira.IrInventario(selecAnterior);
     }
 }
