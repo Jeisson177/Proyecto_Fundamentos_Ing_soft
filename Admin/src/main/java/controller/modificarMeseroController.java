@@ -10,6 +10,12 @@ import repository.modificarUsuarioRepository;
 public class modificarMeseroController {
 
     @FXML
+    public Button selecInicio;
+    @FXML
+    public Button selecHome;
+    @FXML
+    public Button selecMenu;
+    @FXML
     private TableView<modificarUsuarioRepository.Usuario> tablaMeseros;
     @FXML
     private TableColumn<modificarUsuarioRepository.Usuario, String> columnaNombre;
@@ -27,6 +33,8 @@ public class modificarMeseroController {
     @FXML
     private TextField contrasenaField;
 
+    private RedirijirAdmin Ira = new RedirijirAdmin();
+    
     private final modificarUsuarioRepository repository = new modificarUsuarioRepository();
 
     @FXML
@@ -93,11 +101,15 @@ public class modificarMeseroController {
     }
 
     public void IrHome(ActionEvent actionEvent) {
+        Ira.IrHome(selecHome);
     }
 
     public void IrMenu(ActionEvent actionEvent) {
+        Ira.IrMenu(selecMenu);
     }
 
     public void IrInicio(ActionEvent actionEvent) {
+        Ira.IrInicio(selecInicio);
     }
+
 }
