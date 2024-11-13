@@ -69,7 +69,7 @@ public class AppTest {
         int nuevoId = usuarioRepo.CrearUsuario(email, password, nombre, telefono);
 
         System.out.println("Prueba crearUsuario_SinExito - Esperado: < 0, Actual: " + nuevoId);
-        assertTrue(nuevoId < 0, "El ID del nuevo usuario debería ser menor a 0 si la creación fue no exitosa");
+        assertTrue(nuevoId==-1 , "El ID del nuevo usuario debería ser menor a 0 si la creación fue no exitosa");
     }
 
     @Test
