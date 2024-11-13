@@ -42,7 +42,7 @@ public class AgregarOeliminarInventario {
     @FXML
     private TextField nombreField;
     @FXML
-    private TextField cantidadField;
+    public TextField cantidadField;
     @FXML
     private DatePicker fechaField;
     @FXML
