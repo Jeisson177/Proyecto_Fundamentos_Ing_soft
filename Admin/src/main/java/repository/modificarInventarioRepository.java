@@ -33,6 +33,10 @@ public class modificarInventarioRepository {
             return cantidadInv;
         }
 
+        public void setCantidadInv(int cantidadInv) {
+            this.cantidadInv = cantidadInv;
+        }
+
         public Date getFechaVen() {
             return fechaVen;
         }

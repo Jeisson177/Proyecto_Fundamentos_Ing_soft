@@ -42,7 +42,7 @@ public class AgregarOeliminarInventario {
     @FXML
     private TextField nombreField;
     @FXML
-    private TextField cantidadField;
+    public TextField cantidadField;
     @FXML
     private DatePicker fechaField;
     @FXML
@@ -69,6 +69,15 @@ public class AgregarOeliminarInventario {
         instaImagen.setImage(ig);
 
         cargarDatosTabla();
+
+        // Listener para actualizar el campo de texto cuando se selecciona un ingrediente en la tabla
+        tablaInventario.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+            if (newSelection != null) {
+                nombreField.setText(newSelection.getNombre());
+            } else {
+                nombreField.clear();
+            }
+        });
     }
 
     private void cargarDatosTabla() {
@@ -112,10 +121,22 @@ public class AgregarOeliminarInventario {
     }
 
     private void eliminarIngrediente() {
-        String nombre = nombreField.getText();
-        repository.eliminarIngrediente(nombre);
-        cargarDatosTabla();
+        // Obtiene el ingrediente seleccionado en la tabla
+        modificarInventarioRepository.InventarioAlimento ingredienteSeleccionado = tablaInventario.getSelectionModel().getSelectedItem();
+
+        // Verifica si hay un ingrediente seleccionado
+        if (ingredienteSeleccionado != null) {
+            // Llama al método del repositorio para eliminar el ingrediente por su nombre
+            repository.eliminarIngrediente(ingredienteSeleccionado.getNombre());
+
+            // Actualiza la tabla para reflejar los cambios
+            cargarDatosTabla();
+        } else {
+            // Opcional: mostrar un mensaje si no se selecciona un ingrediente
+            System.out.println("Seleccione un ingrediente para eliminar.");
+        }
     }
+
 
     public void IrHome(ActionEvent actionEvent) {
         Ira.IrHome(selecHome);
