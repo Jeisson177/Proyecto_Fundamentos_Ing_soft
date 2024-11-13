@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fd8ff85-b94a-4b81-b0f1-01c765de323a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/java/controller/AgregarOeliminarInventario.java" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/java/controller/AgregarOeliminarInventario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/java/controller/modificarInventario.java" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/java/controller/modificarInventario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/src/main/java/repository/modificarInventarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/java/repository/modificarInventarioRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Admin/src/test/java/pkg/AppTestAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/test/java/pkg/AppTestAdmin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,6 +102,10 @@
     "JUnit.AppTestAdmin.testActualizarVistaAgregar.executor": "Run",
     "JUnit.AppTestAdmin.testAgregarIngrediente.executor": "Run",
     "JUnit.AppTestAdmin.testEliminarIngrediente.executor": "Run",
+    "JUnit.AppTestAdmin.testEliminarIngredienteConMultiplesRegistros.executor": "Run",
+    "JUnit.AppTestAdmin.testEliminarIngredienteNoExistente.executor": "Run",
+    "JUnit.AppTestAdmin.testInsertarIngredienteDatosNulos.executor": "Run",
+    "JUnit.AppTestAdmin.testValidarCantidadIngredientesDespuesAgregar.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
@@ -145,33 +146,7 @@
       <recent name="repository.menu" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AppTestAdmin.testActualizarVistaAgregar">
-    <configuration name="Mesero" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.Mesero.Mesero" />
-      <module name="Mesero" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.Mesero.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="admin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.admin.admin" />
-      <module name="Administrador" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.admin.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.AppTestAdmin.testEliminarIngredienteConMultiplesRegistros">
     <configuration name="AppTestAdmin.testActualizarVistaAgregar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Administrador" />
       <extension name="coverage">
@@ -188,7 +163,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppTestAdmin.testAgregarIngrediente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AppTestAdmin.testEliminarIngredienteConMultiplesRegistros" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Administrador" />
       <extension name="coverage">
         <pattern>
@@ -198,13 +173,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="pkg" />
       <option name="MAIN_CLASS_NAME" value="pkg.AppTestAdmin" />
-      <option name="METHOD_NAME" value="testAgregarIngrediente" />
+      <option name="METHOD_NAME" value="testEliminarIngredienteConMultiplesRegistros" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AppTestAdmin.testEliminarIngrediente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AppTestAdmin.testEliminarIngredienteNoExistente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Administrador" />
       <extension name="coverage">
         <pattern>
@@ -214,7 +189,39 @@
       </extension>
       <option name="PACKAGE_NAME" value="pkg" />
       <option name="MAIN_CLASS_NAME" value="pkg.AppTestAdmin" />
-      <option name="METHOD_NAME" value="testEliminarIngrediente" />
+      <option name="METHOD_NAME" value="testEliminarIngredienteNoExistente" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTestAdmin.testInsertarIngredienteDatosNulos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Administrador" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pkg.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pkg" />
+      <option name="MAIN_CLASS_NAME" value="pkg.AppTestAdmin" />
+      <option name="METHOD_NAME" value="testInsertarIngredienteDatosNulos" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTestAdmin.testValidarCantidadIngredientesDespuesAgregar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Administrador" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pkg.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pkg" />
+      <option name="MAIN_CLASS_NAME" value="pkg.AppTestAdmin" />
+      <option name="METHOD_NAME" value="testValidarCantidadIngredientesDespuesAgregar" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -222,11 +229,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AppTestAdmin.testEliminarIngredienteConMultiplesRegistros" />
+        <item itemvalue="JUnit.AppTestAdmin.testInsertarIngredienteDatosNulos" />
+        <item itemvalue="JUnit.AppTestAdmin.testValidarCantidadIngredientesDespuesAgregar" />
+        <item itemvalue="JUnit.AppTestAdmin.testEliminarIngredienteNoExistente" />
         <item itemvalue="JUnit.AppTestAdmin.testActualizarVistaAgregar" />
-        <item itemvalue="JUnit.AppTestAdmin.testEliminarIngrediente" />
-        <item itemvalue="JUnit.AppTestAdmin.testAgregarIngrediente" />
-        <item itemvalue="Application.admin" />
-        <item itemvalue="Application.Mesero" />
       </list>
     </recent_temporary>
   </component>

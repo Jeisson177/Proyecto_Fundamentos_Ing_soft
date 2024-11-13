@@ -1,6 +1,6 @@
 package pkg;
 
-import controller.AgregarOeliminarInventario;
+
 import controller.modificarInventario;
 import javafx.collections.ObservableList;
 import org.junit.jupiter.api.BeforeEach;
@@ -12,7 +12,9 @@ import repository.modifificarRepository;
 
 import javafx.geometry.Point2D;
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -90,30 +92,32 @@ public class AppTestAdmin {
     }
 
     @Test
-    void testActualizarVistaAgregar() {
-        // Crear instancia del controlador y llamar a setAgregarOeliminar con "Agregar"
-        AgregarOeliminarInventario agregarEliminarCtrl = new AgregarOeliminarInventario();
-        agregarEliminarCtrl.setAgregarOeliminar("Agregar");
-
-        // Verificar que el texto del botón cambió a "Agregar" y los campos están habilitados
-        assertEquals("Agregar", agregarEliminarCtrl.AgregarOeliminar.getText());
-        assertFalse(agregarEliminarCtrl.cantidadField.isDisable(), "El campo de cantidad debería estar habilitado.");
+    void testValidarCantidadIngredientesDespuesAgregar() {
+        String agregarI = "Avellana";
+        int cant = 100;
+        int cantidadAntes = modRepo.obtenerTodosLosInventarios().size();
+        modificarInventarioRepository.InventarioAlimento ingrediente =
+                new modificarInventarioRepository.InventarioAlimento(agregarI, cant, new Date(), "g");
+        modRepo.agregarIngrediente(ingrediente);
+        int cantidadDespues = modRepo.obtenerTodosLosInventarios().size();
+        assertEquals(cantidadAntes + 1, cantidadDespues, "La cantidad debe incrementarse en 1 tras agregar un ingrediente.");
     }
 
     @Test
-    void testActualizarVistaEliminar() {
-        // Crear instancia del controlador y llamar a setAgregarOeliminar con "Eliminar"
-        AgregarOeliminarInventario agregarEliminarCtrl = new AgregarOeliminarInventario();
-        agregarEliminarCtrl.setAgregarOeliminar("Eliminar");
-
-        // Verificar que el texto del botón cambió a "Eliminar" y los campos están deshabilitados
-        assertEquals("Eliminar", agregarEliminarCtrl.AgregarOeliminar.getText());
-        assertTrue(agregarEliminarCtrl.cantidadField.isDisable(), "El campo de cantidad debería estar deshabilitado.");
+    void testEliminarIngredienteConMultiplesRegistros() {
+        String agregar1 = "Avellana";
+        int cant = 10;
+        String agregar2 = "Avellana";
+        int cant2 = 5;
+        modificarInventarioRepository.InventarioAlimento ingrediente1 =
+                new modificarInventarioRepository.InventarioAlimento(agregar1, cant, new Date(), "g");
+        modificarInventarioRepository.InventarioAlimento ingrediente2 =
+                new modificarInventarioRepository.InventarioAlimento(agregar2, cant2, new Date(), "g");
+        modRepo.agregarIngrediente(ingrediente1);
+        modRepo.agregarIngrediente(ingrediente2);
+        modRepo.eliminarIngrediente("Avellana");
+        List<modificarInventarioRepository.InventarioAlimento> ingredientes = modRepo.obtenerTodosLosInventarios();
+        assertFalse(ingredientes.stream().anyMatch(i -> i.getNombre().equals("Avellana")),
+                "Todos los registros del ingrediente deben ser eliminados.");
     }
-
-
-
-
-
-
 }
