@@ -3,16 +3,29 @@ package services;
 import repository.menu.agregarPizzaRepositorio;
 
 public class AgregarPizzaService {
-
     private agregarPizzaRepositorio pizzas = new agregarPizzaRepositorio();
 
-    // Método para obtener el precio de la pizza según el nombre y el tamaño
-    public double getPrecioPizza(String nombre, String tamaño) {
-        return pizzas.getPrecioPizza(nombre, tamaño);
+    public int getPrecios(String bebida) {
+        return pizzas.getPrecios(bebida);
     }
 
-    // Método para verificar la disponibilidad de la pizza según el nombre y el tamaño
-    public boolean estaDisponible(String nombre, String tamaño) {
-        return pizzas.estaDisponible(nombre, tamaño);
+    public boolean estaDisponible(String bebida) {
+        return pizzas.getDisponibilidad(bebida);
     }
+
+    public int getPrecioPizza(String nombrePizza, String tamano) {
+        return pizzas.getPreciosPizza(nombrePizza, tamano);
+    }
+
+    public boolean estaDisponiblePizza(String nombrePizza, String tamano) {
+        return pizzas.getDisponibilidadPizza(nombrePizza, tamano);
+    }
+    public int getPrecioHelado(String nombreHelado) {
+        return pizzas.getPrecioHelado(nombreHelado);
+    }
+    public boolean estaDisponibleHelado(String nombreHelado) {
+        return pizzas.getDisponibilidadHelado(nombreHelado);
+    }
+    
 }
+

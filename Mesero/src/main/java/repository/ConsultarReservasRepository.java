@@ -8,6 +8,7 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class ConsultarReservasRepository {
 
@@ -70,7 +71,43 @@ public class ConsultarReservasRepository {
         }
         return reservas;
     }
+    // Agregar este método en la clase ReservaRepository
+    public Reserva obtenerReservaPorId(int idReserva) {
+        String query = "SELECT * FROM reserva WHERE ID_RESERVA = ?";
+        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+             PreparedStatement stmt = connection.prepareStatement(query)) {
+            stmt.setInt(1, idReserva);
+            try (ResultSet rs = stmt.executeQuery()) {
+                if (rs.next()) {
+                    int idCliente = rs.getInt("ID_CLIENTE");
+                    int idMesa = rs.getInt("ID_MESA");
+                    LocalDateTime fechaHora = rs.getTimestamp("FECHA_HORA").toLocalDateTime();
+                    return new Reserva(idReserva, idCliente, idMesa, fechaHora);
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    public Reserva obtenerUltimaReserva() {
+        String query = "SELECT * FROM reserva ORDER BY fecha_hora DESC LIMIT 1"; // Ajusta según tu base de datos
+        try (Connection connection = getConnection();
+             PreparedStatement statement = connection.prepareStatement(query)) {
 
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                int idReserva = resultSet.getInt("ID_RESERVA");
+                int idCliente = resultSet.getInt("ID_CLIENTE");
+                int idMesa = resultSet.getInt("ID_MESA");
+                LocalDateTime fechaHora = resultSet.getTimestamp("FECHA_HORA").toLocalDateTime();
+                return new Reserva(idReserva, idCliente, idMesa, fechaHora);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null; // Si no hay reservas
+    }
     // Método para guardar una nueva reserva
     public boolean guardarReserva(int idCliente, int idMesa, String fechaHora) {
         String query = "INSERT INTO RESERVA (ID_CLIENTE, ID_MESA, FECHA_HORA) VALUES (?, ?, ?)";

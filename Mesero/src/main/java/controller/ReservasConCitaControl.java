@@ -1,20 +1,18 @@
 package controller;
 
+import controller.menuMesero.MenuControl;
 import controller.menuMesero.MesaControl;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
+import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import services.GestionarReserva;
+import services.ReservaService; // Importa el servicio de reserva compartido
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -64,8 +62,9 @@ public class ReservasConCitaControl {
     @FXML
     private void Atender(ActionEvent actionEvent) {
         if (reservaSeleccionada != null) {
-            InicioControlMesero.setReservaAtendida(reservaSeleccionada);
-            cargarPantalla("/vista/menu/Menu.fxml");
+            // Guarda la reserva seleccionada en el servicio compartido
+            ReservaService.getInstance().setReservaSeleccionada(reservaSeleccionada);
+            cargarMenu(); // Cargar el menú sin pasar la reserva explícitamente
         } else {
             showAlert("Por favor, selecciona una reserva.");
         }
@@ -86,16 +85,25 @@ public class ReservasConCitaControl {
         alert.setContentText(mensaje);
         alert.showAndWait();
     }
-    private void cargarPantalla(String fxmlFile) {
+
+    private void cargarMenu() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/menu/Menu.fxml"));
             Parent root = loader.load();
-            Stage stage = (Stage) btnAtender.getScene().getWindow();
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
+
+            Stage stage = new Stage();
+            stage.setTitle("Menú");
+            stage.setScene(new Scene(root));
             stage.show();
+
+            // Cerrar la ventana actual de reservas
+            Stage currentStage = (Stage) btnAtender.getScene().getWindow();
+            currentStage.close();
         } catch (IOException e) {
             e.printStackTrace();
+            showAlert("Error al cargar el menú.");
         }
     }
+
+
 }

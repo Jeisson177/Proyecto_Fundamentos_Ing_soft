@@ -9,118 +9,123 @@
     <Pane prefHeight="48.0" prefWidth="723.0" style="-fx-background-color: black;">
         <children>
             <ImageView fx:id="instaimage" fitHeight="48.0" fitWidth="53.0" layoutX="669.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" />
-            <Text fill="WHITE" layoutX="14.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: dream avenue;" text="Bella Ventura">
+            <ImageView fx:id="heladosletra" fitHeight="48.0" fitWidth="53.0" layoutX="610.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" />
+            <Text fill="WHITE" layoutX="14.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Bella Ventura">
                 <font>
                     <Font size="24.0" />
                 </font>
             </Text>
-         <Button fx:id="botonMenu" layoutX="411.0" layoutY="12.0" mnemonicParsing="false" onAction="#IrMenu" style="-fx-background-color: bl;" text="Menu" textFill="WHITE" underline="true">
-            <font>
-               <Font size="15.0" />
-            </font>
-         </Button>
-        </children>
-    </Pane>
-    <Pane layoutX="-1.0" layoutY="48.0" prefHeight="351.0" prefWidth="277.0" style="-fx-background-color: WHITE;">
-        <children>
-            <ImageView fx:id="heladogrande" fitHeight="351.0" fitWidth="277.0" pickOnBounds="true" preserveRatio="false" />
-            <Button fx:id="volverPostres" layoutX="58.0" layoutY="286.0" mnemonicParsing="false" onAction="#clickHELADO" style="-fx-background-color: black;" text="Regresar a Postres" textFill="WHITE" underline="true">
+            <Button fx:id="botonMenu" layoutX="401.0" layoutY="8.0" mnemonicParsing="false" onAction="#IrMenu" style="-fx-background-color: transparent;" text="Menu" textFill="WHITE" underline="true">
                 <font>
-                    <Font size="17.0" />
+                    <Font size="15.0" />
+                </font>
+            </Button>
+            <Button fx:id="botonCarrito" layoutX="500.0" layoutY="8.0" mnemonicParsing="false" onAction="#revisarCarrito" style="-fx-background-color: transparent;" text="Ver Carrito" textFill="WHITE" underline="true">
+                <font>
+                    <Font size="15.0" />
                 </font>
             </Button>
         </children>
     </Pane>
-    <Pane layoutX="276.0" layoutY="48.0" prefHeight="40.0" prefWidth="445.0" style="-fx-background-color: WHITE; -fx-background-color: ;">
-        <children>
-            <ImageView fx:id="heladosletra" fitHeight="37.0" fitWidth="112.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" />
-            <Button fx:id="agregaraorden" layoutX="342.0" layoutY="13.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="22.0" prefWidth="89.0" style="-fx-background-color: black;" text="Agregar a Orden" textFill="WHITE" underline="true">
-                <font>
-                    <Font size="10.0" />
-                </font>
-            </Button>
-        </children>
-    </Pane>
+
+    <!-- Vista de los helados -->
+    <Pane layoutX="276.0" layoutY="48.0" prefHeight="351.0" prefWidth="277.0" style="-fx-background-color: WHITE;" />
+
+    <!-- Helado de Avellana -->
     <Pane layoutX="296.0" layoutY="90.0" prefHeight="130.0" prefWidth="112.0">
         <children>
-            <Button layoutX="8.0" layoutY="3.0" prefHeight="90.0" prefWidth="96.0">
+            <Button fx:id="botonHeladoAvellana" layoutX="8.0" layoutY="3.0" onAction="#agregarHelado" prefHeight="90.0" prefWidth="96.0" userData="Gelato Bacio (Avellana)">
                 <graphic>
                     <ImageView fx:id="heladoavellana" fitHeight="78.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true" />
                 </graphic>
             </Button>
             <Label layoutX="27.0" layoutY="93.0" text="AVELLANA" />
             <Label fx:id="precioavellana" layoutX="17.0" layoutY="108.0" prefHeight="17.0" prefWidth="77.0" textAlignment="CENTER" />
+            <Text fx:id="dispoAvellana" fill="RED" layoutX="17.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                <font>
+                    <Font name="System Bold" size="16.0" />
+                </font>
+            </Text>
         </children>
     </Pane>
+
+    <!-- Helado de Limón -->
     <Pane layoutX="440.0" layoutY="90.0" prefHeight="130.0" prefWidth="112.0">
         <children>
-            <Button layoutX="8.0" layoutY="3.0" prefHeight="90.0" prefWidth="96.0">
+            <Button fx:id="botonHeladoLimon" layoutX="8.0" layoutY="3.0" onAction="#agregarHelado" prefHeight="90.0" prefWidth="96.0" userData="Gelato Limone (Limon)">
                 <graphic>
                     <ImageView fx:id="heladolimon" fitHeight="78.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true" />
                 </graphic>
             </Button>
             <Label layoutX="37.0" layoutY="93.0" text="LIMÓN" />
             <Label fx:id="preciolimon" layoutX="18.0" layoutY="108.0" prefHeight="17.0" prefWidth="77.0" />
+            <Text fx:id="dispoLimon" fill="RED" layoutX="18.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                <font>
+                    <Font name="System Bold" size="16.0" />
+                </font>
+            </Text>
         </children>
     </Pane>
+
+    <!-- Helado de Frambuesa -->
     <Pane layoutX="579.0" layoutY="90.0" prefHeight="130.0" prefWidth="112.0">
         <children>
-            <Button layoutX="8.0" layoutY="3.0" prefHeight="90.0" prefWidth="96.0">
+            <Button fx:id="botonHeladoFrambuesa" layoutX="8.0" layoutY="3.0" onAction="#agregarHelado" prefHeight="90.0" prefWidth="96.0" userData="Gelato Lampone (Frambuesa)">
                 <graphic>
                     <ImageView fx:id="heladoframbuesa" fitHeight="78.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true" />
                 </graphic>
             </Button>
             <Label layoutX="23.0" layoutY="93.0" text="FRAMBUESA" />
             <Label fx:id="precioframbuesa" layoutX="18.0" layoutY="108.0" prefHeight="17.0" prefWidth="77.0" textAlignment="CENTER" />
+            <Text fx:id="dispoFrambuesa" fill="RED" layoutX="18.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                <font>
+                    <Font name="System Bold" size="16.0" />
+                </font>
+            </Text>
         </children>
     </Pane>
+
+    <!-- Helado de Fresa -->
     <Pane layoutX="361.0" layoutY="230.0" prefHeight="130.0" prefWidth="112.0">
         <children>
-            <Button layoutX="8.0" layoutY="3.0" prefHeight="90.0" prefWidth="96.0">
+            <Button fx:id="botonHeladoFresa" layoutX="8.0" layoutY="3.0" onAction="#agregarHelado" prefHeight="90.0" prefWidth="96.0" userData="Gelato Fragola (Fresa)">
                 <graphic>
                     <ImageView fx:id="heladofresa" fitHeight="78.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true" />
                 </graphic>
             </Button>
             <Label layoutX="39.0" layoutY="93.0" text="FRESA" />
             <Label fx:id="preciofresa" layoutX="17.0" layoutY="108.0" prefHeight="17.0" prefWidth="77.0" textAlignment="CENTER" />
+            <Text fx:id="dispoFresa" fill="RED" layoutX="17.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                <font>
+                    <Font name="System Bold" size="16.0" />
+                </font>
+            </Text>
         </children>
     </Pane>
+
+    <!-- Helado de Chocolate Picante -->
     <Pane layoutX="523.0" layoutY="230.0" prefHeight="151.0" prefWidth="112.0">
         <children>
-            <Button layoutX="8.0" layoutY="3.0" prefHeight="90.0" prefWidth="96.0">
+            <Button fx:id="botonHeladoChocolate" layoutX="8.0" layoutY="3.0" onAction="#agregarHelado" prefHeight="90.0" prefWidth="96.0" userData="Gelato Cioccolato con Peperoncino">
                 <graphic>
                     <ImageView fx:id="heladochocolatepicante" fitHeight="78.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true" />
                 </graphic>
             </Button>
-            <Label layoutX="25.0" layoutY="95.0" text="CHOCOLATE" />
-            <Label layoutX="36.0" layoutY="105.0" text="PICANTE" />
-            <Label layoutX="41.0" layoutY="114.0" text="DULCE" />
+            <Label layoutX="25.0" layoutY="95.0" text="CHOCOLATE PICANTE" />
             <Label fx:id="preciochocolate" layoutX="25.0" layoutY="129.0" prefHeight="17.0" prefWidth="67.0" textAlignment="CENTER" />
+            <Text fx:id="dispoChocPicante" fill="RED" layoutX="18.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                <font>
+                    <Font name="System Bold" size="16.0" />
+                </font>
+            </Text>
         </children>
     </Pane>
-   <Text fx:id="dispoAvellana" fill="RED" layoutX="304.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-      <font>
-         <Font name="System Bold" size="16.0" />
-      </font>
-   </Text>
-   <Text fx:id="dispoLimon" fill="RED" layoutX="443.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-      <font>
-         <Font name="System Bold" size="16.0" />
-      </font>
-   </Text>
-   <Text fx:id="dispoFrambuesa" fill="RED" layoutX="592.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-      <font>
-         <Font name="System Bold" size="16.0" />
-      </font>
-   </Text>
-   <Text fx:id="dispoFresa" fill="RED" layoutX="363.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-      <font>
-         <Font name="System Bold" size="16.0" />
-      </font>
-   </Text>
-   <Text fx:id="dispoChocPicante" fill="RED" layoutX="520.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-      <font>
-         <Font name="System Bold" size="16.0" />
-      </font>
-   </Text>
+      <ImageView fx:id="heladogrande" fitHeight="351.0" fitWidth="277.0" layoutY="55.0" pickOnBounds="true" preserveRatio="false" />
+
+    <!-- Botón para regresar al menú de postres -->
+    <Button fx:id="volverPostres" layoutX="43.0" layoutY="329.0" mnemonicParsing="false" onAction="#clickHELADO" style="-fx-background-color: black;" text="Regresar a Postres" textFill="WHITE" underline="true">
+        <font>
+            <Font size="17.0" />
+        </font>
+    </Button>
 </AnchorPane>

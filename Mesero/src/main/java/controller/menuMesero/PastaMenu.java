@@ -133,7 +133,7 @@ public class PastaMenu {
             boolean platoEncontrado = false;
             for (PlatoCarrito platoCarrito : carrito.obtenerPlatosEnCarrito()) {
                 if (platoCarrito.getPlato().equals(plato)) {
-                    platoCarrito.incrementarCantidad();
+                    platoCarrito.incrementarCantidad(-1);
                     platoEncontrado = true;
                     break;
                 }

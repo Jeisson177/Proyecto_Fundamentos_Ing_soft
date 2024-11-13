@@ -1,5 +1,6 @@
 package controller.menuMesero;
 
+import controller.ControladorCarrito;
 import controller.Plato;
 import controller.PlatoCarrito;
 import javafx.event.ActionEvent;
@@ -12,11 +13,10 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import services.AgregarPizzaService;
 import services.Carrito;
-import services.PlatosServices;
 
 import java.io.IOException;
 import java.util.Objects;
@@ -24,157 +24,118 @@ import java.util.Objects;
 public class BebidaControl {
 
     @FXML
-    private ImageView aguaImage;
+    public Button botonHome;
     @FXML
-    private ImageView aguaGasImage;
+    public Button botonReservar;
     @FXML
-    private ImageView champagneImage;
+    public Button botonMenu;
     @FXML
-    private ImageView gaseosaImage;
+    public Button botonImagenAgua;
     @FXML
-    private ImageView vinosImage;
+    public Button botonImagenAguaGas;
+    @FXML
+    public Button botonImagenVino;
+    @FXML
+    public Button botonImagenGaseosa;
+    @FXML
+    public Button botonImagenChampagne;
+    @FXML
+    public Button botonRevisarCarrito;
 
     @FXML
-    private Button botonHome;
+    public Text textoPrecioAguaGas;
     @FXML
-    private Button botonReservar;
+    public Text textoPrecioChampagne;
     @FXML
-    private Button botonMenu;
+    public Text textoPrecioAgua;
     @FXML
-    private Button botonImagenAgua;
+    public Text dispoAgua;
     @FXML
-    private Button botonImagenAguaGas;
+    public Text dispoAguaGas;
     @FXML
-    private Button botonImagenChampagne;
-    @FXML
-    private Button botonImagenVino;
-    @FXML
-    private Button botonImagenGaseosa;
-    @FXML
-    private Button botonRevisarCarrito;
-    @FXML
-    private Text textoPrecioAgua;
-    @FXML
-    private Text textoPrecioAguaGas;
-    @FXML
-    private Text textoPrecioChampagne;
-    @FXML
-    private Text dispoAgua;
-    @FXML
-    private Text dispoAguaGas;
-    @FXML
-    private Text dispoCham;
+    public Text dispoCham;
 
-    private final PlatosServices bebidaService = new PlatosServices();
+    private final AgregarPizzaService bebidaService = new AgregarPizzaService();
     private final Carrito carrito = Carrito.getInstance();
     private final RedireccionGeneral Ira = new RedireccionGeneral();
 
     @FXML
     public void initialize() {
-        try {
-            cargarImagenes();
-            cargarPrecios();
-            cargarDisponibilidad();
-        } catch (Exception e) {
-            e.printStackTrace();
-            mostrarAlerta("Error en la inicialización", "Ocurrió un problema al cargar los datos en la vista: " + e.getMessage());
-        }
+        // Configurar imágenes en los botones
+        setButtonImage(botonImagenAgua, "/Imagenes/Bebidas1/Agua.png");
+        setButtonImage(botonImagenAguaGas, "/Imagenes/Bebidas1/AguaConGas.png");
+        setButtonImage(botonImagenVino, "/Imagenes/Bebidas1/vinos.png");
+        setButtonImage(botonImagenChampagne, "/Imagenes/Bebidas1/Champagne.png");
+        setButtonImage(botonImagenGaseosa, "/Imagenes/Bebidas1/Gaseosas.png");
 
-        // Asignar userData para identificar los botones de bebidas
-        botonImagenAgua.setUserData("Agua");
-        botonImagenAguaGas.setUserData("Agua con gas");
-        botonImagenChampagne.setUserData("Champagne");
+        // Cargar precios
+        textoPrecioAgua.setText(bebidaService.getPrecios("Agua") + " COP");
+        textoPrecioAguaGas.setText(bebidaService.getPrecios("Agua con gas") + " COP");
+        textoPrecioChampagne.setText(bebidaService.getPrecios("Champagne") + " COP");
 
-        // Asignar eventos onAction a los botones de bebidas
-        botonImagenAgua.setOnAction(this::agregarPlato);
-        botonImagenAguaGas.setOnAction(this::agregarPlato);
-        botonImagenChampagne.setOnAction(this::agregarPlato);
+        // Actualizar disponibilidad
+        actualizarDisponibilidad();
     }
 
-    private void cargarImagenes() {
-        if (aguaImage != null) {
-            aguaImage.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/Bebidas1/Agua.png"))));
-        }
-        if (aguaGasImage != null) {
-            aguaGasImage.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/Bebidas1/AguaConGas.png"))));
-        }
-        if (champagneImage != null) {
-            champagneImage.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/Bebidas1/Champagne.png"))));
-        }
-        if (gaseosaImage != null) {
-            gaseosaImage.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/Bebidas1/Gaseosas.png"))));
-        }
-        if (vinosImage != null) {
-            vinosImage.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/Bebidas1/vinos.png"))));
-        }
+    private void setButtonImage(Button button, String imagePath) {
+        Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream(imagePath)));
+        ImageView imageView = new ImageView(image);
+        imageView.setFitHeight(100);
+        imageView.setFitWidth(100);
+        imageView.setPreserveRatio(true);
+        button.setGraphic(imageView);
     }
 
-    private void cargarPrecios() {
-        textoPrecioAgua.setText(bebidaService.obtenerPrecioPlato("Agua") + " COP");
-        textoPrecioAguaGas.setText(bebidaService.obtenerPrecioPlato("Agua con gas") + " COP");
-        textoPrecioChampagne.setText(bebidaService.obtenerPrecioPlato("Champagne") + " COP");
-    }
+    private void actualizarDisponibilidad() {
+        dispoAgua.setText(bebidaService.estaDisponible("Agua") ? "Disponible" : "No disponible");
+        dispoAguaGas.setText(bebidaService.estaDisponible("Agua con gas") ? "Disponible" : "No disponible");
+        dispoCham.setText(bebidaService.estaDisponible("Champagne") ? "Disponible" : "No disponible");
 
-    private void cargarDisponibilidad() {
-        actualizarTextoDisponibilidad(dispoAgua, "Agua");
-        actualizarTextoDisponibilidad(dispoAguaGas, "Agua con gas");
-        actualizarTextoDisponibilidad(dispoCham, "Champagne");
-    }
-
-    private void actualizarTextoDisponibilidad(Text textElement, String nombrePlato) {
-        if (bebidaService.estaDisponible(nombrePlato)) {
-            textElement.setText("Disponible");
-            textElement.setFill(Color.GREEN);
-        } else {
-            textElement.setText("No disponible");
-            textElement.setFill(Color.RED);
-        }
+        // Colorear el texto de disponibilidad
+        dispoAgua.setFill(bebidaService.estaDisponible("Agua") ? javafx.scene.paint.Color.GREEN : javafx.scene.paint.Color.RED);
+        dispoAguaGas.setFill(bebidaService.estaDisponible("Agua con gas") ? javafx.scene.paint.Color.GREEN : javafx.scene.paint.Color.RED);
+        dispoCham.setFill(bebidaService.estaDisponible("Champagne") ? javafx.scene.paint.Color.GREEN : javafx.scene.paint.Color.RED);
     }
 
     @FXML
-    public void agregarPlato(ActionEvent event) {
+    public void agregarBebida(ActionEvent event) {
         Button clickedButton = (Button) event.getSource();
-        String nombrePlato = (String) clickedButton.getUserData();
+        String nombreBebida = null;
 
-        if (!bebidaService.estaDisponible(nombrePlato)) {
-            mostrarAlerta("No disponible", "La bebida \"" + nombrePlato + "\" no está disponible para servir.");
+        if (clickedButton == botonImagenAgua) {
+            nombreBebida = "Agua";
+        } else if (clickedButton == botonImagenAguaGas) {
+            nombreBebida = "Agua con gas";
+        } else if (clickedButton == botonImagenChampagne) {
+            nombreBebida = "Champagne";
+        }
+
+        if (nombreBebida == null || !bebidaService.estaDisponible(nombreBebida)) {
+            mostrarAlerta("No disponible", "La bebida \"" + nombreBebida + "\" no está disponible.");
             return;
         }
 
-        Plato plato = bebidaService.obtenerPlatoPorNombre(nombrePlato);
-        if (plato != null) {
-            boolean platoEncontrado = false;
-            for (PlatoCarrito platoCarrito : carrito.obtenerPlatosEnCarrito()) {
-                if (platoCarrito.getPlato().equals(plato)) {
-                    platoCarrito.incrementarCantidad();
-                    platoEncontrado = true;
-                    break;
-                }
-            }
-
-            if (!platoEncontrado) {
-                carrito.agregarPlato(plato);
-            }
-
-            mostrarAlerta("Bebida agregada", "La bebida \"" + nombrePlato + "\" ha sido agregada al carrito.");
-        } else {
-            mostrarAlerta("Error", "No se pudo agregar la bebida al carrito.");
+        int precio = bebidaService.getPrecios(nombreBebida);
+        if (precio <= 0) {
+            mostrarAlerta("Error", "No se pudo obtener el precio de la bebida.");
+            return;
         }
-    }
 
-    @FXML
-    public void revisarCarrito(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/CarritoCompras.fxml"));
-            Parent root = loader.load();
-            Stage stage = new Stage();
-            stage.setTitle("Carrito");
-            stage.setScene(new Scene(root));
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-            mostrarAlerta("Error", "No se pudo cargar la vista del carrito.");
+        Plato platoBebida = new Plato(0, nombreBebida, precio);
+        boolean bebidaEncontrada = false;
+        for (PlatoCarrito platoCarrito : carrito.obtenerPlatosEnCarrito()) {
+            if (platoCarrito.getPlato().equals(platoBebida)) {
+                platoCarrito.incrementarCantidad(1);
+                bebidaEncontrada = true;
+                break;
+            }
         }
+
+        if (!bebidaEncontrada) {
+            carrito.agregarPlato(platoBebida);
+        }
+
+        mostrarAlerta("Bebida agregada", "La bebida \"" + nombreBebida + "\" ha sido agregada al carrito.");
     }
 
     private void mostrarAlerta(String titulo, String mensaje) {
@@ -185,36 +146,58 @@ public class BebidaControl {
         alert.showAndWait();
     }
 
-    public void irAPantallaVinos(ActionEvent event) {
-        cargarPantalla("/vista/vinos.fxml", event);
-    }
-
-    public void irAPantallaGaseosas(ActionEvent event) {
-        cargarPantalla("/vista/gaseosas.fxml", event);
-    }
-
-    private void cargarPantalla(String rutaFXML, ActionEvent event) {
+    @FXML
+    public void revisarCarrito(ActionEvent event) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource(rutaFXML));
-            Scene scene = new Scene(root);
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(scene);
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/CarritoCompras.fxml"));
+            Parent root = loader.load();
+
+            ControladorCarrito controlador = loader.getController();
+            controlador.setCarrito(Carrito.getInstance());
+
+            Stage stage = new Stage();
+            stage.setTitle("Carrito");
+            stage.setScene(new Scene(root));
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
-            mostrarAlerta("Error", "No se pudo cargar la vista.");
+            mostrarAlerta("Error", "No se pudo cargar la vista del carrito.");
         }
     }
 
+    @FXML
+    public void irAPantallaVinos(ActionEvent event) {
+        try {
+            Parent vinosRoot = FXMLLoader.load(getClass().getResource("/vista/menu/Vinos.fxml"));
+            Scene vinosScene = new Scene(vinosRoot);
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(vinosScene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void irAPantallaGaseosas(ActionEvent event) {
+        try {
+            Parent gaseosaRoot = FXMLLoader.load(getClass().getResource("/vista/menu/gaseosas.fxml"));
+            Scene gaseosaScene = new Scene(gaseosaRoot);
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(gaseosaScene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
     public void IrHome(ActionEvent actionEvent) {
         Ira.IrHome(botonHome);
     }
 
+    @FXML
     public void IrMenu(ActionEvent actionEvent) {
         Ira.IrMenu(botonMenu);
-    }
-
-    public void IrReserva(ActionEvent actionEvent) {
-        Ira.IrReserva(botonReservar);
     }
 }

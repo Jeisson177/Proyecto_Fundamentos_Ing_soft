@@ -25,6 +25,7 @@
         <!-- Primer panel con imagen y botón -->
         <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;">
             <VBox alignment="CENTER" spacing="5">
+               <Button fx:id="botonRevisarCarrito" onAction="#revisarCarrito" text="Revisar Carrito" />
                 <ImageView fx:id="antipastiImage" fitHeight="340.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="false" />
             </VBox>
             <Button fx:id="antipastiMenu" layoutX="32.0" layoutY="178.0" onAction="#abrirAntipasti" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color:transparent; -fx-text-fill: white; -fx-font-size: 17px;" text="ANTIPASTI" />

@@ -10,15 +10,33 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class GestionarReserva {
 
     private final MesaControl mesa;
     private final ConsultarReservasRepository reservaRepo;
 
+    // Constructor que acepta MesaControl
     public GestionarReserva(MesaControl mesa) {
         this.mesa = mesa;
         this.reservaRepo = new ConsultarReservasRepository();
+    }
+
+    public GestionarReserva() {
+        this.mesa = new MesaControl();  // Inicialización por defecto si aplica
+        this.reservaRepo = new ConsultarReservasRepository();
+    }
+
+    public Optional<Reserva> obtenerReservaPorId(int idReserva) {
+        Reserva reserva = reservaRepo.obtenerReservaPorId(idReserva);
+        return Optional.ofNullable(reserva); // Envuelve la reserva en un Optional
+    }
+
+    // Método para obtener la reserva activa (por ejemplo, la última reserva hecha por el usuario actual)
+    public Optional<Reserva> obtenerReservaActual() {
+        Reserva reservaActual = reservaRepo.obtenerUltimaReserva(); // Ajustado sin try-catch
+        return Optional.ofNullable(reservaActual);
     }
 
     public List<String> obtenerHorariosDisponibles(LocalDate fechaSeleccionada, int mesaId) throws SQLException {
@@ -38,7 +56,6 @@ public class GestionarReserva {
         return horariosDisponibles;
     }
 
-    
     private String obtenerNombreDia(LocalDate fecha) {
         switch (fecha.getDayOfWeek()) {
             case MONDAY: return "Lunes";
@@ -52,14 +69,11 @@ public class GestionarReserva {
         }
     }
 
-
     public boolean crearReserva(LocalDate fecha, String hora, int idUsuario) {
         int idMesa = mesa.getMesa();
         String fechaHora = fecha + " " + hora;
         return reservaRepo.guardarReserva(idUsuario, idMesa, fechaHora);
     }
-
-
 
     public List<Reserva> obtenerReservasPorFecha(LocalDate fecha) {
         return reservaRepo.obtenerReservasPorFecha(fecha);

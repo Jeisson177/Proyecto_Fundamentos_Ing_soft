@@ -1,12 +1,16 @@
 package controller.menuMesero;
 
+import controller.Plato;
+import controller.PlatoCarrito;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import services.PlatosServices;
+import services.Carrito;
 
 import java.util.Objects;
 
@@ -24,12 +28,18 @@ public class VinosControl {
     public Button botonImagenRosado;
     public Button botonImagenTinto;
     public Button botonImagenBlanco;
+
     public Text textoPrecioBlanco;
     public Text textoPrecioTinto;
     public Text textoPrecioRosado;
 
-    private PlatosServices vinosService = new PlatosServices();
-    private RedireccionGeneral Ira = new RedireccionGeneral();
+    public Text dispoRosa;
+    public Text dispoTinto;
+    public Text dispoBlanco;
+
+    private final PlatosServices vinosService = new PlatosServices();
+    private final Carrito carrito = Carrito.getInstance();
+    private final RedireccionGeneral Ira = new RedireccionGeneral();
 
     @FXML
     public void initialize() {
@@ -60,6 +70,68 @@ public class VinosControl {
         textoPrecioRosado.setText(vinosService.obtenerPrecioPlato("Vino rosado") + " COP");
         textoPrecioTinto.setText(vinosService.obtenerPrecioPlato("Vino tinto") + " COP");
         textoPrecioBlanco.setText(vinosService.obtenerPrecioPlato("Vino blanco") + " COP");
+
+        // Actualizar disponibilidad
+        actualizarDisponibilidad();
+    }
+
+    private void actualizarDisponibilidad() {
+        dispoRosa.setText(vinosService.estaDisponible("Vino rosado") ? "Disponible" : "No disponible");
+        dispoTinto.setText(vinosService.estaDisponible("Vino tinto") ? "Disponible" : "No disponible");
+        dispoBlanco.setText(vinosService.estaDisponible("Vino blanco") ? "Disponible" : "No disponible");
+
+        dispoRosa.setFill(vinosService.estaDisponible("Vino rosado") ? javafx.scene.paint.Color.GREEN : javafx.scene.paint.Color.RED);
+        dispoTinto.setFill(vinosService.estaDisponible("Vino tinto") ? javafx.scene.paint.Color.GREEN : javafx.scene.paint.Color.RED);
+        dispoBlanco.setFill(vinosService.estaDisponible("Vino blanco") ? javafx.scene.paint.Color.GREEN : javafx.scene.paint.Color.RED);
+    }
+
+    @FXML
+    public void agregarVino(ActionEvent event) {
+        Button clickedButton = (Button) event.getSource();
+        String nombreVino = null;
+
+        if (clickedButton == botonImagenRosado) {
+            nombreVino = "Vino rosado";
+        } else if (clickedButton == botonImagenTinto) {
+            nombreVino = "Vino tinto";
+        } else if (clickedButton == botonImagenBlanco) {
+            nombreVino = "Vino blanco";
+        }
+
+        if (!vinosService.estaDisponible(nombreVino)) {
+            mostrarAlerta("No disponible", "El vino \"" + nombreVino + "\" no está disponible.");
+            return;
+        }
+
+        double precio = vinosService.obtenerPrecioPlato(nombreVino);
+        if (precio <= 0) {
+            mostrarAlerta("Error", "No se pudo obtener el precio del vino.");
+            return;
+        }
+
+        Plato platoVino = new Plato(0, nombreVino, precio);
+        boolean vinoEncontrado = false;
+        for (PlatoCarrito platoCarrito : carrito.obtenerPlatosEnCarrito()) {
+            if (platoCarrito.getPlato().equals(platoVino)) {
+                platoCarrito.incrementarCantidad(1);
+                vinoEncontrado = true;
+                break;
+            }
+        }
+
+        if (!vinoEncontrado) {
+            carrito.agregarPlato(platoVino);
+        }
+
+        mostrarAlerta("Vino agregado", "El vino \"" + nombreVino + "\" ha sido agregado al carrito.");
+    }
+
+    private void mostrarAlerta(String titulo, String mensaje) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(titulo);
+        alert.setHeaderText(null);
+        alert.setContentText(mensaje);
+        alert.showAndWait();
     }
 
     public void irAPantallaBebidas(ActionEvent event) {

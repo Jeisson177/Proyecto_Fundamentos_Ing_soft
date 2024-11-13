@@ -2,15 +2,15 @@ package services;
 
 import controller.Plato;
 import controller.PlatoCarrito;
-import java.util.ArrayList;
-import java.util.List;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 public class Carrito {
     private static Carrito instance;
-    private List<PlatoCarrito> platosEnCarrito;
+    private ObservableList<PlatoCarrito> platosEnCarrito;
 
     private Carrito() {
-        this.platosEnCarrito = new ArrayList<>();
+        this.platosEnCarrito = FXCollections.observableArrayList();
     }
 
     public static Carrito getInstance() {
@@ -20,19 +20,24 @@ public class Carrito {
         return instance;
     }
 
-    public List<PlatoCarrito> obtenerPlatosEnCarrito() {
+    public ObservableList<PlatoCarrito> obtenerPlatosEnCarrito() {
         return platosEnCarrito;
     }
 
     public void agregarPlato(Plato plato) {
         for (PlatoCarrito platoCarrito : platosEnCarrito) {
             if (platoCarrito.getPlato().equals(plato)) {
-                platoCarrito.incrementarCantidad();  // Incrementa la cantidad si el plato ya está en el carrito
+                platoCarrito.incrementarCantidad(1);  // Incrementa la cantidad si el plato ya está en el carrito
+                platosEnCarrito.set(platosEnCarrito.indexOf(platoCarrito), platoCarrito); // Notifica el cambio
                 return;
             }
         }
         // Si no se encuentra, agregar uno nuevo con cantidad inicial de 1
         platosEnCarrito.add(new PlatoCarrito(plato));
+    }
+
+    public void eliminarPlato(Plato plato) {
+        platosEnCarrito.removeIf(platoCarrito -> platoCarrito.getPlato().equals(plato));
     }
 
     public double calcularTotalCarrito() {
@@ -44,4 +49,5 @@ public class Carrito {
     public void vaciarCarrito() {
         platosEnCarrito.clear();
     }
+
 }

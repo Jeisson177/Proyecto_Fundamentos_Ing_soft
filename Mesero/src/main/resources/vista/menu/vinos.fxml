@@ -43,7 +43,7 @@
                   <Font name="System Bold" size="17.0" />
                </font>
             </Text>
-            <Text fill="#004aad" layoutX="374.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VinoTinto">
+            <Text fill="#004aad" layoutX="374.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vino Tinto">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>
@@ -53,9 +53,13 @@
                   <Font name="System Bold" size="17.0" />
                </font>
             </Text>
-            <Button fx:id="botonImagenRosado" layoutX="242.0" layoutY="100.0" mnemonicParsing="false" prefHeight="96.0" prefWidth="88.0" style="-fx-background-color: white;" />
-            <Button fx:id="botonImagenTinto" layoutX="354.0" layoutY="100.0" mnemonicParsing="false" prefHeight="96.0" prefWidth="88.0" style="-fx-background-color: white;" />
-            <Button fx:id="botonImagenBlanco" layoutX="480.0" layoutY="100.0" mnemonicParsing="false" prefHeight="96.0" prefWidth="88.0" style="-fx-background-color: white;" />
+
+            <!-- Botones con imágenes y acción para agregar vinos al carrito -->
+            <Button fx:id="botonImagenRosado" layoutX="242.0" layoutY="100.0" mnemonicParsing="false" prefHeight="96.0" prefWidth="88.0" style="-fx-background-color: white;" onAction="#agregarVino"/>
+            <Button fx:id="botonImagenTinto" layoutX="354.0" layoutY="100.0" mnemonicParsing="false" prefHeight="96.0" prefWidth="88.0" style="-fx-background-color: white;" onAction="#agregarVino"/>
+            <Button fx:id="botonImagenBlanco" layoutX="480.0" layoutY="100.0" mnemonicParsing="false" prefHeight="96.0" prefWidth="88.0" style="-fx-background-color: white;" onAction="#agregarVino"/>
+
+            <!-- Panes para mostrar precios de cada vino -->
             <Pane layoutX="259.0" layoutY="241.0" prefHeight="38.0" prefWidth="86.0" style="-fx-background-color: blue;">
                <children>
                   <Text fx:id="textoPrecioRosado" fill="WHITE" layoutX="27.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
@@ -83,6 +87,8 @@
                   </Text>
                </children>
             </Pane>
+
+            <!-- Textos para mostrar disponibilidad -->
             <Text fx:id="dispoRosa" fill="RED" layoutX="259.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
                <font>
                   <Font name="System Bold" size="16.0" />

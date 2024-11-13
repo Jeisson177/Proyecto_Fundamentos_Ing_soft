@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
@@ -61,16 +61,16 @@
                   </Text>
                </children>
             </Pane>
-            <Button fx:id="botonImagenAgua" layoutX="22.0" layoutY="98.0" mnemonicParsing="false" prefHeight="107.0" prefWidth="105.0" style="-fx-background-color: white;" />
-            <Button fx:id="botonImagenAguaGas" layoutX="134.0" layoutY="98.0" mnemonicParsing="false" prefHeight="107.0" prefWidth="105.0" style="-fx-background-color: white;" />
+            <ImageView fx:id="aguaImage" fitHeight="107.0" fitWidth="105.0" layoutX="22.0" layoutY="98.0" />
+            <ImageView fx:id="aguaGasImage" fitHeight="107.0" fitWidth="105.0" layoutX="134.0" layoutY="98.0" />
+            <ImageView fx:id="champagneImage" fitHeight="107.0" fitWidth="105.0" layoutX="360.0" layoutY="98.0" />
+            <ImageView fx:id="gaseosaImage" fitHeight="107.0" fitWidth="105.0" layoutX="474.0" layoutY="98.0" />
+            <ImageView fx:id="vinosImage" fitHeight="107.0" fitWidth="105.0" layoutX="247.0" layoutY="98.0" />
+            <Button fx:id="botonImagenAgua" layoutX="22.0" layoutY="98.0" mnemonicParsing="false" onAction="#agregarBebida" prefHeight="107.0" prefWidth="105.0" style="-fx-background-color: white;" />
+            <Button fx:id="botonImagenAguaGas" layoutX="134.0" layoutY="98.0" mnemonicParsing="false" onAction="#agregarBebida" prefHeight="107.0" prefWidth="105.0" style="-fx-background-color: white;" />
             <Button fx:id="botonImagenVino" layoutX="247.0" layoutY="98.0" mnemonicParsing="false" onAction="#irAPantallaVinos" prefHeight="107.0" prefWidth="105.0" style="-fx-background-color: white;" />
-            <Button fx:id="botonImagenChampagne" layoutX="360.0" layoutY="98.0" mnemonicParsing="false" prefHeight="107.0" prefWidth="105.0" style="-fx-background-color: white;" />
+            <Button fx:id="botonImagenChampagne" layoutX="360.0" layoutY="98.0" mnemonicParsing="false" onAction="#agregarBebida" prefHeight="107.0" prefWidth="105.0" style="-fx-background-color: white;" />
             <Button fx:id="botonImagenGaseosa" layoutX="474.0" layoutY="98.0" mnemonicParsing="false" onAction="#irAPantallaGaseosas" prefHeight="107.0" prefWidth="105.0" style="-fx-background-color: white;" />
-            <ImageView fx:id="aguaImage" layoutX="22.0" layoutY="98.0" fitHeight="107.0" fitWidth="105.0" />
-            <ImageView fx:id="aguaGasImage" layoutX="134.0" layoutY="98.0" fitHeight="107.0" fitWidth="105.0" />
-            <ImageView fx:id="champagneImage" layoutX="360.0" layoutY="98.0" fitHeight="107.0" fitWidth="105.0" />
-            <ImageView fx:id="gaseosaImage" layoutX="474.0" layoutY="98.0" fitHeight="107.0" fitWidth="105.0" />
-            <ImageView fx:id="vinosImage" layoutX="247.0" layoutY="98.0" fitHeight="107.0" fitWidth="105.0" />
             <Text fill="#004aad" layoutX="54.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agua">
                <font>
                   <Font name="System Bold" size="17.0" />
@@ -96,6 +96,7 @@
                   <Font name="System Bold" size="17.0" />
                </font>
             </Text>
+            <!-- Textos para mostrar disponibilidad -->
             <Text fx:id="dispoAgua" fill="RED" layoutX="25.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No disponible">
                <font>
                   <Font name="System Bold" size="15.0" />

@@ -4,15 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fd8ff85-b94a-4b81-b0f1-01c765de323a" name="Changes" comment="cositas equis para ver pq que putas">
-      <change afterPath="$PROJECT_DIR$/Mesero/src/main/java/services/PlatosServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="1fd8ff85-b94a-4b81-b0f1-01c765de323a" name="Changes" comment="Ya se pueden agregar varios platos al carrito. PROBLEMAS: Pizzas tiran un error que no sé qué hacer al tratar de agregar una pizza al carrito, Botones en Bebidas NO funcionan, y me falta programar los postres y listo">
+      <change afterPath="$PROJECT_DIR$/Facturas/Factura.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/FacturaControlador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/ItemFactura.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mesero/src/main/java/services/ReservaService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Admin/src/main/java/com/example/admin/admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/java/com/example/admin/admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/com/example/Mesero/Mesero.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/com/example/Mesero/Mesero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/src/main/java/controller/menu/BebidaControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/java/controller/menu/BebidaControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/ControladorCarrito.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/ControladorCarrito.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/Plato.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/Plato.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/MenuMeseroControl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/PlatoCarrito.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/PlatoCarrito.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/ReservasConCitaControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/ReservasConCitaControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/ReservasControl.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/AntipastiControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/AntipastiControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/BebidaControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/BebidaControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/GaseosasControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/GaseosasControl.java" afterDir="false" />
@@ -20,30 +24,22 @@
       <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/LasanaMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/LasanaMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/MenuControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/MenuControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/PastaMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/PastaMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/PizzaMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/PizzaMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/Postrecontrol.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/Postrecontrol.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/RisotoMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/RisotoMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/VinosControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/VinosControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/agregarPizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/agregarPizza.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/repository/CarritoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/repository/CarritoRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/repository/ConsultarReservasRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/repository/ConsultarReservasRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/repository/consultarPlatosRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/repository/consultarPlatosRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/repository/menu/PostreRepositorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/repository/menu/PostreRepositorio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/repository/menu/agregarPizzaRepositorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/repository/menu/agregarPizzaRepositorio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/repository/menu/antipastiRepositorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/repository/menu/antipastiRepositorio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/services/AgregarPizzaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/services/AgregarPizzaService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/services/Carrito.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/services/Carrito.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/vista/MenuMesero.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/Antipasti.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/Antipasti.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/services/GestionarReserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/services/GestionarReserva.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/services/PlatosServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/services/PlatosServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/vista/Factura.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/vista/Factura.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/Bebidas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/Bebidas.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/HeladoMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/HeladoMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/LasanaMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/LasanaMenu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/Menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/Menu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/Mesa.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/Mesa.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/PastaMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/PastaMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/PizzaMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/PizzaMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/PlatosFuertes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/PlatosFuertes.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/PostreMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/PostreMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/RisotoMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/RisotoMenu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/agregarPizza.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/agregarPizza.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/gaseosas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/gaseosas.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/vinos.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/vinos.fxml" afterDir="false" />
@@ -101,6 +97,7 @@
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="downloadSourcesAutomatically" value="true" />
+        <option name="workspaceImportForciblyTurnedOn" value="true" />
       </MavenImportingSettings>
     </option>
   </component>
@@ -122,7 +119,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.HelloApplication.executor": "Debug",
-    "Application.Mesero.executor": "Run",
+    "Application.Mesero.executor": "Debug",
     "Application.admin.executor": "Run",
     "Application.usuarioC.executor": "Run",
     "Downloaded.Files.Path": "C:\\Users\\Jocel\\Downloads\\Proyecto_Fundamentos_Ing_soft",
@@ -171,11 +168,11 @@
       <recent name="C:\Users\jeiss\Documents\universidad\10 decimo semestre\Fundamentos ing soft\Proyecto_Fundamentos_Ing_soft\Mesero\src\main\java\repository\menu" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\delux\Documents\GitHub\Proyecto_Fundamentos_Ing_soft\Facturas" />
       <recent name="C:\Users\delux\Documents\GitHub\Proyecto_Fundamentos_Ing_soft\Mesero\src\main\resources\vista" />
       <recent name="C:\Users\delux\Documents\GitHub\Proyecto_Fundamentos_Ing_soft\Mesero\src\main\resources" />
       <recent name="C:\Users\jeiss\Documents\universidad\10 decimo semestre\Fundamentos ing soft\Proyecto_Fundamentos_Ing_soft\Admin\src\main\resources\vista" />
       <recent name="C:\Users\jeiss\Documents\universidad\10 decimo semestre\Fundamentos ing soft\Proyecto_Fundamentos_Ing_soft\Mesero\src\main\java" />
-      <recent name="C:\Users\jeiss\OneDrive\Documentos\universidad\10 decimo semestre\Fundamentos ing soft\Proyecto_Fundamentos_Ing_soft\Admin\src\main\resources\vista\menu" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="repository.menu" />
@@ -265,6 +262,14 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -288,7 +293,18 @@
       <workItem from="1729797266663" duration="1245000" />
       <workItem from="1730072852165" duration="689000" />
       <workItem from="1730231433151" duration="1535000" />
+      <workItem from="1731356002456" duration="1862000" />
+      <workItem from="1731431147941" duration="43617000" />
     </task>
+    <task id="LOCAL-00001" summary="Ya se pueden agregar varios platos al carrito. PROBLEMAS: Pizzas tiran un error que no sé qué hacer al tratar de agregar una pizza al carrito, Botones en Bebidas NO funcionan, y me falta programar los postres y listo">
+      <option name="closed" value="true" />
+      <created>1731303316492</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731303316492</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,7 +323,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="cositas equis para ver pq que putas" />
-    <option name="LAST_COMMIT_MESSAGE" value="cositas equis para ver pq que putas" />
+    <MESSAGE value="Ya se pueden agregar varios platos al carrito. PROBLEMAS: Pizzas tiran un error que no sé qué hacer al tratar de agregar una pizza al carrito, Botones en Bebidas NO funcionan, y me falta programar los postres y listo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ya se pueden agregar varios platos al carrito. PROBLEMAS: Pizzas tiran un error que no sé qué hacer al tratar de agregar una pizza al carrito, Botones en Bebidas NO funcionan, y me falta programar los postres y listo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

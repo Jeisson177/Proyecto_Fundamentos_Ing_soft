@@ -1,16 +1,23 @@
 package controller.menuMesero;
 
-import javafx.scene.control.Alert;
-import services.Carrito;
+import controller.ControladorCarrito;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
+import services.Carrito;
 
+import java.io.IOException;
 import java.util.Objects;
 
 public class MenuControl {
+
     @FXML
     private Button antipastiMenu;
     @FXML
@@ -73,13 +80,7 @@ public class MenuControl {
             mostrarAlerta("Error al abrir Bebidas", "Ocurrió un problema al intentar abrir la vista de bebidas: " + e.getMessage());
         }
     }
-    private void mostrarAlerta(String titulo, String mensaje) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle(titulo);
-        alert.setHeaderText(null);
-        alert.setContentText(mensaje);
-        alert.showAndWait();
-    }
+
     @FXML
     private void IrPlatosFuertes() {
         Ira.IrPlatosFuertes(botonPlatosFuertes);
@@ -91,7 +92,7 @@ public class MenuControl {
     }
 
     @FXML
-    public void irMenu(ActionEvent actionEvent) {
+    public void IrMenu(ActionEvent actionEvent) {
         Ira.IrMenu(botonMenu);
     }
 
@@ -102,9 +103,31 @@ public class MenuControl {
     public void IrReserva(ActionEvent actionEvent) {
         Ira.IrReserva(botonReservar);
     }
-    @FXML
-    public void IrMenu(ActionEvent actionEvent) {
-        Ira.IrMenu(botonMenu);
+
+    public void revisarCarrito() {
+        abrirControladorCarrito();
     }
 
+    private void abrirControladorCarrito() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/carrito/CarritoCompras.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = new Stage();
+            stage.setTitle("Carrito de Compras");
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            mostrarAlerta("Error", "No se pudo cargar la pantalla del carrito.");
+        }
+    }
+
+    private void mostrarAlerta(String titulo, String mensaje) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(titulo);
+        alert.setHeaderText(null);
+        alert.setContentText(mensaje);
+        alert.showAndWait();
+    }
 }

@@ -119,7 +119,7 @@ public class LasanaMenu {
             boolean platoEncontrado = false;
             for (PlatoCarrito platoCarrito : carrito.obtenerPlatosEnCarrito()) {
                 if (platoCarrito.getPlato().equals(plato)) {
-                    platoCarrito.incrementarCantidad(); // Incrementa la cantidad si el plato ya está en el carrito
+                    platoCarrito.incrementarCantidad(-1); // Incrementa la cantidad si el plato ya está en el carrito
                     platoEncontrado = true;
                     break;
                 }

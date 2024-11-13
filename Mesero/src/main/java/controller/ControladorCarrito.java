@@ -1,13 +1,20 @@
 package controller;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 import services.Carrito;
-import controller.PlatoCarrito;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.ObservableList;
+
+import java.io.IOException;
+import java.util.Optional;
 
 public class ControladorCarrito {
 
@@ -33,12 +40,7 @@ public class ControladorCarrito {
     private Carrito carrito;
 
     public ControladorCarrito() {
-        this.carrito = Carrito.getInstance();  // Usar la instancia singleton del carrito
-    }
-
-    public void setCarrito(Carrito carrito) {
-        this.carrito = carrito;
-        cargarPlatosEnCarrito();  // Actualiza la vista con los platos actuales del carrito
+        this.carrito = Carrito.getInstance();
     }
 
     @FXML
@@ -48,48 +50,86 @@ public class ControladorCarrito {
         colCantidad.setCellValueFactory(cellData -> new SimpleIntegerProperty(cellData.getValue().getCantidad()).asObject());
         colPrecioTotal.setCellValueFactory(cellData -> new SimpleDoubleProperty(cellData.getValue().getCostoTotal()).asObject());
 
-        cargarPlatosEnCarrito();
-        btnEliminar.setOnAction(event -> eliminarPlatoDelCarrito());
-        btnTotal.setOnAction(event -> calcularTotal());
-        btnCrearFactura.setOnAction(event -> crearFactura());
-    }
+        ObservableList<PlatoCarrito> listaCarrito = carrito.obtenerPlatosEnCarrito();
+        tableViewCarrito.setItems(listaCarrito);
 
-    private void cargarPlatosEnCarrito() {
-        tableViewCarrito.getItems().clear();
-        tableViewCarrito.getItems().addAll(carrito.obtenerPlatosEnCarrito());
+        actualizarTotal();
+
+        btnEliminar.setOnAction(event -> eliminarPlatoDelCarrito());
+        btnTotal.setOnAction(event -> actualizarTotal());
+        btnCrearFactura.setOnAction(event -> crearFactura());
     }
 
     private void eliminarPlatoDelCarrito() {
         PlatoCarrito platoSeleccionado = tableViewCarrito.getSelectionModel().getSelectedItem();
         if (platoSeleccionado != null) {
-            carrito.obtenerPlatosEnCarrito().remove(platoSeleccionado);
-            cargarPlatosEnCarrito();
+            int nuevaCantidad = platoSeleccionado.getCantidad() - 1;
+            if (nuevaCantidad > 0) {
+                platoSeleccionado.setCantidad(nuevaCantidad);
+                tableViewCarrito.refresh();
+            } else {
+                carrito.eliminarPlato(platoSeleccionado.getPlato());
+            }
+            actualizarTotal();
         } else {
-            showAlert("Selecciona un plato para eliminar.");
+            mostrarAlerta("Información", "Selecciona un plato para eliminar.");
         }
     }
 
-    private void calcularTotal() {
+    private void actualizarTotal() {
         double total = carrito.calcularTotalCarrito();
         textTotal.setText("Total: $" + total);
     }
 
     private void crearFactura() {
-        double total = carrito.calcularTotalCarrito();
-        if (total > 0) {
-            showAlert("Factura creada con éxito. Total: $" + total);
-            carrito.vaciarCarrito();
-            cargarPlatosEnCarrito();
-        } else {
-            showAlert("El carrito está vacío, no se puede crear una factura.");
+        // Preguntar si el usuario desea añadir el 8% de servicio
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Añadir Servicio");
+        alert.setHeaderText("¿Desea añadir el servicio?");
+        alert.setContentText("Seleccione una opción:");
+
+        ButtonType buttonYes = new ButtonType("Sí");
+        ButtonType buttonNo = new ButtonType("No");
+        ButtonType buttonCancel = new ButtonType("Cancelar", ButtonBar.ButtonData.CANCEL_CLOSE);
+
+        alert.getButtonTypes().setAll(buttonYes, buttonNo, buttonCancel);
+
+        // Mostrar el diálogo y esperar la respuesta del usuario
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.isPresent() && result.get() == buttonCancel) {
+            return; // Si el usuario cancela, no se crea la factura
+        }
+
+        boolean incluirServicio = result.isPresent() && result.get() == buttonYes;
+
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Factura.fxml"));
+            Parent root = loader.load();
+
+            FacturaControlador facturaControlador = loader.getController();
+            facturaControlador.actualizarTotales(incluirServicio);
+
+            Stage stage = new Stage();
+            stage.setTitle("Factura");
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            mostrarAlerta("Error", "No se pudo cargar la pantalla de factura.");
         }
     }
 
-    private void showAlert(String mensaje) {
+    private void mostrarAlerta(String titulo, String mensaje) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Información");
+        alert.setTitle(titulo);
         alert.setHeaderText(null);
         alert.setContentText(mensaje);
         alert.showAndWait();
+    }
+
+    public void setCarrito(Carrito carrito) {
+        this.carrito = carrito;
+        tableViewCarrito.setItems(carrito.obtenerPlatosEnCarrito());
+        actualizarTotal();
     }
 }
