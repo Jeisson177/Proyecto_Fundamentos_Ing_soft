@@ -11,4 +11,5 @@ module com.example.cliente {
     opens controller to javafx.fxml;
     exports controller.menu;
     opens controller.menu to javafx.fxml;
+    opens Entities to javafx.base;
 }
