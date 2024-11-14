@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FacturaControlador">
+    <children>
+        <VBox alignment="TOP_CENTER" spacing="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <Text text="Bella Ventura" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+            <Text fx:id="fechaFactura" text="Fecha: 2023-10-23" />
+            <Text fx:id="mesaFactura" text="Mesa: 1" />
+            <Text fx:id="horaFactura" text="Hora: 12:00" /> <!-- Añadido el campo de hora -->
+            <TableView fx:id="tablaFactura" prefHeight="300.0">
+                <columns>
+                    <TableColumn fx:id="colCantidad" text="CANT" prefWidth="100" />
+                    <TableColumn fx:id="colDescripcion" text="DESCRIPCIÓN" prefWidth="300" />
+                    <TableColumn fx:id="colPrecio" text="PRECIO" prefWidth="100" />
+                    <TableColumn fx:id="colTotal" text="TOTAL" prefWidth="100" />
+                </columns>
+            </TableView>
+            <HBox alignment="CENTER_RIGHT" spacing="10.0">
+                <Label text="BASE:" />
+                <Text fx:id="totalBase" text="54,000 COP" />
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" spacing="10.0">
+                <Label text="SERVICIO:" />
+                <Text fx:id="servicioAdicional" text="4,320 COP" />
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" spacing="10.0">
+                <Label text="TOTAL:" style="-fx-font-weight: bold;" />
+                <Text fx:id="totalConServicio" text="58,320 COP" style="-fx-font-weight: bold;" />
+            </HBox>
+            <Button text="Imprimir Factura" onAction="#imprimirFactura" style="-fx-background-color: black; -fx-text-fill: white;" />
+        </VBox>
+    </children>
+</AnchorPane>

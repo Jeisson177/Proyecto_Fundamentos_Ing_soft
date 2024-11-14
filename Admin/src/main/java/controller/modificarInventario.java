@@ -28,8 +28,6 @@ public class modificarInventario {
     @FXML
     public Button selecHome;
     @FXML
-    public ImageView instaImagen;
-    @FXML
     public Button selecMenu;
     @FXML
     public Button selecAgregar;
@@ -56,15 +54,12 @@ public class modificarInventario {
     @FXML
     public void initialize() {
 
-        Image ig = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/imagenes/PlatosFuertes/ig.png")));
-
         // Configurar las columnas para asociarse con los campos de InventarioAlimento
         columnaNombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
         columnaCantidad.setCellValueFactory(new PropertyValueFactory<>("cantidadInv"));
         columnaFecha.setCellValueFactory(new PropertyValueFactory<>("fechaVen"));
         columnaUnidad.setCellValueFactory(new PropertyValueFactory<>("unidad"));
 
-        instaImagen.setImage(ig);
 
         // Cargar los datos en la tabla
         cargarDatosTabla();

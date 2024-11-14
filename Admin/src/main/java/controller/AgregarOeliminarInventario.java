@@ -18,8 +18,6 @@ public class AgregarOeliminarInventario {
     @FXML
     public Button selecHome;
     @FXML
-    public ImageView instaImagen;
-    @FXML
     public Button selecMenu;
     @FXML
     public Button AgregarOeliminar;
@@ -59,14 +57,10 @@ public class AgregarOeliminarInventario {
 
     @FXML
     public void initialize() {
-        Image ig = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/imagenes/PlatosFuertes/ig.png")));
-
         columnaNombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
         columnaCantidad.setCellValueFactory(new PropertyValueFactory<>("cantidadInv"));
         columnaFecha.setCellValueFactory(new PropertyValueFactory<>("fechaVen"));
         columnaUnidad.setCellValueFactory(new PropertyValueFactory<>("unidad"));
-
-        instaImagen.setImage(ig);
 
         cargarDatosTabla();
 

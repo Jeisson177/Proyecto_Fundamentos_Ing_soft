@@ -4,7 +4,6 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -52,14 +51,13 @@
 
         <!-- Botón para agregar ingredientes -->
         <Button fx:id="agregarIngrediente" layoutX="250.0" layoutY="624.0" onAction="#agregarIngredienteAlPlato" text="Agregar Ingrediente al Plato" />
-      <AnchorPane prefHeight="59.0" prefWidth="680.0" style="-fx-background-color: black;">
+      <AnchorPane prefHeight="59.0" prefWidth="680.0" style="-fx-background-color: EFB810;">
          <children>
             <Text fill="WHITE" layoutX="21.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bella Ventura">
                <font>
                   <Font size="19.0" />
                </font>
             </Text>
-            <ImageView fx:id="InstaImage" fitHeight="55.0" fitWidth="69.0" layoutX="590.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" />
             <Button fx:id="selecHome" layoutX="250.0" layoutY="17.0" mnemonicParsing="false" onAction="#IrHome" style="-fx-background-color: transpare;" text="Home" textFill="WHITE" underline="true">
                <font>
                   <Font size="16.0" />

@@ -83,7 +83,7 @@ public class BebidaControl {
     public void irAPantallaVinos(ActionEvent event) {
         try {
             // Cargar la nueva pantalla (vinos.fxml)
-            Parent vinosRoot = FXMLLoader.load(getClass().getResource("/vista/Vinos.fxml"));
+            Parent vinosRoot = FXMLLoader.load(getClass().getResource("/vista/menu/Vinos.fxml"));
             Scene vinosScene = new Scene(vinosRoot);
 
             // Obtener el Stage actual usando el botón como referencia
@@ -100,7 +100,7 @@ public class BebidaControl {
     public void irAPantallaGaseosas(ActionEvent event) {
         try {
             // Cargar la nueva pantalla (vinos.fxml)
-            Parent gaseosaRoot = FXMLLoader.load(getClass().getResource("/vista/gaseosas.fxml"));
+            Parent gaseosaRoot = FXMLLoader.load(getClass().getResource("/vista/menu/gaseosas.fxml"));
             Scene gaseosaScene = new Scene(gaseosaRoot);
 
             // Obtener el Stage actual usando el botón como referencia

@@ -1,124 +1,136 @@
 package controller.menuMesero;
 
+import controller.ControladorCarrito;
+import controller.Plato;
+import controller.menuMesero.RedireccionGeneral;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import services.AgregarPizzaService;
-
+import services.Carrito;
+import java.io.IOException;
 import java.util.Objects;
 
 public class Heladoscontrol {
 
     @FXML
-    public Label precioframbuesa;
+    public Label precioframbuesa, precioavellana, preciolimon, preciofresa, preciochocolate;
     @FXML
-    public Button botonHome;
+    public Button botonHome, botonMenu, botonCarrito, volverPostres;
     @FXML
-    public Button botonMenu;
+    private ImageView heladoavellana, heladolimon, heladoframbuesa, heladofresa, heladochocolatepicante, heladogrande, instaimage, heladosletra;
     @FXML
-    public Button botonReservar;
-    @FXML
-    private ImageView heladoavellana;
-    @FXML
-    private ImageView heladolimon;
-    @FXML
-    private ImageView heladoframbuesa;
-    @FXML
-    private ImageView heladofresa;
-    @FXML
-    private ImageView heladochocolatepicante;
-    @FXML
-    private ImageView heladogrande;
-    @FXML
-    private ImageView instaimage;
-    @FXML
-    private ImageView heladosletra;
+    public Text dispoAvellana, dispoLimon, dispoFrambuesa, dispoFresa, dispoChocPicante;
 
-    @FXML
-    public Button agregaraorden;
-    @FXML
-    public Button volverPostres;
-    @FXML
-    public  Button volverMenu;
-
-    @FXML
-    public Label precioavellana;
-    @FXML
-    public Label preciolimon;
-    @FXML
-    public Label preciofresa;
-    @FXML
-    public Label preciochocolate;
-
-    private AgregarPizzaService helado =new AgregarPizzaService();
-
-    private RedireccionGeneral Ira = new RedireccionGeneral();
+    private AgregarPizzaService heladoService = new AgregarPizzaService();
+    private Carrito carrito = Carrito.getInstance();
 
     @FXML
     public void initialize() {
-        // Cargar la imagen al inicializar la vista
-        Image img1 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/Imagenes/helados/AVELLANA_IMAGE.png")));
-        Image img2= new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/Imagenes/helados/LIMON_IMAGE.png")));
-        Image img3 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/Imagenes/helados/FRAMBUESA_IMAGE.png")));
-        Image img4 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/Imagenes/helados/FRESA_IMAGE.png")));
-        Image img5 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/Imagenes/helados/CHOCOLATE_IMAGE.png")));
-        Image img6 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/Imagenes/helados/HELADOS_IMAGE.png")));
-        Image img7 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/Imagenes/postres/INSTA_IMAGE.png")));
-        Image img8 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/Imagenes/helados/HELADOSLETRA_IMAGE.png")));
+        // Cargar las imágenes
+        heladoavellana.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/Imagenes/helados/AVELLANA_IMAGE.png"))));
+        heladolimon.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/Imagenes/helados/LIMON_IMAGE.png"))));
+        heladoframbuesa.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/Imagenes/helados/FRAMBUESA_IMAGE.png"))));
+        heladofresa.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/Imagenes/helados/FRESA_IMAGE.png"))));
+        heladochocolatepicante.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/Imagenes/helados/CHOCOLATE_IMAGE.png"))));
+        heladogrande.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/Imagenes/helados/HELADOS_IMAGE.png"))));
+        instaimage.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/Imagenes/postres/INSTA_IMAGE.png"))));
+        heladosletra.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/Imagenes/helados/HELADOSLETRA_IMAGE.png"))));
 
-        heladoavellana.setImage(img1); // Establecer la imagen en el ImageView
-        heladolimon.setImage(img2);
-        heladoframbuesa.setImage(img3);
-        heladofresa.setImage(img4);
-        heladochocolatepicante.setImage(img5);
-        heladogrande.setImage(img6);
-        instaimage.setImage(img7);
-        heladosletra.setImage(img8);
+        // Cargar precios
+        precioavellana.setText(heladoService.getPrecios("Gelato Bacio (Avellana)") + " COP");
+        precioframbuesa.setText(heladoService.getPrecios("Gelato Lampone (Frambuesa)") + " COP");
+        preciochocolate.setText(heladoService.getPrecios("Gelato Cioccolato con Peperoncino") + " COP");
+        preciofresa.setText(heladoService.getPrecios("Gelato Fragola (Fresa)") + " COP");
+        preciolimon.setText(heladoService.getPrecios("Gelato Limone (Limon)") + " COP");
 
-        precioavellana.setText(String.valueOf(helado.getPrecios("Gelato Bacio (Avellana)"))+" COP");
-        precioframbuesa.setText(String.valueOf(helado.getPrecios("Gelato Lampone (Frambuesa)"))+" COP");
-        preciochocolate.setText(String.valueOf(helado.getPrecios("Gelato Cioccolato con Peperoncino"))+" COP");
-        preciofresa.setText(String.valueOf(helado.getPrecios("Gelato Fragola (Fresa)"))+" COP");
-        preciolimon.setText(String.valueOf(helado.getPrecios("Gelato Limone (Limon)"))+" COP");
-
+        // Verificar disponibilidad y mostrar en pantalla
+        dispoAvellana.setText(heladoService.estaDisponibleHelado("Gelato Bacio (Avellana)") ? "Disponible" : "No disponible");
+        dispoLimon.setText(heladoService.estaDisponibleHelado("Gelato Limone (Limon)") ? "Disponible" : "No disponible");
+        dispoFrambuesa.setText(heladoService.estaDisponibleHelado("Gelato Lampone (Frambuesa)") ? "Disponible" : "No disponible");
+        dispoFresa.setText(heladoService.estaDisponibleHelado("Gelato Fragola (Fresa)") ? "Disponible" : "No disponible");
+        dispoChocPicante.setText(heladoService.estaDisponibleHelado("Gelato Cioccolato con Peperoncino") ? "Disponible" : "No disponible");
     }
 
+    @FXML
+    public void agregarHelado(ActionEvent event) {
+        Button clickedButton = (Button) event.getSource();
+        String nombreHelado = (String) clickedButton.getUserData();
 
-    public void clickHELADO(ActionEvent actionEvent) {
+        // Verificar disponibilidad
+        if (!heladoService.estaDisponibleHelado(nombreHelado)) {
+            mostrarAlerta("No disponible", "El helado \"" + nombreHelado + "\" no está disponible.");
+            return;
+        }
+
+        // Obtener el precio del helado y agregarlo al carrito
+        int precioHelado = heladoService.getPrecios(nombreHelado);
+        Plato helado = new Plato(-1, nombreHelado, precioHelado);
+        carrito.agregarPlato(helado);
+
+        mostrarAlerta("Agregado", "El helado \"" + nombreHelado + "\" fue agregado al carrito.");
+    }
+
+    @FXML
+    public void revisarCarrito(ActionEvent event) {
         try {
-            // Carga la nueva ventana
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Postremenu.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/CarritoCompras.fxml"));
             Parent root = loader.load();
 
-            // Crea una nueva escena
+            ControladorCarrito controlador = loader.getController();
+            controlador.setCarrito(carrito);
+
+            Stage stage = new Stage();
+            stage.setTitle("Carrito");
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            mostrarAlerta("Error", "No se pudo cargar la vista del carrito.");
+        }
+    }
+
+    @FXML
+    public void clickHELADO(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/menu/PostreMenu.fxml"));
+            Parent root = loader.load();
+
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
-            stage.setTitle("PostreMenu"); // Título de la nueva ventana
+            stage.setTitle("PostreMenu");
             stage.show();
 
-            // Opcionalmente, cierra la ventana actual
-            ((Stage) volverMenu.getScene().getWindow()).close();
+            ((Stage) volverPostres.getScene().getWindow()).close();
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 
-    public void onHelloButtonClick(ActionEvent actionEvent) {
+    @FXML
+    public void IrHome(ActionEvent actionEvent) {
+        new RedireccionGeneral().IrHome(botonHome);
     }
 
-    public void IrHome(ActionEvent actionEvent) { Ira.IrHome(botonHome);
+    @FXML
+    public void IrMenu(ActionEvent actionEvent) {
+        new RedireccionGeneral().IrMenu(botonMenu);
     }
 
-    public void IrMenu(ActionEvent actionEvent) { Ira.IrMenu(botonMenu);
-    }
-    public void IrReserva(ActionEvent actionEvent) {Ira.IrReserva(botonReservar);
+    private void mostrarAlerta(String titulo, String mensaje) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(titulo);
+        alert.setHeaderText(null);
+        alert.setContentText(mensaje);
+        alert.showAndWait();
     }
 }

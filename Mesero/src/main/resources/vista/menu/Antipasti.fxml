@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.menuMesero.AntipastiControl">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.menuMesero.AntipastiControl">
     <Pane prefHeight="61.0" prefWidth="722.0" style="-fx-background-color: black;">
         <children>
             <Text fill="WHITE" layoutX="14.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: normal;" text="Bella Ventura">
@@ -18,7 +18,7 @@
                     <Font size="17.0" />
                 </font>
             </Button>
-            <Button fx:id="homeBoton" layoutX="289.0" layoutY="8.0" mnemonicParsing="false" onAction="#homeButtonClick" style="-fx-background-color: black;" text="home" textFill="WHITE" underline="true">
+            <Button fx:id="revisarCarritoBoton" layoutX="550.0" layoutY="8.0" mnemonicParsing="false" onAction="#revisarCarrito" style="-fx-background-color: black;" text="Revisar Carrito" textFill="WHITE">
                 <font>
                     <Font size="17.0" />
                 </font>
@@ -33,14 +33,13 @@
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
-
         <rowConstraints>
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
         <children>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-                <Button GridPane.columnIndex="0">
+                <Button fx:id="carpaccioResBoton" onAction="#agregarPlato" userData="Carpaccio de Res" GridPane.columnIndex="0">
                     <graphic>
                         <ImageView fx:id="carpaccioResImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="false" />
                     </graphic>
@@ -49,154 +48,136 @@
                 <Label fx:id="carpaccioResPrecio" />
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
-                <children>
-                    <Button GridPane.columnIndex="0">
-                        <graphic>
-                            <ImageView fx:id="carpaccioSalmonImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="false" />
-                        </graphic>
-                    </Button>
-                    <Label text="CARPACCIO DE SALMÓN" />
-                    <Label fx:id="carpaccioSalmonPrecio" />
-                </children>
+                <Button fx:id="carpaccioSalmonBoton" onAction="#agregarPlato" userData="Carpaccio de Salmon" GridPane.columnIndex="0">
+                    <graphic>
+                        <ImageView fx:id="carpaccioSalmonImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="false" />
+                    </graphic>
+                </Button>
+                <Label text="CARPACCIO DE SALMÓN" />
+                <Label fx:id="carpaccioSalmonPrecio" />
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
-                <children>
-                    <Button GridPane.columnIndex="0">
-                        <graphic>
-                            <ImageView fx:id="focacciaGenoveseImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="false" />
-                        </graphic>
-                    </Button>
-                    <Label text="FOCACCIA GENOVESE" />
-                    <Label fx:id="focacciaGenovesePrecio" />
-                </children>
+                <Button fx:id="focacciaGenoveseBoton" onAction="#agregarPlato" userData="Focaccia Genovese" GridPane.columnIndex="0">
+                    <graphic>
+                        <ImageView fx:id="focacciaGenoveseImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="false" />
+                    </graphic>
+                </Button>
+                <Label text="FOCACCIA GENOVESE" />
+                <Label fx:id="focacciaGenovesePrecio" />
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3">
-                <children>
-                    <Button GridPane.columnIndex="0">
-                        <graphic>
-                            <ImageView fx:id="focacciaDolceImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="false" />
-                        </graphic>
-                    </Button>
-                    <Label text="FOCACCIA DOLCE" />
-                    <Label fx:id="focacciaDolcePrecio" />
-                </children>
+                <Button fx:id="focacciaDolceBoton" onAction="#agregarPlato" userData="Focaccia Dolce" GridPane.columnIndex="0">
+                    <graphic>
+                        <ImageView fx:id="focacciaDolceImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="false" />
+                    </graphic>
+                </Button>
+                <Label text="FOCACCIA DOLCE" />
+                <Label fx:id="focacciaDolcePrecio" />
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4">
-                <children>
-                    <Button GridPane.columnIndex="0">
-                        <graphic>
-                            <ImageView fx:id="focacciaVenetaImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="false" />
-                        </graphic>
-                    </Button>
-                    <Label text="FOCACCIA VENETA" />
-                    <Label fx:id="focacciaVenetaPrecio" />
-                </children>
+                <Button fx:id="focacciaVenetaBoton" onAction="#agregarPlato" userData="Focaccia Veneta" GridPane.columnIndex="0">
+                    <graphic>
+                        <ImageView fx:id="focacciaVenetaImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="false" />
+                    </graphic>
+                </Button>
+                <Label text="FOCACCIA VENETA" />
+                <Label fx:id="focacciaVenetaPrecio" />
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
-                <children>
-                    <Button GridPane.columnIndex="0">
-                        <graphic>
-                            <ImageView fx:id="focacciaPuglieseImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="false" />
-                        </graphic>
-                    </Button>
-                    <Label text="FOCACCIA PUGLIESE" />
-                    <Label fx:id="focacciaPugliesePrecio" />
-                </children>
+                <Button fx:id="focacciaPuglieseBoton" onAction="#agregarPlato" userData="Focaccia Pugliese" GridPane.columnIndex="0">
+                    <graphic>
+                        <ImageView fx:id="focacciaPuglieseImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="false" />
+                    </graphic>
+                </Button>
+                <Label text="FOCACCIA PUGLIESE" />
+                <Label fx:id="focacciaPugliesePrecio" />
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                <children>
-                    <Button GridPane.columnIndex="0">
-                        <graphic>
-                            <ImageView fx:id="ensaladaCesarRomanaImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="false" />
-                        </graphic>
-                    </Button>
-                    <Label text="ENSALADA CESAR ROMANA" />
-                    <Label fx:id="ensaladaCesarRomanaPrecio" />
-                </children>
+                <Button fx:id="ensaladaCesarRomanaBoton" onAction="#agregarPlato" userData="Ensalada Cesar Romana" GridPane.columnIndex="0">
+                    <graphic>
+                        <ImageView fx:id="ensaladaCesarRomanaImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="false" />
+                    </graphic>
+                </Button>
+                <Label text="ENSALADA CESAR ROMANA" />
+                <Label fx:id="ensaladaCesarRomanaPrecio" />
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                <children>
-                    <Button GridPane.columnIndex="0">
-                        <graphic>
-                            <ImageView fx:id="ensaldaPortobelloImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="false" />
-                        </graphic>
-                    </Button>
-                    <Label text="ENSALADA PORTOBELLO" />
-                    <Label fx:id="ensaldaPortobelloPrecio" />
-                </children>
+                <Button fx:id="ensaldaPortobelloBoton" onAction="#agregarPlato" userData="Ensalada Portobello" GridPane.columnIndex="0">
+                    <graphic>
+                        <ImageView fx:id="ensaldaPortobelloImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="false" />
+                    </graphic>
+                </Button>
+                <Label text="ENSALADA PORTOBELLO" />
+                <Label fx:id="ensaldaPortobelloPrecio" />
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
-                <children>
-                    <Button GridPane.columnIndex="0">
-                        <graphic>
-                            <ImageView fx:id="ensaladaVentrescaImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="false" />
-                        </graphic>
-                    </Button>
-                    <Label text="ENSALADA VENTRESCA" />
-                    <Label fx:id="ensaladaVentrescaPrecio" />
-                </children>
+                <Button fx:id="ensaladaVentrescaBoton" onAction="#agregarPlato" userData="Ensalada Ventresca" GridPane.columnIndex="0">
+                    <graphic>
+                        <ImageView fx:id="ensaladaVentrescaImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="false" />
+                    </graphic>
+                </Button>
+                <Label text="ENSALADA VENTRESCA" />
+                <Label fx:id="ensaladaVentrescaPrecio" />
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
-                <children>
-                    <Button GridPane.columnIndex="0">
-                        <graphic>
-                            <ImageView fx:id="tablaQuesosImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="false" />
-                        </graphic>
-                    </Button>
-                    <Label text="TABLA DE QUESOS" />
-                    <Label fx:id="tablaQuesosPrecio" />
-                </children>
+                <Button fx:id="tablaQuesosBoton" onAction="#agregarPlato" userData="Tabla de Quesos" GridPane.columnIndex="0">
+                    <graphic>
+                        <ImageView fx:id="tablaQuesosImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="false" />
+                    </graphic>
+                </Button>
+                <Label text="TABLA DE QUESOS" />
+                <Label fx:id="tablaQuesosPrecio" />
             </VBox>
         </children>
     </GridPane>
-   <Text fx:id="dispoFocPu" fill="RED" layoutX="14.0" layoutY="386.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-      <font>
-         <Font name="System Bold" size="16.0" />
-      </font>
-   </Text>
-   <Text fx:id="dispoCesar" fill="RED" layoutX="147.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-      <font>
-         <Font name="System Bold" size="16.0" />
-      </font>
-   </Text>
-   <Text fx:id="dispoPorto" fill="RED" layoutX="302.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="118.0">
-      <font>
-         <Font name="System Bold" size="16.0" />
-      </font>
-   </Text>
-   <Text fx:id="dispoVen" fill="RED" layoutX="452.0" layoutY="386.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-      <font>
-         <Font name="System Bold" size="16.0" />
-      </font>
-   </Text>
-   <Text fx:id="dispoTabQuesos" fill="RED" layoutX="594.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-      <font>
-         <Font name="System Bold" size="16.0" />
-      </font>
-   </Text>
-   <Text fx:id="dispoCarRes" fill="RED" layoutX="7.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-      <font>
-         <Font name="System Bold" size="16.0" />
-      </font>
-   </Text>
-   <Text fx:id="dispoCarSal" fill="RED" layoutX="164.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-      <font>
-         <Font name="System Bold" size="16.0" />
-      </font>
-   </Text>
-   <Text fx:id="dispoFocGen" fill="RED" layoutX="304.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-      <font>
-         <Font name="System Bold" size="16.0" />
-      </font>
-   </Text>
-   <Text fx:id="dispoFocDol" fill="RED" layoutX="452.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-      <font>
-         <Font name="System Bold" size="16.0" />
-      </font>
-   </Text>
-   <Text fx:id="dispoFocVe" fill="RED" layoutX="594.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-      <font>
-         <Font name="System Bold" size="16.0" />
-      </font>
-   </Text>
+    <Text fx:id="dispoFocPu" fill="RED" layoutX="14.0" layoutY="386.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+        <font>
+            <Font name="System Bold" size="16.0" />
+        </font>
+    </Text>
+    <Text fx:id="dispoCesar" fill="RED" layoutX="147.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+        <font>
+            <Font name="System Bold" size="16.0" />
+        </font>
+    </Text>
+    <Text fx:id="dispoPorto" fill="RED" layoutX="302.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="118.0">
+        <font>
+            <Font name="System Bold" size="16.0" />
+        </font>
+    </Text>
+    <Text fx:id="dispoVen" fill="RED" layoutX="452.0" layoutY="386.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+        <font>
+            <Font name="System Bold" size="16.0" />
+        </font>
+    </Text>
+    <Text fx:id="dispoTabQuesos" fill="RED" layoutX="594.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+        <font>
+            <Font name="System Bold" size="16.0" />
+        </font>
+    </Text>
+    <Text fx:id="dispoCarRes" fill="RED" layoutX="7.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+        <font>
+            <Font name="System Bold" size="16.0" />
+        </font>
+    </Text>
+    <Text fx:id="dispoCarSal" fill="RED" layoutX="164.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+        <font>
+            <Font name="System Bold" size="16.0" />
+        </font>
+    </Text>
+    <Text fx:id="dispoFocGen" fill="RED" layoutX="304.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+        <font>
+            <Font name="System Bold" size="16.0" />
+        </font>
+    </Text>
+    <Text fx:id="dispoFocDol" fill="RED" layoutX="452.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+        <font>
+            <Font name="System Bold" size="16.0" />
+        </font>
+    </Text>
+    <Text fx:id="dispoFocVe" fill="RED" layoutX="594.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+        <font>
+            <Font name="System Bold" size="16.0" />
+        </font>
+    </Text>
 </AnchorPane>

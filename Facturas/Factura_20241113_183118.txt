@@ -1,0 +1,12 @@
+Bella Ventura
+Fecha: 2023-10-23
+Mesa: 1
+====================================
+CANT	DESCRIPCIÓN	PRECIO	TOTAL
+2	Panna Cotta	10000.00 COP	20000.00 COP
+1	Affogato	15000.00 COP	15000.00 COP
+====================================
+BASE: 35000.00 COP
+SERVICIO: 2800.00 COP
+TOTAL: 37800.00 COP
+GRACIAS POR SU VISITA

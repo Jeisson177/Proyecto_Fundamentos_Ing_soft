@@ -1,0 +1,14 @@
+Bella Ventura
+Fecha: 2024-10-07
+Mesa: 1
+====================================
+CANT	DESCRIPCIÓN	PRECIO	TOTAL
+1	Fettuccine alla Puttanesca	20000.00 COP	20000.00 COP
+3	Trenette al Pesto	30000.00 COP	90000.00 COP
+2	Panna Cotta	10000.00 COP	20000.00 COP
+1	Agua	4000.00 COP	4000.00 COP
+====================================
+BASE: 134000.00 COP
+SERVICIO: 10720.00 COP
+TOTAL: 144720.00 COP
+GRACIAS POR SU VISITA

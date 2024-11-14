@@ -10,10 +10,16 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import services.GestionarReserva;
 import services.MesaService;
 
+import java.io.IOException;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Optional;
+import controller.Reserva;
 
 public class MesaControl {
 
@@ -26,38 +32,40 @@ public class MesaControl {
     public Button btnReservar;
     public Button btnhome;
 
-    public int idUuario;
+    public int idUsuario;
 
     @FXML
     public Button bntm1, bntm2, bntm3, bntm4, bntm5, bntm6, bntm7, bntm8, bntm9, bntm10;
     @FXML
     public Button bntm11, bntm12, bntm13, bntm14, bntm15, bntm16, bntm17, bntm18, bntm19;
     public Button btnHorarios;
+    public Button btnRegresar;
 
-    private RedireccionGeneral Ira = new RedireccionGeneral();
+    private final RedireccionGeneral Ira = new RedireccionGeneral();
     private final MesaService mesaRepository = new MesaService();
+    private final GestionarReserva gestionarReservaService;
 
-    private int mesaSeleccionada=0;
+    private int mesaSeleccionada = 0;
+
+    public MesaControl() {
+        this.gestionarReservaService = new GestionarReserva(this);
+    }
+
     @FXML
-    public void initialize(){
-
+    public void initialize() {
         Image img1 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/mesa/fondomesa.png")));
-        Image img2= new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/mesa/fondomesa.png")));
-
+        Image img2 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Imagenes/mesa/fondomesa.png")));
         fondodr.setImage(img1);
         fondoiz.setImage(img2);
-
         cargarPosicion();
     }
 
     private void cargarPosicion() {
         Map<Integer, Double[]> posicionesMesas = mesaRepository.obtenerPosicionesMesas();
-
         if (posicionesMesas.isEmpty()) {
             mostrarErrorConexion();
             return;
         }
-
         posicionesMesas.forEach((idMesa, ubicacion) -> {
             Button mesaButton = getMesaButton(idMesa);
             if (mesaButton != null) {
@@ -66,6 +74,7 @@ public class MesaControl {
             }
         });
     }
+
     private void mostrarErrorConexion() {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Error de Conexión");
@@ -74,7 +83,6 @@ public class MesaControl {
         alert.showAndWait();
     }
 
-    // Método auxiliar para obtener el botón de la mesa correspondiente por ID
     private Button getMesaButton(int idMesa) {
         switch (idMesa) {
             case 1: return bntm1;
@@ -100,53 +108,94 @@ public class MesaControl {
         }
     }
 
-    public void IrHome(ActionEvent actionEvent) { Ira.IrHome(btnhome);
-    }
+    public void IrHome(ActionEvent actionEvent) { Ira.IrHome(btnhome); }
 
-    public void IrMenu(ActionEvent actionEvent) { Ira.IrMenu(btnMenu);
-    }
-    public void IrReserva(ActionEvent actionEvent) {Ira.IrReserva(btnReservar);
-    }
+    public void IrMenu(ActionEvent actionEvent) { Ira.IrMenu(btnMenu); }
+
+    public void IrReserva(ActionEvent actionEvent) { Ira.IrReserva(btnReservar); }
 
     @FXML
     public void seleccionarMesa(ActionEvent actionEvent) {
-        Button clickedButton = (Button) actionEvent.getSource(); // Obtén el botón que fue clicado
-        String buttonId = clickedButton.getId(); // Obtén el ID del botón
-
-        // Elimina el prefijo "bntm" y convierte el valor restante a un entero
+        Button clickedButton = (Button) actionEvent.getSource();
+        String buttonId = clickedButton.getId();
         mesaSeleccionada = Integer.parseInt(buttonId.replace("bntm", ""));
 
+        LocalDate fechaActual = LocalDate.now();
+        LocalTime horaActual = LocalTime.now();
+
+        if (!gestionarReservaService.estaMesaDisponible(mesaSeleccionada, fechaActual, horaActual)) {
+            Optional<Reserva> reservaFuturaOpt = gestionarReservaService.obtenerReservasPorFecha(fechaActual).stream()
+                    .filter(r -> r.getIdMesa() == mesaSeleccionada && r.getFechaHora().toLocalTime().isAfter(horaActual))
+                    .findFirst();
+
+            if (reservaFuturaOpt.isPresent()) {
+                Reserva reservaFutura = reservaFuturaOpt.get();
+                mostrarAlerta("Mesa Ocupada", "La mesa seleccionada está ocupada.\n" +
+                        "Reserva existente para el cliente con ID: " + reservaFutura.getIdCliente() +
+                        "\nHora de reserva: " + reservaFutura.getFechaHora().toLocalTime());
+                return;
+            }
+        }
+
+        if (crearReservaSinCita(mesaSeleccionada)) {
+            IrMenu(actionEvent);
+        } else {
+            mostrarAlerta("Error", "No se pudo crear la reserva sin cita para la mesa seleccionada.");
+        }
     }
 
-    // Método para obtener la mesa seleccionada (número entero)
-    public int getMesa() {
+    private void mostrarAlerta(String titulo, String mensaje) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(titulo);
+        alert.setHeaderText(null);
+        alert.setContentText(mensaje);
+        alert.showAndWait();
+    }
 
+    public int getMesa() {
         return mesaSeleccionada;
     }
 
     public void irHorarios(ActionEvent actionEvent) {
         try {
-            // Carga la nueva ventana
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/ReservaFecha.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/menu/ReservaFecha.fxml"));
             Parent root = loader.load();
-            // Obtener el controlador de la nueva ventana
             ReservaControl reservaControl = loader.getController();
-
-            // Pasar la instancia de MesaControl a ReservaControl
-            reservaControl.setMesaControl(this);  // Pasar la instancia actual de MesaControl
-            // Crea una nueva escena
+            reservaControl.setMesaControl(this);
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
-            stage.setTitle("Reservar"); // Título de la nueva ventana
+            stage.setTitle("Reservar");
             stage.show();
-
-            // Opcionalmente, cierra la ventana actual
             ((Stage) btnHorarios.getScene().getWindow()).close();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-    public void setIdUsuario(int id){
-        idUuario=id;
+
+    public void setIdUsuario(int id) {
+        idUsuario = id;
+    }
+
+    public boolean crearReservaSinCita(int mesaId) {
+        boolean reservaCreada = gestionarReservaService.crearReservaSinCita(mesaId);
+        if (reservaCreada) {
+            System.out.println("Reserva sin cita creada exitosamente para la mesa " + mesaId);
+            return true;
+        } else {
+            System.out.println("No se pudo crear la reserva sin cita. La mesa " + mesaId + " no está disponible en este momento.");
+            return false;
+        }
+    }
+
+    public void irInicio(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Inicio.fxml"));
+            Stage stage = (Stage) btnRegresar.getScene().getWindow();
+            stage.setScene(new Scene(loader.load()));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+
+        }
     }
 }

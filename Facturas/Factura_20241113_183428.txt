@@ -1,0 +1,13 @@
+Bella Ventura
+Fecha: 2024-11-13
+Hora: 18:34:28
+Mesa: 1
+====================================
+CANT	DESCRIPCIÓN	PRECIO	TOTAL
+2	Cannoli	12000.00 COP	24000.00 COP
+1	Affogato	15000.00 COP	15000.00 COP
+====================================
+BASE: 39000.00 COP
+SERVICIO: 0.00 COP
+TOTAL: 39000.00 COP
+GRACIAS POR SU VISITA

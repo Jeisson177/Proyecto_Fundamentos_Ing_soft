@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.menuMesero.MenuControl">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.menuMesero.MenuControl">
 
     <Pane prefHeight="61.0" prefWidth="722.0" style="-fx-background-color: black;">
         <children>
@@ -19,17 +19,13 @@
                     <Font size="17.0" />
                 </font>
             </Button>
-            <Button fx:id="botonHome" layoutX="289.0" layoutY="8.0" mnemonicParsing="false" onAction="#IrHome" style="-fx-background-color: black;" text="home" textFill="WHITE" underline="true">
-                <font>
-                    <Font size="17.0" />
-                </font>
-            </Button>
         </children>
     </Pane>
     <HBox alignment="CENTER" layoutY="61.0" prefHeight="340.0" prefWidth="722.0" spacing="10">
         <!-- Primer panel con imagen y botón -->
         <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;">
             <VBox alignment="CENTER" spacing="5">
+               <Button fx:id="botonRevisarCarrito" onAction="#revisarCarrito" text="Revisar Carrito" />
                 <ImageView fx:id="antipastiImage" fitHeight="340.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="false" />
             </VBox>
             <Button fx:id="antipastiMenu" layoutX="32.0" layoutY="178.0" onAction="#abrirAntipasti" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color:transparent; -fx-text-fill: white; -fx-font-size: 17px;" text="ANTIPASTI" />

@@ -1,14 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="controller.ReservasConCitaControl"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="357.0" prefWidth="722.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReservasConCitaControl">
+    <children>
+        <Pane prefHeight="47.0" prefWidth="722.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Text fill="WHITE" layoutX="14.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: dream avenue;" text="Bella Ventura">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Text>
+                <HBox layoutX="280.0" layoutY="8.0" spacing="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            </children>
+        </Pane>
 
+        <!-- Nuevo botón para ir a Inicio -->
+        <Button fx:id="btnInicio" layoutX="10.0" layoutY="322.0" onAction="#irInicio" prefHeight="25.0" prefWidth="66.0" text="Regresar" />
+
+        <Button fx:id="btnConsultar" layoutX="122.0" layoutY="241.0" onAction="#ConsultarReserva" prefHeight="47.0" prefWidth="111.0" text="Consultar" />
+        <DatePicker fx:id="Calendario" layoutX="57.0" layoutY="136.0" prefHeight="86.0" prefWidth="241.0" />
+        <Text layoutX="53.0" layoutY="106.0" lineSpacing="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿Qué reserva estás atendiendo hoy?" wrappingWidth="250.0">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Text>
+        <TableView fx:id="tabla_reservas" layoutX="343.0" layoutY="60.0" onMouseClicked="#handleReservaSelection" prefHeight="221.0" prefWidth="358.0">
+            <columns>
+                <TableColumn fx:id="fechaColumn" prefWidth="143.0" text="Fecha" />
+                <TableColumn fx:id="horaColumn" prefWidth="86.66665649414062" text="Hora" />
+                <TableColumn fx:id="mesaColumn" prefWidth="127.33331298828125" text="Número de Mesa" />
+            </columns>
+        </TableView>
+
+        <Button fx:id="btnAtender" layoutX="452.0" layoutY="295.0" mnemonicParsing="false" onAction="#Atender" prefHeight="47.0" prefWidth="140.0" text="Atender Reserva" />
+    </children>
 </AnchorPane>

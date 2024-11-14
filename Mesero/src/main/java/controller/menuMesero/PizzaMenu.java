@@ -61,7 +61,7 @@ public class PizzaMenu {
             tipoPizza  = "4quesos";
             try {
                 // Carga la nueva ventana
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/agregarPizza.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/menu/agregarPizza.fxml"));
                 Parent root = loader.load();
 
                 // Obtén el controlador de la nueva vista
@@ -84,7 +84,7 @@ public class PizzaMenu {
             tipoPizza  = "pepperoni";
             try {
                 // Carga la nueva ventana
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/agregarPizza.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/menu/agregarPizza.fxml"));
                 Parent root = loader.load();
 
                 // Obtén el controlador de la nueva vista
@@ -107,7 +107,7 @@ public class PizzaMenu {
             tipoPizza  = "margarita";
             try {
                 // Carga la nueva ventana
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/agregarPizza.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/menu/agregarPizza.fxml"));
                 Parent root = loader.load();
 
                 // Obtén el controlador de la nueva vista

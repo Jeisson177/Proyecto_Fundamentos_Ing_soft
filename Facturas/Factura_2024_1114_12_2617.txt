@@ -1,0 +1,12 @@
+Bella Ventura
+Fecha: 2024-11-14
+Mesa: 15
+Hora: 12:19:45
+====================================
+CANT	DESCRIPCIÓN	PRECIO	TOTAL
+1	Trenette al Pesto	30000.00 COP	30000.00 COP
+====================================
+BASE: 30000.00 COP
+SERVICIO: 2400.00 COP
+TOTAL: 32400.00 COP
+GRACIAS POR SU VISITA

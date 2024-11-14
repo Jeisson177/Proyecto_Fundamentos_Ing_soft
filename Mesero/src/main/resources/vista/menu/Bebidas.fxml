@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.menuMesero.BebidaControl">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.menuMesero.BebidaControl">
    <children>
       <Pane prefHeight="63.0" prefWidth="600.0" style="-fx-background-color: Black;">
          <children>
-            <Button fx:id="botonHome" layoutX="331.0" layoutY="13.0" mnemonicParsing="false" onAction="#IrHome" style="-fx-background-color: black;" text="Home" textFill="WHITE" underline="true">
-               <font>
-                  <Font size="17.0" />
-               </font>
-            </Button>
             <Button fx:id="botonMenu" layoutX="413.0" layoutY="13.0" mnemonicParsing="false" onAction="#IrMenu" style="-fx-background-color: black;" text="Menú" textFill="WHITE" underline="true">
                <font>
                   <Font size="17.0" />
@@ -23,6 +19,12 @@
                   <Font size="24.0" />
                </font>
             </Text>
+            <!-- Botón para revisar el carrito -->
+            <Button fx:id="botonRevisarCarrito" layoutX="500.0" layoutY="13.0" mnemonicParsing="false" onAction="#revisarCarrito" style="-fx-background-color: black;" text="Carrito" textFill="WHITE" underline="true">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
          </children>
       </Pane>
       <Pane layoutY="63.0" prefHeight="335.0" prefWidth="600.0" style="-fx-background-color: white;">
@@ -59,10 +61,15 @@
                   </Text>
                </children>
             </Pane>
-            <Button fx:id="botonImagenAgua" layoutX="22.0" layoutY="98.0" mnemonicParsing="false" prefHeight="107.0" prefWidth="105.0" style="-fx-background-color: white;" />
-            <Button fx:id="botonImagenAguaGas" layoutX="134.0" layoutY="98.0" mnemonicParsing="false" prefHeight="107.0" prefWidth="105.0" style="-fx-background-color: white;" />
+            <ImageView fx:id="aguaImage" fitHeight="107.0" fitWidth="105.0" layoutX="22.0" layoutY="98.0" />
+            <ImageView fx:id="aguaGasImage" fitHeight="107.0" fitWidth="105.0" layoutX="134.0" layoutY="98.0" />
+            <ImageView fx:id="champagneImage" fitHeight="107.0" fitWidth="105.0" layoutX="360.0" layoutY="98.0" />
+            <ImageView fx:id="gaseosaImage" fitHeight="107.0" fitWidth="105.0" layoutX="474.0" layoutY="98.0" />
+            <ImageView fx:id="vinosImage" fitHeight="107.0" fitWidth="105.0" layoutX="247.0" layoutY="98.0" />
+            <Button fx:id="botonImagenAgua" layoutX="22.0" layoutY="98.0" mnemonicParsing="false" onAction="#agregarBebida" prefHeight="107.0" prefWidth="105.0" style="-fx-background-color: white;" />
+            <Button fx:id="botonImagenAguaGas" layoutX="134.0" layoutY="98.0" mnemonicParsing="false" onAction="#agregarBebida" prefHeight="107.0" prefWidth="105.0" style="-fx-background-color: white;" />
             <Button fx:id="botonImagenVino" layoutX="247.0" layoutY="98.0" mnemonicParsing="false" onAction="#irAPantallaVinos" prefHeight="107.0" prefWidth="105.0" style="-fx-background-color: white;" />
-            <Button fx:id="botonImagenChampagne" layoutX="360.0" layoutY="98.0" mnemonicParsing="false" prefHeight="107.0" prefWidth="105.0" style="-fx-background-color: white;" />
+            <Button fx:id="botonImagenChampagne" layoutX="360.0" layoutY="98.0" mnemonicParsing="false" onAction="#agregarBebida" prefHeight="107.0" prefWidth="105.0" style="-fx-background-color: white;" />
             <Button fx:id="botonImagenGaseosa" layoutX="474.0" layoutY="98.0" mnemonicParsing="false" onAction="#irAPantallaGaseosas" prefHeight="107.0" prefWidth="105.0" style="-fx-background-color: white;" />
             <Text fill="#004aad" layoutX="54.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agua">
                <font>
@@ -89,6 +96,7 @@
                   <Font name="System Bold" size="17.0" />
                </font>
             </Text>
+            <!-- Textos para mostrar disponibilidad -->
             <Text fx:id="dispoAgua" fill="RED" layoutX="25.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No disponible">
                <font>
                   <Font name="System Bold" size="15.0" />

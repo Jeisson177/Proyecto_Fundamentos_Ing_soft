@@ -1,0 +1,12 @@
+Bella Ventura
+Fecha: 2023-10-23
+Mesa: 1
+====================================
+CANT	DESCRIPCIÓN	PRECIO	TOTAL
+3	Panna Cotta	10000.00 COP	30000.00 COP
+1	Agua	4000.00 COP	4000.00 COP
+====================================
+BASE: 34000.00 COP
+SERVICIO: 2720.00 COP
+TOTAL: 36720.00 COP
+GRACIAS POR SU VISITA

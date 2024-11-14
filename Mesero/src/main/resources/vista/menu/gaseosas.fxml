@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.menuMesero.GaseosasControl">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.menuMesero.GaseosasControl">
    <children>
       <Pane prefHeight="77.0" prefWidth="600.0" style="-fx-background-color: black;">
          <children>
@@ -14,11 +14,6 @@
                   <Font size="24.0" />
                </font>
             </Text>
-            <Button fx:id="botonHome" layoutX="309.0" layoutY="20.0" mnemonicParsing="false" onAction="#IrHome" style="-fx-background-color: black;" text="Home" textFill="WHITE" underline="true">
-               <font>
-                  <Font size="17.0" />
-               </font>
-            </Button>
             <Button fx:id="botonMenu" layoutX="400.0" layoutY="22.0" mnemonicParsing="false" onAction="#IrMenu" style="-fx-background-color: black;" text="Menú" textFill="WHITE" underline="true">
                <font>
                   <Font size="17.0" />
@@ -39,14 +34,16 @@
                </font>
             </Text>
             <Button fx:id="botonRegresar" layoutX="493.0" layoutY="14.0" mnemonicParsing="false" onAction="#irAPantallaBebidas" prefHeight="38.0" prefWidth="86.0" style="-fx-background-color: blue;" text="Regresar" textFill="WHITE" />
+
+            <!-- Botones para agregar cada gaseosa al carrito -->
+            <Button fx:id="botonImagenQuatro" layoutX="248.0" layoutY="88.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="86.0" style="-fx-background-color: white;" onAction="#agregarGaseosa"/>
+            <Button fx:id="botonImagenCoca" layoutX="362.0" layoutY="88.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="86.0" style="-fx-background-color: white;" onAction="#agregarGaseosa"/>
+            <Button fx:id="botonImagenFanta" layoutX="473.0" layoutY="88.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="86.0" style="-fx-background-color: white;" onAction="#agregarGaseosa"/>
+
+            <!-- Panes para mostrar precios de cada gaseosa -->
             <Pane layoutX="257.0" layoutY="217.0" prefHeight="29.0" prefWidth="68.0" style="-fx-background-color: blue;">
                <children>
                   <Text fx:id="textoPrecio4" fill="WHITE" layoutX="23.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-               </children>
-            </Pane>
-            <Pane layoutX="482.0" layoutY="217.0" prefHeight="29.0" prefWidth="68.0" style="-fx-background-color: blue;">
-               <children>
-                  <Text fx:id="textoPrecioFanta" fill="WHITE" layoutX="23.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                </children>
             </Pane>
             <Pane layoutX="371.0" layoutY="217.0" prefHeight="29.0" prefWidth="68.0" style="-fx-background-color: blue;">
@@ -54,35 +51,24 @@
                   <Text fx:id="textoPrecioCoca" fill="WHITE" layoutX="23.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
                </children>
             </Pane>
-            <Text fill="#004aad" layoutX="271.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quatro">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-            </Text>
-            <Text fill="#004aad" layoutX="379.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CocaCola">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-            </Text>
-            <Text fill="#004aad" layoutX="500.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fanta">
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-            </Text>
-            <Button fx:id="botonImagenQuatro" layoutX="248.0" layoutY="88.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="86.0" style="-fx-background-color: white;" />
-            <Button fx:id="botonImagenCoca" layoutX="362.0" layoutY="88.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="86.0" style="-fx-background-color: white;" />
-            <Button fx:id="botonImagenFanta" layoutX="473.0" layoutY="88.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="86.0" style="-fx-background-color: white;" />
-            <Text fx:id="dispo4" fill="RED" layoutX="257.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+            <Pane layoutX="482.0" layoutY="217.0" prefHeight="29.0" prefWidth="68.0" style="-fx-background-color: blue;">
+               <children>
+                  <Text fx:id="textoPrecioFanta" fill="WHITE" layoutX="23.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+               </children>
+            </Pane>
+
+            <!-- Textos para mostrar disponibilidad -->
+            <Text fx:id="dispo4" fill="RED" layoutX="257.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No disponible">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </Text>
-            <Text fx:id="dispoCoca" fill="RED" layoutX="371.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+            <Text fx:id="dispoCoca" fill="RED" layoutX="371.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No disponible">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </Text>
-            <Text fx:id="dispoFanta" fill="RED" layoutX="483.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+            <Text fx:id="dispoFanta" fill="RED" layoutX="483.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No disponible">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
