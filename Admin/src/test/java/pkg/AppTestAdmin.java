@@ -1,6 +1,5 @@
 package pkg;
 
-
 import controller.modificarInventario;
 import javafx.collections.ObservableList;
 import org.junit.jupiter.api.BeforeEach;
@@ -9,6 +8,7 @@ import repository.AdminRepository;
 import repository.Credenciales;
 import repository.modificarInventarioRepository;
 import repository.modifificarRepository;
+import repository.verReservaRepository;
 
 import javafx.geometry.Point2D;
 import java.sql.SQLException;
@@ -22,11 +22,14 @@ public class AppTestAdmin {
     private AdminRepository adm;
     private modifificarRepository mod;
     private modificarInventarioRepository modRepo;
+    private verReservaRepository verReser;
+
     @BeforeEach
     void setUp(){
         adm=new AdminRepository();
         mod=new modifificarRepository();
         modRepo=new modificarInventarioRepository();
+        verReser=new verReservaRepository();
     }
     @Test
     void AutentficarAdmin(){
@@ -119,5 +122,13 @@ public class AppTestAdmin {
         List<modificarInventarioRepository.InventarioAlimento> ingredientes = modRepo.obtenerTodosLosInventarios();
         assertFalse(ingredientes.stream().anyMatch(i -> i.getNombre().equals("Avellana")),
                 "Todos los registros del ingrediente deben ser eliminados.");
+    }
+
+    @Test
+    void testEliminarReserva(){
+        assertEquals(1, verReser.getReservasPorIdCliente("1").size());
+        verReser.eliminarReserva(1);
+        assertEquals(0, verReser.getReservasPorIdCliente("1").size(),
+        "Se elimino correctamente");
     }
 }
