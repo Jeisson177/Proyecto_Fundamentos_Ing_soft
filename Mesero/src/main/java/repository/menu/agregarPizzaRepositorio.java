@@ -12,7 +12,7 @@ public class agregarPizzaRepositorio {
     private static final String PASSWORD = c.getPassword();
     private static final Map<String, String> pizzaNameMap = new HashMap<>();
     static {
-        pizzaNameMap.put("cuatro quesos", "Cuatro Quesos");
+        pizzaNameMap.put("4quesos", "Cuatro Quesos");
         pizzaNameMap.put("margarita", "Margarita");
         pizzaNameMap.put("pepperoni", "Pepperoni");
         pizzaNameMap.put("napolitana", "Napolitana");
