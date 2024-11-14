@@ -19,6 +19,8 @@ import java.util.ResourceBundle;
 public class ModificarMesasControl {
 
     @FXML
+    public Button selecInicio;
+    @FXML
     public Button bntm1, bntm2, bntm3, bntm4, bntm5, bntm6, bntm7, bntm8, bntm9, bntm10;
     @FXML
     public Button bntm11, bntm12, bntm13, bntm14, bntm15, bntm16, bntm17, bntm18, bntm19;
@@ -32,6 +34,7 @@ public class ModificarMesasControl {
     private int idMesaSeleccionada = -1;
     private final Map<Button, Integer> botonIdMap = new HashMap<>();
     private  modifificarRepository mesaRepository = new  modifificarRepository();
+    private RedirijirAdmin Ira = new RedirijirAdmin();
     // Este metodo se ejecuta automáticamente cuando la vista se carga
     @FXML
     public void initialize(URL location, ResourceBundle resources) {
@@ -163,5 +166,9 @@ public class ModificarMesasControl {
 
         }
 
+    }
+
+    public void IrInicio(ActionEvent actionEvent) {
+        Ira.IrInicio(selecInicio);
     }
 }
