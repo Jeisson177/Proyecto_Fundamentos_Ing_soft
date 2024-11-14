@@ -4,6 +4,7 @@ module com.example.cliente {
     requires java.sql;
     requires java.desktop;
     opens repository to javafx.base;
+    opens Entities to javafx.base;
 
     opens com.example.admin to javafx.fxml;
     exports com.example.admin;
