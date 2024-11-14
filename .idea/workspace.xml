@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fd8ff85-b94a-4b81-b0f1-01c765de323a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/src/main/java/controller/AgregarOeliminarInventario.java" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/java/controller/AgregarOeliminarInventario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/src/main/java/controller/modificarInventario.java" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/java/controller/modificarInventario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/src/main/java/controller/modificarPlato.java" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/java/controller/modificarPlato.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Admin/src/main/resources/vista/AgregarOeliminarInventario.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/AgregarOeliminarInventario.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/resources/vista/modificarInventario.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/modificarInventario.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/resources/vista/modificarMesero.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/modificarMesero.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/src/main/resources/vista/modificarPlato.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/modificarPlato.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

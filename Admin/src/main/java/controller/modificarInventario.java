@@ -54,8 +54,6 @@ public class modificarInventario {
     @FXML
     public void initialize() {
 
-        Image ig = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/imagenes/PlatosFuertes/ig.png")));
-
         // Configurar las columnas para asociarse con los campos de InventarioAlimento
         columnaNombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
         columnaCantidad.setCellValueFactory(new PropertyValueFactory<>("cantidadInv"));
