@@ -52,7 +52,7 @@
 
         <!-- Botón para agregar ingredientes -->
         <Button fx:id="agregarIngrediente" layoutX="250.0" layoutY="624.0" onAction="#agregarIngredienteAlPlato" text="Agregar Ingrediente al Plato" />
-      <AnchorPane prefHeight="59.0" prefWidth="680.0" style="-fx-background-color: black;">
+      <AnchorPane prefHeight="59.0" prefWidth="680.0" style="-fx-background-color: yellow;">
          <children>
             <Text fill="WHITE" layoutX="21.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bella Ventura">
                <font>
