@@ -102,7 +102,7 @@ public class Heladoscontrol {
     @FXML
     public void clickHELADO(ActionEvent actionEvent) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/PostreMenu.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/menu/PostreMenu.fxml"));
             Parent root = loader.load();
 
             Stage stage = new Stage();
