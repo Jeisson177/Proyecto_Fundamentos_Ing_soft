@@ -20,8 +20,6 @@ public class modificarPlato {
     @FXML
     public Button eliminarIngrediente;
     @FXML
-    public ImageView InstaImage;
-    @FXML
     public Button selecHome;
     @FXML
     public Button selecMenu;
@@ -64,8 +62,6 @@ public class modificarPlato {
     @FXML
     public void initialize() {
 
-        Image ig = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/imagenes/PlatosFuertes/ig.png")));
-        InstaImage.setImage(ig);
         // Configuración de columnas de la tabla de platos
         columnaNombre.setCellValueFactory(cellData -> cellData.getValue().nombreProperty());
         columnaDescripcion.setCellValueFactory(cellData -> cellData.getValue().descripcionProperty());
