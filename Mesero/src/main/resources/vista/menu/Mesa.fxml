@@ -21,6 +21,11 @@
                   <Font size="17.0" />
                </font>
             </Button>
+            <Button fx:id="btnRegresar" layoutX="600.0" layoutY="8.0" mnemonicParsing="false" onAction="#irInicio" style="-fx-background-color: black;" text="Regresar" textFill="WHITE" underline="true">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
          </children>
       </Pane>
       <ImageView fitHeight="187.0" fitWidth="254.0" layoutX="218.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">

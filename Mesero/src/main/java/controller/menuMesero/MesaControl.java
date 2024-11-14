@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 import services.GestionarReserva;
 import services.MesaService;
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Map;
@@ -38,6 +39,7 @@ public class MesaControl {
     @FXML
     public Button bntm11, bntm12, bntm13, bntm14, bntm15, bntm16, bntm17, bntm18, bntm19;
     public Button btnHorarios;
+    public Button btnRegresar;
 
     private final RedireccionGeneral Ira = new RedireccionGeneral();
     private final MesaService mesaRepository = new MesaService();
@@ -182,6 +184,18 @@ public class MesaControl {
         } else {
             System.out.println("No se pudo crear la reserva sin cita. La mesa " + mesaId + " no está disponible en este momento.");
             return false;
+        }
+    }
+
+    public void irInicio(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Inicio.fxml"));
+            Stage stage = (Stage) btnRegresar.getScene().getWindow();
+            stage.setScene(new Scene(loader.load()));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+
         }
     }
 }
