@@ -13,7 +13,7 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AgregarOeliminarInventario">
     <children>
         <!-- Encabezado de la ventana -->
-        <AnchorPane prefHeight="74.0" prefWidth="600.0" style="-fx-background-color: black;">
+        <AnchorPane prefHeight="74.0" prefWidth="600.0" style="-fx-background-color: EFB810;">
             <children>
                 <Text fill="#f7f5f5" layoutX="14.0" layoutY="45.0" text="Bella Ventura">
                     <font><Font size="21.0" /></font>

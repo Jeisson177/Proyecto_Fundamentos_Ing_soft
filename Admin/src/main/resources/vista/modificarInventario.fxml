@@ -13,7 +13,7 @@
 
     </stylesheets>
     <children>
-        <AnchorPane prefHeight="74.0" prefWidth="600.0" style="-fx-background-color: yellow;">
+        <AnchorPane prefHeight="74.0" prefWidth="600.0" style="-fx-background-color: EFB810;">
          <children>
             <Text fill="#f7f5f5" layoutX="14.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bella Ventura">
                <font>
