@@ -127,7 +127,7 @@ public class MesaControl {
     public void irHorarios(ActionEvent actionEvent) {
         try {
             // Carga la nueva ventana
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/ReservaFecha.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/menu/ReservaFecha.fxml"));
             Parent root = loader.load();
             // Obtener el controlador de la nueva ventana
             ReservaControl reservaControl = loader.getController();

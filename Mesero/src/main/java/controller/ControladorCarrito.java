@@ -1,5 +1,9 @@
+
 package controller;
 
+import javafx.beans.property.SimpleDoubleProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -8,10 +12,7 @@ import javafx.scene.control.*;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import services.Carrito;
-import javafx.beans.property.SimpleDoubleProperty;
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.collections.ObservableList;
+import services.ReservaService;
 
 import java.io.IOException;
 import java.util.Optional;
@@ -19,7 +20,7 @@ import java.util.Optional;
 public class ControladorCarrito {
 
     @FXML
-    private TableView<PlatoCarrito> tableViewCarrito;
+    public TableView<PlatoCarrito> tableViewCarrito;
     @FXML
     private TableColumn<PlatoCarrito, String> colNombre;
     @FXML
@@ -35,7 +36,7 @@ public class ControladorCarrito {
     @FXML
     private Button btnCrearFactura;
     @FXML
-    private Text textTotal;
+    public Text textTotal;
 
     private Carrito carrito;
 
@@ -50,14 +51,51 @@ public class ControladorCarrito {
         colCantidad.setCellValueFactory(cellData -> new SimpleIntegerProperty(cellData.getValue().getCantidad()).asObject());
         colPrecioTotal.setCellValueFactory(cellData -> new SimpleDoubleProperty(cellData.getValue().getCostoTotal()).asObject());
 
-        ObservableList<PlatoCarrito> listaCarrito = carrito.obtenerPlatosEnCarrito();
-        tableViewCarrito.setItems(listaCarrito);
-
+        tableViewCarrito.setItems(carrito.obtenerPlatosEnCarrito());
         actualizarTotal();
 
         btnEliminar.setOnAction(event -> eliminarPlatoDelCarrito());
         btnTotal.setOnAction(event -> actualizarTotal());
         btnCrearFactura.setOnAction(event -> crearFactura());
+    }
+
+    private void crearFactura() {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Añadir Servicio");
+        alert.setHeaderText("¿Desea añadir el servicio?");
+        alert.setContentText("Seleccione una opción:");
+
+        ButtonType buttonYes = new ButtonType("Sí");
+        ButtonType buttonNo = new ButtonType("No");
+        ButtonType buttonCancel = new ButtonType("Cancelar", ButtonBar.ButtonData.CANCEL_CLOSE);
+
+        alert.getButtonTypes().setAll(buttonYes, buttonNo, buttonCancel);
+
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.isPresent() && result.get() == buttonCancel) {
+            return;
+        }
+
+        boolean incluirServicio = result.isPresent() && result.get() == buttonYes;
+
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Factura.fxml"));
+            Parent root = loader.load();
+
+            FacturaControlador facturaControlador = loader.getController();
+            facturaControlador.actualizarTotales(incluirServicio);
+
+            // Cargar datos de la reserva seleccionada en la factura
+            facturaControlador.cargarDatosReserva();  // Asegura que se carga la reserva seleccionada
+
+            Stage stage = new Stage();
+            stage.setTitle("Factura");
+            stage.setScene(new Scene(root));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            mostrarAlerta("Error", "No se pudo cargar la pantalla de factura.");
+        }
     }
 
     private void eliminarPlatoDelCarrito() {
@@ -79,44 +117,6 @@ public class ControladorCarrito {
     private void actualizarTotal() {
         double total = carrito.calcularTotalCarrito();
         textTotal.setText("Total: $" + total);
-    }
-
-    private void crearFactura() {
-        // Preguntar si el usuario desea añadir el 8% de servicio
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Añadir Servicio");
-        alert.setHeaderText("¿Desea añadir el servicio?");
-        alert.setContentText("Seleccione una opción:");
-
-        ButtonType buttonYes = new ButtonType("Sí");
-        ButtonType buttonNo = new ButtonType("No");
-        ButtonType buttonCancel = new ButtonType("Cancelar", ButtonBar.ButtonData.CANCEL_CLOSE);
-
-        alert.getButtonTypes().setAll(buttonYes, buttonNo, buttonCancel);
-
-        // Mostrar el diálogo y esperar la respuesta del usuario
-        Optional<ButtonType> result = alert.showAndWait();
-        if (result.isPresent() && result.get() == buttonCancel) {
-            return; // Si el usuario cancela, no se crea la factura
-        }
-
-        boolean incluirServicio = result.isPresent() && result.get() == buttonYes;
-
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Factura.fxml"));
-            Parent root = loader.load();
-
-            FacturaControlador facturaControlador = loader.getController();
-            facturaControlador.actualizarTotales(incluirServicio);
-
-            Stage stage = new Stage();
-            stage.setTitle("Factura");
-            stage.setScene(new Scene(root));
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-            mostrarAlerta("Error", "No se pudo cargar la pantalla de factura.");
-        }
     }
 
     private void mostrarAlerta(String titulo, String mensaje) {

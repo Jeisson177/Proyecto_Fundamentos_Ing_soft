@@ -12,7 +12,7 @@ public class agregarPizzaRepositorio {
     private static final String PASSWORD = c.getPassword();
     private static final Map<String, String> pizzaNameMap = new HashMap<>();
     static {
-        pizzaNameMap.put("4quesos", "Cuatro Quesos");
+        pizzaNameMap.put("cuatro quesos", "Cuatro Quesos");
         pizzaNameMap.put("margarita", "Margarita");
         pizzaNameMap.put("pepperoni", "Pepperoni");
         pizzaNameMap.put("napolitana", "Napolitana");
@@ -63,7 +63,6 @@ public class agregarPizzaRepositorio {
     }
 
     public int getPreciosPizza(String nombrePizza, String tamano) {
-        // Evitar duplicar la palabra "Pizza" en el nombre completo
         String nombreCompleto = nombrePizza + " " + tamano;
 
         String query = "SELECT PRECIO FROM PLATO WHERE NOMBRE = ?";

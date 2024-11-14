@@ -172,4 +172,16 @@ public class ConsultarReservasRepository {
             return horaCierre;
         }
     }
+    public boolean eliminarReserva(int idReserva) {
+        String query = "DELETE FROM RESERVA WHERE ID_RESERVA = ?";
+        try (Connection connection = getConnection();
+             PreparedStatement stmt = connection.prepareStatement(query)) {
+
+            stmt.setInt(1, idReserva);
+            return stmt.executeUpdate() > 0; // Devuelve true si la eliminación fue exitosa
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 }

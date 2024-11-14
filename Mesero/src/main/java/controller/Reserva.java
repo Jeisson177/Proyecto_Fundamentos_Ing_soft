@@ -16,6 +16,10 @@ public class Reserva {
         this.fechaHora = fechaHora;
     }
 
+    public Reserva() {
+
+    }
+
     public int getIdReserva() {
         return idReserva;
     }

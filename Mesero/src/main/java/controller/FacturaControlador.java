@@ -1,3 +1,4 @@
+// FacturaControlador.java
 package controller;
 
 import javafx.collections.FXCollections;
@@ -6,12 +7,17 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
 import services.Carrito;
+import services.GestionarReserva;
+import services.ReservaService;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+import java.io.File;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class FacturaControlador {
 
@@ -31,13 +37,17 @@ public class FacturaControlador {
     @FXML
     private Text mesaFactura;
     @FXML
-    private Text totalBase;
+    public Text totalBase;
     @FXML
-    private Text servicioAdicional;
+    public Text servicioAdicional;
     @FXML
-    private Text totalConServicio;
+    public Text totalConServicio;
+    @FXML
+    private Text horaFactura;
 
     private final Carrito carrito = Carrito.getInstance();
+    private final GestionarReserva gestionarReserva = new GestionarReserva();
+    private int idReservaActual;
 
     @FXML
     public void initialize() {
@@ -60,7 +70,7 @@ public class FacturaControlador {
         ObservableList<ItemFactura> itemsObservable = FXCollections.observableArrayList(itemsFactura);
         tablaFactura.setItems(itemsObservable);
 
-        actualizarTotales(false); // Inicialmente sin servicio
+        actualizarTotales(false);
     }
 
     public void actualizarTotales(boolean incluirServicio) {
@@ -73,12 +83,25 @@ public class FacturaControlador {
         totalConServicio.setText(String.format("%.2f COP", totalConServicioValue));
     }
 
+    public void cargarDatosReserva() {
+        Reserva reserva = ReservaService.getInstance().getReservaSeleccionada();
+        if (reserva != null) {
+            fechaFactura.setText("Fecha: " + reserva.getFechaHora().toLocalDate());
+            horaFactura.setText("Hora: " + reserva.getFechaHora().toLocalTime());
+            mesaFactura.setText("Mesa: " + reserva.getIdMesa());
+            idReservaActual = reserva.getIdReserva(); // Guardamos el ID para eliminar después
+        } else {
+            mostrarAlerta("Error", "No se encontró la reserva seleccionada.");
+        }
+    }
+
     @FXML
     private void imprimirFactura() {
         StringBuilder facturaTexto = new StringBuilder();
         facturaTexto.append("Bella Ventura\n")
                 .append(fechaFactura.getText()).append("\n")
                 .append(mesaFactura.getText()).append("\n")
+                .append(horaFactura.getText()).append("\n")
                 .append("====================================\n")
                 .append("CANT\tDESCRIPCIÓN\tPRECIO\tTOTAL\n");
 
@@ -95,12 +118,20 @@ public class FacturaControlador {
                 .append("TOTAL: ").append(totalConServicio.getText()).append("\n")
                 .append("GRACIAS POR SU VISITA\n");
 
-        try (PrintWriter writer = new PrintWriter("Factura.txt")) {
+        String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
+        String filename = "facturas/Factura_" + timestamp + ".txt";
+        File folder = new File("facturas");
+        if (!folder.exists()) folder.mkdir();
+
+        try (PrintWriter writer = new PrintWriter(filename)) {
             writer.print(facturaTexto.toString());
-            mostrarAlerta("Factura", "Factura guardada como Factura.txt");
+            mostrarAlerta("Factura", "Factura guardada en: " + filename);
+
+            // Eliminar la reserva después de guardar la factura :D
+            gestionarReserva.eliminarReserva(idReservaActual);
         } catch (IOException e) {
             e.printStackTrace();
-            mostrarAlerta("Error", "No se pudo guardar la factura.");
+            mostrarAlerta("Error", "Error al guardar la factura.");
         }
     }
 

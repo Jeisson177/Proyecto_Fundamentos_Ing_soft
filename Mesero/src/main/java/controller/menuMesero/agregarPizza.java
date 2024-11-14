@@ -101,7 +101,8 @@ public class agregarPizza {
         mostrarAlerta("Pizza agregada", "La pizza ha sido agregada al carrito.");
     }
 
-
+// Añadir breakpoint y ver variables
+    // (reserva sin cita) select base de datos y ver las reservas de hoy, comparar las horas para ver si la mesa X estan disponibles. Si si hay se crea una reserva
 
     // Muestra una alerta informativa
     private void mostrarAlerta(String titulo, String mensaje) {

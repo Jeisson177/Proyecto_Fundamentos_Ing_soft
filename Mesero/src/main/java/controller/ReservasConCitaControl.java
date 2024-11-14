@@ -12,7 +12,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import services.GestionarReserva;
-import services.ReservaService; // Importa el servicio de reserva compartido
+import services.ReservaService;
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -21,7 +21,7 @@ import java.util.List;
 public class ReservasConCitaControl {
 
     @FXML
-    private TableView<Reserva> tabla_reservas;
+    public TableView<Reserva> tabla_reservas;
     @FXML
     private TableColumn<Reserva, String> fechaColumn;
     @FXML
@@ -37,6 +37,7 @@ public class ReservasConCitaControl {
 
     private GestionarReserva gestionarReserva;
     private Reserva reservaSeleccionada;
+    private int idReservaSeleccionada;
 
     public ReservasConCitaControl() {
         this.gestionarReserva = new GestionarReserva(new MesaControl());
@@ -62,9 +63,12 @@ public class ReservasConCitaControl {
     @FXML
     private void Atender(ActionEvent actionEvent) {
         if (reservaSeleccionada != null) {
-            // Guarda la reserva seleccionada en el servicio compartido
-            ReservaService.getInstance().setReservaSeleccionada(reservaSeleccionada);
-            cargarMenu(); // Cargar el menú sin pasar la reserva explícitamente
+            if (gestionarReserva.esReservaActual(reservaSeleccionada)) {
+                ReservaService.getInstance().setReservaSeleccionada(reservaSeleccionada);
+                cargarMenu();
+            } else {
+                showAlert("Solo se pueden atender reservas actuales.");
+            }
         } else {
             showAlert("Por favor, selecciona una reserva.");
         }
@@ -74,9 +78,11 @@ public class ReservasConCitaControl {
     private void handleReservaSelection(MouseEvent mouseEvent) {
         reservaSeleccionada = tabla_reservas.getSelectionModel().getSelectedItem();
         if (reservaSeleccionada != null) {
-            System.out.println("Reserva seleccionada: " + reservaSeleccionada);
+            idReservaSeleccionada = reservaSeleccionada.getIdReserva();
+            System.out.println("ID de reserva seleccionada: " + idReservaSeleccionada);
         }
     }
+
 
     private void showAlert(String mensaje) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -96,7 +102,6 @@ public class ReservasConCitaControl {
             stage.setScene(new Scene(root));
             stage.show();
 
-            // Cerrar la ventana actual de reservas
             Stage currentStage = (Stage) btnAtender.getScene().getWindow();
             currentStage.close();
         } catch (IOException e) {
@@ -104,6 +109,4 @@ public class ReservasConCitaControl {
             showAlert("Error al cargar el menú.");
         }
     }
-
-
 }

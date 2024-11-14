@@ -6,8 +6,10 @@ import controller.Reserva;
 
 import java.sql.SQLException;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -17,26 +19,23 @@ public class GestionarReserva {
     private final MesaControl mesa;
     private final ConsultarReservasRepository reservaRepo;
 
-    // Constructor que acepta MesaControl
     public GestionarReserva(MesaControl mesa) {
         this.mesa = mesa;
         this.reservaRepo = new ConsultarReservasRepository();
     }
 
     public GestionarReserva() {
-        this.mesa = new MesaControl();  // Inicialización por defecto si aplica
+        this.mesa = new MesaControl();
         this.reservaRepo = new ConsultarReservasRepository();
     }
 
-    public Optional<Reserva> obtenerReservaPorId(int idReserva) {
-        Reserva reserva = reservaRepo.obtenerReservaPorId(idReserva);
-        return Optional.ofNullable(reserva); // Envuelve la reserva en un Optional
+
+    public boolean estaMesaDisponible(int mesaId, LocalDate fecha, LocalTime hora) {
+        return !reservaRepo.fechaOcupada(fecha, hora, mesaId);
     }
 
-    // Método para obtener la reserva activa (por ejemplo, la última reserva hecha por el usuario actual)
-    public Optional<Reserva> obtenerReservaActual() {
-        Reserva reservaActual = reservaRepo.obtenerUltimaReserva(); // Ajustado sin try-catch
-        return Optional.ofNullable(reservaActual);
+    public Optional<Reserva> obtenerReservaPorId(int idReserva) {
+        return Optional.ofNullable(reservaRepo.obtenerReservaPorId(idReserva));
     }
 
     public List<String> obtenerHorariosDisponibles(LocalDate fechaSeleccionada, int mesaId) throws SQLException {
@@ -77,5 +76,52 @@ public class GestionarReserva {
 
     public List<Reserva> obtenerReservasPorFecha(LocalDate fecha) {
         return reservaRepo.obtenerReservasPorFecha(fecha);
+    }
+
+    public boolean esReservaActual(Reserva reserva) {
+        LocalDateTime ahora = LocalDateTime.now();
+        LocalDateTime fechaHoraReserva = reserva.getFechaHora();
+        if (!fechaHoraReserva.toLocalDate().equals(ahora.toLocalDate())) {
+            return false;
+        }
+        long minutosDiferencia = ChronoUnit.MINUTES.between(ahora.toLocalTime(), fechaHoraReserva.toLocalTime());
+        return Math.abs(minutosDiferencia) <= 15;
+    }
+
+    public boolean intentarAtenderReserva(int idReserva) {
+        Optional<Reserva> reservaOpt = obtenerReservaPorId(idReserva);
+
+        if (reservaOpt.isPresent()) {
+            Reserva reserva = reservaOpt.get();
+            if (esReservaActual(reserva)) {
+                System.out.println("Reserva actual atendida correctamente.");
+                return true;
+            } else {
+                System.out.println("No se puede atender una reserva anterior o futura.");
+                return false;
+            }
+        } else {
+            System.out.println("Reserva no encontrada.");
+            return false;
+        }
+    }
+
+    public boolean eliminarReserva(int idReserva) {
+        return reservaRepo.eliminarReserva(idReserva);
+    }
+
+    public boolean crearReservaSinCita(int mesaId) {
+        LocalDate fechaActual = LocalDate.now();
+        LocalTime horaActual = LocalTime.now();
+
+        // Verifica si la mesa está disponible en la fecha y hora actuales
+        if (estaMesaDisponible(mesaId, fechaActual, horaActual)) {
+            int idUsuario = 0; // Puedes ajustar este ID de usuario para reservas sin cita
+            String fechaHora = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+            return reservaRepo.guardarReserva(idUsuario, mesaId, fechaHora);
+        } else {
+            System.out.println("La mesa " + mesaId + " no está disponible en este momento.");
+            return false;
+        }
     }
 }
