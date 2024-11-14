@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fd8ff85-b94a-4b81-b0f1-01c765de323a" name="Changes" comment="cositas">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/FacturaControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/FacturaControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/ReservasConCitaControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/ReservasConCitaControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/vista/Reservas.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/vista/ReservasConCita.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/vista/ReservasConCita.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/Mesa.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/Mesa.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="1fd8ff85-b94a-4b81-b0f1-01c765de323a" name="Changes" comment="cositas" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -263,6 +256,7 @@
       <workItem from="1731376870866" duration="1138000" />
       <workItem from="1731417890182" duration="955000" />
       <workItem from="1731508181938" duration="19062000" />
+      <workItem from="1731606321782" duration="501000" />
     </task>
     <servers />
   </component>

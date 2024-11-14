@@ -110,7 +110,7 @@ public class MenuControl {
 
     private void abrirControladorCarrito() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/carrito/CarritoCompras.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/CarritoCompras.fxml"));
             Parent root = loader.load();
 
             Stage stage = new Stage();
