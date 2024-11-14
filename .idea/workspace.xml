@@ -4,25 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fd8ff85-b94a-4b81-b0f1-01c765de323a" name="Changes" comment="YA se crea la factura!! :D se pueden mejorar cositas pero eso lo hago mañana en la mañana">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/MesaControlFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mesero/src/test/java/pckg/TestMesero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="1fd8ff85-b94a-4b81-b0f1-01c765de323a" name="Changes" comment="ya, faltan pruebas">
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Consulta.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Consulta.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/ControladorCarrito.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/ControladorCarrito.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/FacturaControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/FacturaControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/InicioControlMesero.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/InicioControlMesero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/Reserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/Reserva.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/ReservasConCitaControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/ReservasConCitaControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/MesaControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/MesaControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/agregarPizza.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/agregarPizza.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/repository/ConsultarReservasRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/repository/ConsultarReservasRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/repository/menu/agregarPizzaRepositorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/repository/menu/agregarPizzaRepositorio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/services/GestionarReserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/services/GestionarReserva.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/services/ReservaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/services/ReservaService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +83,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.HelloApplication.executor": "Debug",
-    "Application.Mesero.executor": "Debug",
+    "Application.Mesero.executor": "Run",
     "Application.admin.executor": "Run",
     "Application.usuarioC.executor": "Run",
     "Downloaded.Files.Path": "C:\\Users\\Jocel\\Downloads\\Proyecto_Fundamentos_Ing_soft",
@@ -115,7 +99,7 @@
     "JUnit.AppTest.testGuardarReserva.executor": "Run",
     "JUnit.AppTest.testObtenerHorarioDia.executor": "Run",
     "JUnit.AppTest.testObtenerHorariosDisponibles.executor": "Run",
-    "JUnit.TestMesero.executor": "Debug",
+    "JUnit.TestMesero.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
@@ -164,7 +148,7 @@
       <recent name="repository.menu" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Mesero">
     <configuration name="Mesero" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.Mesero.Mesero" />
       <module name="Mesero" />
@@ -281,7 +265,7 @@
       <workItem from="1730231433151" duration="1535000" />
       <workItem from="1731356002456" duration="1862000" />
       <workItem from="1731431147941" duration="43772000" />
-      <workItem from="1731525515201" duration="22065000" />
+      <workItem from="1731525515201" duration="22758000" />
     </task>
     <task id="LOCAL-00001" summary="Ya se pueden agregar varios platos al carrito. PROBLEMAS: Pizzas tiran un error que no sé qué hacer al tratar de agregar una pizza al carrito, Botones en Bebidas NO funcionan, y me falta programar los postres y listo">
       <option name="closed" value="true" />
@@ -299,7 +283,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731477897481</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="ya, faltan pruebas">
+      <option name="closed" value="true" />
+      <created>1731558134687</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1731558134687</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,7 +312,8 @@
     <MESSAGE value="cositas equis para ver pq que putas" />
     <MESSAGE value="Ya se pueden agregar varios platos al carrito. PROBLEMAS: Pizzas tiran un error que no sé qué hacer al tratar de agregar una pizza al carrito, Botones en Bebidas NO funcionan, y me falta programar los postres y listo" />
     <MESSAGE value="YA se crea la factura!! :D se pueden mejorar cositas pero eso lo hago mañana en la mañana" />
-    <option name="LAST_COMMIT_MESSAGE" value="YA se crea la factura!! :D se pueden mejorar cositas pero eso lo hago mañana en la mañana" />
+    <MESSAGE value="ya, faltan pruebas" />
+    <option name="LAST_COMMIT_MESSAGE" value="ya, faltan pruebas" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
