@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fd8ff85-b94a-4b81-b0f1-01c765de323a" name="Changes" comment="ya, faltan pruebas">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+    <list default="true" id="1fd8ff85-b94a-4b81-b0f1-01c765de323a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/src/test/java/pkg/AppTestAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/test/java/pkg/AppTestAdmin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +51,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Jeisson177/Proyecto_Fundamentos_Ing_soft.git&quot;,
-    &quot;accountId&quot;: &quot;19f69f75-ca28-46a4-9103-87243a4383e7&quot;
+    &quot;accountId&quot;: &quot;1f69838e-1070-4544-b949-828285373af2&quot;
   }
 }</component>
   <component name="MarkdownSettingsMigration">
@@ -99,7 +99,7 @@
     "JUnit.AppTest.testGuardarReserva.executor": "Run",
     "JUnit.AppTest.testObtenerHorarioDia.executor": "Run",
     "JUnit.AppTest.testObtenerHorariosDisponibles.executor": "Run",
-    "JUnit.TestMesero.executor": "Run",
+    "JUnit.AppTestAdmin.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
@@ -107,7 +107,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "OrdenMesero",
+    "git-widget-placeholder": "adminVerReservas",
     "ignore.preview.features.used": "true",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
@@ -122,11 +122,6 @@
     "project.structure.side.proportion": "0.2591623",
     "settings.editor.selected.configurable": "preferences.JavaFX",
     "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "h2"
-    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -138,17 +133,15 @@
       <recent name="C:\Users\jeiss\Documents\universidad\10 decimo semestre\Fundamentos ing soft\Proyecto_Fundamentos_Ing_soft\Mesero\src\main\java\repository\menu" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\delux\Documents\GitHub\Proyecto_Fundamentos_Ing_soft\Facturas" />
-      <recent name="C:\Users\delux\Documents\GitHub\Proyecto_Fundamentos_Ing_soft\Mesero\src\main\resources\vista" />
-      <recent name="C:\Users\delux\Documents\GitHub\Proyecto_Fundamentos_Ing_soft\Mesero\src\main\resources" />
       <recent name="C:\Users\jeiss\Documents\universidad\10 decimo semestre\Fundamentos ing soft\Proyecto_Fundamentos_Ing_soft\Admin\src\main\resources\vista" />
       <recent name="C:\Users\jeiss\Documents\universidad\10 decimo semestre\Fundamentos ing soft\Proyecto_Fundamentos_Ing_soft\Mesero\src\main\java" />
+      <recent name="C:\Users\jeiss\OneDrive\Documentos\universidad\10 decimo semestre\Fundamentos ing soft\Proyecto_Fundamentos_Ing_soft\Admin\src\main\resources\vista\menu" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="repository.menu" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Mesero">
+  <component name="RunManager">
     <configuration name="Mesero" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.Mesero.Mesero" />
       <module name="Mesero" />
@@ -224,8 +217,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Mesero" />
         <item itemvalue="Application.admin" />
+        <item itemvalue="Application.Mesero" />
         <item itemvalue="JUnit.AppTest" />
         <item itemvalue="JUnit.AppTest.testGReserva" />
         <item itemvalue="JUnit.AppTest.testObtenerHorariosDisponibles" />
@@ -235,8 +228,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.19416.15" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.19416.15" />
       </set>
     </attachedChunks>
   </component>
@@ -263,35 +256,10 @@
       <workItem from="1729797266663" duration="1245000" />
       <workItem from="1730072852165" duration="689000" />
       <workItem from="1730231433151" duration="1535000" />
-      <workItem from="1731356002456" duration="1862000" />
-      <workItem from="1731431147941" duration="43772000" />
-      <workItem from="1731525515201" duration="22758000" />
+      <workItem from="1731376870866" duration="1138000" />
+      <workItem from="1731417890182" duration="955000" />
+      <workItem from="1731508181938" duration="19062000" />
     </task>
-    <task id="LOCAL-00001" summary="Ya se pueden agregar varios platos al carrito. PROBLEMAS: Pizzas tiran un error que no sé qué hacer al tratar de agregar una pizza al carrito, Botones en Bebidas NO funcionan, y me falta programar los postres y listo">
-      <option name="closed" value="true" />
-      <created>1731303316492</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1731303316492</updated>
-    </task>
-    <task id="LOCAL-00002" summary="YA se crea la factura!! :D se pueden mejorar cositas pero eso lo hago mañana en la mañana">
-      <option name="closed" value="true" />
-      <created>1731477897481</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1731477897481</updated>
-    </task>
-    <task id="LOCAL-00003" summary="ya, faltan pruebas">
-      <option name="closed" value="true" />
-      <created>1731558134687</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1731558134687</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,13 +275,6 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="cositas equis para ver pq que putas" />
-    <MESSAGE value="Ya se pueden agregar varios platos al carrito. PROBLEMAS: Pizzas tiran un error que no sé qué hacer al tratar de agregar una pizza al carrito, Botones en Bebidas NO funcionan, y me falta programar los postres y listo" />
-    <MESSAGE value="YA se crea la factura!! :D se pueden mejorar cositas pero eso lo hago mañana en la mañana" />
-    <MESSAGE value="ya, faltan pruebas" />
-    <option name="LAST_COMMIT_MESSAGE" value="ya, faltan pruebas" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

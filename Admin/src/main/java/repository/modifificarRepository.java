@@ -10,9 +10,11 @@ import java.util.Map;
 import javafx.geometry.Point2D;
 
 public class modifificarRepository {
-    private String url = "jdbc:mysql://localhost:3306/proyecto ingesoft";
-    private String user = "root";
-    private String password = "cl";
+    private static final Credenciales credenciales=new Credenciales();
+    private static final String url = credenciales.getURL();
+    //private static final String URL  = "jdbc:mysql://localhost:3307/proyecto ingesoft";
+    private static final String user = credenciales.getUser();
+    private static final String password = credenciales.getPassword();
 
     public Map<Integer, Point2D> obtenerPosicionesMesas() throws SQLException {
         Map<Integer, Point2D> posicionesMesas = new HashMap<>();

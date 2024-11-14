@@ -20,6 +20,8 @@ public class InicioControlAdmin {
     public Button btnreservas;
     public Button btnmesas;
 
+    private RedirijirAdmin Ira = new RedirijirAdmin();
+
     public void IrEditarMesas(ActionEvent actionEvent) {;
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/ModificarMesas.fxml"));
@@ -37,4 +39,14 @@ public class InicioControlAdmin {
             System.err.println("Error al cargar la vista Home: " + e.getMessage());
         }
     }
+
+    public void IrPlato(ActionEvent actionEvent) {
+        Ira.IrPlato(btnplato);
+    }
+
+    public void IrInventario(ActionEvent actionEvent) {
+        Ira.IrInventario(btnInventario);
+    }
+
+    public void IrVerReservas(ActionEvent actionEvent) {Ira.IrVerReserva(btnreservas);}
 }

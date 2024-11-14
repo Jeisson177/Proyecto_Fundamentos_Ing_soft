@@ -12,7 +12,7 @@ public class AdminRepository {
 
     public boolean AutentificatAdmin(String email, String contrasena){
         String query = "SELECT ID_USUARIO FROM usuario WHERE EMAIL = ? AND CONTRASENA = ? AND ROL = ?";
-        String rol = "Cliente";
+        String rol = "Administrador";
 
         try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
             try (PreparedStatement stmt = connection.prepareStatement(query)) {

@@ -556,7 +556,8 @@ INSERT INTO Usuario (NOMBRE, EMAIL, TELEFONO, ROL, CONTRASENA) VALUES
 ('Patricia Mendoza', 'patriciamendoza@email.com', '555-2222', 'Mesero', 'mesero2'),
 ('Samuel Vargas', 'samuelvargas@email.com', '555-3333', 'Mesero', 'mesero3'),
 ('Lucia Torres', 'luciatorres@email.com', '555-4444', 'Mesero', 'mesero4'),
-('Jorge Castillo', 'jorgecastillo@email.com', '555-5555', 'Mesero', 'mesero5');
+('Jorge Castillo', 'jorgecastillo@email.com', '555-5555', 'Mesero', 'mesero5'),
+('Esteban Torres','estebanxd@email.com','123-3212','Administrador','admin');
 
 -- Inserciones en la tabla RESERVA
 INSERT INTO RESERVA (ID_CLIENTE, ID_MESA, FECHA_HORA) VALUES

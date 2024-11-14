@@ -9,9 +9,9 @@ import javafx.stage.Stage;
 public class admin extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-       FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/vista/menu/Bebidas.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/vista/Inicio.fxml"));
 
-       Scene scene = new Scene(fxmlLoader.load(), 700, 400);
+        Scene scene = new Scene(fxmlLoader.load(), 700, 400);
         stage.setTitle("Bella Venture admnistrator");
         stage.setScene(scene);
         stage.show();
