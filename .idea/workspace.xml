@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fd8ff85-b94a-4b81-b0f1-01c765de323a" name="Changes" comment="cositas">
-      <change beforePath="$PROJECT_DIR$/Admin/src/test/java/pkg/AppTestAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/test/java/pkg/AppTestAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/src/main/java/controller/ModificarMesasControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/java/controller/ModificarMesasControl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +38,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="OrdenMesero" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -81,8 +83,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.HelloApplication.executor": "Debug",
-    "Application.Mesero.executor": "Debug",
-    "Application.admin.executor": "Debug",
+    "Application.Mesero.executor": "Run",
+    "Application.admin.executor": "Run",
     "Application.usuarioC.executor": "Run",
     "Downloaded.Files.Path": "C:\\Users\\Jocel\\Downloads\\Proyecto_Fundamentos_Ing_soft",
     "Downloaded.Files.Path.Enabled": "true",
@@ -105,11 +107,11 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "modificar-mesero",
+    "git-widget-placeholder": "develop",
     "ignore.preview.features.used": "true",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/jeiss/Documents/universidad/10 decimo semestre/Fundamentos ing soft/Proyecto_Fundamentos_Ing_soft/Mesero/src/main",
+    "last_opened_file_path": "C:/Users/jeiss/Documents/universidad/10 decimo semestre/Fundamentos ing soft/Proyecto_Fundamentos_Ing_soft",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -139,7 +141,7 @@
       <recent name="repository.menu" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Mesero">
+  <component name="RunManager" selected="Application.admin">
     <configuration name="Mesero" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.Mesero.Mesero" />
       <module name="Mesero" />
@@ -215,13 +217,21 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Mesero" />
         <item itemvalue="Application.admin" />
+        <item itemvalue="Application.Mesero" />
         <item itemvalue="JUnit.AppTest" />
         <item itemvalue="JUnit.AppTest.testGReserva" />
         <item itemvalue="JUnit.AppTest.testObtenerHorariosDisponibles" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -249,17 +259,7 @@
       <workItem from="1731376870866" duration="1138000" />
       <workItem from="1731417890182" duration="955000" />
       <workItem from="1731508181938" duration="19062000" />
-      <workItem from="1731606321782" duration="501000" />
     </task>
-    <task id="LOCAL-00001" summary="cositas">
-      <option name="closed" value="true" />
-      <created>1731607100476</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1731607100476</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
