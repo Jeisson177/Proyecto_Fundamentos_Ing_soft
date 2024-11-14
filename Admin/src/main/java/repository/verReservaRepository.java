@@ -95,33 +95,4 @@ public class verReservaRepository {
         return reservas;  // Retorna la lista de reservas
     }
 
-    public List<Reserva> getReservasPorClienteYFecha(int idCliente, LocalDate fecha) {
-        List<Reserva> reservas = new ArrayList<>();
-        String query = "SELECT * FROM RESERVA WHERE ID_CLIENTE = ? AND DATE(FECHA_HORA) = ?";
-
-        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
-            try (PreparedStatement stmt = connection.prepareStatement(query)) {
-                stmt.setInt(1, idCliente);  // Asigna el ID del cliente al PreparedStatement
-                stmt.setDate(2, java.sql.Date.valueOf(fecha));  // Asigna la fecha al PreparedStatement
-
-                try (ResultSet rs = stmt.executeQuery()) {
-                    while (rs.next()) {
-                        // Construye y agrega cada objeto Reserva a la lista
-                        reservas.add(new Reserva(
-                                rs.getInt("ID_RESERVA"),
-                                rs.getInt("ID_CLIENTE"),
-                                rs.getInt("ID_MESA"),
-                                rs.getTimestamp("FECHA_HORA").toLocalDateTime()
-                        ));
-                    }
-                }
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);  // Lanza una excepción si ocurre un error
-        }
-
-        return reservas;  // Retorna la lista de reservas
-    }
-
-
 }

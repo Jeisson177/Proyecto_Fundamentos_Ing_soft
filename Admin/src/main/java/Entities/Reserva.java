@@ -9,7 +9,12 @@ public class Reserva {
     private int Id_mesa;
 
     public Reserva(int idReserva, int idCliente, int idMesa, LocalDateTime fechaHora) {
+        this.id_Reserva = idReserva;
+        this.id_Cliente = idCliente;
+        this.Id_mesa = idMesa;
+        this.fechaReserva = fechaHora;
     }
+
 
     public int getId_Cliente() {
         return id_Cliente;
