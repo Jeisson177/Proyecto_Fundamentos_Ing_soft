@@ -28,8 +28,6 @@ public class modificarInventario {
     @FXML
     public Button selecHome;
     @FXML
-    public ImageView instaImagen;
-    @FXML
     public Button selecMenu;
     @FXML
     public Button selecAgregar;
@@ -64,7 +62,6 @@ public class modificarInventario {
         columnaFecha.setCellValueFactory(new PropertyValueFactory<>("fechaVen"));
         columnaUnidad.setCellValueFactory(new PropertyValueFactory<>("unidad"));
 
-        instaImagen.setImage(ig);
 
         // Cargar los datos en la tabla
         cargarDatosTabla();
