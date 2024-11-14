@@ -34,6 +34,8 @@ public class ReservasConCitaControl {
     private Button btnConsultar;
     @FXML
     private Button btnAtender;
+    @FXML
+    private Button btnInicio;
 
     private GestionarReserva gestionarReserva;
     private Reserva reservaSeleccionada;
@@ -107,6 +109,18 @@ public class ReservasConCitaControl {
         } catch (IOException e) {
             e.printStackTrace();
             showAlert("Error al cargar el menú.");
+        }
+    }
+    @FXML
+    private void irInicio() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/vista/Inicio.fxml"));
+            Stage stage = (Stage) btnInicio.getScene().getWindow();
+            stage.setScene(new Scene(loader.load()));
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+
         }
     }
 }

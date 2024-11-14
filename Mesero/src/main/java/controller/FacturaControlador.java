@@ -122,7 +122,7 @@ public class FacturaControlador {
                 .append("TOTAL: ").append(totalConServicio.getText()).append("\n")
                 .append("GRACIAS POR SU VISITA\n");
 
-        String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy / MMdd_HH / mmss"));
+        String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy_MMdd_HH_mmss"));
         String filename = "facturas/Factura_" + timestamp + ".txt";
         File folder = new File("facturas");
         if (!folder.exists()) folder.mkdir();

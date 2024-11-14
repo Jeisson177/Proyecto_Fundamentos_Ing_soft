@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fd8ff85-b94a-4b81-b0f1-01c765de323a" name="Changes" comment="cositas" />
+    <list default="true" id="1fd8ff85-b94a-4b81-b0f1-01c765de323a" name="Changes" comment="cositas">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/FacturaControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/FacturaControlador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/ReservasConCitaControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/ReservasConCitaControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/vista/Reservas.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/vista/ReservasConCita.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/vista/ReservasConCita.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/Mesa.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/Mesa.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
