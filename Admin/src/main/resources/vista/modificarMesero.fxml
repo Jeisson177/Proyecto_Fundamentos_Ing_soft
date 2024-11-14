@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="469.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.modificarMeseroController">
+    <children>
+        <!-- Título de la pantalla -->
+        <Text fill="#0617fa" layoutX="40.0" layoutY="123.0" style="-fx-font-size: 20px;" text="Modificar Meseros" />
+
+        <!-- Tabla de meseros -->
+        <TableView fx:id="tablaMeseros" layoutX="40.0" layoutY="143.0" prefHeight="200.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="columnaNombre" prefWidth="150.0" text="Nombre" />
+                <TableColumn fx:id="columnaEmail" prefWidth="200.0" text="Email" />
+                <TableColumn fx:id="columnaTelefono" prefWidth="100.0" text="Teléfono" />
+                <TableColumn fx:id="columnaRol" prefWidth="100.0" text="Rol" />
+            </columns>
+        </TableView>
+
+        <!-- Campos para modificar un mesero -->
+        <TextField fx:id="nombreField" layoutX="40.0" layoutY="363.0" promptText="Nombre del mesero" />
+        <TextField fx:id="emailField" layoutX="200.0" layoutY="363.0" promptText="Email" />
+        <TextField fx:id="telefonoField" layoutX="360.0" layoutY="363.0" promptText="Teléfono" />
+
+        <!-- Botones de acción -->
+        <Button fx:id="guardarCambios" layoutX="497.0" layoutY="414.0" onAction="#guardarCambios" text="Guardar Cambios" />
+
+        <!-- Botón para eliminar un mesero -->
+        <Button fx:id="eliminarMesero" layoutX="75.0" layoutY="414.0" onAction="#eliminarMesero" text="Eliminar Mesero" />
+
+        <!-- Botón para agregar un nuevo mesero -->
+        <Button fx:id="agregarMesero" layoutX="285.0" layoutY="414.0" onAction="#agregarMesero" text="Agregar Mesero" />
+
+        <!-- Barra superior (con opciones de navegación) -->
+        <AnchorPane prefHeight="59.0" prefWidth="680.0" style="-fx-background-color: black;">
+            <children>
+                <Text fill="WHITE" layoutX="21.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bella Ventura">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </Text>
+                <ImageView fx:id="InstaImage" fitHeight="55.0" fitWidth="69.0" layoutX="590.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" />
+                <Button fx:id="selecHome" layoutX="250.0" layoutY="17.0" mnemonicParsing="false" onAction="#IrHome" style="-fx-background-color: transparent;" text="Home" textFill="WHITE" underline="true">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <Button fx:id="selecMenu" layoutX="368.0" layoutY="17.0" mnemonicParsing="false" onAction="#IrMenu" style="-fx-background-color: transparent;" text="Menu" textFill="WHITE" underline="true">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+
+        <!-- Botón para volver a la pantalla de inicio -->
+        <Button fx:id="selecInicio" layoutX="546.0" layoutY="102.0" mnemonicParsing="false" onAction="#IrInicio" style="-fx-background-color: Black;" text="Volver a Inicio" textFill="WHITE" />
+    </children>
+</AnchorPane>

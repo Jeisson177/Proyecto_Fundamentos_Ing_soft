@@ -12,6 +12,7 @@ import repository.modifificarRepository;
 
 import java.net.URL;
 import java.sql.SQLException;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.ResourceBundle;
 
@@ -29,11 +30,12 @@ public class ModificarMesasControl {
     public TextField fieldYposicion;
     public Button btnModificar;
     private int idMesaSeleccionada = -1;
-
+    private final Map<Button, Integer> botonIdMap = new HashMap<>();
     private  modifificarRepository mesaRepository = new  modifificarRepository();
-    // Este método se ejecuta automáticamente cuando la vista se carga
+    // Este metodo se ejecuta automáticamente cuando la vista se carga
     @FXML
     public void initialize(URL location, ResourceBundle resources) {
+        inicializarMapaBotones();
         cargarPosicion(); // Llamar a cargarPosicion() al inicializar la vista
     }
     private void cargarPosicion() {
@@ -56,30 +58,16 @@ public class ModificarMesasControl {
     }
 
     private Button getMesaButton(int idMesa) {
-        switch (idMesa) {
-            case 1: return bntm1;
-            case 2: return bntm2;
-            case 3: return bntm3;
-            case 4: return bntm4;
-            case 5: return bntm5;
-            case 6: return bntm6;
-            case 7: return bntm7;
-            case 8: return bntm8;
-            case 9: return bntm9;
-            case 10: return bntm10;
-            case 11: return bntm11;
-            case 12: return bntm12;
-            case 13: return bntm13;
-            case 14: return bntm14;
-            case 15: return bntm15;
-            case 16: return bntm16;
-            case 17: return bntm17;
-            case 18: return bntm18;
-            case 19: return bntm19;
-            default: return null;
+        for (Map.Entry<Button, Integer> entry : botonIdMap.entrySet()) {
+            if (entry.getValue() == idMesa) {
+                return entry.getKey();
+            }
         }
+        return null;
     }
-
+    private int obtenerIdMesa(Button mesaButton) {
+        return botonIdMap.getOrDefault(mesaButton, -1);
+    }
     @FXML
     public void SeleccionarMesa(ActionEvent actionEvent) {
         Button mesaSeleccionada = (Button) actionEvent.getSource();  // Obtener el botón clicado
@@ -108,27 +96,26 @@ public class ModificarMesasControl {
         }
     }
 
-    private int obtenerIdMesa(Button mesaButton) {
-        if (mesaButton == bntm1) return 1;
-        if (mesaButton == bntm2) return 2;
-        if (mesaButton == bntm3) return 3;
-        if (mesaButton == bntm4) return 4;
-        if (mesaButton == bntm5) return 5;
-        if (mesaButton == bntm6) return 6;
-        if (mesaButton == bntm7) return 7;
-        if (mesaButton == bntm8) return 8;
-        if (mesaButton == bntm9) return 9;
-        if (mesaButton == bntm10) return 10;
-        if (mesaButton == bntm11) return 11;
-        if (mesaButton == bntm12) return 12;
-        if (mesaButton == bntm13) return 13;
-        if (mesaButton == bntm14) return 14;
-        if (mesaButton == bntm15) return 15;
-        if (mesaButton == bntm16) return 16;
-        if (mesaButton == bntm17) return 17;
-        if (mesaButton == bntm18) return 18;
-        if (mesaButton == bntm19) return 19;
-        return -1;  // Si no es ningún botón válido
+    private void inicializarMapaBotones() {
+        botonIdMap.put(bntm1, 1);
+        botonIdMap.put(bntm2, 2);
+        botonIdMap.put(bntm3, 3);
+        botonIdMap.put(bntm4, 4);
+        botonIdMap.put(bntm5, 5);
+        botonIdMap.put(bntm6, 6);
+        botonIdMap.put(bntm7, 7);
+        botonIdMap.put(bntm8, 8);
+        botonIdMap.put(bntm9, 9);
+        botonIdMap.put(bntm10, 10);
+        botonIdMap.put(bntm11, 11);
+        botonIdMap.put(bntm12, 12);
+        botonIdMap.put(bntm13, 13);
+        botonIdMap.put(bntm14, 14);
+        botonIdMap.put(bntm15, 15);
+        botonIdMap.put(bntm16, 16);
+        botonIdMap.put(bntm17, 17);
+        botonIdMap.put(bntm18, 18);
+        botonIdMap.put(bntm19, 19);
     }
 
 
