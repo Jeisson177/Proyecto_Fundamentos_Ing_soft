@@ -26,6 +26,6 @@ public class ReservaService {
     }
 
     public void clearReservaSeleccionada() {
-        this.reservaSeleccionada = null; // Limpiar después de su uso si es necesario
+        this.reservaSeleccionada = null;
     }
 }

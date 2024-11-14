@@ -12,18 +12,15 @@ import java.util.Optional;
 
 public class ConsultarReservasRepository {
 
-    private static final Credenciales c=new Credenciales();
-
+    private static final Credenciales c = new Credenciales();
     private static final String URL = c.getURL();
     private static final String USER = c.getUser();
     private static final String PASSWORD = c.getPassword();
 
-    // Método para establecer conexión con la base de datos
     private Connection getConnection() throws SQLException {
         return DriverManager.getConnection(URL, USER, PASSWORD);
     }
 
-    // Método para obtener los detalles del horario de un día específico
     public HorarioDia obtenerHorarioDia(String nombreDia) {
         String query = "SELECT intervalo, hora_apertura, hora_cierre FROM Dias d " +
                 "JOIN Horarios h ON d.id_dia = h.id_dia WHERE nombre_dia = ?";
@@ -47,7 +44,6 @@ public class ConsultarReservasRepository {
         return null;
     }
 
-    // Método para obtener reservas según una fecha específica
     public List<Reserva> obtenerReservasPorFecha(LocalDate fechaConsulta) {
         List<Reserva> reservas = new ArrayList<>();
         String query = "SELECT ID_RESERVA, ID_CLIENTE, ID_MESA, FECHA_HORA FROM RESERVA WHERE DATE(FECHA_HORA) = ?";
@@ -71,10 +67,10 @@ public class ConsultarReservasRepository {
         }
         return reservas;
     }
-    // Agregar este método en la clase ReservaRepository
+
     public Reserva obtenerReservaPorId(int idReserva) {
         String query = "SELECT * FROM reserva WHERE ID_RESERVA = ?";
-        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+        try (Connection connection = getConnection();
              PreparedStatement stmt = connection.prepareStatement(query)) {
             stmt.setInt(1, idReserva);
             try (ResultSet rs = stmt.executeQuery()) {
@@ -90,25 +86,7 @@ public class ConsultarReservasRepository {
         }
         return null;
     }
-    public Reserva obtenerUltimaReserva() {
-        String query = "SELECT * FROM reserva ORDER BY fecha_hora DESC LIMIT 1"; // Ajusta según tu base de datos
-        try (Connection connection = getConnection();
-             PreparedStatement statement = connection.prepareStatement(query)) {
 
-            ResultSet resultSet = statement.executeQuery();
-            if (resultSet.next()) {
-                int idReserva = resultSet.getInt("ID_RESERVA");
-                int idCliente = resultSet.getInt("ID_CLIENTE");
-                int idMesa = resultSet.getInt("ID_MESA");
-                LocalDateTime fechaHora = resultSet.getTimestamp("FECHA_HORA").toLocalDateTime();
-                return new Reserva(idReserva, idCliente, idMesa, fechaHora);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null; // Si no hay reservas
-    }
-    // Método para guardar una nueva reserva
     public boolean guardarReserva(int idCliente, int idMesa, String fechaHora) {
         String query = "INSERT INTO RESERVA (ID_CLIENTE, ID_MESA, FECHA_HORA) VALUES (?, ?, ?)";
 
@@ -126,7 +104,6 @@ public class ConsultarReservasRepository {
         return false;
     }
 
-    // Método para verificar si un horario está ocupado para una mesa específica
     public boolean fechaOcupada(LocalDate fecha, LocalTime hora, int mesaId) {
         String query = "SELECT COUNT(*) FROM RESERVA WHERE DATE(FECHA_HORA) = ? AND HOUR(FECHA_HORA) = ? AND ID_MESA = ?";
 
@@ -148,7 +125,62 @@ public class ConsultarReservasRepository {
         return false;
     }
 
-    // Clase interna para representar el horario de un día específico
+    public boolean eliminarReserva(int idReserva) {
+        String query = "DELETE FROM RESERVA WHERE ID_RESERVA = ?";
+        try (Connection connection = getConnection();
+             PreparedStatement stmt = connection.prepareStatement(query)) {
+
+            stmt.setInt(1, idReserva);
+            return stmt.executeUpdate() > 0; // Devuelve true si la eliminación fue exitosa
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public int crearUsuarioTemporalSinCita() {
+        String query = "INSERT INTO Usuario (NOMBRE, EMAIL, TELEFONO, ROL, CONTRASENA) VALUES (?, ?, ?, ?, ?)";
+        int generatedId = -1; // Valor por defecto para detectar errores
+
+        try (Connection connection = getConnection();
+             PreparedStatement stmt = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
+
+            // Define los valores del usuario temporal
+            stmt.setString(1, "Usuario Temporal");
+            stmt.setString(2, "temporal@email.com");
+            stmt.setString(3, "000-0000");
+            stmt.setString(4, "Cliente");
+            stmt.setString(5, "temporalPass");
+
+            // Ejecuta la inserción
+            int affectedRows = stmt.executeUpdate();
+
+            // Verifica si la inserción fue exitosa y obtiene el ID generado
+            if (affectedRows > 0) {
+                try (ResultSet generatedKeys = stmt.getGeneratedKeys()) {
+                    if (generatedKeys.next()) {
+                        generatedId = generatedKeys.getInt(1);
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return generatedId;
+    }
+
+    public void eliminarUsuarioTemporal(int idUsuario) {
+        try (Connection connection = getConnection()) {
+            String query = "DELETE FROM usuario WHERE ID_USUARIO = ? AND es_temporal = true";
+            try (PreparedStatement stmt = connection.prepareStatement(query)) {
+                stmt.setInt(1, idUsuario);
+                stmt.executeUpdate();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static class HorarioDia {
         private final int intervalo;
         private final LocalTime horaApertura;
@@ -172,16 +204,17 @@ public class ConsultarReservasRepository {
             return horaCierre;
         }
     }
-    public boolean eliminarReserva(int idReserva) {
-        String query = "DELETE FROM RESERVA WHERE ID_RESERVA = ?";
+    public Integer obtenerUltimaReservaId() {
+        String query = "SELECT ID_RESERVA FROM RESERVA ORDER BY ID_RESERVA DESC LIMIT 1";
         try (Connection connection = getConnection();
-             PreparedStatement stmt = connection.prepareStatement(query)) {
-
-            stmt.setInt(1, idReserva);
-            return stmt.executeUpdate() > 0; // Devuelve true si la eliminación fue exitosa
+             PreparedStatement stmt = connection.prepareStatement(query);
+             ResultSet rs = stmt.executeQuery()) {
+            if (rs.next()) {
+                return rs.getInt("ID_RESERVA");
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return false;
+        return null;  // Devuelve null si no hay reservas
     }
 }

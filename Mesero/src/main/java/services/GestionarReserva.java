@@ -4,6 +4,8 @@ import controller.menuMesero.MesaControl;
 import repository.ConsultarReservasRepository;
 import controller.Reserva;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -18,6 +20,7 @@ public class GestionarReserva {
 
     private final MesaControl mesa;
     private final ConsultarReservasRepository reservaRepo;
+    static private Integer idReservaTemporal;
 
     public GestionarReserva(MesaControl mesa) {
         this.mesa = mesa;
@@ -111,17 +114,44 @@ public class GestionarReserva {
     }
 
     public boolean crearReservaSinCita(int mesaId) {
-        LocalDate fechaActual = LocalDate.now();
-        LocalTime horaActual = LocalTime.now();
+        int idUsuarioTemporal = reservaRepo.crearUsuarioTemporalSinCita();
 
-        // Verifica si la mesa está disponible en la fecha y hora actuales
-        if (estaMesaDisponible(mesaId, fechaActual, horaActual)) {
-            int idUsuario = 0; // Puedes ajustar este ID de usuario para reservas sin cita
+        if (idUsuarioTemporal != -1) {
             String fechaHora = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
-            return reservaRepo.guardarReserva(idUsuario, mesaId, fechaHora);
-        } else {
-            System.out.println("La mesa " + mesaId + " no está disponible en este momento.");
-            return false;
+            boolean reservaCreada = reservaRepo.guardarReserva(idUsuarioTemporal, mesaId, fechaHora);
+
+            if (reservaCreada) {
+                this.idReservaTemporal = reservaRepo.obtenerUltimaReservaId();
+                Reserva reservaTemporal = reservaRepo.obtenerReservaPorId(idReservaTemporal);
+                if (reservaTemporal != null) {
+                    ReservaService.getInstance().setReservaSeleccionada(reservaTemporal); // Establece la reserva temporal en ReservaService
+                }
+
+                return true;
+            } else {
+                reservaRepo.eliminarUsuarioTemporal(idUsuarioTemporal);
+                return false;
+            }
         }
+        return false;
     }
-}
+
+    public Integer getIdReservaTemporal() {
+        System.out.println("Obteniendo ID de reserva temporal: " + idReservaTemporal);
+        return idReservaTemporal;
+    }
+    public boolean eliminarReservaTemporal() {
+        if (idReservaTemporal != null) {
+            boolean reservaEliminada = reservaRepo.eliminarReserva(idReservaTemporal);
+            if (reservaEliminada) {
+                // int idUsuarioTemporal = reservaRepo.obtenerUsuarioPorReserva(idReservaTemporal);
+                // reservaRepo.eliminarUsuarioTemporal(idUsuarioTemporal);
+                idReservaTemporal = null;  // Resetear el ID temporal después de la eliminación
+            }
+            return reservaEliminada;
+        }
+        return false;
+    }
+
+    }
+

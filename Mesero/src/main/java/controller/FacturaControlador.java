@@ -13,7 +13,6 @@ import services.ReservaService;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 import java.io.File;
 import java.time.LocalDateTime;
@@ -86,17 +85,22 @@ public class FacturaControlador {
     public void cargarDatosReserva() {
         Reserva reserva = ReservaService.getInstance().getReservaSeleccionada();
         if (reserva != null) {
+            System.out.println("Reserva seleccionada encontrada: " + reserva.getIdReserva());
             fechaFactura.setText("Fecha: " + reserva.getFechaHora().toLocalDate());
             horaFactura.setText("Hora: " + reserva.getFechaHora().toLocalTime());
             mesaFactura.setText("Mesa: " + reserva.getIdMesa());
             idReservaActual = reserva.getIdReserva(); // Guardamos el ID para eliminar después
         } else {
+            System.out.println("Error: No se encontró la reserva seleccionada en ReservaService.");
             mostrarAlerta("Error", "No se encontró la reserva seleccionada.");
         }
     }
 
+
     @FXML
     private void imprimirFactura() {
+        System.out.println("ID de reserva al intentar imprimir factura: " + idReservaActual);
+
         StringBuilder facturaTexto = new StringBuilder();
         facturaTexto.append("Bella Ventura\n")
                 .append(fechaFactura.getText()).append("\n")
@@ -118,7 +122,7 @@ public class FacturaControlador {
                 .append("TOTAL: ").append(totalConServicio.getText()).append("\n")
                 .append("GRACIAS POR SU VISITA\n");
 
-        String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
+        String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy / MMdd_HH / mmss"));
         String filename = "facturas/Factura_" + timestamp + ".txt";
         File folder = new File("facturas");
         if (!folder.exists()) folder.mkdir();
@@ -127,13 +131,22 @@ public class FacturaControlador {
             writer.print(facturaTexto.toString());
             mostrarAlerta("Factura", "Factura guardada en: " + filename);
 
-            // Eliminar la reserva después de guardar la factura :D
-            gestionarReserva.eliminarReserva(idReservaActual);
+            // Verificación del ID de la reserva temporal para eliminación
+            Integer idReservaTemporal = gestionarReserva.getIdReservaTemporal();
+            System.out.println("ID de reserva temporal obtenido en imprimirFactura: " + idReservaTemporal); // Verificación del ID de reserva temporal
+            if (idReservaTemporal != null && idReservaActual == idReservaTemporal) {
+                gestionarReserva.eliminarReservaTemporal(); // Eliminar reserva temporal
+                System.out.println("Reserva temporal eliminada con ID: " + idReservaTemporal); // Confirmación de eliminación
+            } else {
+                gestionarReserva.eliminarReserva(idReservaActual); // Eliminar reserva normal
+                System.out.println("Reserva normal eliminada con ID: " + idReservaActual); // Confirmación de eliminación
+            }
         } catch (IOException e) {
             e.printStackTrace();
             mostrarAlerta("Error", "Error al guardar la factura.");
         }
     }
+
 
     private void mostrarAlerta(String titulo, String mensaje) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);

@@ -4,12 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fd8ff85-b94a-4b81-b0f1-01c765de323a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/java/controller/AgregarOeliminarInventario.java" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/java/controller/AgregarOeliminarInventario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/java/controller/modificarInventario.java" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/java/controller/modificarInventario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/java/controller/modificarPlato.java" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/java/controller/modificarPlato.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/resources/vista/AgregarOeliminarInventario.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/AgregarOeliminarInventario.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/resources/vista/modificarPlato.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/modificarPlato.fxml" afterDir="false" />
+    <list default="true" id="1fd8ff85-b94a-4b81-b0f1-01c765de323a" name="Changes" comment="cositas">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/FacturaControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/FacturaControlador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/MesaControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/menuMesero/MesaControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/repository/ConsultarReservasRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/repository/ConsultarReservasRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/repository/menu/ReservaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/repository/menu/ReservaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/services/GestionarReserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/services/GestionarReserva.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/services/ReservaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/services/ReservaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/vista/Inicio.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/vista/Inicio.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/Antipasti.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/Antipasti.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/PostreMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/PostreMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/ReservaFecha.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/resources/vista/menu/ReservaFecha.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/test/java/pckg/TestMesero.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,50 +89,50 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.HelloApplication.executor&quot;: &quot;Debug&quot;,
-    &quot;Application.Mesero.executor&quot;: &quot;Run&quot;,
-    &quot;Application.admin.executor&quot;: &quot;Run&quot;,
-    &quot;Application.usuarioC.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path&quot;: &quot;C:\\Users\\Jocel\\Downloads\\Proyecto_Fundamentos_Ing_soft&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
-    &quot;JUnit.AppTest.autentificarUsuario_UsuarioExistente.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AppTest.autentificarUsuario_UsuarioInexistente.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AppTest.consultarReservas_UsuarioConReservas.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AppTest.consultarReservas_UsuarioSinReservas.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AppTest.crearUsuario_Exito.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AppTest.crearUsuario_SinExito.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AppTest.testFechaOcupada.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AppTest.testGReserva.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AppTest.testGuardarReserva.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AppTest.testObtenerHorarioDia.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AppTest.testObtenerHorariosDisponibles.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AppTestAdmin.executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
-    &quot;ignore.preview.features.used&quot;: &quot;true&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/jeiss/Documents/universidad/10 decimo semestre/Fundamentos ing soft/Proyecto_Fundamentos_Ing_soft/Mesero/src/main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2591623&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.HelloApplication.executor": "Debug",
+    "Application.Mesero.executor": "Debug",
+    "Application.admin.executor": "Debug",
+    "Application.usuarioC.executor": "Run",
+    "Downloaded.Files.Path": "C:\\Users\\Jocel\\Downloads\\Proyecto_Fundamentos_Ing_soft",
+    "Downloaded.Files.Path.Enabled": "true",
+    "JUnit.AppTest.autentificarUsuario_UsuarioExistente.executor": "Run",
+    "JUnit.AppTest.autentificarUsuario_UsuarioInexistente.executor": "Run",
+    "JUnit.AppTest.consultarReservas_UsuarioConReservas.executor": "Run",
+    "JUnit.AppTest.consultarReservas_UsuarioSinReservas.executor": "Run",
+    "JUnit.AppTest.crearUsuario_Exito.executor": "Run",
+    "JUnit.AppTest.crearUsuario_SinExito.executor": "Run",
+    "JUnit.AppTest.testFechaOcupada.executor": "Run",
+    "JUnit.AppTest.testGReserva.executor": "Run",
+    "JUnit.AppTest.testGuardarReserva.executor": "Run",
+    "JUnit.AppTest.testObtenerHorarioDia.executor": "Run",
+    "JUnit.AppTest.testObtenerHorariosDisponibles.executor": "Run",
+    "JUnit.AppTestAdmin.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "OrdenMesero",
+    "ignore.preview.features.used": "true",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/jeiss/Documents/universidad/10 decimo semestre/Fundamentos ing soft/Proyecto_Fundamentos_Ing_soft/Mesero/src/main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2591623",
+    "settings.editor.selected.configurable": "preferences.JavaFX",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\jeiss\Documents\universidad\10 decimo semestre\Fundamentos ing soft\Proyecto_Fundamentos_Ing_soft\Mesero\src\main" />
@@ -143,7 +150,7 @@
       <recent name="repository.menu" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.admin">
+  <component name="RunManager" selected="Application.Mesero">
     <configuration name="Mesero" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.Mesero.Mesero" />
       <module name="Mesero" />
@@ -219,8 +226,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.admin" />
         <item itemvalue="Application.Mesero" />
+        <item itemvalue="Application.admin" />
         <item itemvalue="JUnit.AppTest" />
         <item itemvalue="JUnit.AppTest.testGReserva" />
         <item itemvalue="JUnit.AppTest.testObtenerHorariosDisponibles" />
@@ -269,6 +276,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="workspace" />
+    <MESSAGE value="cositas" />
+    <option name="LAST_COMMIT_MESSAGE" value="cositas" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

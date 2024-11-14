@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.menuMesero.AntipastiControl">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.menuMesero.AntipastiControl">
     <Pane prefHeight="61.0" prefWidth="722.0" style="-fx-background-color: black;">
         <children>
             <Text fill="WHITE" layoutX="14.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: normal;" text="Bella Ventura">
@@ -13,11 +14,6 @@
                 </font>
             </Text>
             <Button fx:id="menuBoton" layoutX="365.0" layoutY="8.0" mnemonicParsing="false" onAction="#menuButtonClick" style="-fx-background-color: black;" text="Menú" textFill="WHITE">
-                <font>
-                    <Font size="17.0" />
-                </font>
-            </Button>
-            <Button fx:id="homeBoton" layoutX="289.0" layoutY="8.0" mnemonicParsing="false" onAction="#homeButtonClick" style="-fx-background-color: black;" text="home" textFill="WHITE" underline="true">
                 <font>
                     <Font size="17.0" />
                 </font>
@@ -43,7 +39,7 @@
         </rowConstraints>
         <children>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-                <Button fx:id="carpaccioResBoton" onAction="#agregarPlato" GridPane.columnIndex="0" userData="Carpaccio de Res">
+                <Button fx:id="carpaccioResBoton" onAction="#agregarPlato" userData="Carpaccio de Res" GridPane.columnIndex="0">
                     <graphic>
                         <ImageView fx:id="carpaccioResImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="false" />
                     </graphic>
@@ -52,7 +48,7 @@
                 <Label fx:id="carpaccioResPrecio" />
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
-                <Button fx:id="carpaccioSalmonBoton" onAction="#agregarPlato" GridPane.columnIndex="0" userData="Carpaccio de Salmon">
+                <Button fx:id="carpaccioSalmonBoton" onAction="#agregarPlato" userData="Carpaccio de Salmon" GridPane.columnIndex="0">
                     <graphic>
                         <ImageView fx:id="carpaccioSalmonImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="false" />
                     </graphic>
@@ -61,7 +57,7 @@
                 <Label fx:id="carpaccioSalmonPrecio" />
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
-                <Button fx:id="focacciaGenoveseBoton" onAction="#agregarPlato" GridPane.columnIndex="0" userData="Focaccia Genovese">
+                <Button fx:id="focacciaGenoveseBoton" onAction="#agregarPlato" userData="Focaccia Genovese" GridPane.columnIndex="0">
                     <graphic>
                         <ImageView fx:id="focacciaGenoveseImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="false" />
                     </graphic>
@@ -70,7 +66,7 @@
                 <Label fx:id="focacciaGenovesePrecio" />
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3">
-                <Button fx:id="focacciaDolceBoton" onAction="#agregarPlato" GridPane.columnIndex="0" userData="Focaccia Dolce">
+                <Button fx:id="focacciaDolceBoton" onAction="#agregarPlato" userData="Focaccia Dolce" GridPane.columnIndex="0">
                     <graphic>
                         <ImageView fx:id="focacciaDolceImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="false" />
                     </graphic>
@@ -79,7 +75,7 @@
                 <Label fx:id="focacciaDolcePrecio" />
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4">
-                <Button fx:id="focacciaVenetaBoton" onAction="#agregarPlato" GridPane.columnIndex="0" userData="Focaccia Veneta">
+                <Button fx:id="focacciaVenetaBoton" onAction="#agregarPlato" userData="Focaccia Veneta" GridPane.columnIndex="0">
                     <graphic>
                         <ImageView fx:id="focacciaVenetaImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="false" />
                     </graphic>
@@ -88,7 +84,7 @@
                 <Label fx:id="focacciaVenetaPrecio" />
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
-                <Button fx:id="focacciaPuglieseBoton" onAction="#agregarPlato" GridPane.columnIndex="0" userData="Focaccia Pugliese">
+                <Button fx:id="focacciaPuglieseBoton" onAction="#agregarPlato" userData="Focaccia Pugliese" GridPane.columnIndex="0">
                     <graphic>
                         <ImageView fx:id="focacciaPuglieseImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="false" />
                     </graphic>
@@ -97,7 +93,7 @@
                 <Label fx:id="focacciaPugliesePrecio" />
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                <Button fx:id="ensaladaCesarRomanaBoton" onAction="#agregarPlato" GridPane.columnIndex="0" userData="Ensalada Cesar Romana">
+                <Button fx:id="ensaladaCesarRomanaBoton" onAction="#agregarPlato" userData="Ensalada Cesar Romana" GridPane.columnIndex="0">
                     <graphic>
                         <ImageView fx:id="ensaladaCesarRomanaImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="false" />
                     </graphic>
@@ -106,7 +102,7 @@
                 <Label fx:id="ensaladaCesarRomanaPrecio" />
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                <Button fx:id="ensaldaPortobelloBoton" onAction="#agregarPlato" GridPane.columnIndex="0" userData="Ensalada Portobello">
+                <Button fx:id="ensaldaPortobelloBoton" onAction="#agregarPlato" userData="Ensalada Portobello" GridPane.columnIndex="0">
                     <graphic>
                         <ImageView fx:id="ensaldaPortobelloImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="false" />
                     </graphic>
@@ -115,7 +111,7 @@
                 <Label fx:id="ensaldaPortobelloPrecio" />
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
-                <Button fx:id="ensaladaVentrescaBoton" onAction="#agregarPlato" GridPane.columnIndex="0" userData="Ensalada Ventresca">
+                <Button fx:id="ensaladaVentrescaBoton" onAction="#agregarPlato" userData="Ensalada Ventresca" GridPane.columnIndex="0">
                     <graphic>
                         <ImageView fx:id="ensaladaVentrescaImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="false" />
                     </graphic>
@@ -124,7 +120,7 @@
                 <Label fx:id="ensaladaVentrescaPrecio" />
             </VBox>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
-                <Button fx:id="tablaQuesosBoton" onAction="#agregarPlato" GridPane.columnIndex="0" userData="Tabla de Quesos">
+                <Button fx:id="tablaQuesosBoton" onAction="#agregarPlato" userData="Tabla de Quesos" GridPane.columnIndex="0">
                     <graphic>
                         <ImageView fx:id="tablaQuesosImage" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="false" />
                     </graphic>

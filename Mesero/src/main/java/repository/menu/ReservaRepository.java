@@ -17,7 +17,7 @@ public class ReservaRepository {
     private static final String USER = c.getUser();
     private static final String PASSWORD = c.getPassword();
 
-    // Clase interna para encapsular la información del horario del día
+
     public static class HorarioDia {
         private int intervalo;
         private LocalTime horaApertura;
