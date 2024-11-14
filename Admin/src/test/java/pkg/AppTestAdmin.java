@@ -9,6 +9,7 @@ import repository.Credenciales;
 import repository.modificarInventarioRepository;
 import repository.modifificarRepository;
 import repository.verReservaRepository;
+import repository.modificarUsuarioRepository;
 
 import javafx.geometry.Point2D;
 import java.sql.SQLException;
@@ -23,6 +24,7 @@ public class AppTestAdmin {
     private modifificarRepository mod;
     private modificarInventarioRepository modRepo;
     private verReservaRepository verReser;
+    private modificarUsuarioRepository usuarioRepo;
 
     @BeforeEach
     void setUp(){
@@ -30,6 +32,8 @@ public class AppTestAdmin {
         mod=new modifificarRepository();
         modRepo=new modificarInventarioRepository();
         verReser=new verReservaRepository();
+        usuarioRepo=new modificarUsuarioRepository();
+
     }
     @Test
     void AutentficarAdmin(){
@@ -130,5 +134,84 @@ public class AppTestAdmin {
         verReser.eliminarReserva(1);
         assertEquals(0, verReser.getReservasPorIdCliente("1").size(),
         "Se elimino correctamente");
+    }
+    @Test
+    void testEliminarMesero() {
+        String nombre = "Maria Lopez";
+        String email = "maria.lopez@email.com";
+        String telefono = "123456789";
+        String contrasena = "password123";
+
+        usuarioRepo.agregarMesero(nombre, email, telefono, contrasena);
+
+        List<modificarUsuarioRepository.Usuario> meseros = usuarioRepo.obtenerTodosLosMeseros();
+        modificarUsuarioRepository.Usuario meseroParaEliminar = meseros.stream()
+                .filter(m -> m.getNombre().equals(nombre) && m.getEmail().equals(email))
+                .findFirst()
+                .orElse(null);
+
+        assertNotNull(meseroParaEliminar, "El mesero debería haberse agregado correctamente.");
+
+        usuarioRepo.eliminarMesero(meseroParaEliminar.getId());
+
+        List<modificarUsuarioRepository.Usuario> meserosActualizados = usuarioRepo.obtenerTodosLosMeseros();
+        boolean encontrado = meserosActualizados.stream().anyMatch(m -> m.getId() == meseroParaEliminar.getId());
+
+        assertFalse(encontrado, "El mesero debería haber sido eliminado de la lista.");
+    }
+    @Test
+    void testAgregarMesero() {
+        String nombre = "Juan Perez";
+        String email = "juan.perez@email.com";
+        String telefono = "987654321";
+        String contrasena = "securePass";
+
+        usuarioRepo.agregarMesero(nombre, email, telefono, contrasena);
+
+        List<modificarUsuarioRepository.Usuario> meseros = usuarioRepo.obtenerTodosLosMeseros();
+        boolean encontrado = meseros.stream()
+                .anyMatch(m -> m.getNombre().equals(nombre) && m.getEmail().equals(email)
+                        && m.getTelefono().equals(telefono) && m.getContrasena().equals(contrasena));
+
+        assertTrue(encontrado, "El mesero debería haber sido agregado a la base de datos.");
+    }
+    @Test
+    void testActualizarMesero() {
+        String nombreInicial = "Carlos Ruiz";
+        String emailInicial = "carlos.ruiz@email.com";
+        String telefonoInicial = "123123123";
+        String contrasenaInicial = "oldPassword";
+
+        usuarioRepo.agregarMesero(nombreInicial, emailInicial, telefonoInicial, contrasenaInicial);
+
+        List<modificarUsuarioRepository.Usuario> meseros = usuarioRepo.obtenerTodosLosMeseros();
+        modificarUsuarioRepository.Usuario meseroParaActualizar = meseros.stream()
+                .filter(m -> m.getNombre().equals(nombreInicial) && m.getEmail().equals(emailInicial))
+                .findFirst()
+                .orElse(null);
+
+        assertNotNull(meseroParaActualizar, "El mesero debería haberse agregado correctamente para la actualización.");
+
+        String nuevoNombre = "Carlos Gutierrez";
+        String nuevoEmail = "carlos.gutierrez@email.com";
+        String nuevoTelefono = "456456456";
+        String nuevaContrasena = "newPassword";
+
+        meseroParaActualizar.setNombre(nuevoNombre);
+        meseroParaActualizar.setEmail(nuevoEmail);
+        meseroParaActualizar.setTelefono(nuevoTelefono);
+        meseroParaActualizar.setContrasena(nuevaContrasena);
+
+        usuarioRepo.actualizarMesero(meseroParaActualizar);
+
+        List<modificarUsuarioRepository.Usuario> meserosActualizados = usuarioRepo.obtenerTodosLosMeseros();
+        boolean actualizado = meserosActualizados.stream()
+                .anyMatch(m -> m.getId() == meseroParaActualizar.getId() &&
+                        m.getNombre().equals(nuevoNombre) &&
+                        m.getEmail().equals(nuevoEmail) &&
+                        m.getTelefono().equals(nuevoTelefono) &&
+                        m.getContrasena().equals(nuevaContrasena));
+
+        assertTrue(actualizado, "Los datos del mesero deberían haber sido actualizados en la base de datos.");
     }
 }
