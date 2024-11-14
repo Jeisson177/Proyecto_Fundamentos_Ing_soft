@@ -1,7 +1,7 @@
 package controller;
 
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+import controller.RedirijirAdmin;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.text.Text;
@@ -26,6 +26,7 @@ public class verReservasControl {
     public Button eliminarBoton;
     private verReservaServicio servicio = new verReservaServicio();
     private List<Reserva> reservas;
+    private RedirijirAdmin red = new RedirijirAdmin();
 
     public void verReservasPorId(TextField idReservaBoton) {
         Reserva reserva = servicio.verReserva(idReservaBoton.getText());
@@ -89,6 +90,8 @@ public class verReservasControl {
         }
     }
 
+    public void regresarInicio(){ red.IrInicio(regresarBoton); }
+
     public void initialize() {
         columnaIdReserva.setCellValueFactory(new PropertyValueFactory<>("id_Reserva"));
         columnaIdCliente.setCellValueFactory(new PropertyValueFactory<>("id_Cliente"));
@@ -96,4 +99,5 @@ public class verReservasControl {
         columnaMesa.setCellValueFactory(new PropertyValueFactory<>("id_mesa"));
         buscarBoton.setOnAction(e -> buscarReserva());
     }
+
 }

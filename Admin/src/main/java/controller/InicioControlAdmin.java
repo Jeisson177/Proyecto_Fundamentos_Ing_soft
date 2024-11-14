@@ -47,4 +47,6 @@ public class InicioControlAdmin {
     public void IrInventario(ActionEvent actionEvent) {
         Ira.IrInventario(btnInventario);
     }
+
+    public void IrVerReservas(ActionEvent actionEvent) {Ira.IrVerReserva(btnreservas);}
 }

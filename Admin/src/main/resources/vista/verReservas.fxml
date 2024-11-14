@@ -21,7 +21,7 @@
             </Text>
          </children>
       </Pane>
-      <Button fx:id="regresarBoton" layoutX="28.0" layoutY="79.0" mnemonicParsing="false" style="-fx-background-color: blue;" text="Regresar" textFill="WHITE">
+      <Button fx:id="regresarBoton" layoutX="28.0" layoutY="79.0" mnemonicParsing="false" onAction="#regresarInicio" style="-fx-background-color: blue;" text="Regresar" textFill="WHITE">
          <font>
             <Font size="16.0" />
          </font>

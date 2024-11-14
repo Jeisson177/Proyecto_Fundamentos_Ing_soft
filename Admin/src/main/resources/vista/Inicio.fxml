@@ -14,7 +14,7 @@
       <Button fx:id="btnInventario" layoutX="220.0" layoutY="145.0" mnemonicParsing="false" onAction="#IrInventario" style="-fx-background-color: black;" text="Modificar inventario" textFill="WHITE" />
       <Button fx:id="btnMenu" layoutX="431.0" layoutY="145.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: black;" text="Modificar Menu" textFill="WHITE" />
       <Button fx:id="btnmeseros" layoutX="431.0" layoutY="203.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: black;" text="Modificar Meseros" textFill="WHITE" />
-      <Button fx:id="btnreservas" layoutX="222.0" layoutY="260.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: black;" text="Ver reservas" textFill="WHITE" />
+      <Button fx:id="btnreservas" layoutX="222.0" layoutY="260.0" mnemonicParsing="false" onAction="#IrVerReservas" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: black;" text="Ver reservas" textFill="WHITE" />
       <Button fx:id="btnmesas" layoutX="431.0" layoutY="260.0" mnemonicParsing="false" onAction="#IrEditarMesas" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: black;" text="Editar mesas" textFill="WHITE" />
       <Pane prefHeight="55.0" prefWidth="600.0" style="-fx-background-color: EFB810;">
          <children>
