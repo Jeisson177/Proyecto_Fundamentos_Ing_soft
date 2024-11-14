@@ -34,4 +34,12 @@ public class verReservaServicio {
             return reservas;
         }
     }
+
+    public boolean eliminarReserva(int id_reserva){
+        if(rep.eliminarReserva(id_reserva)){
+            return true;
+        }
+        return false;
+    }
+
 }

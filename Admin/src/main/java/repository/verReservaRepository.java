@@ -95,4 +95,18 @@ public class verReservaRepository {
         return reservas;  // Retorna la lista de reservas
     }
 
+    public boolean eliminarReserva(int idReserva) {
+        String query = "DELETE FROM RESERVA WHERE ID_RESERVA = ?";
+
+        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
+            try (PreparedStatement stmt = connection.prepareStatement(query)) {
+                stmt.setInt(1, idReserva);  // Asigna el ID de la reserva al PreparedStatement
+                int rowsAffected = stmt.executeUpdate();  // Ejecuta la eliminación
+                return rowsAffected > 0;  // Retorna true si se eliminó al menos una fila
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("Error al eliminar la reserva: " + e.getMessage(), e);  // Lanza una excepción si ocurre un error
+        }
+    }
+
 }

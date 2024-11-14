@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="1fd8ff85-b94a-4b81-b0f1-01c765de323a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/java/Entities/Reserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/java/Entities/Reserva.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/src/main/java/controller/verReservasControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/java/controller/verReservasControl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Admin/src/main/java/repository/verReservaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/java/repository/verReservaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/src/main/java/services/verReservaServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/java/services/verReservaServicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/src/main/resources/vista/verReservas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/resources/vista/verReservas.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -259,7 +260,7 @@
       <workItem from="1730231433151" duration="1535000" />
       <workItem from="1731376870866" duration="1138000" />
       <workItem from="1731417890182" duration="955000" />
-      <workItem from="1731508181938" duration="17107000" />
+      <workItem from="1731508181938" duration="18412000" />
     </task>
     <servers />
   </component>

@@ -23,6 +23,7 @@ public class verReservasControl {
     public TableColumn<Reserva, Integer> columnaMesa;
     public TableView<Reserva> tablaReservas;
     public Text reservaText;
+    public Button eliminarBoton;
     private verReservaServicio servicio = new verReservaServicio();
     private List<Reserva> reservas;
 
@@ -66,6 +67,24 @@ public class verReservasControl {
             verReservasPorFecha(ingresoFecha);
         } else {
             Alert alert = new Alert(Alert.AlertType.WARNING, "Por favor, complete al menos un criterio de búsqueda.");
+            alert.show();
+        }
+    }
+
+    public void eliminarReserva() {
+        Reserva seleccionada = tablaReservas.getSelectionModel().getSelectedItem();
+        if (seleccionada != null) {
+            boolean exito = servicio.eliminarReserva(seleccionada.getId_Reserva());
+            if (exito) {
+                tablaReservas.getItems().remove(seleccionada);
+                Alert alert = new Alert(Alert.AlertType.INFORMATION, "La reserva ha sido eliminada exitosamente.");
+                alert.show();
+            } else {
+                Alert alert = new Alert(Alert.AlertType.ERROR, "No se pudo eliminar la reserva.");
+                alert.show();
+            }
+        } else {
+            Alert alert = new Alert(Alert.AlertType.WARNING, "Por favor, seleccione una reserva para eliminar.");
             alert.show();
         }
     }

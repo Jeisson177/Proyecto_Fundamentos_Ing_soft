@@ -51,6 +51,11 @@
             <TextField fx:id="nombreClienteBoton" layoutX="97.0" layoutY="44.0" />
             <TextField fx:id="idReservaBoton" layoutX="384.0" layoutY="8.0" prefHeight="25.0" prefWidth="133.0" />
             <DatePicker fx:id="ingresoFecha" layoutX="64.0" layoutY="8.0" />
+            <Button fx:id="eliminarBoton" layoutX="435.0" layoutY="42.0" mnemonicParsing="false" onAction="#eliminarReserva" style="-fx-background-color: blue;" text="Eliminar" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
          </children>
       </Pane>
       <TableView fx:id="tablaReservas" layoutX="111.0" layoutY="251.0" prefHeight="147.0" prefWidth="352.0">
