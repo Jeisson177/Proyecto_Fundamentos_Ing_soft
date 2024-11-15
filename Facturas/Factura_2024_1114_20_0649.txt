@@ -1,0 +1,12 @@
+Bella Ventura
+Fecha: 2024-11-14
+Mesa: 14
+Hora: 20:06:35
+====================================
+CANT	DESCRIPCIÓN	PRECIO	TOTAL
+1	Risotto Vegetariano	10000.00 COP	10000.00 COP
+====================================
+BASE: 10000.00 COP
+SERVICIO: 800.00 COP
+TOTAL: 10800.00 COP
+GRACIAS POR SU VISITA
