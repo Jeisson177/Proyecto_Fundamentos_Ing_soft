@@ -23,7 +23,7 @@ import java.time.format.DateTimeFormatter;
 public class FacturaControlador {
 
     @FXML
-    private TableView<ItemFactura> tablaFactura;
+    public TableView<ItemFactura> tablaFactura;
     @FXML
     private TableColumn<ItemFactura, Integer> colCantidad;
     @FXML
@@ -34,9 +34,9 @@ public class FacturaControlador {
     private TableColumn<ItemFactura, Double> colTotal;
 
     @FXML
-    private Text fechaFactura;
+    public Text fechaFactura;
     @FXML
-    private Text mesaFactura;
+    public Text mesaFactura;
     @FXML
     public Text totalBase;
     @FXML
@@ -44,7 +44,7 @@ public class FacturaControlador {
     @FXML
     public Text totalConServicio;
     @FXML
-    private Text horaFactura;
+    public Text horaFactura;
 
     private final Carrito carrito = Carrito.getInstance();
     private final GestionarReserva gestionarReserva = new GestionarReserva();
@@ -100,7 +100,7 @@ public class FacturaControlador {
 
 
     @FXML
-    private void imprimirFactura() {
+    public void imprimirFactura() {
         System.out.println("ID de reserva al intentar imprimir factura: " + idReservaActual);
 
         StringBuilder facturaTexto = new StringBuilder();
