@@ -1,7 +1,7 @@
 package controller;
 
-import controller.menuMesero.MenuControl;
 import controller.menuMesero.MesaControl;
+import entities.Reserva;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

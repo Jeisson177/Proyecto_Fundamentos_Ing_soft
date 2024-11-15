@@ -1,7 +1,7 @@
 package services;
 
-import controller.Plato;
-import controller.PlatoCarrito;
+import entities.Plato;
+import entities.PlatoCarrito;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 

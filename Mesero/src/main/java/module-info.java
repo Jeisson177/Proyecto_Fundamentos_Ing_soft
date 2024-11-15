@@ -11,5 +11,7 @@ module com.example.cliente {
     opens controller.menuMesero to javafx.fxml;
     exports services;
     opens services to javafx.fxml;
+    exports entities;
+    opens entities to javafx.fxml;
 
 }

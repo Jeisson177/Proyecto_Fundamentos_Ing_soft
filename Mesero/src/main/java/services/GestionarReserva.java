@@ -2,10 +2,8 @@ package services;
 
 import controller.menuMesero.MesaControl;
 import repository.ConsultarReservasRepository;
-import controller.Reserva;
+import entities.Reserva;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;

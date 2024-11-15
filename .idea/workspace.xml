@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fd8ff85-b94a-4b81-b0f1-01c765de323a" name="Changes" comment="cositas">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1fd8ff85-b94a-4b81-b0f1-01c765de323a" name="Changes" comment="pruebas ya funcionales!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/src/main/java/controller/ModificarMesasControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/src/main/java/controller/ModificarMesasControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mesero/src/test/java/pkg/AppTestMesero.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/test/java/pkg/AppTestMesero.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +37,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="OrdenMesero" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -62,6 +61,7 @@
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="downloadSourcesAutomatically" value="true" />
+        <option name="workspaceImportForciblyTurnedOn" value="true" />
       </MavenImportingSettings>
     </option>
   </component>
@@ -83,8 +83,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.HelloApplication.executor": "Debug",
-    "Application.Mesero.executor": "Run",
-    "Application.admin.executor": "Run",
+    "Application.Mesero.executor": "Debug",
+    "Application.admin.executor": "Debug",
     "Application.usuarioC.executor": "Run",
     "Downloaded.Files.Path": "C:\\Users\\Jocel\\Downloads\\Proyecto_Fundamentos_Ing_soft",
     "Downloaded.Files.Path.Enabled": "true",
@@ -100,6 +100,7 @@
     "JUnit.AppTest.testObtenerHorarioDia.executor": "Run",
     "JUnit.AppTest.testObtenerHorariosDisponibles.executor": "Run",
     "JUnit.AppTestAdmin.executor": "Run",
+    "JUnit.AppTestMesero.executor": "Debug",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
@@ -107,11 +108,11 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "develop",
+    "git-widget-placeholder": "OrdenMesero",
     "ignore.preview.features.used": "true",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/jeiss/Documents/universidad/10 decimo semestre/Fundamentos ing soft/Proyecto_Fundamentos_Ing_soft",
+    "last_opened_file_path": "C:/Users/jeiss/Documents/universidad/10 decimo semestre/Fundamentos ing soft/Proyecto_Fundamentos_Ing_soft/Mesero/src/main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -141,13 +142,39 @@
       <recent name="repository.menu" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.admin">
+  <component name="RunManager">
     <configuration name="Mesero" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.Mesero.Mesero" />
       <module name="Mesero" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.Mesero.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Mesero" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.Mesero.Mesero" />
+      <module name="Mesero" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.Mesero.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="admin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.admin.admin" />
+      <module name="Administrador" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.admin.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -179,6 +206,37 @@
       <option name="PACKAGE_NAME" value="pkg" />
       <option name="MAIN_CLASS_NAME" value="pkg.AppTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Cliente" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pkg.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pkg" />
+      <option name="MAIN_CLASS_NAME" value="pkg.AppTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.testGReserva" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Cliente" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pkg.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pkg" />
+      <option name="MAIN_CLASS_NAME" value="pkg.AppTest" />
+      <option name="METHOD_NAME" value="testGReserva" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -215,10 +273,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AppTest.testObtenerHorariosDisponibles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Cliente" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pkg.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pkg" />
+      <option name="MAIN_CLASS_NAME" value="pkg.AppTest" />
+      <option name="METHOD_NAME" value="testObtenerHorariosDisponibles" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.admin" />
         <item itemvalue="Application.Mesero" />
+        <item itemvalue="Application.admin" />
         <item itemvalue="JUnit.AppTest" />
         <item itemvalue="JUnit.AppTest.testGReserva" />
         <item itemvalue="JUnit.AppTest.testObtenerHorariosDisponibles" />
@@ -259,7 +333,42 @@
       <workItem from="1731376870866" duration="1138000" />
       <workItem from="1731417890182" duration="955000" />
       <workItem from="1731508181938" duration="19062000" />
+      <workItem from="1731606321782" duration="501000" />
+      <workItem from="1731632699975" duration="3274000" />
     </task>
+    <task id="LOCAL-00001" summary="cositas">
+      <option name="closed" value="true" />
+      <created>1731607100476</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731607100476</updated>
+    </task>
+    <task id="LOCAL-00002" summary="refactor a nueva carpeta Entities">
+      <option name="closed" value="true" />
+      <created>1731632881431</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1731632881431</updated>
+    </task>
+    <task id="LOCAL-00003" summary="nueva facturita tambien">
+      <option name="closed" value="true" />
+      <created>1731632902672</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1731632902672</updated>
+    </task>
+    <task id="LOCAL-00004" summary="pruebas ya funcionales!">
+      <option name="closed" value="true" />
+      <created>1731634357775</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1731634357775</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,7 +388,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="workspace" />
     <MESSAGE value="cositas" />
-    <option name="LAST_COMMIT_MESSAGE" value="cositas" />
+    <MESSAGE value="refactor a nueva carpeta Entities" />
+    <MESSAGE value="nueva facturita tambien" />
+    <MESSAGE value="pruebas ya funcionales!" />
+    <option name="LAST_COMMIT_MESSAGE" value="pruebas ya funcionales!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

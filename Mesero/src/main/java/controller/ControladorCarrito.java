@@ -1,6 +1,7 @@
 
 package controller;
 
+import entities.PlatoCarrito;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -12,7 +13,6 @@ import javafx.scene.control.*;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import services.Carrito;
-import services.ReservaService;
 
 import java.io.IOException;
 import java.util.Optional;
