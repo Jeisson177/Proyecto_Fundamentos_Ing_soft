@@ -1,5 +1,6 @@
 package controller;
 
+import entities.Reserva;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

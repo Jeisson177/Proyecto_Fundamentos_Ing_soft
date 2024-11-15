@@ -5,7 +5,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import controller.Plato;
 
 public class consultarPlatosRepository {
     private static final Credenciales c = new Credenciales();

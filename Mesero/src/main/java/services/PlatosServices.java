@@ -1,6 +1,6 @@
 package services;
 
-import controller.Plato;
+import entities.Plato;
 import repository.menu.PostreRepositorio;
 import repository.menu.antipastiRepositorio;
 import repository.consultarPlatosRepository;

@@ -1,7 +1,7 @@
 // ReservaService.java
 package services;
 
-import controller.Reserva;
+import entities.Reserva;
 
 public class ReservaService {
 

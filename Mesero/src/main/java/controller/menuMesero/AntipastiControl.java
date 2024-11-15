@@ -1,8 +1,8 @@
 package controller.menuMesero;
 
 import controller.ControladorCarrito;
-import controller.Plato;
-import controller.PlatoCarrito;
+import entities.Plato;
+import entities.PlatoCarrito;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

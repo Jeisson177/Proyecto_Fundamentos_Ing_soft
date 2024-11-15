@@ -1,6 +1,8 @@
 // FacturaControlador.java
 package controller;
 
+import entities.ItemFactura;
+import entities.Reserva;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;

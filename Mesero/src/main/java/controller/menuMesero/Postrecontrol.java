@@ -13,7 +13,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import controller.Plato;
+import entities.Plato;
 import services.Carrito;
 import services.PlatosServices;
 import java.io.IOException;

@@ -1,6 +1,6 @@
 package controller.menuMesero;
 
-import controller.Plato;
+import entities.Plato;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
