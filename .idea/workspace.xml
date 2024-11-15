@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1fd8ff85-b94a-4b81-b0f1-01c765de323a" name="Changes" comment="nueva facturita tambien">
+    <list default="true" id="1fd8ff85-b94a-4b81-b0f1-01c765de323a" name="Changes" comment="pruebas ya funcionales!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/FacturaControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/main/java/controller/FacturaControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mesero/src/main/java/controller/MesaControlFactory.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Mesero/src/test/java/pkg/AppTestMesero.java" beforeDir="false" afterPath="$PROJECT_DIR$/Mesero/src/test/java/pkg/AppTestMesero.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,7 +100,7 @@
     "JUnit.AppTest.testObtenerHorarioDia.executor": "Run",
     "JUnit.AppTest.testObtenerHorariosDisponibles.executor": "Run",
     "JUnit.AppTestAdmin.executor": "Run",
-    "JUnit.AppTestMesero.executor": "Run",
+    "JUnit.AppTestMesero.executor": "Debug",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
@@ -336,7 +334,7 @@
       <workItem from="1731417890182" duration="955000" />
       <workItem from="1731508181938" duration="19062000" />
       <workItem from="1731606321782" duration="501000" />
-      <workItem from="1731632699975" duration="1622000" />
+      <workItem from="1731632699975" duration="3274000" />
     </task>
     <task id="LOCAL-00001" summary="cositas">
       <option name="closed" value="true" />
@@ -362,7 +360,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731632902672</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="pruebas ya funcionales!">
+      <option name="closed" value="true" />
+      <created>1731634357775</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1731634357775</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -384,7 +390,8 @@
     <MESSAGE value="cositas" />
     <MESSAGE value="refactor a nueva carpeta Entities" />
     <MESSAGE value="nueva facturita tambien" />
-    <option name="LAST_COMMIT_MESSAGE" value="nueva facturita tambien" />
+    <MESSAGE value="pruebas ya funcionales!" />
+    <option name="LAST_COMMIT_MESSAGE" value="pruebas ya funcionales!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

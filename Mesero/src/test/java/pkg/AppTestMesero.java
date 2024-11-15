@@ -139,7 +139,6 @@ public class AppTestMesero {
         assertTrue(contenidoFactura.stream().anyMatch(line -> line.contains("Pizza Margarita")), "No se encontró el plato Pizza Margarita en la factura");
         assertTrue(contenidoFactura.stream().anyMatch(line -> line.contains("TOTAL: 37800 COP")), "El total calculado no coincide en la factura");
 
-        // Eliminar archivo de prueba
         assertTrue(archivoFactura.delete(), "No se pudo eliminar el archivo de prueba de factura");
     }
 }
